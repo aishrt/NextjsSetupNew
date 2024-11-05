@@ -1,0 +1,1910 @@
+
+@media(max-width:1800px){
+  .dashboardTopCard .card.topDmarcFailures{
+    height: 635px;
+  }
+}
+@media(max-width:1700px){
+  .userData {
+    width: 100%;
+  }
+  .dashboardTopCard .cardInner .cardText p {
+    /* font-size: 23px; */
+  }
+  .dashboardTopCard .cardInner .cardIcon {
+    margin-right: 0;
+  }
+}
+@media (max-width: 1700px) and (min-width:1600px){
+  .generatorSection__Content form .form-group .outer .policyCheck .form-check-label.mta{
+    width: 165px;
+  }
+}
+
+@media (max-width:1600px){
+  /* .generatorSection__Content form .form-group .outer .policyCheck .form-check-label.mta{
+    width: 165px;
+  } */
+
+  .generatorSection__Content form .form-group .outer .policyCheck .form-check-label.mta span{
+    display: none;
+  }
+
+  .noWrap{
+    text-wrap:nowrap;
+  }
+
+  .graphSection .license .card{
+    /* width: 845px;
+    margin-left: 44px; */
+  }
+  .graphSection .brand .card{
+    /* width: 870px; */
+    margin-left: 45px;
+  }
+  .profileData{
+    /* width: 915px;
+    margin-left: 6px; */
+  }
+  .dashboardTopCard .cardInner .cardIcon img {
+    height: 30px;
+    width: 30px;
+  }
+  .dashboardTopCard .cardInner .cardText p {
+    font-size: 22px;
+  }
+  .dashboardTopCard .cardInner .cardInnerContent {
+    gap: 10px;
+  }
+  .dashboardTopCard .cardInner {
+    padding:24px;
+  }
+  .card.disposition {
+    height: 168px;
+  }
+  .wizardContent .progressSection .step1::after {
+    width: 455px;
+  }
+  .wizard2 .wizardContent .progressSection .step1::after {
+    width: 455px;
+  }
+  .scannerResult .card-text{
+    height:142px !important;
+    font-size: 14px;
+  }
+  .dashboardTopCard .cardInner .cardText p span.trendDisplaydata {
+    font-size: 12px;
+    display: block;
+  }
+  .generatorSection__Content form .form-group .outer .policyCheck .form-check-label span {
+    display: none;
+}
+
+}
+
+@media (max-width: 1600px) and (min-width: 1440px){
+  .generatorSection__Content form .form-group .outer .policyCheck .form-check-label{
+    width: 150px;
+  }
+}
+
+/* @media (max-width:1530px){
+
+} */
+
+@media(max-width:1500px) {
+  .dashboardTopCard .cardInner {
+    padding: 20px;
+  }
+  .dashboardTopCard .cardInner.senders .cardInnerContent .cardIcon img, .dashboardTopCard .cardInner.compliants .cardIcon img {
+    width: 32px;
+  }
+  .dashboardTopCard .cardInner {
+    padding: 11px !important;
+  }
+  .dashboardTopCard .cardInner .cardIcon img {
+    width: 32px;
+  }
+}
+
+@media (max-width: 1440px) {
+  /* .hero-section.mainBanner{
+    padding: 
+  } */
+  .generatorSection__Content form .form-group .outer .policyCheck .form-check-label.mta {
+    width: 138px;
+  }
+
+  .generatorSection__Content form .form-group .outer .policyCheck .form-check-label{
+    width: 150px;
+  }
+  .hero-section.mainBanner{
+    padding: 205px 100px 50px 100px;
+  }
+  .scannerSection__Content{
+    margin-top: 80px;
+  }
+
+  .mainBanner .mainBanner__Content h3{
+    font-size: 33px;
+  }
+  .compliancebook h4{
+    font-size: 33px;
+  }
+  .graphSection .license .card {
+    /* width: 745px;
+    margin-left: 44px; */
+  }
+  .graphSection .brand .card {
+    /* width: 765px; */
+    margin-left: 33px;
+  }
+  .profileData{
+    /* width: 798px;
+    margin-left: 6px; */
+  }
+  .emailComp .emailValidator .inner-content{
+    margin-left: 35px;
+  }
+  .wizardContent .progressSection .step1::after {
+    width: 406px;
+  }
+
+  .wizard2 .wizardContent .progressSection .step1::after {
+    width: 406px;
+  }
+  
+  /* .card.disposition {
+    height: 222px;
+  } */
+  .userData {
+    /* width: 280px; */
+  }
+  /* .advantageSection__Img img {
+    width: 50%;
+  } */
+  .advantageSection__Content h3 {
+    font-size: 33px;
+  }
+  .chargeSection h3{
+    font-size: 33px;
+  }
+
+  .commandSection .seizeContent h3 {
+  font-size: 33px;
+  }
+  .threatProtectSection h3 {
+    font-size: 33px;
+  }
+  .subscribe .subscribe__Form h3 {
+  font-size: 33px;
+  }
+  .dashboardTopCard .cardInner .cardText h4 {
+    font-size: 14px;
+  }
+  .dashboardTopCard .cardInner .cardIcon img {
+    height: 28px;
+    width: 28px;
+  }
+  .dashboardTopCard .cardInner .cardIcon {
+    margin-right: 15px;
+  }
+  .dashboardTopCard .cardInner .cardText p {
+    font-size: 20px;
+  }
+  .dashboardTopCard .cardInner {
+    padding: 18px;
+  }
+  .dashboardTopCard .cardInner .cardText p {
+    font-size: 19px;
+  }
+  .dashboardTopCard .card .card-body .dispSection p{
+    font-size:14px
+  }
+  .dashboardTopCard .card .card-body .dispSection  span{
+    font-size:14px
+  }
+  .dashboardTopCard .card .card-body .reasonSection  p{
+    font-size:14px
+  }
+  .dashboardTopCard .card .card-body .commentSection  p{
+    font-size:14px
+  }
+  .dashboardTopCard .card.policy .card-header h4{
+    font-size:16px
+  }
+  .dashboardTopCard .card.policy .card-body h5{
+    font-size:16px
+  }
+  .dashboardTopCard .card.policy .card-body .requestSection {
+    font-size: 13px;
+  }
+  .graphSection .card .card-body .table tr th{
+    font-size: 14px;
+  }
+  .reportTime {
+    font-size: 14px;
+  }
+  .generatorSection__Content form .form-group .outer .policyCheck .form-check-label span{
+    display: none;
+  }
+
+}
+@media (max-width: 1366px) {
+  .tabCard .main-button-light{
+    padding: 5px 0 !important;
+  }
+  .graphSection .brand .card {
+    /* width: 696px; */
+    /* margin-left: 50px; */
+}
+  .graphSection .license .card {
+    /* width: 700px; */
+  }
+  .profileData{
+    /* width: 666px; */
+    margin-left: 0px;
+  }
+  .visibiltySection img{
+    width:100%;
+  }
+  .commandSection .seizeContent img{
+    width:120%;
+  }
+  .visibiltySection .contentSection .contentInner{
+    padding-left: 140px;
+  }
+  .wizard2 .wizardContent .progressSection .step1::after {
+    width: 376px;
+  }
+  .wizardContent .progressSection .step1::after {
+    width: 376px;
+  }
+  .userData {
+    /* width: 280px; */
+  }
+  .main-button-dark {
+    font-size: 13px;
+    padding: 8px 20px;
+  }
+  .footer .footer-content ul li a {
+    font-size: 14px;
+  }
+  .feature-card .card-title {
+    font-size: 17px;
+  }
+  .card .card-heading {
+    font-size: 16px;
+  }
+  /* .card .card-text {
+      height: 200px;
+  } */
+  .mainBanner .mainBanner__Content h3 {
+    font-size: 34px;
+  }
+  .mainBanner .mainBanner__Content p {
+    font-size: 14px;
+  }
+  .tabInnerContet .tabCard p {
+    font-size: 14px;
+  }
+  .generatorSection__Content form .form-group .outer .policyCheck .form-check-label {
+    /* width: auto; */
+    font-size: 13px;
+  }
+  /* .generatorSection__Content form .form-group .outer .policyCheck:first-child .form-check-label {
+    width: 200px;
+  } */
+  .scannerSection__Content h2 {
+    font-size: 30px;
+  }
+  .tabInnerContet .tabCard h5 {
+    font-size: 18px;
+  }
+  .advantageSection__Content p {
+    font-size: 15px;
+  }
+  .advantageSection__Content h3 {
+    font-size: 30px;
+  }
+  .dashboardTopCard .cardInner {
+    margin-top: 10px;
+  }
+  .dashboardTopCard .card .card-header h4{
+    font-size: 22px;
+  } 
+  .dashboardTopCard .card .card-body h5{
+    font-size: 19px;
+  } 
+  .login-outer .formInner {
+    width: 520px;
+    margin-left: 0;
+  }
+  .compliancebook h4{
+    font-size: 30px;
+  }
+  .chargeSection h3{
+    font-size: 30px;
+  }
+  /* .commandSection .seizeContent h3{
+    padding: 30px;
+  } */
+  .commandSection .seizeContent h3{
+    padding: 0;
+    font-size: 30px;
+  }
+  /* .threatProtectSection h3{
+    font-size: 30px;
+  }
+  .subscribe .subscribe__Form h3{
+    font-size: 30px;
+  } */
+  /* h3{
+    font-size: 30px !important;
+  } */
+  .departments .departments__Circle span {
+    font-size: 24px;
+  }
+  .popularPost .posts .postContent p span {
+    gap: 2px;
+    margin-right: 3px;
+  }
+  .popularPost .posts .postContent p span img {
+    width: 100%;
+    max-width: 15px;
+  }
+  .sidebarOuter {
+    width: 280px;
+  }
+  .sidebarOuter .sideBar .MuiDrawer-paper {
+    width: 280px;
+  }
+  .graphSection .card .card-header h3 {
+    font-size: 22px !important;
+  }
+  .graphSection .card .card-body .table-responsive table tbody tr td {
+    padding: 10px 10px;
+    font-size: 13px;
+  }
+  .graphSection .card .card-body .table tr th {
+    padding: 10px 10px;
+    font-size: 13px;
+  }
+  .card.failure, .card.compliant {
+    height: 540px;
+  }
+  .graphSection .card .card-body .table tr td img {
+    max-width: 22px;
+  }
+  .sidebarNav li span {
+    font-size: 16px !important;
+  }
+  li.sublist span {
+    font-size: 12px !important;
+  }
+  .generatorSection__Content form .form-group .outer .policyCheck .form-check-label {
+    padding: 14px 10px;
+  }
+  .faq .accordion .accordion-item .accordion-header .accordion-button {
+    font-size: 17px;
+  }
+  .faq .faqOuter {
+    height: 770px;
+  }
+  .generatorSection__Result .progressCard .card-text {
+    font-size: 14px;
+    height: 162px !important;
+  }
+  .magzineSection__Img img {
+    width: 100%;
+    height: 520px;
+  }
+  .devicePreview .devicePreview__Img .leftContent p {
+    font-size: 16px;
+  }
+  .devicePreview .devicePreview__Img .leftContent {
+    top: 75px;
+    left: 53px;
+  }
+  .devicePreview .devicePreview__Img .rightContent {
+    top: 10px;
+  }
+  .devicePreview .devicePreview__Img .rightContent p {
+    margin-left: 0;
+  }
+  .devicePreview .devicePreview__Img .rightImg {
+    top: 14px;
+    left: 17px;
+  }
+}
+
+@media (max-width:1366px) and (min-width: 1280px){
+  .generatorSection__Content form .form-group .outer .policyCheck .form-check-label {
+    width: 135px;
+}
+}
+@media (max-width: 1280px) {
+  .generatorSection__Content form .form-group .outer .policyCheck .form-check-label.mta{
+    width: 120px;
+  }
+
+  /* .generatorSection__Content form .form-group .outer .policyCheck .form-check-label{
+    width: 135px;
+  } */
+
+  .generatorSection__Content form .form-group .outer .policyCheck .form-check-label span{
+    display: none;
+  }
+
+  .graphSection .brand .card {
+    /* width: 614px; */
+    margin-left: 0;
+  }
+     
+  .graphSection .license .card {
+    /* width: 600px;
+    margin-left: 72px; */
+  }
+  .profileData{
+    /* width: 606px; */
+    margin-left: 0px;
+  }
+  .scannerSection__Content{
+    margin-top: 30px;
+  }
+  .compliancebook h4 {
+    font-size: 30px;
+  }
+  /* .card.disposition {
+    height: 240px;
+  } */
+  .graphSection .card .card-header h3 {
+    font-size: 20px;
+  }
+  .reportReceiver{
+    flex-direction: column;
+  }
+  table.primary tbody tr th{
+    text-align: center !important;
+  }
+  .mainBanner .mainBanner__Content h3 {
+    font-size: 29px;
+  }
+  .generatorSection__Result .records h4, .emailTool__Content h2, .tableSection__Content h3, .recordSection__Outer .Content h3, .faq h2 {
+    font-size: 36px;
+  }
+  .navigation .navbar {
+    padding: 14px 30px;
+  }
+  .tabInnerContet .tabCard h5 {
+    font-size: 18px;
+  }
+  .tabInnerContet .tabCard p {
+    font-size: 13px;
+  }
+  .advantageSection__Content h3 {
+    font-size: 33px;
+  }
+  /* .scannerSection__Content h2 {
+    font-size: 32px;
+  } */
+  .subscribe .subscribe__Form h3 {
+    font-size: 34px;
+  }
+  .footer h5 {
+    font-size: 20px;
+  }
+  .footer .footer-copyright p {
+    font-size: 15px;
+  }
+  .footer .footer-copyright a {
+    font-size: 15px;
+  }
+  .footer p {
+    font-size: 15px;
+  }
+  .footer .contact a {
+  font-size: 15px;
+  }
+  .dashboardTopCard .cardInner .cardInnerContent {
+    gap: 5px;
+  }
+  .dashboardTopCard .cardInner .cardText h4 {
+    font-size: 14px;
+  }
+  .dashboardTopCard .cardInner .cardIcon img {
+    height: 26px;
+    width: 26px;
+  }
+  .dashboardTopCard .cardInner {
+    padding:16px 14px;
+  }
+  .dashboardTopCard .cardInner .cardText p {
+    font-size: 16px;
+  }
+  .reportReceiver .dateTime{
+    justify-content: center;
+  }
+  .magzineSection__Img img {
+    height: 490px;
+  }
+  .dashboardTopCard .cardInner .cardText p span.previousPeriod {
+    font-size: 12px;
+  }
+  .devicePreview .devicePreview__Img .leftContent {
+    top: 79px;
+    left: 58px;
+  }
+  .devicePreview .devicePreview__Img .leftContent img {
+    max-width: 26px;
+  }
+}
+@media (max-width: 1199px) {
+  .generatorSection__Result .progressCard .card-text{
+    height: 184px !important;
+  }
+  .pinkButton{
+    font-size: 13px !important;
+  }
+  .login-outer .imageArea span img{
+    width: 35px;
+  }
+
+  .login-outer .formArea span img {
+    width: 35px;
+  }
+  .login-outer .imageSection .loginImage{
+    width: 230px;
+  }
+  .login-outer .imageSection h2{
+    font-size: 32px;
+    font-size: 15px;
+  }
+  .graphSection .license .card {
+    /* width: 529px;
+    margin-left: 92px; */
+}
+.graphSection .license .card {
+  padding: 0;
+}
+.graphSection .license .card .card-header {
+  padding: 15px;
+}
+  .profileData {
+    /* width: 533px;
+    margin-left: 22px; */
+}
+
+.profileSection .card .margin{
+  margin-top: 0px;
+}
+  .scannerResult .card-text{
+    height: 85px !important
+  }
+  .margin{
+    margin: auto;
+  }
+  .commandSection .innerSection p{
+    height: auto
+  }
+  .compliancebook p, .advantageSection__Content p, .chargeSection p{
+    font-size: 14px;
+  }
+  .dashboardTopCard .card.volumeEmail {
+    height:auto;
+  }
+  .wizardContent .wizardHead h4{
+     font-size: 20px;
+  }
+  .card.disposition {
+    height: auto;
+  }
+.saveSection .reportSection {
+  text-align: start;
+  }
+  .profileSection .card {
+    padding: 30px;
+  }
+  .domainButtons {
+    text-align: start;
+    margin-bottom: 10px;
+  }
+  .card.failure, .card.compliant{
+    height: auto;
+  }
+  .heading h1 {
+    font-size: 55px;
+  }
+  .features .content h3 {
+    font-size: 36px;
+  }
+  .feature-card .card-text {
+    font-size: 15px;
+  }
+  .services .banner-image {
+    width: 100%;
+  }
+  .card .card-heading {
+    font-size: 14px;
+  }
+  .card .card-text {
+    font-size: 12px;
+  }
+  .main-button-dark {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+  .recentBlogs__Content {
+    margin-bottom: 20px;
+  }
+  .feature-card .card .card-title{
+    font-size: 15px;
+  }
+  .subscribe .subscribe__Form h3 {
+    font-size: 36px;
+  }
+  .card .card-title {
+    font-size: 17px;
+  }
+  .card {
+    padding: 15px 10px;
+  }
+  .card .card-image {
+    width: 55px;
+  }
+  .tabInnerContet .tabCard p {
+    height: 65px;
+  }
+  .scannerSection__Content h2 {
+    font-size: 30px;
+  }
+  .scannerSection__Content p {
+    font-size: 16px;
+  }
+  .toolsTab .nav-pills .nav-item .nav-link {
+    font-size: 15px;
+  }
+  /* .tabInnerContet .tabCard img {
+    max-width: 54px;
+  } */
+  .advantageSection__Content h3 {
+    font-size: 30px;
+  }
+  /* .advantageSection {
+    padding: 0px 0 50px 0;
+  }  */
+  .subscribe .subscribe__Form h3 {
+    font-size: 33px;
+  }
+  .dashboardTopCard .card .card-body h5 {
+    font-size: 17px;
+  }
+  .card.step{
+    height: auto;
+  }
+  .card.stepForm{
+    height: auto;
+  }
+  .commandSection .seizeContent{
+    padding: 60px 0 0 0 ;
+  }
+  .commandSection .seizeContent img{
+    width: 85%;
+  }
+  .visibiltySection .contentInner2, .visibiltySection .contentSection .contentInner{
+    padding-left: 0;
+  }
+  .blogsList .nav-pills .nav-item .nav-link {
+    font-size: 16px;
+  }
+  .blogsList .blogCard .cardInner h4 {
+    font-size: 20px;
+  }
+  .popularPost .posts .postContent h6 {
+    font-size: 17px;
+  }
+  .faq .faqOuter {
+    height: 860px;
+  }
+  .magzineSection__Img img {
+    height: 420px;
+  }
+  .devicePreview .devicePreview__Img .leftContent {
+    top: 63px;
+    left: 45px;
+  }
+  .devicePreview .devicePreview__Img .rightContent {
+    top: 6px;
+    left: 70px;
+  }
+  .devicePreview .devicePreview__Img .rightContent p {
+    font-size: 12px;
+  }
+  .devicePreview .devicePreview__Img .leftContent p {
+    font-size: 14px;
+    margin-left: 7px;
+  }
+}
+
+@media (max-width:1024px){
+  .startupfeatures p{
+    font-size: 15px;
+  }
+  .dmarctrial h3{
+    width: auto;
+  }
+  .login-outer .imageSection .loginImage{
+    width: 195px;
+  }
+  .login-outer .imageSection h2{
+    font-size: 25px;
+  }
+  .login-outer .imageSection p {
+    width: 448px;
+    font-size: 15px;
+  }
+  .login-outer .formInner {
+    width: 430px;
+    margin-left: 0;
+  }
+  .graphSection .license .card {
+    /* width: 367px;
+    margin-left: 128px; */
+  }
+  .profileData{
+    width: 100%;
+    margin:20px 0 0 0;  }
+
+  .scannerSection__Content{
+    margin-top: -15px;
+  }
+  .emailComp .emailValidator h3{
+    font-size: 23px
+  }
+  .emailComp .emailValidator .inner-content{
+    margin-left: 40px;
+  }
+  .emailComp .emailValidator .margin{
+    font-size: 15px;
+  }
+  .emailComp .sendersSection .takeAction .actionService{
+    font-size: 15px;
+  }
+  .footer p{
+    font-size: 14px;
+  }
+  .footer h5 {
+    font-size: 18px;
+  }
+  .footer .contact a {
+    font-size: 14px;
+  }
+  .footer .contact {
+    display: flex;
+    gap: 7px;
+  }
+  .subscribe .subscribe__Form h3 {
+    font-size: 35px;
+  }
+  .subscribe .subscribe__Form {
+    flex-direction: column;
+  }
+  .btnSchrdule {
+    margin-left: 0px;
+  }
+  .navigation .navbar .navbar-nav .nav-item .nav-link {
+    font-size: 15px;
+  }
+  /* .scannerSection__Content h2 {
+    font-size: 32px;
+  } */
+  .toolsTab .nav-pills .nav-item .nav-link {
+    font-size: 14px;
+  }
+  .advantageSection__Content h3 {
+    font-size: 25px;
+  }
+  .advantageSection__Content p {
+    line-height: 20px;
+  }
+  /* .tabInnerContet .tabCard p{
+    height: 70px;
+  } */
+  .compliancebook h4{
+    font-size: 28px;
+  }
+  /* h3{
+    font-size: 28px !important;
+  } */
+  .commandSection .innerSection h5{
+    font-size: 18px;
+  }
+  .visibiltySection h4{
+    font-size:21px
+  }
+  .cyberdefence.home h5{
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  .cyberdefence.home .startupfeatures {
+    padding: 25px;
+  }
+  .cyberdefence.home p{
+    font-size: 15px;
+  }
+}
+@media (max-width: 991px) {
+  /* .row.solution, .manageService{
+    margin-top: 45px;
+  } */
+  .faq .accordion{
+    width: 100%;
+  }
+  .generatorSection__Result .progressCard .card-text {
+    height: 150px !important;
+  }
+  .blogpostImage{
+    height: 185px;
+  }
+
+  .advantageSection__Content{
+    padding-left: 0 !important;
+  }
+  .login-outer .imageArea{
+    display: none;
+  }
+
+  .login-outer .formInner{
+    /* width: 700px; */
+    width: 100%;
+    max-width: 700px;
+
+  }
+  .login-outer .formArea .logo img{
+    display: block;
+  }
+
+  .graphSection .license .card {
+    /* width: 637px;
+    margin-left: 64px; */
+  }
+
+  .profileData{
+    /* width: 600px;
+    margin: 0 0 0 95px; */
+  }
+  
+  .advantageSection{
+    padding: 60px 0;
+  }
+
+ .emailComp .fullReport{
+  margin-top: 40px;
+  text-align: center !important;
+ }
+  .closeButton{
+    display: inline;
+  }
+  /* .sidebarFixed{
+    position: fixed ;
+    top:0 ;
+    left:0 ;
+    z-index:2222222222 ;
+  } */
+  /* .css-iwcr2j {
+    width: max-content;
+  } */
+  .wizardContent .progressSection .card .card-body h5{
+    font-size: 16px;
+  }
+  .wizardContent .progressSection .recordFound .warningData h5{
+    font-size: 16px;
+  }
+  .wizardContent .progressSection .noRecordfound p {
+    font-size: 13px;
+  }
+  .wizardContent .progressSection .recordFound p {
+    font-size: 13px;
+  }
+  .wizard2 .wizardContent .progressSection .step1::after {
+    width: 340px;
+  }
+  .wizardContent .progressSection .step1::after {
+    width: 340px;
+  }
+  .users .search {
+    flex-direction: column !important;
+  }
+  .users .search .form-group{
+    margin-top: 20px;
+  }
+  .domainButtons {
+    justify-content: start;
+    margin-top: 15px;
+  }
+  .domainButtons a {
+    font-size: 13px;
+  } 
+  .toggleButton{
+    display: block;
+  }
+  .dateTime{
+    justify-content: center;
+    gap:18px !important;
+  }
+  table.subtle tbody tr th{
+    width: 50%;
+  }
+  table.primary tbody tr th {
+    width:50%;
+  }
+  .mainwrapper{
+    display: block !important;
+  }
+  .dispOuter{
+    padding-right: 12px;
+  }
+  .reasonOuter{
+    padding-left:12px;
+  }
+  .searchBar input {
+    width: 165px;
+  }
+  .navigation .navbar {
+    padding: 8px;
+  }
+  .navbar .navbar-toggler {
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-shadow: none;
+  }
+  .navbar .navbar-toggler .navbar-toggler-icon {
+    /* background-image: url(./../images/menuIcon.svg); */
+    background-size: 30px;
+  }
+  .header .vector {
+    left: 23%;
+  }
+  .header .vector img {
+    height: 370px;
+  }
+  .card-section .card {
+    margin-bottom: 10px;
+  }
+  .features .content h3 {
+    font-size: 29px;
+  }
+  .feature-card .card {
+    margin-bottom: 10px;
+  }
+  .services .banner-image {
+    width: 100%;
+    max-width: 50%;
+    margin-bottom: 20px;
+  }
+  .header .vector-left {
+    display: none;
+  }
+  .feature-card .card-title {
+    height: auto;
+  }
+  /* .card .card-text {
+      height: 100px;
+  } */
+  .mainBanner .mainBanner__Content h3 {
+    font-size: 20px;
+  }
+  .mainBanner .mainBanner__Content p {
+    font-size: 13px;
+  }
+  .advantageSection__Img {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .advantageSection__Img img {
+    position: static;
+  }
+  .generatorSection__Result h3 {
+    gap: 10px;
+  }
+  .generatorSection__Result .records .recordValues button {
+    width: 300px;
+  }
+  .emailTool__Content form .form-control {
+    margin-bottom: 15px;
+  }
+  .faq .faqImg {
+    text-align: center;
+  }
+  .faq .row .accPosition{
+    order:2 
+  }
+
+  .faq .faqImg img {
+    width: 60%;
+  }
+  .navbar .navbar-collapse {
+    background-color: var(--darksky);
+  }
+  .btnSchrdule {
+    margin: 0 0 0 20px;
+    width: 210px;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+  .navigation .navbar .navbar-nav .nav-item .nav-link {
+    font-size: 14px;
+  }
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    width: auto;
+    display: none;
+  }
+  .navbar-expand-lg .navbar-nav .dropdown-menu.show {
+    display: block;
+  }
+  .mainWrapr {
+    padding-left: 10px;
+  }
+  .sidebarMenus {
+    display: none;
+  }
+  .dashboardTopCard .cardInner {
+    margin-bottom: 10px;
+  }
+  .graphSection .card .card-header .headerBtns {
+    flex-wrap: wrap;
+  }
+  .contact__img {
+    display: none;
+  }
+  .hero-section.mainBanner {
+    padding: 175px 100px 30px 100px;
+  }
+  /* .header {
+    height: 680px;
+  } */
+  .scannerSection__Content h2 {
+    font-size: 28px;
+  }
+  .subscribe .subscribe__Form h3 {
+    font-size: 30px;
+  }
+  .header {
+    height: 530px;
+  }
+  /* .scannerSection__Content {
+    margin-top: 0px;
+  } */
+  .mainBanner__Img {
+    text-align: center;
+  }
+  .tabInnerContet .tabCard p {
+    height: auto;
+  }
+  .advantageSection__Content p {
+    font-size: 13px;
+  }
+  /* .advantageSection__Img{
+    margin-top: 60px;
+  } */
+  .advantageSection__Img img {
+    width: 80%;
+    margin-bottom: 40px;
+  }
+  .footer h5 {
+    margin: 10px 0;
+  }
+  .footer .footer-content .outerLinks ul {
+    margin-bottom: 0;
+  }
+  .footer .footer-copyright .links {
+    text-align: center;
+  }
+  .footer .footer-copyright .copyright {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .footer .footer-copyright {
+    padding: 12px 70px;
+  }
+  .dashboardTopCard .card .card-body p{
+    font-size: 15px;
+  }
+  .generatorSection__Result {
+    margin: 50px 15px;
+  }
+  .tableSection__Content .table tr td {
+    font-size: 13px;
+  }
+  .domainHeader .header{
+    height: 140px;
+  }
+  .discoverContent{
+    order: 2;
+    margin-top: 40px;
+  }
+  .commandSection .innerSection{
+    margin-bottom: 40px;
+  }
+  .visibiltySection img{
+    width:80%;
+  }
+  .visibiltySection .imageSection{
+    text-align: center;
+  }
+  .visibiltySection .contentSection.order{
+    order:1;
+    margin-top: 40px;
+  }
+  .visibiltySection .contentSection .contentInner{
+    margin-top: 40px;
+  }
+  .compliancebook h4{
+    font-size: 25px;
+  }
+  .commandSection .innerSection h5{
+    font-size: 18px;
+  }
+  .commandSection .seizeContent h3, .threatProtectSection h3, .chargeSection h3{
+    font-size: 28px;
+  }
+  .scannerSection__Content{
+    margin-top: 20px
+  }
+  /* .discoverImage img{
+    width: 80%;
+  } */
+  .discoverImage {
+    text-align: center;
+  }
+  .commandSection .seizeContent img{
+    width: 80%;
+  }
+  .blogsList .nav-pills .nav-item .nav-link {
+    font-size: 15px;
+    padding: 0;
+  }
+  .blogsList .blogCard .cardInner {
+    padding: 30px;
+  }
+  .popularPost .posts {
+    grid-template-columns: 13% 87%;
+  }
+  .faq .faqOuter {
+    height: auto;
+  }
+  .dmarccontact .experttalk {
+    margin: 0 0 30px 0;
+  }
+  .dmarccontact .experttalk .experttalkInner {
+    position: static;
+    height: auto;
+  }
+  .magzineSection__Img img {
+    height: auto;
+  }
+  .magzineSection__Img {
+    margin-bottom: 20px;
+  }
+  .devicePreview .devicePreview__Img .leftContent {
+    top: 73px;
+    left: 55px;
+  }
+  .devicePreview .devicePreview__Img .rightContent p {
+    font-size: 22px;
+  }
+  .devicePreview .devicePreview__Img .rightContent {
+    top: 26px;
+    left: 167px;
+  }
+  .devicePreview .devicePreview__Img .rightImg {
+    top: 54px;
+    left: 47px;
+  }
+  .devicePreview .devicePreview__Img .rightImg img {
+    max-width: 90px;
+  }
+  .sidebarOuter .sideBar .MuiDrawer-paper {
+    z-index: 11;
+  }
+  
+}
+
+@media (max-width:767px) {
+  .keyPara{
+    width: 100%;
+  }
+  
+  .faq .faqHead{
+    width: 100%;
+  }
+
+  .faq .topContent{
+    width: 100%;
+  }
+  .generatorSection__Result .progressCard .card-text{
+    height: auto !important;
+  }
+
+.cyberdefence.home h5 {
+  /* font-size: 20px;
+  font-weight: 700; */
+   margin: 15px 0;
+  }
+  .cyberdefence.home p{
+    margin: 0;
+    font-size: 15px;
+  }
+  .imageBorder {
+    height: 48px;
+    width: 65px;
+  }
+  .cyberdefence.home .startupfeatures{
+    padding:30px;
+  }
+  .mainBanner__Img img{
+    width: 400px;
+    margin-top: 20px;
+  }
+  .ebookImage img {
+    height: 325px;
+}
+  .ebookModal{
+    width:650px
+  }
+  .graphSection .license .card {
+    width: 100%;
+    margin-left: 0;
+  }
+  .license .row.margin{
+    margin-top: 20px;
+  }
+  .userData{
+    width: 100%;
+  }
+  .profileData{
+    /* margin: 20px 0 0 0;
+    width: 100%; */
+  }
+  .scannerResult .card-text{
+    height:auto !important
+  }
+  .commandSection .seizeContent h3, .threatProtectSection h3,.chargeSection h3{
+    font-size: 25px;
+  }
+  .scannerSection__Content{
+    margin-top: 270px;
+  }
+  .emailComp .topSenders table tr td span{
+    width:200px;
+  }
+  .wizardContent .progressSection .card .card-body h5{
+    font-size: 15px;
+  }
+  .wizardContent .progressSection .noRecordfound .warningData h5{
+    font-size: 15px;
+  
+  }
+  .wizard2 .wizardContent .progressSection .step1::after {
+    width: 257px;
+  }
+  .wizardContent .progressSection .step1::after {
+    width: 257px;
+  }
+  .profileSection .adminData{
+    order: 1;
+    margin-bottom: 30px;
+  }
+  .profile-section .userData{
+   margin-bottom: 20px;
+  }
+  .profileSection .profileData{
+    order: 2;
+  }
+  .scannerSection__Content h2 {
+    font-size: 28px;
+  }
+  /* .scannerSection__Content form .btn{
+    padding: 0 15px !important;
+  } */
+  .generatorSection__Result h3 {
+  font-size: 28px;
+  }
+  .features .content h3 {
+    font-size: 24px;
+  }
+  .features .content p {
+    font-size: 15px;
+    margin-bottom:50px;
+  }
+  .subscribe .subscribe__Form h3 {
+    font-size: 26px;
+  }
+  .resources-outer .content h3 {
+    font-size: 35px;
+  }
+  .resources-outer .content p {
+    font-size: 16px;
+  }
+  .dashboardTopCard .card .card-body p{
+    line-height: 32px;
+  }
+  .filterSection{
+    flex-direction: column;
+    gap:10px
+  }
+  .compliancebook h4{
+    font-size: 26px;
+  }
+  .departments .departments__Circle::after {
+    display: none;
+  }
+  .departments .order1 {
+    order: 1;
+  }
+  .departments .order2 {
+    order: 2;
+  }
+  .departments .order3 {
+    order: 3;
+  }
+  .departments .departments__Content.left {
+    text-align: left;
+  }
+  .departments .departments__Circle {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 575px) {
+
+
+  .dateWidth{
+    width: auto;
+  }
+  .ebookImage{
+    display: none;
+  }
+  .ebookModal {
+    width: 430px;
+  }
+  .ebookContent {
+    padding: 45px 45px 45px 32px !important;
+}
+  .login-outer .formInner {
+    max-width: 485px;
+    width: 100%;
+    padding: 18px;
+}
+  .wizardContent .wizardHead h4 {
+    font-size: 18px;
+  }
+  .stepFormData input{
+    width:100%;
+  }
+  .wizardContent .progressSection .step1::after {
+    width: 175px;
+    left: 66%;
+  }
+  .wizard2 .wizardContent .progressSection .step1::after {
+    width: 175px;
+    left: 66%;
+  }
+  .wizardContent .progressSection .noRecordfound {
+    width: 100%;
+  }
+  .wizardContent .progressSection .card{
+    width: 100%;
+  }
+  .wizardContent .progressSection .recordFound {
+    width: 100%;
+  }
+  .card .card-body .table-responsive table tbody tr td .ip {
+    font-size: 12px;
+  }
+  .userData {
+    width: 100%;
+  }
+  .dashboardTopCard .btn-group .btn {
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+  .alertSection .card.alert .add{
+    text-align: start;
+    margin-bottom: 10px;
+  }
+  .mainButton {
+    padding: 6px 16px;
+  }
+
+  .domainbottomFilters .accordion .accordion-header {
+    justify-content: space-around;
+  }
+  .reportReceiver {
+    align-items: center;
+  }
+  .graphSection .card .card-header .headerBtns .btn-group{
+    flex-wrap: wrap;
+    gap:5px;
+  }
+  .graphSection .card .card-header .headerBtns .btn-group .btn{
+    border-radius: 4px;
+  }
+  .graphSection .card .card-body .table-responsive .form-group .form-control {
+    height: 37px;
+  }
+  .dashboardTopCard {
+    padding: 0px;
+  }
+  .navbar .navbar-brand img {
+    width: 100%;
+    max-width: 100px;
+  }
+  .header .vector img {
+    height: 150px;
+  }
+  .heading h1 {
+    font-size: 28px;
+  }
+  .heading p {
+    font-size: 14px;
+  }
+  .hero-section #countdown ul li span {
+    font-size: 25px;
+  }
+  .hero-section #countdown ul li span p {
+    font-size: 11px;
+  }
+  .hero-section #countdown ul {
+    gap: 0;
+    padding: 0;
+  }
+  .hero-section #countdown ul li {
+    margin-right: 15px;
+  }
+  .hero-section #countdown ul li:last-of-type {
+    margin-right: 0;
+  }
+  .hero-section #countdown ul li::after {
+    right: -13px;
+  }
+  .testimonials .carousel .carousel-inner .carousel-item {
+    text-align: center;
+    padding: 0 0;
+  }
+  .card .card-text {
+    height: auto;
+  }
+  .hero-section.mainBanner {
+    padding-top: 153px !important;
+  }
+  .scannerSection__Content {
+    margin-top: 20px;
+  }
+  .scannerSection__Content h2 {
+    font-size: 26px;
+  }
+  .scannerSection__Content form {
+    display: block;
+  }
+  .scannerSection__Content form .form-group {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .tabInnerContet h4 {
+    font-size: 22px;
+  }
+  .advantageSection__Content h3 {
+    font-size: 30px;
+  }
+  .recentBlogs__Content h4 {
+    font-size: 26px;
+  }
+  .subscribe .subscribe__Form h3 {
+    font-size: 28px;
+  }
+  .footer .footer-outer {
+    padding: 30px 0;
+  }
+  .hero-section.mainBanner {
+    padding: 100px 40px 30px 40px;
+  }
+  .mainBanner__Img {
+    display: none;
+  }
+  .generatorSection__Content form .form-group .outer {
+    flex-wrap: wrap;
+  }
+  .generatorSection__Content form .form-group .outer .policyCheck .form-check-label, .generatorSection__Content form .form-group .outer .policyCheck:first-child .form-check-label {
+    width: 250px;
+  }
+  .generatorSection__Result .records h4, .emailTool__Content h2, .tableSection__Content h3, .recordSection__Outer .Content h3, .faq h2 {
+    font-size: 30px;
+  }
+  .generatorSection__Result .records .recordValues {
+    flex-wrap: wrap;
+  }
+  .recordSection__Outer .Img img {
+    width: 80%;
+  }
+  .footer .footer-copyright {
+    padding: 20px 0;
+  }
+  .footer-copyright .copyright p {
+    text-align: center;
+  }
+  .footer .footer-copyright .links {
+    text-align: center;
+    margin-top: 10px;
+  }
+  /* .resources {
+    padding: 50px 0;
+  } */
+  .complaintCard {
+    text-align: center;
+  }
+  .complaintCard img {
+    width: 50%;
+  }
+  .generatorSection .generatorSection__Content ul li a {
+    font-size: 16px;
+  }
+  .tabInnerContet .accordion .accordion-item {
+    padding: 0;
+  }
+  .tabInnerContet .accordion .accordion-item .accordion-header .accordion-button {
+    flex-wrap: wrap;
+  }
+  .tabInnerContet .accordion .accordion-item .accordion-body {
+    padding: 0;
+  }
+  .tabInnerContet .accordion .accordion-item .accordion-header .accordion-button span.blue-pill {
+    margin: 10px 0 0 0;
+  }
+  .login-outer {
+    /* padding: 100px 30px; */
+    padding: 10px;
+  }
+  .addDomain {
+    padding: 80px 0;
+  }
+  .login-outer .addDomain {
+    padding: 30px;
+  }
+
+  .login-outer .addDomain .input-group {
+    display: block;
+  }
+  .login-outer .addDomain .input-group .form-control {
+    width: 100%;
+    border-radius: 8px !important;
+  }
+  .login-outer .addDomain .input-group .btn-add {
+    border-radius: 8px !important;
+    margin-top: 10px;
+  }
+  .login-outer .login-main h3 {
+    font-size: 30px;
+  }
+  .generatorSection__Result .progressCard .card-text {
+    font-size: 12px;
+  }
+  .progressCard h4 {
+    font-size: 16px;
+  }
+  .footer{
+    padding:20px
+  }
+  .scannerSection__Content {
+    padding: 15px 0;
+  }
+  .header {
+    height: 450px;
+  }
+  .scannerSection__Content {
+    padding: 45px;
+  }
+  .toolsTab .nav-pills .nav-item .nav-link {
+    margin: 0 28px 0 0;
+  }
+  .toolsTab .tab-content .tab-pane .tabInnerContet .row .col-md-6{
+    margin-top: 30px !important;
+  }
+  .dashboardTopCard .form-group .form-control {
+    height: 45px;
+  }
+  .dashboardTopCard .form-group .form-control::placeholder{
+    font-size: 13px;
+  }
+  .graphSection .card .card-header h3 {
+    font-size: 19px;
+  }
+  .search.Pagination{
+    flex-direction: column;
+    gap:5px
+  }
+  .graphSection .card.cardHeight {
+    height: auto;
+  }
+  /* .dispSection, .reasonOuter, .commentSection{
+    padding: 15px 10px !important ;
+  } */
+  .dispSection, .reasonSection, .commentSection{
+    height: 55px;
+  }
+  .dashboardTopCard .card .card-body p {
+    font-size: 15px;
+  }
+  .dashboardTopCard .card .card-header h4 {
+    font-size: 21px;
+  }
+  /* .graphSection .card {
+
+    margin-bottom: 0px;
+  } */
+  .card .card-body .table-responsive table tbody tr td {
+    padding: 15px 15px;
+  }
+  .graphSection .card.cardHeight .compliance {
+    font-size: 32px;
+  }
+  .graphSection .card.cardHeight .volume {
+    font-size: 32px;
+  }
+  .emailComp .sendersSection .takeAction{
+    margin-top: 30px;
+  }
+  /* h3{
+    font-size: 26px !important;
+  } */
+  .pinkButton{
+    font-size: 15px;
+  }
+  .subscribe .subscribe__Form form.subscribeForm {
+    display: flex;
+    flex-direction: column;
+  }
+  .subscribe .subscribe__Form form.subscribeForm div:nth-child(2) {
+    order: 0;
+  }
+  .experttalk img {
+    width: 100%;
+  }
+  .blogsList {
+    padding: 100px 0 50px;
+  }
+  .blogsList .nav-pills::after {
+    display: none;
+  }
+  .blogsList .nav-pills .nav-item {
+    width: auto;
+  }
+  .blogsList .nav-pills .nav-item .nav-link {
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+  .popularPost .posts {
+    grid-template-columns: 26% 74%;
+  }
+  .devicePreview .devicePreview__Img .leftContent {
+    top: 31px;
+    left: 22px;
+  }
+  .devicePreview .devicePreview__Img .leftContent p {
+    font-size: 10px;
+  }
+  .devicePreview .devicePreview__Img .leftContent img {
+    max-width: 16px;
+  }
+  .devicePreview .devicePreview__Img .rightImg {
+    top: 4px;
+    left: 7px;
+  }
+  .devicePreview .devicePreview__Img .rightContent p {
+    font-size: 12px;
+  }
+  .devicePreview .devicePreview__Img .rightContent {
+    top: 5px;
+    left: 75px;
+  }
+}
+@media (max-width:430px){
+  .cyberdefence{
+    padding: 0;
+    background: transparent;
+  }
+  .navigation .downloadEbook p{
+    font-size: 13px;
+  }
+  .scannerSection__Content {
+    margin-top: 55px;
+  }
+  .dashboardTopCard .card .card-body p {
+    line-height: 29px;
+  }
+  .reportReceiver{
+    flex-direction: column;
+    gap:5px;
+    align-items: center;
+  }
+  .senderHost{
+    flex-direction: column;
+    gap:5px;
+    align-items: center;
+  }
+  .search{
+    flex-direction: column;
+    gap:10px;
+    align-items: start;
+  }
+  .search .form-group{
+    margin-left: 0 !important;
+    margin-bottom: 5px !important;
+  }
+  .toolsTab .nav-pills .nav-item .nav-link {
+    font-size: 11px;
+  }
+  .toolsTab .nav-pills .nav-item .nav-link {
+    margin: 0 15px 0 0;
+  }
+  .scannerSection__Content h2 {
+    font-size: 24px;
+  }
+  .scannerSection__Content p {
+    font-size: 14px;
+  }
+  .scannerSection .form-group .form-control::placeholder{
+    font-size: 13px;
+  }
+  .subscribe .subscribe__Form {
+    padding: 45px 22px;
+  }
+  .subscribe .subscribe__Form h3 {
+    font-size: 25px;
+  }
+  .advantageSection__Content h3 {
+    font-size: 25px;
+    text-align: center;
+  }
+  .btn-group.topCategory{
+    flex-wrap: wrap;
+    gap:5px;
+  }
+  .btn-group.topCategory .btn{
+    border: 1px solid #c3c3c3;
+    border-radius: 4px;
+    border-top-right-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+  }
+  .btn-group.topCategory .btn.active{
+    border: 1px solid var(--darksky)
+  }
+  .dashboardTopCard .btn-group.btn-group.topCategory .btn:last-of-type {
+    border:1px solid #c3c3c3;
+  }
+  .dashboardTopCard .btn-group.btn-group{
+    border: 0;
+    margin-top: 10px ;
+  }
+} 
+@media (max-width:414px){
+  .hero-section.mainBanner{
+    padding: 200px 40px 30px 40px !important;
+  }
+  .subscribe .subscribe__Form h3 {
+    font-size: 23px;
+  }
+  .subscribe .subscribe__Form p {
+    font-size: 14px;
+  }
+  .subscribe .subscribe__Form form button {
+      padding: 5px 20px;
+  }
+  .subscribe .subscribe__Form form .form-group .form-control {
+    height: 40px;
+  }
+  .subscribe .subscribe__Form form {
+    margin-top: 0px;
+  }
+  .subscribe .subscribe__Form {
+    padding: 35px 22px;
+  }
+  .mainBanner .mainBanner__Content h3 {
+    margin-top: 15px !important;
+  }
+  .mainBanner .mainBanner__Content p {
+    margin-bottom: 15px !important;
+  }
+  .header {
+    height: 460px;
+  }
+}
+@media(max-width:380px){
+  .mainBanner .mainBanner__Content a {
+    font-size: 13px;
+  }
+  .scannerSection__Content p {
+    font-size: 13px;
+  }
+  .toolsTab {
+    padding: 30px 0;
+  }
+  .advantageSection__Content h3 {
+    font-size: 22px;
+  }
+  .subscribe .subscribe__Form h3 {
+    font-size: 20px;
+  }
+  .navigation .navbar .navbar-brand img {
+    max-width: 135px;
+  }
+  .header {
+    height: 450px;
+  }
+  .scannerSection__Content form .form-group .form-control{
+    height:40px;
+  }
+  .scannerSection__Content form .btn {
+    height: 38px;
+  }
+  .tabInnerContet .row {
+    padding-top: 1.5rem;
+  }
+  .hero-section.mainBanner {
+    padding: 100px 25px 0 25px;
+  }
+  .tabInnerContet .tabCard h5 {
+    font-size: 17px;
+  }
+  .footer .footer-copyright .copyright {
+    margin-bottom: -6px;
+  }
+  .footer .footer-copyright p {
+    font-size: 13px;
+  }
+  .footer .footer-copyright a {
+    font-size: 13px;
+  }
+  .footer .footer-copyright {
+    padding: 10px 0;
+  }
+  .footer h5 {
+    margin: 10px 0;
+  }
+  .footer p {
+    font-size: 13px;
+  }
+  .footer ul li {
+    margin-bottom: 0px;
+  }
+  .tabInnerContet h4 {
+    margin-bottom: 36px;
+  }
+  .tabInnerContet .tabCard {
+    height: auto;
+  }
+  .toolsTab .tab-content .tab-pane .tabInnerContet .row .col-md-6 {
+    margin-top: 0px !important;
+  }
+}
+@media(max-width:320px){
+  .scannerSection__Content h2 {
+    font-size: 22px;
+  }
+  .scannerSection__Content {
+    padding: 30px;
+  }
+  .subscribe .subscribe__Form form .form-group .form-control::placeholder{
+    font-size:11px;
+  }
+  .subscribe .subscribe__Form form {
+    margin-top: 0px;
+  }
+  .tabInnerContet .row .col{
+    margin-top: 10px !important;
+  }
+  .tabInnerContet .tabCard p {
+    margin-top: 0px;
+  }
+}

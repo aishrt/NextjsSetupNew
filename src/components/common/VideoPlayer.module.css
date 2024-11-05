@@ -1,0 +1,33 @@
+.videoContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hiddenControls {
+  display: none;
+}
+
+.videoContainer:hover .controls.hiddenControls {
+  display: block;
+}
+
+.plyBtn {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.plyBtn:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}

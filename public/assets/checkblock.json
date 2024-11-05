@@ -1,0 +1,619 @@
+{
+    "networkAddress": "2a00:1450:4000::",
+    "netmask": "ffff:ffff:f000::",
+    "minAddress": "2a00:1450:4000::",
+    "maxAddress": "2a00:1450:4fff:ffff:ffff:ffff:ffff:ffff",
+    "numPossibleHosts": "4951760157141521099596496896",
+    "addressSpaceDesc": "Global Unicast",
+    "reportedAddress": [
+        {
+            "ipAddress": "2a00:1450:4001:803::200e",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-12T10:05:01+00:00",
+            "abuseConfidenceScore": 3,
+            "countryCode": "DE"
+        },
+        {
+            "ipAddress": "2a00:1450:4001:81d::200e",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-12T22:04:54+00:00",
+            "abuseConfidenceScore": 3,
+            "countryCode": "DE"
+        },
+        {
+            "ipAddress": "2a00:1450:4002:415::200e",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-13T10:04:32+00:00",
+            "abuseConfidenceScore": 3,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:400a:1000::101",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-14T22:00:15+00:00",
+            "abuseConfidenceScore": 11,
+            "countryCode": "CH"
+        },
+        {
+            "ipAddress": "2a00:1450:400a:1000::102",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-14T22:00:15+00:00",
+            "abuseConfidenceScore": 11,
+            "countryCode": "CH"
+        },
+        {
+            "ipAddress": "2a00:1450:400a:1000::103",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-14T22:00:17+00:00",
+            "abuseConfidenceScore": 3,
+            "countryCode": "CH"
+        },
+        {
+            "ipAddress": "2a00:1450:400a:1000::105",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-14T22:00:17+00:00",
+            "abuseConfidenceScore": 11,
+            "countryCode": "CH"
+        },
+        {
+            "ipAddress": "2a00:1450:400a:1002::104",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-14T22:00:18+00:00",
+            "abuseConfidenceScore": 11,
+            "countryCode": "CH"
+        },
+        {
+            "ipAddress": "2a00:1450:400a:1007::103",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-14T22:00:19+00:00",
+            "abuseConfidenceScore": 11,
+            "countryCode": "CH"
+        },
+        {
+            "ipAddress": "2a00:1450:400a:1007::105",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-14T22:00:20+00:00",
+            "abuseConfidenceScore": 11,
+            "countryCode": "CH"
+        },
+        {
+            "ipAddress": "2a00:1450:400a:1009::103",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-14T22:00:20+00:00",
+            "abuseConfidenceScore": 11,
+            "countryCode": "CH"
+        },
+        {
+            "ipAddress": "2a00:1450:400a:1009::104",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-14T22:00:21+00:00",
+            "abuseConfidenceScore": 11,
+            "countryCode": "CH"
+        },
+        {
+            "ipAddress": "2a00:1450:4010:c01::101",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-08T09:58:52+00:00",
+            "abuseConfidenceScore": 3,
+            "countryCode": "FI"
+        },
+        {
+            "ipAddress": "2a00:1450:4010:c01::102",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-09T09:49:44+00:00",
+            "abuseConfidenceScore": 11,
+            "countryCode": "FI"
+        },
+        {
+            "ipAddress": "2a00:1450:4010:c01::107",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-06T10:07:15+00:00",
+            "abuseConfidenceScore": 3,
+            "countryCode": "FI"
+        },
+        {
+            "ipAddress": "2a00:1450:4010:c02::102",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-18T09:56:58+00:00",
+            "abuseConfidenceScore": 12,
+            "countryCode": "FI"
+        },
+        {
+            "ipAddress": "2a00:1450:4010:c02::103",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-11T09:36:11+00:00",
+            "abuseConfidenceScore": 11,
+            "countryCode": "FI"
+        },
+        {
+            "ipAddress": "2a00:1450:4010:c02::104",
+            "numReports": 2,
+            "mostRecentReport": "2024-08-18T09:48:19+00:00",
+            "abuseConfidenceScore": 3,
+            "countryCode": "FI"
+        },
+        {
+            "ipAddress": "2a00:1450:4010:c08::103",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-13T10:04:20+00:00",
+            "abuseConfidenceScore": 12,
+            "countryCode": "FI"
+        },
+        {
+            "ipAddress": "2a00:1450:4010:c08::104",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-15T10:05:07+00:00",
+            "abuseConfidenceScore": 10,
+            "countryCode": "FI"
+        },
+        {
+            "ipAddress": "2a00:1450:4010:c08::105",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-19T10:07:11+00:00",
+            "abuseConfidenceScore": 12,
+            "countryCode": "FI"
+        },
+        {
+            "ipAddress": "2a00:1450:4010:c08::106",
+            "numReports": 2,
+            "mostRecentReport": "2024-08-14T10:27:10+00:00",
+            "abuseConfidenceScore": 12,
+            "countryCode": "FI"
+        },
+        {
+            "ipAddress": "2a00:1450:4010:c08::107",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-17T09:47:50+00:00",
+            "abuseConfidenceScore": 12,
+            "countryCode": "FI"
+        },
+        {
+            "ipAddress": "2a00:1450:4010:c08::108",
+            "numReports": 2,
+            "mostRecentReport": "2024-08-19T09:26:43+00:00",
+            "abuseConfidenceScore": 12,
+            "countryCode": "FI"
+        },
+        {
+            "ipAddress": "2a00:1450:4010:c08::109",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-12T09:08:54+00:00",
+            "abuseConfidenceScore": 11,
+            "countryCode": "FI"
+        },
+        {
+            "ipAddress": "2a00:1450:4010:c08::10a",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-19T09:13:40+00:00",
+            "abuseConfidenceScore": 12,
+            "countryCode": "FI"
+        },
+        {
+            "ipAddress": "2a00:1450:4010:c08::10b",
+            "numReports": 4,
+            "mostRecentReport": "2024-08-17T09:31:43+00:00",
+            "abuseConfidenceScore": 12,
+            "countryCode": "FI"
+        },
+        {
+            "ipAddress": "2a00:1450:4010:c0e::101",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-06T10:19:38+00:00",
+            "abuseConfidenceScore": 3,
+            "countryCode": "FI"
+        },
+        {
+            "ipAddress": "2a00:1450:4010:c0e::102",
+            "numReports": 2,
+            "mostRecentReport": "2024-08-14T09:26:19+00:00",
+            "abuseConfidenceScore": 12,
+            "countryCode": "FI"
+        },
+        {
+            "ipAddress": "2a00:1450:4010:c0e::103",
+            "numReports": 2,
+            "mostRecentReport": "2024-08-10T09:58:40+00:00",
+            "abuseConfidenceScore": 12,
+            "countryCode": "FI"
+        },
+        {
+            "ipAddress": "2a00:1450:4010:c0e::105",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-13T09:48:23+00:00",
+            "abuseConfidenceScore": 12,
+            "countryCode": "FI"
+        },
+        {
+            "ipAddress": "2a00:1450:4010:c0e::106",
+            "numReports": 2,
+            "mostRecentReport": "2024-08-15T09:52:41+00:00",
+            "abuseConfidenceScore": 12,
+            "countryCode": "FI"
+        },
+        {
+            "ipAddress": "2a00:1450:4010:c0e::10a",
+            "numReports": 2,
+            "mostRecentReport": "2024-08-16T09:40:06+00:00",
+            "abuseConfidenceScore": 3,
+            "countryCode": "FI"
+        },
+        {
+            "ipAddress": "2a00:1450:4013:c03::104",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-10T09:37:54+00:00",
+            "abuseConfidenceScore": 3,
+            "countryCode": "NL"
+        },
+        {
+            "ipAddress": "2a00:1450:4013:c03::108",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-10T10:00:34+00:00",
+            "abuseConfidenceScore": 11,
+            "countryCode": "NL"
+        },
+        {
+            "ipAddress": "2a00:1450:4013:c05::103",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-15T10:14:40+00:00",
+            "abuseConfidenceScore": 3,
+            "countryCode": "NL"
+        },
+        {
+            "ipAddress": "2a00:1450:4013:c08::107",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-15T10:54:39+00:00",
+            "abuseConfidenceScore": 3,
+            "countryCode": "NL"
+        },
+        {
+            "ipAddress": "2a00:1450:4013:c18::10d",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-16T10:40:55+00:00",
+            "abuseConfidenceScore": 3,
+            "countryCode": "NL"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::12b",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-09T17:48:30+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::132",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-19T10:38:04+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::133",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-16T12:34:45+00:00",
+            "abuseConfidenceScore": 3,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::141",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-17T16:05:02+00:00",
+            "abuseConfidenceScore": 12,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::142",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-17T14:47:57+00:00",
+            "abuseConfidenceScore": 21,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::144",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-14T04:55:06+00:00",
+            "abuseConfidenceScore": 19,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::146",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-10T14:05:01+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::165",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-20T01:07:26+00:00",
+            "abuseConfidenceScore": 4,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::166",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-19T23:35:43+00:00",
+            "abuseConfidenceScore": 4,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::22d",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-19T11:09:31+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::231",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-16T12:35:09+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::232",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-16T12:35:12+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::234",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-06T12:56:31+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::235",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-16T12:34:59+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::236",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-16T12:34:53+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::242",
+            "numReports": 3,
+            "mostRecentReport": "2024-08-18T06:52:19+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::243",
+            "numReports": 2,
+            "mostRecentReport": "2024-08-17T13:34:29+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::244",
+            "numReports": 2,
+            "mostRecentReport": "2024-08-15T03:21:18+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::265",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-20T06:24:18+00:00",
+            "abuseConfidenceScore": 4,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::266",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-19T20:24:48+00:00",
+            "abuseConfidenceScore": 4,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::268",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-19T21:40:25+00:00",
+            "abuseConfidenceScore": 4,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::32a",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-19T10:44:46+00:00",
+            "abuseConfidenceScore": 11,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::32b",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-19T23:59:42+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::32e",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-19T11:47:13+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::334",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-19T13:30:57+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::341",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-15T15:45:17+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::342",
+            "numReports": 2,
+            "mostRecentReport": "2024-08-17T17:39:09+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::344",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-14T18:03:22+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::348",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-17T16:15:13+00:00",
+            "abuseConfidenceScore": 2,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::365",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-19T19:51:51+00:00",
+            "abuseConfidenceScore": 4,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::42e",
+            "numReports": 2,
+            "mostRecentReport": "2024-08-19T17:40:16+00:00",
+            "abuseConfidenceScore": 13,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::442",
+            "numReports": 2,
+            "mostRecentReport": "2024-08-17T14:46:00+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::52a",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-06T12:36:19+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::52c",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-05T09:45:53+00:00",
+            "abuseConfidenceScore": 9,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::52e",
+            "numReports": 2,
+            "mostRecentReport": "2024-08-19T15:36:51+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::542",
+            "numReports": 2,
+            "mostRecentReport": "2024-08-19T20:16:01+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::543",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-14T17:55:14+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::544",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-20T06:17:50+00:00",
+            "abuseConfidenceScore": 12,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::566",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-19T19:59:43+00:00",
+            "abuseConfidenceScore": 4,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::568",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-19T20:53:40+00:00",
+            "abuseConfidenceScore": 4,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::62b",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-19T14:26:23+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::62c",
+            "numReports": 2,
+            "mostRecentReport": "2024-08-19T12:22:46+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::62d",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-14T04:51:50+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::631",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-19T19:25:24+00:00",
+            "abuseConfidenceScore": 4,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::632",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-19T21:12:36+00:00",
+            "abuseConfidenceScore": 12,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::636",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-05T17:23:35+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::641",
+            "numReports": 2,
+            "mostRecentReport": "2024-08-19T21:23:36+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::642",
+            "numReports": 2,
+            "mostRecentReport": "2024-08-20T04:08:10+00:00",
+            "abuseConfidenceScore": 13,
+            "countryCode": "IE"
+        },
+        {
+            "ipAddress": "2a00:1450:4864:20::644",
+            "numReports": 1,
+            "mostRecentReport": "2024-08-19T22:49:04+00:00",
+            "abuseConfidenceScore": 0,
+            "countryCode": "IE"
+        }
+    ]
+}

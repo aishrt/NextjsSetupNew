@@ -1,0 +1,972 @@
+[
+  {
+    "name": "Full form for the names",
+    "data": {
+      "AD_": "Account Dashboard page",
+      "SND_": "Sender dashboard page",
+      "SRCDB_": "Source dashboard page",
+      "CMPDB_": "Compliant dashboard page -> under Sender dashboard page 3",
+      "SRDP_": "Source result dashboard page -> under Sender dashboard page 4",
+      "RPT_": "Reporters Dashboard Page",
+      "RSLT_": "Result Dashboard Page",
+      "RSLT_p2_": "Result Dashboard Page 2",
+      "DNS_": "Result Dashboard Page 2",
+      "ED_": "Email Disposition Page",
+      "SRF_": "Scanner result for a domain having that meter",
+      "_hd": "Headings of content"
+    }
+  },
+  {
+    "name": "AD_domain",
+    "tooltipData": "This is the count of domain.",
+    "icon": "icon1.png"
+  },
+  {
+    "name": "AD_emails",
+    "tooltipData": "These are the count of the emails.",
+    "icon": "icon2.png"
+  },
+  {
+    "name": "AD_compliant",
+    "tooltipData": "These are the number of email we have processed successfully.",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "AD_failures",
+    "tooltipData": "These are the emails , that are not able to processed.",
+    "icon": "icon1.png"
+  },
+  {
+    "name": "AD_DMARC_failures_hd",
+    "tooltipData": "These are the count of the emails.",
+    "icon": "icon2.png"
+  },
+  {
+    "name": "AD_email_hd",
+    "tooltipData": "These are the number of email we have processed successfully.",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "AD_total_Email_hd",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "AD_total_Email_doamin",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "AD_total_Email_volume",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "AD_total_compliant_hd",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "AD_total_compliant_domain",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "AD_total_compliant_compliant",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "AD_total_failures_hd",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "AD_total_failures_domains",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "AD_total_failures_failures",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "AD_details_hd",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "AD_details_domain",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "AD_details_sender",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "AD_details_emails",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "AD_details_compliants",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "AD_details_failure",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "AD_details_dmarc_policy",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "AD_details_spf",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "AD_details_dkim",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SND_senders",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SND_failure",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SND_compliant",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SND_email",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SND_top_sender",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SND_top_failure_sender",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SND_top_compliant_sender",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SND_details_sender",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SND_details_ip_count",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SND_details_emails",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SND_details_dmarc_override",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SND_details_compliance",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SND_details_failure",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SND_details_spf",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SND_details_dkim",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "map_where_email_sent_from",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRCDB_detail_ip_server",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRCDB_detail_header",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRCDB_detail_email",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRCDB_detail_dmarc_override",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRCDB_detail_compliant",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRCDB_detail_failure",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRCDB_detail_spf",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRCDB_detail_",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "CMPDB_sender",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "CMPDB_server_name",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "CMPDB_header_from",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "CMPDB_ip_address",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "CMPDB_emails_box",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "CMPDB_compliance_box",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "CMPDB_details_report_date",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "CMPDB_details_emails",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "CMPDB_details_dmarc_override",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "CMPDB_details_spf_result",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "CMPDB_details_dkim_result",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "CMPDB_details_compliance",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "AI_analytics",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRDP_action_taken",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRDP_reason_type",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRDP_reason_comment",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRDP_dmarc_policy_published",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRDP_report_reciever",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRDP_from",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRDP_to",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRDP_sender_hostname",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRDP_address",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRDP_volume",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRDP_spf_domain",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRDP_header_from",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRDP_spf_valid",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRDP_spf_alignment",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRDP_envelop_from",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRDP_envelop_to",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRDP_dkim_signatures",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRDP_dkim_domain",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRDP_dkim_selector",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRDP_dkim_valid",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "SRDP_dkim_alignment",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RPT_reporters",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RPT_which_organization",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RPT_table_reporters",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RPT_table_reports",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RPT_table_ip_count",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RPT_table_domain_count",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RPT_table_emails",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RPT_table_compliant",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RPT_table_failures",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RSLT_email",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RSLT_delivered",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RSLT_quarantined",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RSLT_rejected",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RSLT_results",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RSLT_table_last_event",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RSLT_table_source_ip",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RSLT_table_dkim",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RSLT_table_spf",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RSLT_table_disposition",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RSLT_table_selector",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RSLT_table_reporter",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RSLT_table_messages",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RSLT_p2_spf_result",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RSLT_p2_dkim_result",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RSLT_p2_disposition",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RSLT_p2_sources",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RSLT_p2_selectors",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RSLT_p2_reporters",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RSLT_p2_table_server",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RSLT_p2_table_messages",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RSLT_p2_table_selector",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RSLT_p2_table_reporter",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "RSLT_p2_table_last_event",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "DNS_event_timeline_hd",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "DNS_value",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "DNS_previous",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "DNS_diff",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "ED_main_hd",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "ED_email_processed",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "ED_delivered",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "ED_quarantined",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "ED_rejected",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_domain_or_ip",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_dns_server",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_dns_table_type",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_dns_table_name",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_dns_table_ipaddress",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_dns_table_ttl",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_dns_table_mail_server",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_dns_table_name_server",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_dns_table_priority",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_dns_table_content",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_dns_table_primary_name_server",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_dns_table_responsible_email",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_dns_table_serial",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_dns_table_refresh",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_dns_table_expiry",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_dns_table_retry",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_dns_table_main_ttl",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_A_hd",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_AAAA_hd",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_MX_hd",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_TXT_hd",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_CNAME_hd",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_NS_hd",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_PTR_hd",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_SRV_hd",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_SOA_hd",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_CAA_hd",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_DS_hd",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_DNSKEY_hd",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_mta_tls_record_validation",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_mta_tls_policy_validation",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_mta_tls_policy_mode",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_mta_tls_table_tag",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_mta_tls_table_tag_value",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_mta_tls_table_tag_description",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_mta_tls_MTA_STS_Record",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_mta_tls_MTA_STS_Policy",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_spf_generator_use_redirect",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_spf_generator_include",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_blacklisted_listed",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_blacklisted_list",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_blacklisted_categories",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "add_user_reports_notifications",
+    "tooltipData": "You can enable them if you want to get the email and other notifications for respective features",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tool_blacklisted_",
+    "tooltipData": "",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "domain_page_report_received",
+    "tooltipData": "these are the dates that show , when we have fetched the data for these particular domains",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "validate",
+    "tooltipData": "<span style='color:green;'><strong>Valid:</strong></span> Your MTA-STS record is in good shape. No further action is needed.<br/><br/> <span style='color:red;'><strong>Invalid:</strong></span> Your MTA-STS record has issues. Utilize our MTA-STS generator to resolve them. <br/><br/> <span style='color:red;'><strong>No Record:</strong></span> You haven&apos;t published a MTA-STS record. Create and publish a new one.",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "policy_validate",
+    "tooltipData": "<span style='color:green;'><strong>Valid:</strong></span> Your MTA-STS policy is in good shape. No further action is needed.<br/><br/> <span style='color:red;'><strong>Invalid:</strong> </span>Your MTA-STS policy has issues. Utilize our MTA-STS generator to resolve them. <br/><br/> <span style='color:red;'><strong>No Record:</strong></span> You haven&apos;t published an MTA-STS policy. Create and publish a new one.",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "policy_mode",
+    "tooltipData": "<span style='color:red;'><strong> None:</span></strong> While the modes above are somewhat comparable to DMARC policies, this one is very distinct. The none policy in your MTA-STS file means fully disabling the policy.<br/><br/><span style='color:#ffb020;'><strong> Testing:</span></strong> The messages that fail to pass the TLS wonapos;t be blocked, but youapos;ll be able to gather data on them. Enable TLS-RPT to start getting the reports. (Acts much like the quarantine policy in DMARC, doesn&apos;t it?)<br/><br/><span style='color:green;'><strong> Enforce:</strong> </span> In this mode, failing the TLS means that the emails won&apos;t be delivered (similar to the DMARC reject policy). However, you&apos;ll still receive reports. <br/><br/><span style='color:red;'> <strong> Missing:</strong>  </span>You haven&apos;t published an MTA-STS policy. Create and publish a new one. <br/> <br/> <span style='color:red;'><strong> Invalid:</strong> </span> Your MTA-STS policy has issues. Utilize our MTA-STS generator to resolve them.",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "mta_sts_generator_policy_type",
+    "tooltipData": "these are the dates that show , when we have fetched the data for these particular domains",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "mta_sts_generator_mx_hosts",
+    "tooltipData": "The MX records for your domain. It has to match the MX records published in your domain’s DNS. You can specify either the FQDN or a wildcard host (e.g. mail.example. com or *.example.org)",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "mta_sts_generator_maximum_age",
+    "tooltipData": " The maximum lifetime of the policy in seconds. This represents the length of time    a sender would cache your domains MTA-STS policy. It is recommended to use a value equivalent of several weeks or greater, but not exceeding 31557600 (roughly 1 year)",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tls_rpt_report_mail_to",
+    "tooltipData": "Specify the email address(es) to which aggregate information about policy validation results should be submitted",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "tls_rpt_report_https_to",
+    "tooltipData": "Specify the endpoint URL(s) to which aggregate information about policy validation results should be submitted via POST",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "dmarc_generator_policy_type",
+    "tooltipData": "Information",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "dmarc_generator_reports_send_to",
+    "tooltipData": " Which email addresses do you prefer for receiving aggregate reports ? you can multiple email addresses with commas ",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "dmarc_generator_sub_domain_policy",
+    "tooltipData": "How strictly do you want YOUR DMARC Policy to be for your sub-domains.",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "dmarc_generator_spf_identifire",
+    "tooltipData": "Indicate wheter strict or relaxed SPF identifier Alingment mode is required by the domain owner Default is relaxed.",
+    "icon": "icon3.png"
+  },
+
+  {
+    "name": "dmarc_generator_dkim_identifier",
+    "tooltipData": "Indicate wheter strict or relaxed DKIM identifier Alingment mode is required by the domain owner Default is relaxed ",
+    "icon": "icon3.png"
+  },
+
+  {
+    "name": "dmarc_generator_report_interval",
+    "tooltipData": "How often should aggregate reportes to sent ?\nDefault time is 86400",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "dmarc_generator_percentage_applied_to",
+    "tooltipData": "What percentage of email do you want to apply for this policy to.",
+    "icon": "icon3.png"
+  },
+
+  {
+    "name": "dmarc_generator_failure_report_send_to",
+    "tooltipData": "Which email addresses do you prefer for receiving for failure reports ? you can multiple email addresses with commas",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "dmarc_generator_failure_report_option",
+    "tooltipData": "0 - Send report if DKIM and SPF don't pass or align \n   1 - Send report if DKIM and SPF don't pass or align\nd- Send report if DKIM don't pass or align\ns - Send report if SPF don't pass or align",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "bimi_generator_VMC_ertificate_location",
+    "tooltipData": "Secure URL to the VMC certificate.",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "bimi_generator_logo_location",
+    "tooltipData": "Secure URL to the image.",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "dkim_generator_selector",
+    "tooltipData": "Please provide a name for the selector (e.g., s1, google, k1, etc.)",
+    "icon": "icon3.png"
+  },
+  {
+    "name": "dkim_generator_key_length",
+    "tooltipData": "Select the length of the DKIM",
+    "icon": "icon3.png"
+  }
+]

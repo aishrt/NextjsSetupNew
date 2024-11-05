@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+Allow: https://www.googleadservices.com/
+Disallow: /private/
+Disallow: /cgi-bin/
+
+# Explicitly allow Google Ads tracking scripts
+User-agent: Googlebot
+Allow: /pagead/conversion/
+Allow: /hs-script-loader-public/v1/config/pixels-and-events/json
+Allow: /hs-script-loader-public/
+Allow: /livechat-public/
+Allow: /embed/v3/
+Allow: /images/            
+Allow: /li.lms-analytics/    
+Allow: /scripts
+Allow: /facebook/tr/
+Allow: /pagead/conversion/
+
+Sitemap: https://www.yourdmarc.com/sitemap.xml
+
+
+

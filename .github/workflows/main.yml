@@ -1,0 +1,34 @@
+name: push to production server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    
+
+    - name: Set up SSH key
+      uses: webfactory/ssh-agent@v0.5.3
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY_LIVE }}
+        # You'll need to add the corresponding public key to your AWS server's authorized_keys files
+
+    - name: Deploy to Azure Server
+      run: |
+        ssh -o StrictHostKeyChecking=no -i $HOME/.ssh/ azureuser@20.51.121.129 "
+        
+        cd /var/www/html/yourdmarc
+        sudo git add .
+        sudo git commit -m 'servercommit'
+        sudo git pull origin main
+        export PATH=$PATH:/home/azureuser/.nvm/versions/node/v18.19.1/bin/
+        echo \$PATH  # Log the PATH to verify it's correct
+        which pm2
+        pm2 restart 0"

@@ -1,0 +1,4 @@
+export const _ENV_VARIABLES = {
+  JWT_KEY: process.env.JWT_SECRET_KEY,
+  STRAPI_CONSTANT: process.env.NEXT_PUBLIC_STRAPI_CONSTANT,
+};

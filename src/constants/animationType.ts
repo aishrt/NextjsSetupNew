@@ -1,0 +1,18 @@
+export const ANIMATION_TYPE: Record<any, any> = {
+  animate: "animate",
+  bounceAnimations: "bounceAnimations",
+  fadeSlideAnimations: "fadeSlideAnimations",
+  rotateAnimations: "rotateAnimations",
+  zoomAnimations: "zoomAnimations",
+  slideLeftRightAnimations: "slideLeftRightAnimations",
+  flipAnimations: "flipAnimations",
+  stretchAnimations: "stretchAnimations",
+  slideInRight: "slideInRight",
+  slideInUp: "slideInUp",
+  slideInDown: "slideInDown",
+  rotateIn: "rotateIn",
+  fadeIn: "fadeIn",
+  shake: "shake",
+  pulse: "pulse",
+  lightSpeedInRight: "lightSpeedInRight",
+};

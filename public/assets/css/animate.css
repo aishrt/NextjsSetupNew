@@ -1,0 +1,32 @@
+/* pulse animation */
+
+@keyframes pulse-animation {
+    0% {
+      box-shadow: 0 0 0 0px rgba(245, 149, 105, 0.4);
+    }
+    100% {
+      box-shadow: 0 0 0 20px rgba(26, 78, 230, 0);
+    }
+}
+
+/* rotation animation */
+@keyframes rotate-animation {
+	0% {
+		transform: rotate(0deg);
+  }
+  50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes pulse-animation2 {
+    0% {
+      box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.40);
+    }
+    100% {
+      box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+    }
+}

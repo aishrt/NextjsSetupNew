@@ -1,8 +1,9 @@
 "use client";
 import { styled, Container, Box } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import Header from "@/components/shared/dashboard-header/Header";
-import Sidebar from "@/components/shared/sidebar/Sidebar";
+import Header from "@/components/Layout/dashboard-header/Header";
+import Sidebar from "@/components/Layout/sidebar/Sidebar";
+
 const MainWrapper = styled("div")(() => ({
   display: "flex",
   minHeight: "100vh",

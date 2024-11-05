@@ -1,7 +1,7 @@
 "use client";
 import React, { memo, Suspense, useEffect, useState } from "react";
 import { MenuItem, Box, Menu } from "@mui/material";
-import DashboardCard from "@/components/shared/DashboardCard";
+import DashboardCard from "@/app/pageComponents/Dashboard/DashboardCard";
 import {
   BarChart,
   Bar,
@@ -12,8 +12,8 @@ import {
   YAxis,
 } from "recharts";
 import { getDashboardGraphData } from "@/@core/apiFetcher";
-import InformationTooltip from "@/components/InformationTooltip";
-import GraphLoader from "../../../components/ui/Loaders/GraphLoader";
+import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
+import GraphLoader from "../../../components/Loaders/GraphLoader";
 const options = ["Action", "Another Action", "Something else here"];
 
 const Volume = ({

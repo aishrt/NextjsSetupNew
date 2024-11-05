@@ -17,13 +17,13 @@ import {
 import { isEmpty } from "@/utils/isEmpty";
 import { _TOOL_TYPES } from "@/constants/toolsData";
 import Link from "next/link";
-import CopyToClipboard from "@/components/ui/CopyToClipboard";
+import CopyToClipboard from "@/components/Functions/CopyToClipboard";
 import { isTokenExpired, postFetcherLambda } from "@/@core/apiFetcher";
 import RecordWarningCompo from "@/app/pageComponents/Tools/ui/RecordWarningCompo";
 import { scrollIntoView } from "@/utils/scrollIntoView";
-import SubmitButton from "@/app/pageComponents/Tools/ui/SubmitButton";
+import SubmitButton from "@/components/Form/SubmitButton";
 import {  Tooltip } from "@mui/material";
-import TagTable from "@/components/ui/TagTable";
+import TagTable from "@/components/UI/TagTable";
 import { createAndClickProgressBar } from "@/@core/createAndClickProgressBar";
 import { useSession } from "next-auth/react";
 import AllToolsScannerResult from "./ui/AllToolsScannerResult";
@@ -31,7 +31,7 @@ import getCurrentUser from "@/lib/session";
 import { toast } from "react-toastify";
 import AccordionComponent from "./ui/Accordin";
 
-import InformationTooltip from "@/components/InformationTooltip";import ToolsUi from "@/app/pageComponents/Tools/ToolsUi";
+import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";import ToolsUi from "@/app/pageComponents/Tools/ToolsUi";
 import {
   removeFirstPart,
 } from "@/@core/helper";
@@ -39,9 +39,9 @@ import {
 import { validateDomainName } from "@/utils/string-conversion";
 
 import Head from "next/head";
-import LicenseWarningsCompo from "@/components/common/LicenseWarningsCompo";
-import MainLoader from "@/components/ui/MainLoader";
-import RecordBox from "@/components/common/RecordBox";
+import LicenseWarningsCompo from "@/components/UI/LicenseWarningsCompo";
+import MainLoader from "@/components/Loaders/MainLoader";
+import RecordBox from "@/components/UI/RecordBox";
 import { fetchImage } from "@/@core/commonS3";
 import { useStore } from "@/utils/store";
 const SpfTool = ({

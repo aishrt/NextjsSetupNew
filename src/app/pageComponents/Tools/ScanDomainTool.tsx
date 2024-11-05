@@ -4,20 +4,20 @@ import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import FileExcelUpload from "@/components/common/FileExcelUpload";
+import FileExcelUpload from "@/components/View/common/FileExcelUpload";
 import Pagination from "@mui/material/Pagination";
 import LinearProgress from "@mui/material/LinearProgress";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import ExportCsv from "@/components/common/ExportCsv";
+import ExportCsv from "@/components/View/common/ExportCsv";
 import Grid from "@mui/material/Grid";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import { Dayjs } from "dayjs";
-import DateRangePicker from "@/components/ui/DateRangePicketMui";
-import MainLoader from "@/components/ui/MainLoader";
+import DateRangePicker from "@/components/Form/DateRangePicketMui";
+import MainLoader from "@/components/Loaders/MainLoader";
 
 const formatPercentage = (progress: any, totalCount: any): number => {
   const percentage =

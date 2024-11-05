@@ -2,11 +2,11 @@
 import { postFetcher } from "@/@core/apiFetcher";
 import { API_ROUTES } from "@/@core/apiRoutes";
 import { useStore } from "@/utils/store";
-import LicenseWarningsCompo from "@/components/common/LicenseWarningsCompo";
-import SelectAsync from "@/components/common/SelectAsync";
-import InformationTooltip from "@/components/InformationTooltip";
-import MainLoader from "@/components/ui/MainLoader";
-import UpgradePlanComponent from "@/components/UpgradePlanComponent";
+import LicenseWarningsCompo from "@/components/UI/LicenseWarningsCompo";
+import SelectAsync from "@/components/Form/SelectAsync";
+import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
+import MainLoader from "@/components/Loaders/MainLoader";
+import UpgradePlanComponent from "@/app/pageComponents/Others/UpgradePlanComponent";
 import { Formik, Field, ErrorMessage, Form, FormikProps } from "formik";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";

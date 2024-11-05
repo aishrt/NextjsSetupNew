@@ -2,14 +2,14 @@
 import { usePathname, useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { lazy, useEffect, useState } from "react";
-import CopyToClipboard from "@/components/ui/CopyToClipboard";
+import CopyToClipboard from "@/components/Functions/CopyToClipboard";
 import { Link, Tooltip } from "@mui/material";
 
-import CircularSpinner from "@/components/ui/Loaders/CircularSpinner";
+import CircularSpinner from "@/components/Loaders/CircularSpinner";
 import { isEmpty } from "@/utils/isEmpty";
 import { commonFetcherFn } from "@/@core/apiFetcher";
 import { API_ROUTES } from "@/@core/apiRoutes";
-const GaugeChartCompo = lazy(() => import("./GaugeChartCompo"));
+const GaugeChartCompo = lazy(() => import("../../../../components/Charts/GaugeChartCompo"));
 
 const BLACKLIST_CHECK_URL = process.env.NEXT_PUBLIC_BACKEND_BLACKLIST_CHECK_URL;
 const DKIM_CHECK_URL = process.env.NEXT_PUBLIC_DKIM_CHECK_URL;

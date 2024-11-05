@@ -5,15 +5,15 @@ import { getFetcherWithAuth } from "@/@core/apiFetcher";
 import dayjs, { Dayjs } from "dayjs";
 import { Table, TableBody, TableContainer, Typography } from "@mui/material";
 import _ from "lodash";
-import TableToolbar from "../../../components/ui/table-ui/TableToolbar";
-import Scrollbar from "../../../components/ui/scrollbar/Scrollbar";
+import TableToolbar from "../../../components/UI/table-ui/TableToolbar";
+import Scrollbar from "../../../components/Layout/scrollbar/Scrollbar";
 import TableHeadRow, {
   StyledTableCell,
   StyledTableNoData,
   StyledTableRow,
-} from "../../../components/ui/table-ui/TableHeadRow";
-import { headCellsSenders } from "../../../components/ui/table-ui/headCells";
-import { BorderLinearProgress } from "../../../components/ui/LineProgress";
+} from "../../../components/UI/table-ui/TableHeadRow";
+import { headCellsSenders } from "../../../components/UI/table-ui/headCells";
+import { BorderLinearProgress } from "../../../components/UI/LineProgress";
 import { PAGINATION_OBJECT } from "@/constants/pagination";
 import { useStore } from "@/utils/store";
 import {
@@ -22,8 +22,8 @@ import {
   createQueryString,
 } from "@/@core/tableFunctions";
 import { API_ROUTES } from "@/@core/apiRoutes";
-import TableRowsLoader from "../../../components/ui/table-ui/TableRowsLoader";
-import { TablePaginationCompo } from "../../../components/ui/table-ui/TablePaginationCompo";
+import TableRowsLoader from "../../../components/UI/table-ui/TableRowsLoader";
+import { TablePaginationCompo } from "../../../components/UI/table-ui/TablePaginationCompo";
 import { useRouter } from "next/navigation";
 import { fetchImage } from "@/@core/commonS3";
 const DetailedSources = (props: any) => {

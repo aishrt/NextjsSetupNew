@@ -3,7 +3,7 @@ import { Grid, Table, TableBody, TableContainer } from "@mui/material";
 import React, { useEffect, useState, Suspense } from "react";
 import ResultButton from "@/app/pageComponents/Dashboard/ResultButton";
 import Button from "@mui/material/Button";
-import LineChartComponent from "@/app/pageComponents/Dashboard/linechart";
+import LineChartComponent from "@/components/Charts/linechart";
 import { getFetcherWithAuth } from "@/@core/apiFetcher";
 import { useRouter } from "next/navigation";
 import CancelIcon from "@mui/icons-material/Cancel";
@@ -14,27 +14,27 @@ import { isEmpty } from "@/utils/isEmpty";
 import { useStore } from "@/utils/store";
 import { formatDateOnly } from "@/utils/format";
 import dayjs, { Dayjs } from "dayjs";
-import InformationTooltip from "@/components/InformationTooltip";
+import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 import { API_ROUTES } from "@/@core/apiRoutes";
-import LicenseWarningsCompo from "../../../components/common/LicenseWarningsCompo";
-import MainLoader from "../../../components/ui/MainLoader";
-import SelectAsync from "../../../components/common/SelectAsync";
-import DateRangePicker from "../../../components/ui/DateRangePicketMui";
-import TableToolbar from "../../../components/ui/table-ui/TableToolbar";
-import Scrollbar from "../../../components/ui/scrollbar/Scrollbar";
+import LicenseWarningsCompo from "../../../components/UI/LicenseWarningsCompo";
+import MainLoader from "../../../components/Loaders/MainLoader";
+import SelectAsync from "../../../components/Form/SelectAsync";
+import DateRangePicker from "../../../components/Form/DateRangePicketMui";
+import TableToolbar from "../../../components/UI/table-ui/TableToolbar";
+import Scrollbar from "../../../components/Layout/scrollbar/Scrollbar";
 import TableHeadRow, {
   StyledTableCell,
   StyledTableNoData,
   StyledTableRow,
-} from "../../../components/ui/table-ui/TableHeadRow";
-import { headCellsResult } from "../../../components/ui/table-ui/headCells";
+} from "../../../components/UI/table-ui/TableHeadRow";
+import { headCellsResult } from "../../../components/UI/table-ui/headCells";
 import { PAGINATION_OBJECT } from "@/constants/pagination";
 import {
   _handleChangePage,
   _setPaginationObjectFn,
   createQueryString,
 } from "@/@core/tableFunctions";
-import UpgradeSubscription from "../../../components/UpgradeSubscription";
+import UpgradeSubscription from "../Others/UpgradeSubscription";
 import { checkHistory } from "@/@core/helper";
 
 const Resultspage = ({

@@ -1,5 +1,5 @@
-import FooterContent from "@/components/Footer/FooterContent";
-import HeaderNavigation from "@/components/Header/HeaderNavigation";
+import FooterContent from "@/components/Layout/Footer/FooterContent";
+import HeaderNavigation from "@/components/Layout/Header/HeaderNavigation";
 
 const PageNotFound =() =>{
     return(

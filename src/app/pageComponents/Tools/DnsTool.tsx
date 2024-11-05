@@ -31,7 +31,7 @@ import {
   removeIfExists,
   removeItemByValue,
 } from "@/utils/array-conversion";
-import DashboardCard from "@/components/shared/DashboardCard";
+import DashboardCard from "@/app/pageComponents/Dashboard/DashboardCard";
 import {
   Box,
   Table,
@@ -41,16 +41,16 @@ import {
   TableRow,
   Typography,
 } from "@mui/material";
-import SubmitButton from "@/app/pageComponents/Tools/ui/SubmitButton";
-import TagTable from "@/components/ui/TagTable";
+import SubmitButton from "@/components/Form/SubmitButton";
+import TagTable from "@/components/UI/TagTable";
 import { createAndClickProgressBar } from "@/@core/createAndClickProgressBar";
 import { useSession } from "next-auth/react";
 import AllToolsScannerResult from "./ui/AllToolsScannerResult";
 import IpInfoComponent from "../Dashboard/IpInfoComponent";
-import InformationTooltip from "@/components/InformationTooltip";
+import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 import Head from "next/head";
-import LicenseWarningsCompo from "@/components/common/LicenseWarningsCompo";
-import MainLoader from "@/components/ui/MainLoader";
+import LicenseWarningsCompo from "@/components/UI/LicenseWarningsCompo";
+import MainLoader from "@/components/Loaders/MainLoader";
 const DnsTool = ({
   result,
   toolsId,

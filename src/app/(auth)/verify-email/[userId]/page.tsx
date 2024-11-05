@@ -1,7 +1,7 @@
 import HeaderNew from "@/components/Header/HeaderNew";
 import React from "react";
 import { postFetcher } from "@/@core/apiFetcher";
-import FooterContent from "@/components/Footer/FooterContent";
+import FooterContent from "@/components/Layout/Footer/FooterContent";
 import { API_ROUTES } from "@/@core/apiRoutes";
 import RedirectTimerCompo from "@/app/pageComponents/Auth/RedirectTimerCompo";
 

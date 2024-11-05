@@ -7,7 +7,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 
 import Head from "next/head";
-import CircularSpinner from "@/components/ui/Loaders/CircularSpinner";
+import CircularSpinner from "@/components/Loaders/CircularSpinner";
 import Loader from "@/app/pageComponents/BlogComponent/Loader";
 import { API_ROUTES } from "@/@core/apiRoutes";
 

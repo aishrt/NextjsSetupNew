@@ -15,22 +15,22 @@ import getCurrentUser from "@/lib/session";
 import { signOut } from "next-auth/react";
 import { isEmpty } from "@/utils/isEmpty";
 import { useRouter } from "next/navigation";
-import InformationTooltip from "@/components/InformationTooltip";import EmailButton from "../EmailButton";
-import Donutchart from "@/components/Donutchart";
+import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";import EmailButton from "../Form/EmailButton";
+import Donutchart from "@/components/Charts/Donutchart";
 import dayjs from "dayjs";
 import { getLicenseData } from "@/@core/apiFetcher";
-import IPLoader from "../ui/Loaders/IPLoader";
+import IPLoader from "../Loaders/IPLoader";
 import { createQueryString } from "@/@core/tableFunctions";
 import { API_ROUTES } from "@/@core/apiRoutes";
 
-const LinkOpenButton = dynamic(() => import("@/components/LinkOpenButton"), {
+const LinkOpenButton = dynamic(() => import("@/components/Form/LinkOpenButton"), {
   ssr: false,
 });
 // const score = { slice1: 10, slice2: 20, slice3: 30 };
 const score = 60;
 
 const GoogleleafletMap = dynamic(
-  () => import("@/app/pageComponents/Dashboard/GoogleleafletMap"),
+  () => import("@/externalLibraries/GoogleleafletMap"),
   {
     ssr: false,
   }

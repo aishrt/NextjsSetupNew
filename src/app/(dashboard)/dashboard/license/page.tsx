@@ -8,8 +8,8 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { API_ROUTES } from "@/@core/apiRoutes";
 import { getLicenseData } from "@/@core/apiFetcher";
-import LicenseWarningsCompo from "@/components/common/LicenseWarningsCompo";
-import MainLoader from "@/components/ui/MainLoader";
+import LicenseWarningsCompo from "@/components/UI/LicenseWarningsCompo";
+import MainLoader from "@/components/Loaders/MainLoader";
 import { useStore } from "@/utils/store";
 import { Checkbox, FormControlLabel, FormGroup } from "@mui/material";
 

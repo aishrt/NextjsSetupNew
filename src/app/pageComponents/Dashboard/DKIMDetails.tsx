@@ -4,7 +4,7 @@ import { Pagination } from "@mui/material";
 import { debounce } from "lodash";
 import { useRouter } from "next/navigation";
 import React, { useCallback, useEffect, useState } from "react";
-import InformationTooltip from "@/components/InformationTooltip";
+import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 
 interface DKIMDetailsProps {
   domain: string;

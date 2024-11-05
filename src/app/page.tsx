@@ -1,17 +1,17 @@
 "use client";
-import HeaderNavigation from "@/components/Header/HeaderNavigation";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { Suspense } from "react";
-import ScannerSection from "@/components/ui/ScannerSection";
-import ToolsTabs from "@/components/ui/ToolsTabs";
-import FooterContent from "@/components/Footer/FooterContent";
+import ScannerSection from "@/app/pageComponents/Others/ScannerSection";
+import ToolsTabs from "@/app/pageComponents/Tools/ToolsTabs";
 import { Metadata } from "next";
 import { useRouter } from "next/navigation";
 import ModalEbook from "../components/Modal/downloadEbook";
-import SubscribeNewsLetter from "@/components/common/Subscribe";
-import CalendlyBadge from "@/components/CalendlyBadge";
+import SubscribeNewsLetter from "@/app/pageComponents/Others/Subscribe";
+import CalendlyBadge from "@/externalLibraries/CalendlyBadge";
 import Head from "next/head";
+import HeaderNavigation from "@/components/Layout/Header/HeaderNavigation";
+import FooterContent from "@/components/Layout/Footer/FooterContent";
 
 const metadata: Metadata = {
   title: {

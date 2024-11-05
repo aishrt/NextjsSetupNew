@@ -1,6 +1,6 @@
-import CopyToClipboard from "@/components/ui/CopyToClipboard";
+import CopyToClipboard from "@/components/Functions/CopyToClipboard";
 import { isEmpty } from "@/utils/isEmpty";
-import InformationTooltip from "@/components/InformationTooltip";
+import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 import { Button, Link, Tooltip } from "@mui/material";
 type Props = {
   recordValue: string | string[] | undefined;

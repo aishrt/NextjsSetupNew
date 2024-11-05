@@ -11,11 +11,11 @@ import {
   Typography,
 } from "@mui/material";
 import { API_ROUTES } from "@/@core/apiRoutes";
-import LicenseWarningsCompo from "@/components/common/LicenseWarningsCompo";
-import MainLoader from "@/components/ui/MainLoader";
+import LicenseWarningsCompo from "@/components/UI/LicenseWarningsCompo";
+import MainLoader from "@/components/Loaders/MainLoader";
 import { BootstrapDialog } from "@/components/Modal/BootstrapDialogUi";
 import { useStore } from "@/utils/store";
-import UpgradePlanComponent from "@/components/UpgradePlanComponent";
+import UpgradePlanComponent from "@/app/pageComponents/Others/UpgradePlanComponent";
 const BrandLogo = () => {
   const [form, setFormData] = useState({
     brandLogo: "",

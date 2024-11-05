@@ -27,7 +27,7 @@ import {
   TableBody,
   TableContainer,
 } from "@mui/material";
-import CopyToClipboard from "@/components/ui/CopyToClipboard";
+import CopyToClipboard from "@/components/Functions/CopyToClipboard";
 import {
   deleteFetcher,
   isTokenExpired,
@@ -40,11 +40,11 @@ import { useSession, signOut } from "next-auth/react";
 import Button from "@mui/material/Button";
 import DialogActions from "@mui/material/DialogActions";
 import AddIcon from "@mui/icons-material/Add";
-import FileUpload from "@/components/common/FileUpload";
+import FileUpload from "@/components/View/common/FileUpload";
 import { API_ROUTES } from "@/@core/apiRoutes";
-import LicenseWarningsCompo from "@/components/common/LicenseWarningsCompo";
+import LicenseWarningsCompo from "@/components/UI/LicenseWarningsCompo";
 import TableToolbar from "@/components/ui/table-ui/TableToolbar";
-import Scrollbar from "@/components/ui/scrollbar/Scrollbar";
+import Scrollbar from "@/components/Layout/scrollbar/Scrollbar";
 import TableHeadRow, {
   StyledTableCell,
   StyledTableNoData,
@@ -62,11 +62,11 @@ import {
   createQueryString,
 } from "@/@core/tableFunctions";
 import { TablePaginationCompo } from "@/components/ui/table-ui/TablePaginationCompo";
-import { BootstrapTooltipUi } from "@/components/ui/BootstrapToolTip";
-import CircularSpinner from "@/components/ui/Loaders/CircularSpinner";
+import { BootstrapTooltipUi } from "@/components/UI/BootstrapToolTip";
+import CircularSpinner from "@/components/Loaders/CircularSpinner";
 import Loader from "@/app/pageComponents/BlogComponent/Loader";
 import { useStore } from "@/utils/store";
-import UpgradePlanComponent from "@/components/UpgradePlanComponent";
+import UpgradePlanComponent from "@/app/pageComponents/Others/UpgradePlanComponent";
 import dayjs from "dayjs";
 function debounce(func: any, wait: any) {
   let timeout: any;

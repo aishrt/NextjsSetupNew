@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
-import MainLoader from "@/components/ui/MainLoader";
+import MainLoader from "@/components/Loaders/MainLoader";
 import { cidrToRange } from "@/@core/cidrToRange";
 import { API_ROUTES } from "@/@core/apiRoutes";
 

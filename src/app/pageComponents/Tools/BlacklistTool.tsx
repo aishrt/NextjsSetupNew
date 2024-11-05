@@ -12,18 +12,18 @@ import React, { FormEvent, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import RecordWarningCompo from "@/app/pageComponents/Tools/ui/RecordWarningCompo";
 import { scrollIntoView } from "@/utils/scrollIntoView";
-import SubmitButton from "@/app/pageComponents/Tools/ui/SubmitButton";
-import TagTable from "@/components/ui/TagTable";
+import SubmitButton from "@/components/Form/SubmitButton";
+import TagTable from "@/components/UI/TagTable";
 import { createAndClickProgressBar } from "@/@core/createAndClickProgressBar";
 import { useSession } from "next-auth/react";
 import AllToolsScannerResult from "./ui/AllToolsScannerResult";
 import { toast } from "react-toastify";
 
 import Head from "next/head";
-import LicenseWarningsCompo from "@/components/common/LicenseWarningsCompo";
-import MainLoader from "@/components/ui/MainLoader";
+import LicenseWarningsCompo from "@/components/UI/LicenseWarningsCompo";
+import MainLoader from "@/components/Loaders/MainLoader";
 import { Button } from "@mui/material";
-import InformationTooltip from "@/components/InformationTooltip";
+import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 import Ipmodal from "@/components/Modal/ipModal";
 import ToolsUi from "@/app/pageComponents/Tools/ToolsUi";
 const BlacklistTool = ({

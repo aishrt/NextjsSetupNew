@@ -20,15 +20,15 @@ import { useRouter } from "next/navigation";
 import RecordWarningCompo from "@/app/pageComponents/Tools/ui/RecordWarningCompo";
 import { postFetcher, postFetcherLambda } from "@/@core/apiFetcher";
 import { scrollIntoView } from "@/utils/scrollIntoView";
-import SubmitButton from "@/app/pageComponents/Tools/ui/SubmitButton";
-import TagTable from "@/components/ui/TagTable";
+import SubmitButton from "@/components/Form/SubmitButton";
+import TagTable from "@/components/UI/TagTable";
 import { createAndClickProgressBar } from "@/@core/createAndClickProgressBar";
 import RecordValuesCompo from "@/app/pageComponents/Tools/ui/RecordValuesCompo";
 import { useSession } from "next-auth/react";
 import AllToolsScannerResult from "./ui/AllToolsScannerResult";
-import InformationTooltip from "@/components/InformationTooltip";import ToolsUi from "@/app/pageComponents/Tools/ToolsUi";
+import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";import ToolsUi from "@/app/pageComponents/Tools/ToolsUi";
 import Head from "next/head";
-import RecordBox from "@/components/common/RecordBox";
+import RecordBox from "@/components/UI/RecordBox";
 import { toast } from "react-toastify";
 const TlsRptTool = ({
   result,

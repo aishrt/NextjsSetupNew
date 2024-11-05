@@ -22,20 +22,20 @@ import {
   postFetcherLambda,
 } from "@/@core/apiFetcher";
 import { scrollIntoView } from "@/utils/scrollIntoView";
-import SubmitButton from "@/app/pageComponents/Tools/ui/SubmitButton";
-import TagTable from "@/components/ui/TagTable";
+import SubmitButton from "@/components/Form/SubmitButton";
+import TagTable from "@/components/UI/TagTable";
 import { createAndClickProgressBar } from "@/@core/createAndClickProgressBar";
 import RecordValuesCompo from "@/app/pageComponents/Tools/ui/RecordValuesCompo";
 import { useSession } from "next-auth/react";
 import AllToolsScannerResult from "./ui/AllToolsScannerResult";
 import { toast } from "react-toastify";
 import getCurrentUser from "@/lib/session";
-import InformationTooltip from "@/components/InformationTooltip";
+import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 import ToolsUi from "@/app/pageComponents/Tools/ToolsUi";
 import { validateDomainName } from "@/utils/string-conversion";
 import Head from "next/head";
-import LicenseWarningsCompo from "@/components/common/LicenseWarningsCompo";
-import MainLoader from "@/components/ui/MainLoader";
+import LicenseWarningsCompo from "@/components/UI/LicenseWarningsCompo";
+import MainLoader from "@/components/Loaders/MainLoader";
 import { Skeleton } from "@mui/material";
 
 const MtaStsTool = ({

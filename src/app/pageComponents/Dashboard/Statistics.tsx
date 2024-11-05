@@ -6,14 +6,14 @@ import React, { useEffect, useState, memo, Suspense } from "react";
 import EmailIcon from "@mui/icons-material/Email";
 import dayjs, { Dayjs } from "dayjs";
 import { useStore } from "@/utils/store";
-import InformationTooltip from "@/components/InformationTooltip";
+import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 import { API_ROUTES } from "@/@core/apiRoutes";
 import { Grid } from "@mui/material";
-import SelectAsync from "../../../components/common/SelectAsync";
-import DateRangePicker from "../../../components/ui/DateRangePicketMui";
+import SelectAsync from "../../../components/Form/SelectAsync";
+import DateRangePicker from "../../../components/Form/DateRangePicketMui";
 import { checkHistory } from "@/@core/helper";
-import UpgradeSubscription from "../../../components/UpgradeSubscription";
-import UpgradePlanComponent from "../../../components/UpgradePlanComponent";
+import UpgradeSubscription from "../Others/UpgradeSubscription";
+import UpgradePlanComponent from "../Others/UpgradePlanComponent";
 
 const Statistics = ({
   data,

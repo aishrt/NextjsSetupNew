@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import "leaflet/dist/leaflet.css";
 import dynamic from "next/dynamic"; // Import dynamic from next/dynamic
 const GoogleleafletMap = dynamic(
-  () => import("@/app/pageComponents/Dashboard/GoogleleafletMap"),
+  () => import("@/externalLibraries/GoogleleafletMap"),
   {
     ssr: false,
   }
@@ -18,7 +18,7 @@ import {
 import LanguageIcon from "@mui/icons-material/Language";
 import EmailIcon from "@mui/icons-material/Email";
 import CancelIcon from "@mui/icons-material/Cancel";
-import InformationTooltip from "@/components/InformationTooltip";
+import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 import {
   Box,
   Card,
@@ -27,33 +27,32 @@ import {
   TableContainer,
   Typography,
 } from "@mui/material";
-import TableToolbar from "../../../components/ui/table-ui/TableToolbar";
-import Scrollbar from "../../../components/ui/scrollbar/Scrollbar";
+import TableToolbar from "../../../components/UI/table-ui/TableToolbar";
+import Scrollbar from "../../../components/Layout/scrollbar/Scrollbar";
 import TableHeadRow, {
   StyledTableCell,
   StyledTableNoData,
   StyledTableRow,
-} from "../../../components/ui/table-ui/TableHeadRow";
-import { headCellAcountDashboardDetail } from "../../../components/ui/table-ui/headCells";
-import TableRowsLoader from "../../../components/ui/table-ui/TableRowsLoader";
-import { BorderLinearProgress } from "../../../components/ui/LineProgress";
-import { TablePaginationCompo } from "../../../components/ui/table-ui/TablePaginationCompo";
+} from "../../../components/UI/table-ui/TableHeadRow";
+import { headCellAcountDashboardDetail } from "../../../components/UI/table-ui/headCells";
+import TableRowsLoader from "../../../components/UI/table-ui/TableRowsLoader";
+import { BorderLinearProgress } from "../../../components/UI/LineProgress";
+import { TablePaginationCompo } from "../../../components/UI/table-ui/TablePaginationCompo";
 import { PAGINATION_OBJECT } from "@/constants/pagination";
 
-import LicenseWarningsCompo from "../../../components/common/LicenseWarningsCompo";
+import LicenseWarningsCompo from "../../../components/UI/LicenseWarningsCompo";
 import {
   _handleChangePage,
   _setPaginationObjectFn,
   createQueryString,
 } from "@/@core/tableFunctions";
 import { API_ROUTES } from "@/@core/apiRoutes";
-import MainLoader from "../../../components/ui/MainLoader";
+import MainLoader from "../../../components/Loaders/MainLoader";
 import Link from "next/link";
-import CircularSpinner from "../../../components/ui/Loaders/CircularSpinner";
+import CircularSpinner from "../../../components/Loaders/CircularSpinner";
 import { useStore } from "@/utils/store";
 import { fetchImage } from "@/@core/commonS3";
 import moment from "moment";
-import ExceedPlan from "../../../components/ExceedPlan";
 const AccountDashboardComponent = ({
   // resData,
   page,

@@ -14,21 +14,21 @@ import { useRouter } from "next/navigation";
 import { postFetcher, postFetcherLambda } from "@/@core/apiFetcher";
 import RecordWarningCompo from "@/app/pageComponents/Tools/ui/RecordWarningCompo";
 import { scrollIntoView } from "@/utils/scrollIntoView";
-import SubmitButton from "@/app/pageComponents/Tools/ui/SubmitButton";
+import SubmitButton from "@/components/Form/SubmitButton";
 import { capitalize } from "@mui/material";
-import TagTable from "@/components/ui/TagTable";
+import TagTable from "@/components/UI/TagTable";
 import { createAndClickProgressBar } from "@/@core/createAndClickProgressBar";
 import RecordValuesCompo from "@/app/pageComponents/Tools/ui/RecordValuesCompo";
 import { useSession } from "next-auth/react";
 import AllToolsScannerResult from "./ui/AllToolsScannerResult";
 import getCurrentUser from "@/lib/session";
 import { toast } from "react-toastify";
-import InformationTooltip from "@/components/InformationTooltip";
+import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 import Head from "next/head";
-import MainLoader from "@/components/ui/MainLoader";
-import LicenseWarningsCompo from "@/components/common/LicenseWarningsCompo";
+import MainLoader from "@/components/Loaders/MainLoader";
+import LicenseWarningsCompo from "@/components/UI/LicenseWarningsCompo";
 import ToolsUi from "@/app/pageComponents/Tools/ToolsUi";
-import CopyToClipboard from "@/components/ui/CopyToClipboard";
+import CopyToClipboard from "@/components/Functions/CopyToClipboard";
 const BimiTool = ({
   result,
   toolsId,

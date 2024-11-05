@@ -3,7 +3,7 @@ import { getFetcherWithAuth } from "@/@core/apiFetcher";
 import { Table, TableBody, TableContainer } from "@mui/material";
 import { isEmpty } from "lodash";
 import React, { useEffect, useState } from "react";
-import InformationTooltip from "@/components/InformationTooltip";
+import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 import dayjs from "dayjs";
 import {
   _handleChangePage,
@@ -12,16 +12,16 @@ import {
 } from "@/@core/tableFunctions";
 import { API_ROUTES } from "@/@core/apiRoutes";
 import { PAGINATION_OBJECT } from "@/constants/pagination";
-import TableToolbar from "../../../components/ui/table-ui/TableToolbar";
-import Scrollbar from "../../../components/ui/scrollbar/Scrollbar";
+import TableToolbar from "../../../components/UI/table-ui/TableToolbar";
+import Scrollbar from "../../../components/Layout/scrollbar/Scrollbar";
 import TableHeadRow, {
   StyledTableCell,
   StyledTableNoData,
   StyledTableRow,
-} from "../../../components/ui/table-ui/TableHeadRow";
-import { headCellsSourceResult } from "../../../components/ui/table-ui/headCells";
-import TableRowsLoader from "../../../components/ui/table-ui/TableRowsLoader";
-import { TablePaginationCompo } from "../../../components/ui/table-ui/TablePaginationCompo";
+} from "../../../components/UI/table-ui/TableHeadRow";
+import { headCellsSourceResult } from "../../../components/UI/table-ui/headCells";
+import TableRowsLoader from "../../../components/UI/table-ui/TableRowsLoader";
+import { TablePaginationCompo } from "../../../components/UI/table-ui/TablePaginationCompo";
 import { useRouter } from "next/navigation";
 import { fetchImage } from "@/@core/commonS3";
 interface DKIMDetailsProps {

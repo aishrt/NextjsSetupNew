@@ -14,8 +14,8 @@ import { isEmpty } from "@/utils/isEmpty";
 import { useRouter } from "next/navigation";
 import { API_ROUTES } from "@/@core/apiRoutes";
 import { TextField } from "@mui/material";
-import SendEmailLoader from "@/components/ui/Loaders/SendEmailLoader";
-import CheckBoxInput from "@/components/checkBoxInput";
+import SendEmailLoader from "@/components/Loaders/SendEmailLoader";
+import CheckBoxInput from "@/components/Form/checkBoxInput";
 
 interface FormData {
   mail_from: string;

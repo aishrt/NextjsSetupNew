@@ -13,7 +13,7 @@ import {
 } from "recharts";
 import { useTheme } from "@mui/material/styles";
 import { Grid } from "@mui/material";
-import DashboardCard from "@/components/shared/DashboardCard";
+import DashboardCard from "@/app/pageComponents/Dashboard/DashboardCard";
 
 interface Source {
   count: number;

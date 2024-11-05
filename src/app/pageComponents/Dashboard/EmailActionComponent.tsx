@@ -7,14 +7,14 @@ import { getFetcherWithAuth } from "@/@core/apiFetcher";
 import dayjs, { Dayjs } from "dayjs";
 import { useStore } from "@/utils/store";
 
-import LineGraphComponent from "./linegraph";
-import InformationTooltip from "@/components/InformationTooltip";
+import LineGraphComponent from "../../../components/Charts/linegraph";
+import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 import { API_ROUTES } from "@/@core/apiRoutes";
-import DateRangePicker from "../../../components/ui/DateRangePicketMui";
-import SelectAsync from "../../../components/common/SelectAsync";
-import EmailActionLoader from "../../../components/ui/Loaders/EmailActionLoader";
+import DateRangePicker from "../../../components/Form/DateRangePicketMui";
+import SelectAsync from "../../../components/Form/SelectAsync";
+import EmailActionLoader from "../../../components/Loaders/EmailActionLoader";
 import { createQueryString } from "@/@core/tableFunctions";
-import UpgradeSubscription from "../../../components/UpgradeSubscription";
+import UpgradeSubscription from "../Others/UpgradeSubscription";
 import { checkHistory } from "@/@core/helper";
 
 const EmailActionComponent = () => {

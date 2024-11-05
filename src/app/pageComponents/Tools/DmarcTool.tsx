@@ -14,18 +14,18 @@ import { useRouter } from "next/navigation";
 import RecordWarningCompo from "@/app/pageComponents/Tools/ui/RecordWarningCompo";
 import { postFetcherLambda } from "@/@core/apiFetcher";
 import { scrollIntoView } from "@/utils/scrollIntoView";
-import SubmitButton from "@/app/pageComponents/Tools/ui/SubmitButton";
-import TagTable from "@/components/ui/TagTable";
+import SubmitButton from "@/components/Form/SubmitButton";
+import TagTable from "@/components/UI/TagTable";
 import { capitalize } from "@mui/material";
 import { createAndClickProgressBar } from "@/@core/createAndClickProgressBar";
 import RecordValuesCompo from "@/app/pageComponents/Tools/ui/RecordValuesCompo";
 import { useSession } from "next-auth/react";
 import AllToolsScannerResult from "./ui/AllToolsScannerResult";
-import InformationTooltip from "@/components/InformationTooltip";
+import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 import Head from "next/head";
 import { toast } from "react-toastify";
 import ToolsUi from "@/app/pageComponents/Tools/ToolsUi";
-import RecordBox from "@/components/common/RecordBox";
+import RecordBox from "@/components/UI/RecordBox";
 const DmarcTool = ({
   result,
   toolsId,

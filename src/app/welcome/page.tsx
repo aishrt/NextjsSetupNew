@@ -1,5 +1,5 @@
 "use client";
-import HeaderNavigation from "@/components/Header/HeaderNavigation";
+import HeaderNavigation from "@/components/Layout/Header/HeaderNavigation";
 
 export default function HomePage() {
   return (

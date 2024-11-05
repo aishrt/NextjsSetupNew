@@ -15,10 +15,10 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import dayjs, { Dayjs } from "dayjs";
-import InformationTooltip from "@/components/InformationTooltip";
-import MainLoader from "../../../components/ui/MainLoader";
-import TableToolbar from "../../../components/ui/table-ui/TableToolbar";
-import Scrollbar from "../../../components/ui/scrollbar/Scrollbar";
+import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
+import MainLoader from "../../../components/Loaders/MainLoader";
+import TableToolbar from "../../../components/UI/table-ui/TableToolbar";
+import Scrollbar from "../../../components/Layout/scrollbar/Scrollbar";
 import {
   FormControl,
   MenuItem,
@@ -32,11 +32,11 @@ import TableHeadRow, {
   StyledTableCell,
   StyledTableNoData,
   StyledTableRow,
-} from "../../../components/ui/table-ui/TableHeadRow";
-import { headCellsSource } from "../../../components/ui/table-ui/headCells";
-import TableRowsLoader from "../../../components/ui/table-ui/TableRowsLoader";
-import { BorderLinearProgress } from "../../../components/ui/LineProgress";
-import { TablePaginationCompo } from "../../../components/ui/table-ui/TablePaginationCompo";
+} from "../../../components/UI/table-ui/TableHeadRow";
+import { headCellsSource } from "../../../components/UI/table-ui/headCells";
+import TableRowsLoader from "../../../components/UI/table-ui/TableRowsLoader";
+import { BorderLinearProgress } from "../../../components/UI/LineProgress";
+import { TablePaginationCompo } from "../../../components/UI/table-ui/TablePaginationCompo";
 import { PAGINATION_OBJECT } from "@/constants/pagination";
 import {
   _handleChangePage,
@@ -46,7 +46,7 @@ import {
 import { API_ROUTES } from "@/@core/apiRoutes";
 
 const GoogleleafletMap = dynamic(
-  () => import("@/app/pageComponents/Dashboard/GoogleleafletMap"),
+  () => import("@/externalLibraries/GoogleleafletMap"),
   {
     ssr: false,
   }

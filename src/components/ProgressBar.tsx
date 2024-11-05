@@ -5,7 +5,7 @@ import { GlobalStyles } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { removeElementsByClassName } from "@/@core/createAndClickProgressBar";
 import { usePathname, useSearchParams } from "next/navigation";
-import MainLoader from "./ui/MainLoader";
+import MainLoader from "./Loaders/MainLoader";
 
 type PushStateInput = [
   data: any,

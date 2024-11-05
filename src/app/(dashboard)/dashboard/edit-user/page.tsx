@@ -8,7 +8,7 @@ import { toast } from "react-toastify";
 import Loader from "@/app/pageComponents/BlogComponent/Loader";
 import { useStore } from "@/utils/store";
 import { API_ROUTES } from "@/@core/apiRoutes";
-import MainLoader from "@/components/ui/MainLoader";
+import MainLoader from "@/components/Loaders/MainLoader";
 
 interface User {
   id: string;

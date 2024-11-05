@@ -1,7 +1,7 @@
 "use client";
 import React, { memo, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import InformationTooltip from "@/components/InformationTooltip";
+import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 import { fetchImage } from "@/@core/commonS3";
 const TopSources = ({
   domainValue,

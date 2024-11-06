@@ -12,6 +12,8 @@ import CalendlyBadge from "@/externalLibraries/CalendlyBadge";
 import Head from "next/head";
 import HeaderNavigation from "@/components/Layout/Header/HeaderNavigation";
 import FooterContent from "@/components/Layout/Footer/FooterContent";
+import Image from "next/image";
+import { _IMG } from "@/constants/images";
 
 const metadata: Metadata = {
   title: {
@@ -137,52 +139,40 @@ export default function HomePage() {
                   <h3 className="mt-5">
                     ELIMINATE EMAIL FRAUD AND STRENGTHEN YOUR BRAND TRUST
                   </h3>
-                  <img
+                  <Image
                     className="vector1"
-                    src="/assets/images/Vector-1.png"
+                    src={_IMG.vector_1}
                     alt="design of a mail envelope"
-                    width="auto"
-                    height="auto"
                     loading="lazy"
                   />
-                  <img
+                  <Image
                     className="vector2"
-                    src="/assets/images/Vector-2.png"
+                    src={_IMG.vector_2}
                     alt="design of a mail envelope"
-                    width="auto"
-                    height="auto"
                     loading="lazy"
                   />
-                  <img
+                  <Image
                     className="vector3"
-                    src="/assets/images/Vector-3.png"
+                    src={_IMG.vector_3}
                     alt="design of a mail envelope"
-                    width="auto"
-                    height="auto"
                     loading="lazy"
                   />
-                  <img
+                  <Image
                     className="vector4"
-                    src="/assets/images/Vector-4.png"
+                    src={_IMG.vector_4}
                     alt="design of a mail envelope"
-                    width="auto"
-                    height="auto"
                     loading="lazy"
                   />
-                  <img
+                  <Image
                     className="vector5"
-                    src="/assets/images/Vector-5.png"
+                    src={_IMG.vector_5}
                     alt="design of a mail envelope"
-                    width="auto"
-                    height="auto"
                     loading="lazy"
                   />
-                  <img
+                  <Image
                     className="vector6"
-                    src="/assets/images/Vector-6.png"
+                    src={_IMG.vector_6}
                     alt="design of a mail envelope"
-                    width="auto"
-                    height="auto"
                     loading="lazy"
                   />
                   <p className="mb-3">
@@ -204,12 +194,10 @@ export default function HomePage() {
               </div>
               <div className="col-xl-6 col-lg-6 col-md-6">
                 <div className="mainBanner__Img">
-                  <img
-                    src="/assets/images/headerImage2.svg"
+                  <Image
+                    src={_IMG.headerImage2}
                     alt=" A man examines a graph while a woman sits with a laptop nearby."
                     className="img-fluid"
-                    width="auto"
-                    height="auto"
                     loading="eager"
                   />
                 </div>
@@ -275,15 +263,13 @@ export default function HomePage() {
             </div>
             <div className="col-lg-6 discoverImage">
               <div>
-                <img
-                  src="/assets/images/magzineImg.webp"
+                <Image
+                  src={_IMG.magzineImg}
                   alt="Your DMARC EBook"
                   className="img-fluid"
                   title="EBook"
                   loading="eager"
                   fetchPriority="high"
-                  width="auto"
-                  height="auto"
                 />
               </div>
             </div>
@@ -295,10 +281,8 @@ export default function HomePage() {
           <div className="row">
             <div className="col-xl-6 col-lg-6 margin">
               <div className="advantageSection__Img">
-                <img
-                  src="/assets/images/reportingImage2.webp"
-                  width="auto"
-                  height="auto"
+                <Image
+                  src={_IMG.reportingImage2}
                   alt="A man and woman stand by a panel, discussing. The woman holds a laptop. Nearby, a plant, speech bubble, chart, clock, and gears are visible."
                   title="DMARC Reporters"
                   loading="lazy"
@@ -382,11 +366,9 @@ export default function HomePage() {
                 <div className="col-xl-6 col-lg-6 col-md-6">
                   <div className="innerSection">
                     <span className="imageBorder">
-                      <img
-                        src="/assets/images/domainPro.svg"
+                      <Image
+                        src={_IMG.domainPro}
                         alt="a red lock icon"
-                        width="auto"
-                        height="auto"
                         loading="lazy"
                       />
                     </span>
@@ -400,11 +382,9 @@ export default function HomePage() {
                 <div className="col-xl-6 col-lg-6 col-md-6">
                   <div className="innerSection">
                     <span className="imageBorder">
-                      <img
-                        src="/assets/images/emailArrival.svg"
+                      <Image
+                        src={_IMG.emailArrival}
                         alt="a secure mail icon"
-                        width="auto"
-                        height="auto"
                         loading="lazy"
                       />
                     </span>
@@ -415,11 +395,9 @@ export default function HomePage() {
                 <div className="col-xl-6 col-lg-6 col-md-6">
                   <div className="innerSection">
                     <span className="imageBorder">
-                      <img
-                        src="/assets/images/brandIntegrity.svg"
+                      <Image
+                        src={_IMG.brandIntegrity}
                         alt="a red flag icon"
-                        width="auto"
-                        height="auto"
                         loading="lazy"
                       />
                     </span>
@@ -432,11 +410,9 @@ export default function HomePage() {
                 <div className="col-xl-6 col-lg-6 col-md-6">
                   <div className="innerSection">
                     <span className="imageBorder">
-                      <img
-                        src="/assets/images/infiniteSpf.svg"
+                      <Image
+                        src={_IMG.infiniteSpf}
                         alt="Keyboard icon"
-                        width="auto"
-                        height="auto"
                         loading="lazy"
                       />
                     </span>
@@ -450,11 +426,9 @@ export default function HomePage() {
                 <div className="col-xl-6 col-lg-6 col-md-6">
                   <div className="innerSection">
                     <span className="imageBorder">
-                      <img
-                        src="/assets/images/setup.svg"
+                      <Image
+                        src={_IMG.setup}
                         alt="Guided setup illustration for managing DMARC, DKIM, and SPF policies"
-                        width="auto"
-                        height="auto"
                         loading="lazy"
                       />
                     </span>
@@ -476,11 +450,9 @@ export default function HomePage() {
                   YOUR DMARC simplifies the DMARC setup process, offering
                   instant insights into email flows for better domain control.
                 </p>
-                <img
+                <Image
                   title="YOUR DMARC"
-                  src="/assets/images/compliantSources.webp"
-                  width="auto"
-                  height="auto"
+                  src={_IMG.compliantSources}
                   alt="A table titled 'Top 5 Compliant Sources'"
                   loading="lazy"
                   className="w-100"
@@ -518,12 +490,10 @@ export default function HomePage() {
         <div className="container">
           <div className="row">
             <div className="col-xl-6 col-lg-6 imageSection">
-              <img
-                src="/assets/images/dmarCFailures.svg"
+              <Image
+                src={_IMG.dmarCFailures}
                 alt="Screenshot of DMARC failures"
                 title="YOUR DMARC Get Visibility"
-                width="auto"
-                height="auto"
                 loading="lazy"
               />
             </div>
@@ -554,12 +524,10 @@ export default function HomePage() {
             </div>
             <div className="col-xl-6 col-lg-6 imageSection">
               <div className="contentInner2">
-                <img
-                  src="/assets/images/maps.webp"
+                <Image
+                  src={_IMG.maps}
                   alt="Screenshot of two graphs. Bar graph, line graph."
                   title="YOUR DMARC Increase Security"
-                  width="auto"
-                  height="auto"
                   loading="lazy"
                   className="w-100"
                 />
@@ -595,33 +563,27 @@ export default function HomePage() {
           <div className="row">
             <div className="col-xl-4 col-lg-4">
               <div className="magzineSection__Img">
-                <img
-                  src="assets/images/magazineImg1.webp"
+                <Image
+                  src={_IMG.magazineImg1}
                   alt="Cyber Defence Magazine"
-                  width="auto"
-                  height="auto"
                   loading="lazy"
                 />
               </div>
             </div>
             <div className="col-xl-4 col-lg-4">
               <div className="magzineSection__Img">
-                <img
-                  src="assets/images/magazineImg2.webp"
+                <Image
+                  src={_IMG.magazineImg2}
                   alt="Cyber Defence Magazine"
-                  width="auto"
-                  height="auto"
                   loading="lazy"
                 />
               </div>
             </div>
             <div className="col-xl-4 col-lg-4">
               <div className="magzineSection__Img">
-                <img
-                  src="assets/images/magazineImg3.webp"
+                <Image
+                  src={_IMG.magazineImg3}
                   alt="Cyber Defence Magazine"
-                  width="auto"
-                  height="auto"
                   loading="lazy"
                 />
               </div>
@@ -654,11 +616,9 @@ export default function HomePage() {
             <div className="col-lg-4">
               <div className="startupfeatures" title="Schedule a Demo">
                 <span className="imageBorder">
-                  <img
-                    src="/assets/images/demo.svg"
+                  <Image
+                    src={_IMG.demo}
                     alt="Demo scheduling icon"
-                    width="auto"
-                    height="auto"
                     loading="lazy"
                   />
                 </span>
@@ -673,11 +633,9 @@ export default function HomePage() {
             <div className="col-lg-4">
               <div className="startupfeatures" title="Domain Analysis">
                 <span className="imageBorder">
-                  <img
-                    src="/assets/images/iconDomain.svg"
+                  <Image
+                    src={_IMG.iconDomain}
                     alt="Web icon"
-                    width="auto"
-                    height="auto"
                     loading="lazy"
                   />
                 </span>
@@ -698,11 +656,9 @@ export default function HomePage() {
             <div className="col-lg-4">
               <div className="startupfeatures" title="Get in Touch">
                 <span className="imageBorder">
-                  <img
-                    src="/assets/images/contact2.svg"
+                  <Image
+                    src={_IMG.contact2}
                     alt="Contact icon"
-                    width="auto"
-                    height="auto"
                     loading="lazy"
                   />
                 </span>

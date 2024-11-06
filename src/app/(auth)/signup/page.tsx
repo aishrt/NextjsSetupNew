@@ -3,6 +3,8 @@ import React from "react";
 import { Metadata } from "next";
 import Head from "next/head";
 import { AuthCredentialsSignupForm } from "@/app/pageComponents/Auth/auth-credentials-signup-form";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: {
@@ -47,96 +49,76 @@ const SignUp = () => {
           <div className="row">
             <div className="col-xl-6 imageArea">
               <span className="vec1">
-                <img
-                  src="/assets/images/vec1.svg"
+                <Image
+                  src={_IMG.vec1}
                   alt="White icon of an envelope with a shield"
                   loading="lazy"
-                  width="auto"
-                  height="auto"
                 />
               </span>
               <span className="vec2">
-                <img
-                  src="/assets/images/vec2.svg"
+                <Image
+                  src={_IMG.vec2}
                   alt="White envelope with a lock"
                   loading="lazy"
-                  width="auto"
-                  height="auto"
                 />
               </span>
               <span className="vec3">
-                <img
-                  src="/assets/images/vec2.svg"
+                <Image
+                  src={_IMG.vec2}
                   alt="White envelope with a lock"
                   loading="lazy"
-                  width="auto"
-                  height="auto"
                 />
               </span>
               <span className="vec4">
-                <img
-                  src="/assets/images/vec2.svg"
+                <Image
+                  src={_IMG.vec2}
                   alt="White envelope with a lock"
                   loading="lazy"
-                  width="auto"
-                  height="auto"
                 />
               </span>
               <span className="vec5">
-                <img
-                  src="/assets/images/vec2.svg"
+                <Image
+                  src={_IMG.vec2}
                   alt="White envelope with a lock"
                   loading="lazy"
-                  width="auto"
-                  height="auto"
                 />
               </span>
               <span className="vec6">
-                <img
-                  src="/assets/images/vec2.svg"
+                <Image
+                  src={_IMG.vec2}
                   alt="White envelope with a lock"
                   loading="lazy"
-                  width="auto"
-                  height="auto"
                 />
               </span>
               <span className="vec7">
-                <img
-                  src="/assets/images/vec1.svg"
+                <Image
+                  src={_IMG.vec1}
                   alt="White icon of an envelope with a shield"
                   loading="lazy"
-                  width="auto"
-                  height="auto"
                 />
               </span>
               <span className="vec8 lock">
-                <img
-                  src="/assets/images/vec3.svg"
+                <Image
+                  src={_IMG.vec3}
                   alt="White icon of an envelope with a shield"
                   loading="lazy"
-                  width="auto"
-                  height="auto"
                 />
               </span>
               <span className="vec9">
-                <img
-                  src="/assets/images/vec1.svg"
+                <Image
+                  src={_IMG.vec1}
                   alt="White icon of an envelope with a shield"
                   loading="lazy"
-                  width="auto"
-                  height="auto"
                 />
               </span>
 
               <div className="imageSection">
                 <Link href="/" style={{ cursor: "pointer" }}>
-                  <img
-                    src="/assets/images/logo-white-blue.svg"
+                  <Image
+                    src={_IMG.logo_white_blue}
                     alt="yourDMARC's logo in white"
                     className="loginImage"
                     loading="lazy"
-                    width="auto"
-                    height="auto"
                   />
                 </Link>
                 <h2>Join YOUR DMARC</h2>
@@ -151,66 +133,52 @@ const SignUp = () => {
 
             <div className="col-xl-6 formArea">
               <span className="vecp1">
-                <img
-                  src="/assets/images/vecp1.svg"
+                <Image
+                  src={_IMG.vecp1}
                   alt="White envelope with a lock"
                   loading="lazy"
-                  width="auto"
-                  height="auto"
                 />
               </span>
               <span className="vecp2">
-                <img
-                  src="/assets/images/vecp1.svg"
+                <Image
+                  src={_IMG.vecp1}
                   alt="White envelope with a lock"
                   loading="lazy"
-                  width="auto"
-                  height="auto"
                 />
               </span>
               <span className="vecp3">
-                <img
-                  src="/assets/images/vecp1.svg"
+                <Image
+                  src={_IMG.vecp1}
                   alt="White envelope with a lock"
                   loading="lazy"
-                  width="auto"
-                  height="auto"
                 />
               </span>
               <span className="vecp4">
-                <img
-                  src="/assets/images/vecp1.svg"
+                <Image
+                  src={_IMG.vecp1}
                   alt="White envelope with a lock"
                   loading="lazy"
-                  width="auto"
-                  height="auto"
                 />
               </span>
               <span className="vecp5">
-                <img
-                  src="/assets/images/vecp1.svg"
+                <Image
+                  src={_IMG.vecp1}
                   alt="White envelope with a lock"
                   loading="lazy"
-                  width="auto"
-                  height="auto"
                 />
               </span>
               <span className="vecp6">
-                <img
-                  src="/assets/images/vecp1.svg"
+                <Image
+                  src={_IMG.vecp1}
                   alt="White envelope with a lock"
                   loading="lazy"
-                  width="auto"
-                  height="auto"
                 />
               </span>
               <span className="vecp7">
-                <img
-                  src="/assets/images/vecp2.svg"
+                <Image
+                  src={_IMG.vecp2}
                   alt="White icon of an envelope with a shield"
                   loading="lazy"
-                  width="auto"
-                  height="auto"
                 />
               </span>
               <div className="formInner">

@@ -159,7 +159,7 @@ const AuthCredentialsLoginForm = ({
                   <ErrorMessage name="password" />
                 </div>
               </div>
-              <div className="text-center mt-5">
+              <div className="form-group text-center mt-5">
                 <Button
                   type="submit"
                   className="btn btnLogin"

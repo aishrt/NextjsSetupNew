@@ -3,6 +3,9 @@ import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
+import { _iterSSEMessages } from "openai/streaming.mjs";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 
 const SigninWithGoogleCompo = ({ btnTitle }: { btnTitle: string }) => {
   const router = useRouter();
@@ -23,20 +26,17 @@ const SigninWithGoogleCompo = ({ btnTitle }: { btnTitle: string }) => {
     }
     setIsLoading(false);
   };
-
-  
   return (
+    
     <button
       className="btn btn-google"
       type="button"
       disabled={isLoading}
       onClick={loginWithGoogle}
     >
-      <img
+      <Image
         alt="This is the Google icon used for signing up"
-        src="/assets/images/googleIcon.svg"
-        width="auto"
-        height="auto"
+        src={_IMG.googleIcon}
         loading="lazy"
       />
       {btnTitle}

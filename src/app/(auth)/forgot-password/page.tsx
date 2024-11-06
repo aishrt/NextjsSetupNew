@@ -1,6 +1,8 @@
 import React from "react";
 import { Metadata } from "next";
 import AuthForgotPassword from "@/app/pageComponents/Auth/auth-forgot-password";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 export const metadata: Metadata = {
   title: {
     template: "Your DMARC Password Recovery: Reset Your Account Access",
@@ -18,64 +20,64 @@ const ForgotPassword = () => {
           <div className="row">
             <div className="col-xl-6 col-lg-6 col-md-12 imageArea">
               <span className="vec1">
-                <img
-                  src="/assets/images/vec1.svg"
+                <Image
+                  src={_IMG.vec1}
                   loading="lazy"
                   alt="White icon of an envelope with a shield"
                 />
               </span>
               <span className="vec2">
-                <img
-                  src="/assets/images/vec2.svg"
+                <Image
+                  src={_IMG.vec2}
                   loading="lazy"
                   alt="White envelope with a lock"
                 />
               </span>
               <span className="vec3">
-                <img
-                  src="/assets/images/vec2.svg"
+                <Image
+                  src={_IMG.vec2}
                   loading="lazy"
                   alt="White envelope with a lock"
                 />
               </span>
               <span className="vec4">
-                <img
-                  src="/assets/images/vec2.svg"
+                <Image
+                  src={_IMG.vec2}
                   loading="lazy"
                   alt="White envelope with a lock"
                 />
               </span>
               <span className="vec5">
-                <img
-                  src="/assets/images/vec2.svg"
+                <Image
+                  src={_IMG.vec2}
                   loading="lazy"
                   alt="White envelope with a lock"
                 />
               </span>
               <span className="vec6">
-                <img
-                  src="/assets/images/vec2.svg"
+                <Image
+                  src={_IMG.vec2}
                   loading="lazy"
                   alt="White envelope with a lock"
                 />
               </span>
               <span className="vec7">
-                <img
-                  src="/assets/images/vec1.svg"
+                <Image
+                  src={_IMG.vec1}
                   loading="lazy"
                   alt="White icon of an envelope with a shield"
                 />
               </span>
               <span className="vec8 lock">
-                <img
-                  src="/assets/images/vec3.svg"
+                <Image
+                  src={_IMG.vec3}
                   loading="lazy"
                   alt="White icon of an envelope with a shield"
                 />
               </span>
               <span className="vec9">
-                <img
-                  src="/assets/images/vec1.svg"
+                <Image
+                  src={_IMG.vec1}
                   loading="lazy"
                   alt="White icon of an envelope with a shield"
                 />
@@ -83,9 +85,9 @@ const ForgotPassword = () => {
 
               <div className="imageSection">
                 <a href="/">
-                  <img
-                    src="/assets/images/black_shadow.png"
+                  <Image
                     alt=""
+                    src={_IMG.black_shadow}
                     className="loginImage"
                     loading="lazy"
                   />
@@ -110,29 +112,29 @@ const ForgotPassword = () => {
 
             <div className="col-xl-6 col-lg-6 col-md-12 formArea">
               <span className="vecp1">
-                <img src="/assets/images/vecp1.svg" alt="" loading="lazy" />
+                <Image src={_IMG.vecp1} alt="" loading="lazy" />
               </span>
               <span className="vecp2">
-                <img src="/assets/images/vecp1.svg" alt="" loading="lazy" />
+                <Image src={_IMG.vecp1} alt="" loading="lazy" />
               </span>
               <span className="vecp3">
-                <img src="/assets/images/vecp1.svg" alt="" loading="lazy" />
+                <Image src={_IMG.vecp1} alt="" loading="lazy" />
               </span>
               <span className="vecp4">
-                <img src="/assets/images/vecp1.svg" alt="" loading="lazy" />
+                <Image src={_IMG.vecp1} alt="" loading="lazy" />
               </span>
               <span className="vecp5">
-                <img src="/assets/images/vecp1.svg" alt="" loading="lazy" />
+                <Image src={_IMG.vecp1} alt="" loading="lazy" />
               </span>
               <span className="vecp6">
-                <img src="/assets/images/vecp1.svg" alt="" loading="lazy" />
+                <Image src={_IMG.vecp1} alt="" loading="lazy" />
               </span>
               <span className="vecp7">
-                <img src="/assets/images/vecp2.svg" alt="" loading="lazy" />
+                <Image src={_IMG.vecp2} alt="" loading="lazy" />
               </span>
               <div className="logo">
-                <img
-                  src="/assets/images/logo-blue.png"
+                <Image
+                  src={_IMG.logo_blue}
                   alt=""
                   className="loginImage"
                   loading="lazy"

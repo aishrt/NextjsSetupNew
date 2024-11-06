@@ -8,6 +8,8 @@ import Head from "next/head";
 import CircularSpinner from "@/components/Loaders/CircularSpinner";
 import Loader from "@/app/pageComponents/BlogComponent/Loader";
 import { API_ROUTES } from "@/@core/apiRoutes";
+import Image from "next/image";
+import { _IMG } from "@/constants/images";
 
 const Login = () => {
   return (
@@ -46,7 +48,6 @@ const LoginComponent = () => {
 
   async function verifyToken(token: any) {
     const apiUrl = `${API_ROUTES.VERIFY_JWT}`;
-
 
     const response = await fetch(`${apiUrl}`, {
       method: "POST",
@@ -101,13 +102,11 @@ const LoginComponent = () => {
             <div className="col-xl-6 col-lg-6 col-md-12 imageArea">
               <div className="imageSection">
                 <Link href="/">
-                  <img
-                    src="/assets/images/logo-white-blue.svg"
+                  <Image
+                    src={_IMG.logo_white_blue}
                     alt="yourDMARC's logo in white"
                     className="loginImage pointer"
                     loading="lazy"
-                    width="auto"
-                    height="auto"
                   />
                 </Link>
                 <h2>Welcome to YOUR DMARC</h2>

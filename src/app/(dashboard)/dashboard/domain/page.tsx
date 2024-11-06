@@ -40,7 +40,6 @@ import { useSession, signOut } from "next-auth/react";
 import Button from "@mui/material/Button";
 import DialogActions from "@mui/material/DialogActions";
 import AddIcon from "@mui/icons-material/Add";
-import FileUpload from "@/components/View/common/FileUpload";
 import { API_ROUTES } from "@/@core/apiRoutes";
 import LicenseWarningsCompo from "@/components/UI/LicenseWarningsCompo";
 import TableToolbar from "@/components/Table-ui/TableToolbar";
@@ -68,6 +67,9 @@ import Loader from "@/app/pageComponents/BlogComponent/Loader";
 import { useStore } from "@/utils/store";
 import UpgradePlanComponent from "@/app/pageComponents/Others/UpgradePlanComponent";
 import dayjs from "dayjs";
+import Image from "next/image";
+import { _IMG } from "@/constants/images";
+import FileUpload from "@/components/Upload/FileUpload";
 function debounce(func: any, wait: any) {
   let timeout: any;
   return function executedFunction(...args: any) {
@@ -415,7 +417,7 @@ const DomainPage = () => {
                           <StyledTableCell>
                             <div className="tableDataFlex">
                               <span>
-                                <img
+                                <Image
                                   className="favIconImage"
                                   loading="lazy"
                                   src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${item?.domain}&size=128`}
@@ -457,8 +459,8 @@ const DomainPage = () => {
                                       }
                                       placement="left"
                                     >
-                                      <img
-                                        src="/assets/images/crosscircle.svg"
+                                      <Image
+                                        src={_IMG.crosscircle}
                                         alt=""
                                         loading="lazy"
                                       />
@@ -489,8 +491,8 @@ const DomainPage = () => {
                                       }
                                       placement="top"
                                     >
-                                      <img
-                                        src="/assets/images/checkarrowFilled.svg"
+                                      <Image
+                                        src={_IMG.checkarrowFilled}
                                         alt=""
                                         loading="lazy"
                                       />
@@ -523,8 +525,8 @@ const DomainPage = () => {
                                         setModalType("DMARC");
                                       }}
                                     >
-                                      <img
-                                        src="/assets/images/redMinusIcon.svg"
+                                      <Image
+                                        src={_IMG.redMinusIco}
                                         alt=""
                                         loading="lazy"
                                       />
@@ -540,8 +542,8 @@ const DomainPage = () => {
                                   title="Configured"
                                   style={{ cursor: "default" }}
                                 >
-                                  <img
-                                    src="/assets/images/greenTick.svg"
+                                  <Image
+                                    src={_IMG.greenTick}
                                     alt=""
                                     loading="lazy"
                                   />
@@ -573,8 +575,8 @@ const DomainPage = () => {
                                         setDomainName(item?.domain);
                                       }}
                                     >
-                                      <img
-                                        src="/assets/images/redMinusIcon.svg"
+                                      <Image
+                                        src={_IMG.redMinusIco}
                                         alt=""
                                         loading="lazy"
                                       />
@@ -590,8 +592,8 @@ const DomainPage = () => {
                                   title="Configured"
                                   style={{ cursor: "default" }}
                                 >
-                                  <img
-                                    src="/assets/images/greenTick.svg"
+                                  <Image
+                                    src={_IMG.greenTick}
                                     alt=""
                                     loading="lazy"
                                   />
@@ -681,8 +683,9 @@ const DomainPage = () => {
                               className="cancelBtn"
                               onClick={handleCloseUpload}
                             >
-                              <img
-                                src="/assets/images/cancel-black.svg"
+                              <Image
+                                alt="cancel"
+                                src={_IMG.cancel_black}
                                 loading="lazy"
                               />
                             </span>
@@ -849,7 +852,7 @@ const DomainPage = () => {
               <DialogContent className="dialogHeader" dividers>
                 <Typography gutterBottom>
                   <>
-                    <img src="/assets/images/binIcon.svg" loading="lazy" />
+                    <Image src={_IMG.bin_Icon} alt="Delete" loading="lazy" />
                     <span style={{ display: "block" }}>
                       Are you sure You want to delete ?
                     </span>

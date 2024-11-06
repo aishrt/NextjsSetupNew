@@ -3,6 +3,8 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 
 const DomainDashboard = () => {
   return (
@@ -157,9 +159,9 @@ const DomainDashboard = () => {
                                                   aria-expanded="false"
                                                   aria-controls="flush-collapseOne"
                                                 ></div>
-                                                <img
+                                                <Image
                                                   className="header-image"
-                                                  src="/assets/images/checkmarcGreen.svg"
+                                                  src={_IMG.checkmarcGreen}
                                                   alt=""
                                                   loading="lazy"
                                                 />

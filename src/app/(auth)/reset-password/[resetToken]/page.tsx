@@ -1,4 +1,6 @@
 import { AuthResetPasswordForm } from "@/app/pageComponents/Auth/auth-reset-password-form";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 import React from "react";
 
 type Props = {
@@ -15,36 +17,36 @@ const ResetPassword = ({ params }: Props) => {
           <div className="row">
             <div className="col-xl-6 col-lg-6 col-md-12 imageArea">
               <span className="vec1">
-                <img src="/assets/images/vec1.svg" alt="" loading="lazy" />
+                <Image src={_IMG.vec1} alt="" loading="lazy" />
               </span>
               <span className="vec2">
-                <img src="/assets/images/vec2.svg" alt="" loading="lazy" />
+                <Image src={_IMG.vec2} alt="" loading="lazy" />
               </span>
               <span className="vec3">
-                <img src="/assets/images/vec2.svg" alt="" loading="lazy" />
+                <Image src={_IMG.vec2} alt="" loading="lazy" />
               </span>
               <span className="vec4">
-                <img src="/assets/images/vec2.svg" alt="" loading="lazy" />
+                <Image src={_IMG.vec2} alt="" loading="lazy" />
               </span>
               <span className="vec5">
-                <img src="/assets/images/vec2.svg" alt="" loading="lazy" />
+                <Image src={_IMG.vec2} alt="" loading="lazy" />
               </span>
               <span className="vec6">
-                <img src="/assets/images/vec2.svg" alt="" loading="lazy" />
+                <Image src={_IMG.vec2} alt="" loading="lazy" />
               </span>
               <span className="vec7">
-                <img src="/assets/images/vec1.svg" alt="" loading="lazy" />
+                <Image src={_IMG.vec1} alt="" loading="lazy" />
               </span>
               <span className="vec8 lock">
-                <img src="/assets/images/vec3.svg" alt="" loading="lazy" />
+                <Image src={_IMG.vec3} alt="" loading="lazy" />
               </span>
               <span className="vec9">
-                <img src="/assets/images/vec1.svg" alt="" loading="lazy" />
+                <Image src={_IMG.vec1} alt="" loading="lazy" />
               </span>
 
               <div className="imageSection">
-                <img
-                  src="/assets/images/logo-white-blue.svg"
+                <Image
+                  src={_IMG.logo_white_blue}
                   alt=""
                   className="loginImage"
                   loading="lazy"
@@ -61,30 +63,30 @@ const ResetPassword = ({ params }: Props) => {
 
             <div className="col-xl-6 col-lg-6 col-md-12 formArea">
               <span className="vecp1">
-                <img src="/assets/images/vecp1.svg" alt="" loading="lazy" />
+                <Image src={_IMG.vecp1} alt="" loading="lazy" />
               </span>
               <span className="vecp2">
-                <img src="/assets/images/vecp1.svg" alt="" loading="lazy" />
+                <Image src={_IMG.vecp1} alt="" loading="lazy" />
               </span>
               <span className="vecp3">
-                <img src="/assets/images/vecp1.svg" alt="" loading="lazy" />
+                <Image src={_IMG.vecp1} alt="" loading="lazy" />
               </span>
               <span className="vecp4">
-                <img src="/assets/images/vecp1.svg" alt="" loading="lazy" />
+                <Image src={_IMG.vecp1} alt="" loading="lazy" />
               </span>
               <span className="vecp5">
-                <img src="/assets/images/vecp1.svg" alt="" loading="lazy" />
+                <Image src={_IMG.vecp1} alt="" loading="lazy" />
               </span>
               <span className="vecp6">
-                <img src="/assets/images/vecp1.svg" alt="" loading="lazy" />
+                <Image src={_IMG.vecp1} alt="" loading="lazy" />
               </span>
               <span className="vecp7">
-                <img src="/assets/images/vecp2.svg" alt="" loading="lazy" />
+                <Image src={_IMG.vecp2} alt="" loading="lazy" />
               </span>
 
               <div className="logo">
-                <img
-                  src="/assets/images/logo-blue.png"
+                <Image
+                  src={_IMG.logo_blue}
                   alt=""
                   className="loginImage"
                   loading="lazy"

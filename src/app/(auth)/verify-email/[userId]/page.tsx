@@ -4,6 +4,8 @@ import FooterContent from "@/components/Layout/Footer/FooterContent";
 import { API_ROUTES } from "@/@core/apiRoutes";
 import RedirectTimerCompo from "@/app/pageComponents/Auth/RedirectTimerCompo";
 import HeaderNew from "@/components/Layout/Header/HeaderNew";
+import Image from "next/image";
+import { _IMG } from "@/constants/images";
 
 type Props = {
   params: {
@@ -30,11 +32,7 @@ export default async function Page({ params }: Props) {
             <div className="col-xl-6 mx-auto">
               {verifyEmail.status ? (
                 <div className="verifyEmail success mb-4">
-                  <img
-                    alt={``}
-                    src="/assets/images/check-mark.png"
-                    loading="lazy"
-                  />
+                  <Image alt={``} src={_IMG.check_mark} loading="lazy" />
                   <h4>Great news! </h4>
                   <p>
                     Your email has been <span>successfully verified</span>.
@@ -46,7 +44,7 @@ export default async function Page({ params }: Props) {
                 </div>
               ) : (
                 <div className="verifyEmail error mb-4">
-                  <img alt={``} src="/assets/images/close.png" loading="lazy" />
+                  <Image alt={``} src={_IMG.close} loading="lazy" />
                   <h4>Uh-oh! </h4>
                   <p>
                     We encountered a <span>verification error</span>. Please

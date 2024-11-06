@@ -8,3 +8,11 @@ export const initDashboardDataResults = {
     DETAIL_REPORTS: {},
     TOP_SENDER: {},
   };
+
+  export const allowedImageFormats = [
+    "image/jpeg",
+    "image/png",
+    "image/gif",
+    "image/svg+xml",
+    "image/webp",
+  ];

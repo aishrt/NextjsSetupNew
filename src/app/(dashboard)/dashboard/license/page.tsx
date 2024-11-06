@@ -12,6 +12,8 @@ import LicenseWarningsCompo from "@/components/UI/LicenseWarningsCompo";
 import MainLoader from "@/components/Loaders/MainLoader";
 import { useStore } from "@/utils/store";
 import { Checkbox, FormControlLabel, FormGroup } from "@mui/material";
+import Image from "next/image";
+import { _IMG } from "@/constants/images";
 
 const License = () => {
   const router = useRouter();
@@ -128,11 +130,7 @@ const License = () => {
                       <div className="col-xl-12">
                         <div className="card">
                           <div className="card-header">
-                            <img
-                              src="/assets/images/card.svg"
-                              alt=""
-                              loading="lazy"
-                            />
+                            <Image src={_IMG.card} alt="Card" loading="lazy" />
                             <h5 className="fw-bolder">License</h5>
                           </div>
                           <div className="card-body">
@@ -193,8 +191,8 @@ const License = () => {
                         <div className="col-xl-12 mt-3">
                           <div className="card">
                             <div className="card-header">
-                              <img
-                                src="/assets/images/domainIcon.svg"
+                              <Image
+                                src={_IMG.domainIcon}
                                 alt=""
                                 loading="lazy"
                               />
@@ -234,8 +232,8 @@ const License = () => {
                         <div className="col-xl-12 mt-3">
                           <div className="card">
                             <div className="card-header">
-                              <img
-                                src="/assets/images/envelope.svg"
+                              <Image
+                                src={_IMG.envelope}
                                 alt=""
                                 loading="lazy"
                               />
@@ -275,9 +273,9 @@ const License = () => {
                         <div className="col-xl-12 mt-3">
                           <div className="card">
                             <div className="card-header">
-                              <img
-                                src="/assets/images/users.svg"
-                                alt=""
+                              <Image
+                                src={_IMG.user}
+                                alt="User"
                                 loading="lazy"
                               />
                               <h5 className="fw-bolder">Users</h5>
@@ -316,9 +314,9 @@ const License = () => {
                         <div className="col-xl-12 mt-3">
                           <div className="card">
                             <div className="card-header">
-                              <img
-                                src="/assets/images/sender.png"
-                                alt=""
+                              <Image
+                                src={_IMG.sender}
+                                alt="Sender"
                                 loading="lazy"
                               />
                               <h5 className="fw-bolder">Senders</h5>
@@ -356,11 +354,7 @@ const License = () => {
                       <div className="col-xl-12 mt-3">
                         <div className="card">
                           <div className="card-header">
-                            <img
-                              src="/assets/images/plan.svg"
-                              alt=""
-                              loading="lazy"
-                            />
+                            <Image src={_IMG.plan} alt="Plan" loading="lazy" />
                             <h5 className="fw-bolder">Plan Features</h5>
                           </div>
                           <div className="card-body">

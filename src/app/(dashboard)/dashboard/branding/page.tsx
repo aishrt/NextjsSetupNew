@@ -5,17 +5,15 @@ import { isEmpty } from "lodash";
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import DialogContent from "@mui/material/DialogContent";
-import {
-  Button,
-  DialogActions,
-  Typography,
-} from "@mui/material";
+import { Button, DialogActions, Typography } from "@mui/material";
 import { API_ROUTES } from "@/@core/apiRoutes";
 import LicenseWarningsCompo from "@/components/UI/LicenseWarningsCompo";
 import MainLoader from "@/components/Loaders/MainLoader";
 import { BootstrapDialog } from "@/components/Modal/BootstrapDialogUi";
 import { useStore } from "@/utils/store";
 import UpgradePlanComponent from "@/app/pageComponents/Others/UpgradePlanComponent";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 const BrandLogo = () => {
   const [form, setFormData] = useState({
     brandLogo: "",
@@ -276,7 +274,6 @@ const BrandLogo = () => {
                         <div className="col-xxl-9 col-xl-8 col-lg-8 col-md-9">
                           <div className="card">
                             <div className="card-body">
-                             
                               <div className="row">
                                 <div className="col-xl-12">
                                   <div className="logoUpload logo">
@@ -306,9 +303,9 @@ const BrandLogo = () => {
                                     {form.preview && (
                                       <>
                                         <div className="logoImage">
-                                          <img
+                                          <Image
                                             src={form.preview}
-                                            alt=""
+                                            alt="Logo Preview"
                                             width={80}
                                             height={80}
                                             loading="lazy"
@@ -510,8 +507,9 @@ const BrandLogo = () => {
                       <DialogContent className="dialogHeader" dividers>
                         <Typography gutterBottom>
                           <div>
-                            <img
-                              src="/assets/images/binIcon.svg"
+                            <Image
+                              alt="delete"
+                              src={_IMG.bin_Icon}
                               loading="lazy"
                             />
                             <p>Are you sure you want to delete logo ?</p>

@@ -11,7 +11,7 @@ import { useSearchParams } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { useStore } from "@/utils/store";
 import Loader from "@/app/pageComponents/BlogComponent/Loader";
-import { Button } from "@/components/Form/Button";
+import { Button } from "@mui/material";
 
 const SourceLoginDashboardPage = () => {
   return (
@@ -161,11 +161,9 @@ const AuthCredentialsLoginForm = ({
               </div>
               <div className="text-center mt-5">
                 <Button
-                  variant="primary"
                   type="submit"
+                  className="btn btnLogin"
                   disabled={formik.isSubmitting}
-                  isLoading={true}
-                  size="lg"
                 >
                   Sign In
                 </Button>

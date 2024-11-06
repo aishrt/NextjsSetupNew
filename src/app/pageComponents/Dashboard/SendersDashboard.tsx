@@ -5,7 +5,7 @@ import Volume from "@/app/pageComponents/Dashboard/Volume";
 import TopSources from "@/app/pageComponents/Dashboard/TopSources";
 import DetailedSources from "@/app/pageComponents/Dashboard/DetailedSources";
 import ResultButton from "@/app/pageComponents/Dashboard/ResultButton";
-import MainLoader from "../../../components/Loaders/MainLoader";
+import MainLoader from "@/components/Loaders/MainLoader";
 import { useStore } from "@/utils/store";
 import { useEffect, useState } from "react";
 import dayjs, { Dayjs } from "dayjs";

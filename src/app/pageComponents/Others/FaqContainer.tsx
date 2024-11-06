@@ -1,6 +1,7 @@
 "use client";
 import { useSession } from "next-auth/react";
 import { useState } from "react";
+
 const FaqContainer = ({ toolName }: { toolName: string }) => {
   const { data: session, status } = useSession();
   const [openIndex, setOpenIndex] = useState(0); // State to track which item is open
@@ -1908,16 +1909,6 @@ const FaqContainer = ({ toolName }: { toolName: string }) => {
                   </div>
                 </div>
               </div>
-              {/* <div className="col-lg-6">
-                <div className="faqImg">
-                  <img
-                    src="/assets/images/faqImg3.jpg"
-                    alt="faq image"
-                    loading="lazy"
-                  />
-                  <h3>Any Questions?</h3>
-                </div>
-              </div> */}
             </div>
           </div>
         </div>

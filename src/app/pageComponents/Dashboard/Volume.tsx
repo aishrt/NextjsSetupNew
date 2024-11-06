@@ -13,7 +13,7 @@ import {
 } from "recharts";
 import { getDashboardGraphData } from "@/@core/apiFetcher";
 import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
-import GraphLoader from "../../../components/Loaders/GraphLoader";
+import GraphLoader from "@/components/Loaders/GraphLoader";
 const options = ["Action", "Another Action", "Something else here"];
 
 const Volume = ({

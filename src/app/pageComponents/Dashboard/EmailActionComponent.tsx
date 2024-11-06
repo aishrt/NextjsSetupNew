@@ -7,15 +7,15 @@ import { getFetcherWithAuth } from "@/@core/apiFetcher";
 import dayjs, { Dayjs } from "dayjs";
 import { useStore } from "@/utils/store";
 
-import LineGraphComponent from "../../../components/Charts/linegraph";
 import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 import { API_ROUTES } from "@/@core/apiRoutes";
-import DateRangePicker from "../../../components/Form/DateRangePicketMui";
-import SelectAsync from "../../../components/Form/SelectAsync";
-import EmailActionLoader from "../../../components/Loaders/EmailActionLoader";
 import { createQueryString } from "@/@core/tableFunctions";
-import UpgradeSubscription from "../Others/UpgradeSubscription";
 import { checkHistory } from "@/@core/helper";
+import LineGraphComponent from "@/components/Charts/linegraph";
+import DateRangePicker from "@/components/Form/DateRangePicketMui";
+import UpgradeSubscription from "../Others/UpgradeSubscription";
+import EmailActionLoader from "@/components/Loaders/EmailActionLoader";
+import SelectAsync from "@/components/Form/SelectAsync";
 
 const EmailActionComponent = () => {
   const { firstDomain, licenseValidation } = useStore();

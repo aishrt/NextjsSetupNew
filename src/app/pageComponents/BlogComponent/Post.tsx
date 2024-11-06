@@ -1,10 +1,7 @@
-import { formatDate, getStrapiMedia } from "./utils/api-helpers";
+import { getStrapiMedia } from "./utils/api-helpers";
 import { postRenderer } from "./utils/post-renderer";
 import Image from "next/image";
-import QueryBuilderIcon from '@mui/icons-material/QueryBuilder';
-import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
-import * as React from 'react';
-
+import * as React from "react";
 
 interface Article {
   id: number;

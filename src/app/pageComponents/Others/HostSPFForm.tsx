@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { toast } from "react-toastify";
 import * as Yup from "yup";
-import MainLoader from "../../../components/Loaders/MainLoader";
+import MainLoader from "@/components/Loaders/MainLoader";
 
 interface FormData {
   source_name: string;

@@ -4,13 +4,13 @@ import { Table, TableBody, TableContainer } from "@mui/material";
 import moment from "moment";
 import { useEffect, useState } from "react";
 import { API_ROUTES } from "@/@core/apiRoutes";
-import Scrollbar from "../../../components/Layout/scrollbar/Scrollbar";
+import Scrollbar from "@/components/Layout/scrollbar/Scrollbar";
 import TableHeadRow, {
   StyledTableCell,
   StyledTableNoData,
   StyledTableRow,
-} from "../../../components/UI/table-ui/TableHeadRow";
-import { headCellsComplaint } from "../../../components/UI/table-ui/headCells";
+} from "@/components/Table-ui/TableHeadRow";
+import { headCellsComplaint } from "@/components/Table-ui/headCells";
 import { isEmpty } from "@/utils/isEmpty";
 import dayjs, { Dayjs } from "dayjs";
 import {
@@ -19,8 +19,8 @@ import {
   createQueryString,
 } from "@/@core/tableFunctions";
 import { PAGINATION_OBJECT } from "@/constants/pagination";
-import { TablePaginationCompo } from "../../../components/UI/table-ui/TablePaginationCompo";
-import TableRowsLoader from "../../../components/UI/table-ui/TableRowsLoader";
+import { TablePaginationCompo } from "@/components/Table-ui/TablePaginationCompo";
+import TableRowsLoader from "@/components/Table-ui/TableRowsLoader";
 import { useRouter } from "next/navigation";
 
 const CompliantDetails = ({ props }: { props: any }) => {

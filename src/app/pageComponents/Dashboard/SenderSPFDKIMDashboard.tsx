@@ -8,6 +8,29 @@ import { Table, TableBody, TableContainer } from "@mui/material";
 import dynamic from "next/dynamic";
 import "leaflet/dist/leaflet.css";
 import "/node_modules/flag-icons/css/flag-icons.min.css";
+import Ipmodal from "@/components/Modal/ipModal";
+import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
+import { API_ROUTES } from "@/@core/apiRoutes";
+import dayjs, { Dayjs } from "dayjs";
+import { PAGINATION_OBJECT } from "@/constants/pagination";
+import Scrollbar from "@/components/Layout/scrollbar/Scrollbar";
+import TableRowsLoader from "@/components/Table-ui/TableRowsLoader";
+import { isEmpty } from "lodash";
+import { TablePaginationCompo } from "@/components/Table-ui/TablePaginationCompo";
+import { SenderSPFDKIMdashboard } from "@/components/Table-ui/headCells";
+
+import TableHeadRow, {
+  StyledTableCell,
+  StyledTableNoData,
+  StyledTableRow,
+} from "@/components/Table-ui/TableHeadRow";
+
+import {
+  _handleChangePage,
+  _setPaginationObjectFn,
+  createQueryString,
+} from "@/@core/tableFunctions";
+
 const GoogleleafletMap = dynamic(
   () => import("@/externalLibraries/GoogleleafletMap"),
   {
@@ -20,26 +43,6 @@ const DonutChart = dynamic(
     ssr: false,
   }
 );
-import Ipmodal from "../../../components/Modal/ipModal";
-import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
-import { API_ROUTES } from "@/@core/apiRoutes";
-import {
-  _handleChangePage,
-  _setPaginationObjectFn,
-  createQueryString,
-} from "@/@core/tableFunctions";
-import dayjs, { Dayjs } from "dayjs";
-import { PAGINATION_OBJECT } from "@/constants/pagination";
-import Scrollbar from "../../../components/Layout/scrollbar/Scrollbar";
-import TableHeadRow, {
-  StyledTableCell,
-  StyledTableNoData,
-  StyledTableRow,
-} from "../../../components/UI/table-ui/TableHeadRow";
-import TableRowsLoader from "../../../components/UI/table-ui/TableRowsLoader";
-import { isEmpty } from "lodash";
-import { TablePaginationCompo } from "../../../components/UI/table-ui/TablePaginationCompo";
-import { SenderSPFDKIMdashboard } from "../../../components/UI/table-ui/headCells";
 
 const SenderSPFDKIMDashboard = ({ props }: { props: any }) => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false); // State to control modal open/close

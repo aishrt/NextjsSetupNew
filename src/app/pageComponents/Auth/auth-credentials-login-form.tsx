@@ -9,9 +9,9 @@ import { Suspense, useEffect, useRef, useState } from "react";
 import SigninWithGoogleCompo from "@/app/pageComponents/Auth/SigninWithGoogleCompo";
 import { useSearchParams } from "next/navigation";
 import { useSession } from "next-auth/react";
-import { Button } from "@mui/material";
 import { useStore } from "@/utils/store";
 import Loader from "@/app/pageComponents/BlogComponent/Loader";
+import { Button } from "@/components/Form/Button";
 
 const SourceLoginDashboardPage = () => {
   return (
@@ -105,9 +105,6 @@ const AuthCredentialsLoginForm = ({
         }}
       >
         {(formik) => {
-          // useEffect(() => {
-          //   formik.resetForm();
-          // }, []);
           return (
             <form onSubmit={formik.handleSubmit}>
               <div className="googleBtn">
@@ -161,21 +158,14 @@ const AuthCredentialsLoginForm = ({
                 <div className="error">
                   <ErrorMessage name="password" />
                 </div>
-                {/* <Link href="/forgot-password">Forgot Password?</Link> */}
               </div>
-              <div className="form-group text-center mt-5">
-                {/* <button
-                  type="submit"
-                  className="btn btnLogin"
-                  disabled={formik.isSubmitting}
-                >
-                  {formik.isSubmitting ? "Please wait..." : "Sign In"}
-                </button> */}
-
+              <div className="text-center mt-5">
                 <Button
+                  variant="primary"
                   type="submit"
-                  className="btn btnLogin"
                   disabled={formik.isSubmitting}
+                  isLoading={true}
+                  size="lg"
                 >
                   Sign In
                 </Button>

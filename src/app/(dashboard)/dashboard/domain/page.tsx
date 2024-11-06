@@ -43,15 +43,15 @@ import AddIcon from "@mui/icons-material/Add";
 import FileUpload from "@/components/View/common/FileUpload";
 import { API_ROUTES } from "@/@core/apiRoutes";
 import LicenseWarningsCompo from "@/components/UI/LicenseWarningsCompo";
-import TableToolbar from "@/components/ui/table-ui/TableToolbar";
+import TableToolbar from "@/components/Table-ui/TableToolbar";
 import Scrollbar from "@/components/Layout/scrollbar/Scrollbar";
 import TableHeadRow, {
   StyledTableCell,
   StyledTableNoData,
   StyledTableRow,
-} from "@/components/ui/table-ui/TableHeadRow";
-import { headCellDomain } from "@/components/ui/table-ui/headCells";
-import TableRowsLoader from "@/components/ui/table-ui/TableRowsLoader";
+} from "@/components/Table-ui/TableHeadRow";
+import { headCellDomain } from "@/components/Table-ui/headCells";
+import TableRowsLoader from "@/components/Table-ui/TableRowsLoader";
 import DeleteIcon from "@mui/icons-material/Delete";
 import FileUploadIcon from "@mui/icons-material/FileUpload";
 
@@ -61,7 +61,7 @@ import {
   _setPaginationObjectFn,
   createQueryString,
 } from "@/@core/tableFunctions";
-import { TablePaginationCompo } from "@/components/ui/table-ui/TablePaginationCompo";
+import { TablePaginationCompo } from "@/components/Table-ui/TablePaginationCompo";
 import { BootstrapTooltipUi } from "@/components/UI/BootstrapToolTip";
 import CircularSpinner from "@/components/Loaders/CircularSpinner";
 import Loader from "@/app/pageComponents/BlogComponent/Loader";

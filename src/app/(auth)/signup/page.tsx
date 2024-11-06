@@ -3,6 +3,7 @@ import React from "react";
 import { Metadata } from "next";
 import Head from "next/head";
 import { AuthCredentialsSignupForm } from "@/app/pageComponents/Auth/auth-credentials-signup-form";
+
 export const metadata: Metadata = {
   title: {
     template: "Sign Up for Your DMARC: Streamline Email Security Today",

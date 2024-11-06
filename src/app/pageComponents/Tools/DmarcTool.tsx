@@ -9,7 +9,7 @@ import {
 } from "@/utils/string-conversion";
 import { isEmpty } from "@/utils/isEmpty";
 import React, { FormEvent, useState, useEffect, useRef } from "react";
-import { _TOOL_TYPES } from"@/constants/toolsData";
+import { _TOOL_TYPES } from "@/constants/toolsData";
 import { useRouter } from "next/navigation";
 import RecordWarningCompo from "@/app/pageComponents/Tools/ui/RecordWarningCompo";
 import { postFetcherLambda } from "@/@core/apiFetcher";
@@ -26,6 +26,7 @@ import Head from "next/head";
 import { toast } from "react-toastify";
 import ToolsUi from "@/app/pageComponents/Tools/ToolsUi";
 import RecordBox from "@/components/UI/RecordBox";
+
 const DmarcTool = ({
   result,
   toolsId,
@@ -42,6 +43,15 @@ const DmarcTool = ({
   if (!isEmpty(lookupData)) {
     scrollIntoView(`${toolName}_resultSection`, 0);
   }
+
+  const [generatorData, setGeneratorData] = useState({} as any);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isLoadingGenerator, setIsLoadingGenerator] = useState(false);
+  const [selectedOptionsError, setselectedOptionsError] = useState(false);
+  const [searchState, setSearchState] = useState<boolean>(false);
+  const targetSectionRef = useRef<HTMLDivElement>(null);
+  const [lookupError, setLookupError] = useState(false);
+  const [invalidDomainError, setInvalidDomainError] = useState(false);
 
   const [inputs, setInputs] = useState([
     { id: 1, value: "rua@mail.yourdmarc.online" },
@@ -99,17 +109,6 @@ const DmarcTool = ({
   useEffect(() => {
     setInputDomain(cleanDomain(domain));
   }, [domain]);
-
-  const [generatorData, setGeneratorData] = useState({} as any);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isLoadingGenerator, setIsLoadingGenerator] = useState(false);
-  const [selectedOptionsError, setselectedOptionsError] = useState(false);
-
-  const [searchState, setSearchState] = useState<boolean>(false);
-  const targetSectionRef = useRef<HTMLDivElement>(null);
-
-  const [lookupError, setLookupError] = useState(false);
-  const [invalidDomainError, setInvalidDomainError] = useState(false);
 
   useEffect(() => {
     if (!isEmpty(lookupData)) {
@@ -575,28 +574,6 @@ const DmarcTool = ({
                           </div>
                         </div>
 
-                        {/* <div className="col-lg-6">
-                          <div className="form-group">
-                            <label>
-                              Subdomain policy
-                              <InformationTooltip
-                                name="dmarc_generator_sub_domain_policy"
-                                position="right"
-                                favIcons="i"
-                              />
-                            </label>
-                            <select
-                              className="form-control"
-                              name="subdomain_policy"
-                              defaultValue=""
-                            >
-                              <option value="">-</option>
-                              <option value="none">None (monitoring)</option>
-                              <option value="quarantine">Quarantine</option>
-                              <option value="reject">Reject</option>
-                            </select>
-                          </div>
-                        </div> */}
                         <div className="col-xl-6 col-lg-12  col-md-12">
                           <div className="form-group">
                             <label>

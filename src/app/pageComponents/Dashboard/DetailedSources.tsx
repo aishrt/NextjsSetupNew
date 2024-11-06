@@ -1,19 +1,19 @@
 "use client";
-import { useEffect, useState, memo, useCallback } from "react";
+import { useEffect, useState, memo } from "react";
 import { isEmpty } from "@/utils/isEmpty";
 import { getFetcherWithAuth } from "@/@core/apiFetcher";
-import dayjs, { Dayjs } from "dayjs";
+import dayjs from "dayjs";
 import { Table, TableBody, TableContainer, Typography } from "@mui/material";
 import _ from "lodash";
-import TableToolbar from "../../../components/UI/table-ui/TableToolbar";
-import Scrollbar from "../../../components/Layout/scrollbar/Scrollbar";
+import TableToolbar from "@/components/Table-ui/TableToolbar";
+import Scrollbar from "@/components/Layout/scrollbar/Scrollbar";
 import TableHeadRow, {
   StyledTableCell,
   StyledTableNoData,
   StyledTableRow,
-} from "../../../components/UI/table-ui/TableHeadRow";
-import { headCellsSenders } from "../../../components/UI/table-ui/headCells";
-import { BorderLinearProgress } from "../../../components/UI/LineProgress";
+} from "@/components/Table-ui/TableHeadRow";
+import { headCellsSenders } from "@/components/Table-ui/headCells";
+import { BorderLinearProgress } from "@/components/UI/LineProgress";
 import { PAGINATION_OBJECT } from "@/constants/pagination";
 import { useStore } from "@/utils/store";
 import {
@@ -22,10 +22,11 @@ import {
   createQueryString,
 } from "@/@core/tableFunctions";
 import { API_ROUTES } from "@/@core/apiRoutes";
-import TableRowsLoader from "../../../components/UI/table-ui/TableRowsLoader";
-import { TablePaginationCompo } from "../../../components/UI/table-ui/TablePaginationCompo";
+import TableRowsLoader from "@/components/Table-ui/TableRowsLoader";
+import { TablePaginationCompo } from "@/components/Table-ui/TablePaginationCompo";
 import { useRouter } from "next/navigation";
 import { fetchImage } from "@/@core/commonS3";
+
 const DetailedSources = (props: any) => {
   let queryString;
   useEffect(() => {
@@ -93,11 +94,7 @@ const DetailedSources = (props: any) => {
         const promises = response?.results.map(
           async (item: any, index: number) => {
             if (item.source_logo) {
-              const logoUrl = await fetchImage(
-                item.source_logo,
-                null,
-                ""
-              );
+              const logoUrl = await fetchImage(item.source_logo, null, "");
               return {
                 ...item,
                 source_logo: logoUrl,
@@ -525,7 +522,19 @@ const DetailedSources = (props: any) => {
                                             props?.domain
                                               ? props?.domain
                                               : firstDomain
-                                          }&host_name=${item?.host_name}&org_name=${item?.source}&start_date=${dayjs(props?.start_date).format("YYYY-MM-DD")}&end_date=${dayjs(props?.end_date).format("YYYY-MM-DD")}&page=1&page_size=10`}
+                                          }&host_name=${
+                                            item?.host_name
+                                          }&org_name=${
+                                            item?.source
+                                          }&start_date=${dayjs(
+                                            props?.start_date
+                                          ).format(
+                                            "YYYY-MM-DD"
+                                          )}&end_date=${dayjs(
+                                            props?.end_date
+                                          ).format(
+                                            "YYYY-MM-DD"
+                                          )}&page=1&page_size=10`}
                                         >
                                           <img
                                             alt={``}

@@ -3,6 +3,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import "leaflet/dist/leaflet.css";
 import dynamic from "next/dynamic"; // Import dynamic from next/dynamic
+
 const GoogleleafletMap = dynamic(
   () => import("@/externalLibraries/GoogleleafletMap"),
   {
@@ -12,9 +13,7 @@ const GoogleleafletMap = dynamic(
 import GetAppIcon from "@mui/icons-material/GetApp";
 import { isEmpty } from "@/utils/isEmpty";
 import Volume from "@/app/pageComponents/Dashboard/Volume";
-import {
-  getFetcherWithAuth,
-} from "@/@core/apiFetcher";
+import { getFetcherWithAuth } from "@/@core/apiFetcher";
 import LanguageIcon from "@mui/icons-material/Language";
 import EmailIcon from "@mui/icons-material/Email";
 import CancelIcon from "@mui/icons-material/Cancel";
@@ -27,32 +26,32 @@ import {
   TableContainer,
   Typography,
 } from "@mui/material";
-import TableToolbar from "../../../components/UI/table-ui/TableToolbar";
-import Scrollbar from "../../../components/Layout/scrollbar/Scrollbar";
 import TableHeadRow, {
   StyledTableCell,
   StyledTableNoData,
   StyledTableRow,
-} from "../../../components/UI/table-ui/TableHeadRow";
-import { headCellAcountDashboardDetail } from "../../../components/UI/table-ui/headCells";
-import TableRowsLoader from "../../../components/UI/table-ui/TableRowsLoader";
-import { BorderLinearProgress } from "../../../components/UI/LineProgress";
-import { TablePaginationCompo } from "../../../components/UI/table-ui/TablePaginationCompo";
+} from "@/components/Table-ui/TableHeadRow";
 import { PAGINATION_OBJECT } from "@/constants/pagination";
 
-import LicenseWarningsCompo from "../../../components/UI/LicenseWarningsCompo";
 import {
   _handleChangePage,
   _setPaginationObjectFn,
   createQueryString,
 } from "@/@core/tableFunctions";
 import { API_ROUTES } from "@/@core/apiRoutes";
-import MainLoader from "../../../components/Loaders/MainLoader";
 import Link from "next/link";
-import CircularSpinner from "../../../components/Loaders/CircularSpinner";
 import { useStore } from "@/utils/store";
 import { fetchImage } from "@/@core/commonS3";
 import moment from "moment";
+import { TablePaginationCompo } from "@/components/Table-ui/TablePaginationCompo";
+import TableRowsLoader from "@/components/Table-ui/TableRowsLoader";
+import { headCellAcountDashboardDetail } from "@/components/Table-ui/headCells";
+import MainLoader from "@/components/Loaders/MainLoader";
+import CircularSpinner from "@/components/Loaders/CircularSpinner";
+import LicenseWarningsCompo from "@/components/UI/LicenseWarningsCompo";
+import Scrollbar from "@/components/Layout/scrollbar/Scrollbar";
+import TableToolbar from "@/components/Table-ui/TableToolbar";
+import { BorderLinearProgress } from "@/components/UI/LineProgress";
 const AccountDashboardComponent = ({
   // resData,
   page,
@@ -65,7 +64,7 @@ const AccountDashboardComponent = ({
   searchQuery: any;
 }) => {
   const router = useRouter();
-  const { historyDate,license } = useStore();
+  const { historyDate, license } = useStore();
   const [dataTDF, setDataTDF] = useState({} as any);
   const [data, setData] = useState({} as any);
   const [paginationObject, setPaginationObject] = useState(() => {
@@ -94,7 +93,7 @@ const AccountDashboardComponent = ({
       // getDashboardMapData()
       // // getFirstDomain();
     }
-  }, [paginationObject.triggerApi,historyDate]);
+  }, [paginationObject.triggerApi, historyDate]);
   useEffect(() => {
     const fetchData = async () => {
       setLoader(true);
@@ -118,7 +117,7 @@ const AccountDashboardComponent = ({
   }, [searchTerm]);
   useEffect(() => {
     if (data) {
-      if(parseInt(data?.volume) > parseInt(license?.volume?.limit)){
+      if (parseInt(data?.volume) > parseInt(license?.volume?.limit)) {
       }
       const dataVal = data?.top_dmarc_failures;
       const sortedData = dataVal?.sort(
@@ -126,7 +125,6 @@ const AccountDashboardComponent = ({
       );
 
       setDataTDF(sortedData);
-      
     }
   }, [data]);
   const getDashboardDetail = () => {
@@ -146,11 +144,7 @@ const AccountDashboardComponent = ({
         const promises = resData?.results.map(
           async (item: any, index: number) => {
             if (item.source_logo) {
-              const logoUrl = await fetchImage(
-                item.source_logo,
-                null,
-                ""
-              );
+              const logoUrl = await fetchImage(item.source_logo, null, "");
               return {
                 ...item,
                 source_logo: logoUrl,
@@ -216,9 +210,7 @@ const AccountDashboardComponent = ({
   };
   const reloadPageData = () => {};
   return (
-
     <>
-  
       <LicenseWarningsCompo
         onSetIsLoading={(value: any) => setisLoader(value)}
         onSetLicenseData={(resData: any) => {
@@ -438,9 +430,13 @@ const AccountDashboardComponent = ({
                                                   );
                                                   reloadPageData();
                                                 }}
-                                                href={`/dashboard/sender-dashboard?policy_published_domain=${item?.domain}&fromDashboard=true&page=1&page_size=10&start_date=${moment(
+                                                href={`/dashboard/sender-dashboard?policy_published_domain=${
+                                                  item?.domain
+                                                }&fromDashboard=true&page=1&page_size=10&start_date=${moment(
                                                   historyDate?.startDate
-                                                ).format("YYYY-MM-DD")}&end_date=${moment(
+                                                ).format(
+                                                  "YYYY-MM-DD"
+                                                )}&end_date=${moment(
                                                   historyDate?.endDate
                                                 ).format("YYYY-MM-DD")}`}
                                               >
@@ -563,9 +559,13 @@ const AccountDashboardComponent = ({
                                                   ),
                                                     reloadPageData();
                                                 }}
-                                                href={`/dashboard/sender-dashboard?policy_published_domain=${item?.domain}&fromDashboard=true&page=1&page_size=10&start_date=${moment(
+                                                href={`/dashboard/sender-dashboard?policy_published_domain=${
+                                                  item?.domain
+                                                }&fromDashboard=true&page=1&page_size=10&start_date=${moment(
                                                   historyDate?.startDate
-                                                ).format("YYYY-MM-DD")}&end_date=${moment(
+                                                ).format(
+                                                  "YYYY-MM-DD"
+                                                )}&end_date=${moment(
                                                   historyDate?.endDate
                                                 ).format("YYYY-MM-DD")}`}
                                               >
@@ -692,9 +692,13 @@ const AccountDashboardComponent = ({
                                                   ),
                                                     reloadPageData();
                                                 }}
-                                                href={`/dashboard/sender-dashboard?policy_published_domain=${item?.domain}&fromDashboard=true&page=1&page_size=10&start_date=${moment(
+                                                href={`/dashboard/sender-dashboard?policy_published_domain=${
+                                                  item?.domain
+                                                }&fromDashboard=true&page=1&page_size=10&start_date=${moment(
                                                   historyDate?.startDate
-                                                ).format("YYYY-MM-DD")}&end_date=${moment(
+                                                ).format(
+                                                  "YYYY-MM-DD"
+                                                )}&end_date=${moment(
                                                   historyDate?.endDate
                                                 ).format("YYYY-MM-DD")}`}
                                               >
@@ -730,7 +734,7 @@ const AccountDashboardComponent = ({
                   <Card className="cardFix mb-7">
                     <TableToolbar
                       title={`Details`}
-                      onSearch={(query) => setSearchTerm(query)}
+                      onSearch={(query: any) => setSearchTerm(query)}
                     />
                     <Scrollbar>
                       <TableContainer>
@@ -932,7 +936,6 @@ const AccountDashboardComponent = ({
         </div>
       )}
     </>
-
   );
 };
 export default AccountDashboardComponent;

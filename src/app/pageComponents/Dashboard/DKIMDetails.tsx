@@ -2,7 +2,6 @@
 import { fetchDkimSignatureData } from "@/@core/apiFetcher";
 import { Pagination } from "@mui/material";
 import { debounce } from "lodash";
-import { useRouter } from "next/navigation";
 import React, { useCallback, useEffect, useState } from "react";
 import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 
@@ -27,7 +26,7 @@ const DKIMDetails: React.FC<DKIMDetailsProps> = ({
   const [totalPages, setTotalPages] = useState(0);
   const [pageSize, setPageSize] = useState(10);
   const [page, setPage] = useState(1);
-  const router = useRouter();
+
   useEffect(() => {
     setElementsList(DKIMList?.results);
     setTotalPages(DKIMList?.total_pages);
@@ -67,17 +66,6 @@ const DKIMDetails: React.FC<DKIMDetailsProps> = ({
     setElementsList(response?.results);
     setTotalPages(response?.total_pages);
     setTotalRecords(response?.count);
-    // let pathurl = `/dashboard/results-details?policy_published_domain=${domain}&base_domain=${base_domain}&row_source_ip=${row_source_ip}&dmarc_report_detail_id=${dmarc_report_detail_id}`;
-    // if (page) {
-    //   pathurl = pathurl.concat(`&page=${page}`);
-    // }
-    // if (page_size) {
-    //   pathurl = pathurl.concat(`&page_size=${page_size}`);
-    // }
-    // if (search_query) {
-    //   pathurl = pathurl.concat(`&search_query=${search_query}`);
-    // }
-    // router.push(pathurl);
   };
   const changeWidth = async (e: any) => {
     setPageSize(parseInt(e.target.value, 10));

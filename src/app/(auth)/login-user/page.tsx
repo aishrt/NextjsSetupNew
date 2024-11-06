@@ -1,11 +1,9 @@
 "use client";
-
 import React, { Suspense, useEffect, useMemo } from "react";
 import { signIn, useSession } from "next-auth/react";
 import { toast } from "react-toastify";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
-
 import Head from "next/head";
 import CircularSpinner from "@/components/Loaders/CircularSpinner";
 import Loader from "@/app/pageComponents/BlogComponent/Loader";
@@ -78,12 +76,8 @@ const LoginComponent = () => {
   useEffect(() => {
     verifyToken(token);
   }, []);
-  // verifyToken(token);
-
   const storedUserName = process.env.NEXT_PUBLIC_API_USER_NAME;
   const storedUserPassword = process.env.NEXT_PUBLIC_API_PASSWORD;
-
-  // Effect to handle redirect based on session state
   useEffect(() => {
     if (session) {
       if (session.user.is_onboarded && session.user.is_domain === "verified") {

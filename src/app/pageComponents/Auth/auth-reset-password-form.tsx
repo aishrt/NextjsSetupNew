@@ -59,10 +59,6 @@ export const AuthResetPasswordForm = ({
               className="form-control"
               placeholder="Enter Password"
             />
-            {/* <span>
-              <img alt={``} src="/assets/images/lockIcon.svg" width="auto" />
-            </span> */}
-
             <div className="error">
               <ErrorMessage name="password" />
             </div>

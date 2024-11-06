@@ -1,16 +1,16 @@
 "use client";
 import Button from "@mui/material/Button";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
-import React, { useEffect, useState, memo, Suspense } from "react";
+import React, { useEffect, useState, memo } from "react";
 import EmailIcon from "@mui/icons-material/Email";
 import dayjs, { Dayjs } from "dayjs";
 import { useStore } from "@/utils/store";
 import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 import { API_ROUTES } from "@/@core/apiRoutes";
 import { Grid } from "@mui/material";
-import SelectAsync from "../../../components/Form/SelectAsync";
-import DateRangePicker from "../../../components/Form/DateRangePicketMui";
+import SelectAsync from "@/components/Form/SelectAsync";
+import DateRangePicker from "@/components/Form/DateRangePicketMui";
 import { checkHistory } from "@/@core/helper";
 import UpgradeSubscription from "../Others/UpgradeSubscription";
 import UpgradePlanComponent from "../Others/UpgradePlanComponent";
@@ -31,6 +31,7 @@ const Statistics = ({
   fromDashboard?: any;
 }) => {
   const router = useRouter();
+  const { firstDomain, historyDate } = useStore();
   const [domain, setDomain] = React.useState<string>(selectedDomain);
   const [filterLoading, setFilterLoading] = useState(false);
   const [showLoader, setShowLoader] = useState(false);
@@ -38,24 +39,16 @@ const Statistics = ({
   const [endDate, setEndDate] = useState<Dayjs | null>(null);
   const [show, setShow] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const { setStoredDashboardUrl, licenseValidation } = useStore();
+  const { setStoredDashboardUrl } = useStore();
   const [showUpgrade, setShowUpgrade] = useState(false);
   const [checkHistoryVal, setCheckHistory] = useState(false);
+  
   useEffect(() => {
     setStoredDashboardUrl(selectedDomain);
   }, [selectedDomain]);
 
   useEffect(() => {
-    // if (fromDashboard === "true") {
-    //   setStartDate(null);
-    //   setEndDate(null);
-    // } else {
-    //   if (start_date) {
-    //     setStartDate(dayjs(start_date));
-    //   }
-    //   if (end_date) {
-    //     setEndDate(dayjs(end_date));
-    //   }
+
     if (start_date) {
       setStartDate(dayjs(start_date));
     }
@@ -122,7 +115,6 @@ const Statistics = ({
         formattedStartDate = startDate ? startDate?.format("YYYY-MM-DD") : "";
       }
       url = url.concat(`&start_date=${formattedStartDate}`);
-      // router.push(`/dashboard/?domain=${domain}&start_date=${startDate}`);
     }
     if (endDate) {
       let formattedEndDate;
@@ -132,9 +124,6 @@ const Statistics = ({
         formattedEndDate = endDate ? endDate?.format("YYYY-MM-DD") : "";
       }
       url = url.concat(`&end_date=${formattedEndDate}`);
-      // router.push(
-      //   `/dashboard/?domain=${domain}&start_date=${startDate}&end_date=${endDate}`
-      // );
     }
     router.push(url);
     setTimeout(() => {
@@ -142,11 +131,8 @@ const Statistics = ({
     }, 0);
   };
 
-  const { firstDomain, historyDate } = useStore();
 
   const handleChangeDomain = (event: any) => {
-    // setStartDate(null);
-    // setEndDate(null);
     setDomain(event?.domain);
     window.localStorage.setItem("dashboardUrl", event?.domain);
     if (fromDashboard) {

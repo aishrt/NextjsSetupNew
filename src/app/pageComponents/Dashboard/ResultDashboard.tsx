@@ -16,18 +16,17 @@ import { formatDateOnly } from "@/utils/format";
 import dayjs, { Dayjs } from "dayjs";
 import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 import { API_ROUTES } from "@/@core/apiRoutes";
-import LicenseWarningsCompo from "../../../components/UI/LicenseWarningsCompo";
-import MainLoader from "../../../components/Loaders/MainLoader";
-import SelectAsync from "../../../components/Form/SelectAsync";
-import DateRangePicker from "../../../components/Form/DateRangePicketMui";
-import TableToolbar from "../../../components/UI/table-ui/TableToolbar";
-import Scrollbar from "../../../components/Layout/scrollbar/Scrollbar";
+import LicenseWarningsCompo from "@/components/UI/LicenseWarningsCompo";
+import MainLoader from "@/components/Loaders/MainLoader";
+import SelectAsync from "@/components/Form/SelectAsync";
+import DateRangePicker from "@/components/Form/DateRangePicketMui";
+import Scrollbar from "@/components/Layout/scrollbar/Scrollbar";
 import TableHeadRow, {
   StyledTableCell,
   StyledTableNoData,
   StyledTableRow,
-} from "../../../components/UI/table-ui/TableHeadRow";
-import { headCellsResult } from "../../../components/UI/table-ui/headCells";
+} from "@/components/Table-ui/TableHeadRow";
+import { headCellsResult } from "@/components/Table-ui/headCells";
 import { PAGINATION_OBJECT } from "@/constants/pagination";
 import {
   _handleChangePage,

@@ -1,7 +1,7 @@
 "use client";
 
+import Ipmodal from "@/components/Modal/ipModal";
 import { useEffect, useState } from "react";
-import Ipmodal from "../../../components/Modal/ipModal";
 
 const IpInfoComponent = ({
   ipAddress,

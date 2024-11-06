@@ -7,7 +7,7 @@ import {
   removeHttp,
 } from "@/utils/string-conversion";
 import { toast } from "react-toastify";
-import CircularSpinner from "../../../components/Loaders/CircularSpinner";
+import CircularSpinner from "@/components/Loaders/CircularSpinner";
 
 const ScannerSection = ({
   scannerSectionClass,

@@ -11,7 +11,7 @@ import { isEmpty } from "@/utils/isEmpty";
 import React, { FormEvent, useEffect, useRef, useState } from "react";
 import { _TOOL_TYPES } from "@/constants/toolsData";
 import { useRouter } from "next/navigation";
-import { postFetcher, postFetcherLambda } from "@/@core/apiFetcher";
+import { postFetcherLambda } from "@/@core/apiFetcher";
 import RecordWarningCompo from "@/app/pageComponents/Tools/ui/RecordWarningCompo";
 import { scrollIntoView } from "@/utils/scrollIntoView";
 import SubmitButton from "@/components/Form/SubmitButton";
@@ -21,7 +21,6 @@ import { createAndClickProgressBar } from "@/@core/createAndClickProgressBar";
 import RecordValuesCompo from "@/app/pageComponents/Tools/ui/RecordValuesCompo";
 import { useSession } from "next-auth/react";
 import AllToolsScannerResult from "./ui/AllToolsScannerResult";
-import getCurrentUser from "@/lib/session";
 import { toast } from "react-toastify";
 import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 import Head from "next/head";
@@ -29,6 +28,7 @@ import MainLoader from "@/components/Loaders/MainLoader";
 import LicenseWarningsCompo from "@/components/UI/LicenseWarningsCompo";
 import ToolsUi from "@/app/pageComponents/Tools/ToolsUi";
 import CopyToClipboard from "@/components/Functions/CopyToClipboard";
+
 const BimiTool = ({
   result,
   toolsId,
@@ -40,15 +40,28 @@ const BimiTool = ({
   const router = useRouter();
   const { data: session, status } = useSession();
   const domain: string | string[] | undefined =
-    removeHttp(searchParams?.domain as string) || "";
+  removeHttp(searchParams?.domain as string) || "";
 
-  if (!isEmpty(lookupData)) {
-    scrollIntoView(`${toolName}_resultSection`, 0);
-  }
+if (!isEmpty(lookupData)) {
+  scrollIntoView(`${toolName}_resultSection`, 0);
+}
 
+
+  const [generatorData, setGeneratorData] = useState({} as any);
+  const [vmcErrors, setVMCErrors] = useState([] as any);
+  const [logoErrorrs, setLogoErrorrs] = useState([] as any);
+  const [logoData, setLogoData] = useState({} as any);
+  const [isWindow, setIsWindow] = useState(true);
+  const [searchState, setSearchState] = useState<boolean>(false);
+  const targetSectionRef = useRef<HTMLDivElement>(null);
   const [lookupError, setLookupError] = useState(false);
   const [invalidDomainError, setInvalidDomainError] = useState(false);
+  const [inputDomain, setInputDomain] = useState(cleanDomain(domain));
+  const [domainError, setDomainError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isLoadingGenerator, setIsLoadingGenerator] = useState(false);
 
+ 
   useEffect(() => {
     if (!isEmpty(lookupData)) {
       if (lookupData?.status == false) {
@@ -58,17 +71,6 @@ const BimiTool = ({
     }
     setInvalidDomainError(false);
   }, [lookupData]);
-
-  const [generatorData, setGeneratorData] = useState({} as any);
-  const [vmcErrors, setVMCErrors] = useState([] as any);
-  const [logoErrorrs, setLogoErrorrs] = useState([] as any);
-
-  const [logoData, setLogoData] = useState({} as any);
-
-  const [isWindow, setIsWindow] = useState(true);
-
-  const [searchState, setSearchState] = useState<boolean>(false);
-  const targetSectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (searchState && targetSectionRef.current) {
@@ -99,16 +101,11 @@ const BimiTool = ({
     }
   }, [lookupData, generatorData]);
 
-  const [inputDomain, setInputDomain] = useState(cleanDomain(domain));
-  const [domainError, setDomainError] = useState(false);
-
   useEffect(() => {
     setInputDomain(cleanDomain(domain));
   }, [domain]);
 
   //comment
-  const [isLoading, setIsLoading] = useState(false);
-  const [isLoadingGenerator, setIsLoadingGenerator] = useState(false);
 
   const onCheckLookup = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -828,14 +825,11 @@ const BimiTool = ({
 
               {toolType === _TOOL_TYPES.LOOKUP && !lookupError && (
                 <AllToolsScannerResult
-                  // data={result}
                   domain={domain}
                 />
               )}
-              {isWindow ? (
+              {isWindow && (
                 <ToolsUi toolName={`${toolName + "_" + toolType}`} />
-              ) : (
-                <></>
               )}
               <TagTable
                 result={result}

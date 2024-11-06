@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+
 import {
   cleanDomain,
   formatToolTypes,
@@ -7,12 +8,13 @@ import {
   removeHttp,
   validateDomainName,
 } from "@/utils/string-conversion";
+
 import { isEmpty } from "@/utils/isEmpty";
 import React, { FormEvent, useEffect, useRef, useState } from "react";
 import { _TOOL_TYPES } from "@/constants/toolsData";
 import { useRouter } from "next/navigation";
 import RecordWarningCompo from "@/app/pageComponents/Tools/ui/RecordWarningCompo";
-import { postFetcher, postFetcherLambda } from "@/@core/apiFetcher";
+import { postFetcherLambda } from "@/@core/apiFetcher";
 import { scrollIntoView } from "@/utils/scrollIntoView";
 import SubmitButton from "@/components/Form/SubmitButton";
 import { capitalize } from "@mui/material";
@@ -21,11 +23,11 @@ import { createAndClickProgressBar } from "@/@core/createAndClickProgressBar";
 import RecordValuesCompo from "@/app/pageComponents/Tools/ui/RecordValuesCompo";
 import { useSession } from "next-auth/react";
 import AllToolsScannerResult from "./ui/AllToolsScannerResult";
-import Tooltip from "@mui/material/Tooltip";
 import { toast } from "react-toastify";
 import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 import Head from "next/head";
 import ToolsUi from "@/app/pageComponents/Tools/ToolsUi";
+
 const DkimTool = ({
   result,
   toolsId,
@@ -45,10 +47,17 @@ const DkimTool = ({
   }
   const [inputDomain, setInputDomain] = useState(cleanDomain(domain));
   const [domainError, setDomainError] = useState(false);
-
   const [lookupError, setLookupError] = useState(false);
   const [invalidDomainError, setInvalidDomainError] = useState(false);
-
+  const [inputSelector, setInputSelector] = useState(selector);
+  const [detectAllSelector, setDetectAllSelector] = useState(!selector);
+  const [generatorData, setGeneratorData] = useState({} as any);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isLoadingGenerator, setIsLoadingGenerator] = useState(false);
+  const [isWindow, setIsWindow] = useState(true);
+  const [searchState, setSearchState] = useState<boolean>(false);
+  const targetSectionRef = useRef<HTMLDivElement>(null);
+  
   useEffect(() => {
     if (!isEmpty(lookupData)) {
       if (lookupData?.status == false) {
@@ -63,15 +72,7 @@ const DkimTool = ({
     setInputDomain(cleanDomain(domain));
   }, [domain]);
 
-  const [inputSelector, setInputSelector] = useState(selector);
-  const [detectAllSelector, setDetectAllSelector] = useState(!selector);
-  const [generatorData, setGeneratorData] = useState({} as any);
-  const [isLoading, setIsLoading] = useState(false);
-  const [isLoadingGenerator, setIsLoadingGenerator] = useState(false);
-  const [isWindow, setIsWindow] = useState(true);
-
-  const [searchState, setSearchState] = useState<boolean>(false);
-  const targetSectionRef = useRef<HTMLDivElement>(null);
+  
 
   useEffect(() => {
     if (searchState && targetSectionRef.current) {

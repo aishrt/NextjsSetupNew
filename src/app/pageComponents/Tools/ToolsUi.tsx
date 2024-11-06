@@ -1,16 +1,5 @@
-import {
-  Box,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
-  Typography,
-} from "@mui/material";
 import { useState, useEffect } from "react";
-import dynamic from "next/dynamic"; // Import dynamic from next/dynamic
 import { toolsData } from "@/constants/toolsData";
-// const CarouselTool = dynamic(() => import('../../components/ui/owlCarousel'), { ssr: false });
 
 type ToolProps = {
   toolName: string;

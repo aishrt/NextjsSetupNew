@@ -1,11 +1,13 @@
-import HeaderNew from "@/components/Header/HeaderNew";
+import HeaderNew from "@/components/Layout/Header/HeaderNew";
 import FeaturesContainer from "@/app/pageComponents/Others/FeaturesContainer";
-import { isEmpty } from "@/@core/utils/isEmpty";
 import ResourcesContainerNew from "@/app/pageComponents/Others/ResourcesContainerNew";
-import AllToolsScannerResult from "@/components/Tools/ui/AllToolsScannerResult";
 import ScannerSection from "@/app/pageComponents/Others/ScannerSection";
 import React, { Suspense } from "react";
 import FooterContent from "@/components/Layout/Footer/FooterContent";
+import { isEmpty } from "@/utils/isEmpty";
+import AllToolsScannerResult from "../pageComponents/Tools/ui/AllToolsScannerResult";
+
+
 type Props = {
   searchParams: { [key: string]: string | string[] | undefined };
 };

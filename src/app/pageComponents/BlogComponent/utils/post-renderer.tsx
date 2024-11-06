@@ -1,8 +1,8 @@
 import RichText from "../RichText";
-import ImageSlider from "../ImageSlider";
+import ImageSlider from "@/components/View/ImageSlider";
 import Quote from "../Quote";
 import Media from "../Media";
-import VideoEmbed from "../VideoEmbed";
+import VideoEmbed from "@/components/View/VideoEmbed";
 
 export function postRenderer(section: any, index: number) {
   switch (section.__component) {
@@ -10,7 +10,7 @@ export function postRenderer(section: any, index: number) {
       return <RichText key={index} data={section} />;
     case "shared.slider":
       return <ImageSlider key={index} data={section} />;
-    case "shared.quote": 
+    case "shared.quote":
       return <Quote key={index} data={section} />;
     case "shared.media":
       return <Media key={index} data={section} />;

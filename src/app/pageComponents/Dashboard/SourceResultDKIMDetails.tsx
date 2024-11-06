@@ -12,16 +12,16 @@ import {
 } from "@/@core/tableFunctions";
 import { API_ROUTES } from "@/@core/apiRoutes";
 import { PAGINATION_OBJECT } from "@/constants/pagination";
-import TableToolbar from "../../../components/UI/table-ui/TableToolbar";
-import Scrollbar from "../../../components/Layout/scrollbar/Scrollbar";
+import TableToolbar from "@/components/Table-ui/TableToolbar";
+import Scrollbar from "@/components/Layout/scrollbar/Scrollbar";
 import TableHeadRow, {
   StyledTableCell,
   StyledTableNoData,
   StyledTableRow,
-} from "../../../components/UI/table-ui/TableHeadRow";
-import { headCellsSourceResult } from "../../../components/UI/table-ui/headCells";
-import TableRowsLoader from "../../../components/UI/table-ui/TableRowsLoader";
-import { TablePaginationCompo } from "../../../components/UI/table-ui/TablePaginationCompo";
+} from "@/components/Table-ui/TableHeadRow";
+import { headCellsSourceResult } from "@/components/Table-ui/headCells";
+import TableRowsLoader from "@/components/Table-ui/TableRowsLoader";
+import { TablePaginationCompo } from "@/components/Table-ui/TablePaginationCompo";
 import { useRouter } from "next/navigation";
 import { fetchImage } from "@/@core/commonS3";
 interface DKIMDetailsProps {

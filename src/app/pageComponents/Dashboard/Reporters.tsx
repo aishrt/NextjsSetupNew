@@ -10,19 +10,19 @@ import React, { useEffect, useState } from "react";
 import dayjs, { Dayjs } from "dayjs";
 import { useStore } from "@/utils/store";
 import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
-import TableToolbar from "../../../components/UI/table-ui/TableToolbar";
-import Scrollbar from "../../../components/Layout/scrollbar/Scrollbar";
+import TableToolbar from "@/components/Table-ui/TableToolbar";
+import Scrollbar from "@/components/Layout/scrollbar/Scrollbar";
 import TableHeadRow, {
   StyledTableCell,
   StyledTableNoData,
   StyledTableRow,
-} from "../../../components/UI/table-ui/TableHeadRow";
-import { headCellsReports } from "../../../components/UI/table-ui/headCells";
-import MainLoader from "../../../components/Loaders/MainLoader";
-import SelectAsync from "../../../components/Form/SelectAsync";
-import DateRangePicker from "../../../components/Form/DateRangePicketMui";
+} from "@/components/Table-ui/TableHeadRow";
+import { headCellsReports } from "@/components/Table-ui/headCells";
+import MainLoader from "@/components/Loaders/MainLoader";
+import SelectAsync from "@/components/Form/SelectAsync";
+import DateRangePicker from "@/components/Form/DateRangePicketMui";
 import { PAGINATION_OBJECT } from "@/constants/pagination";
-import { TablePaginationCompo } from "../../../components/UI/table-ui/TablePaginationCompo";
+import { TablePaginationCompo } from "@/components/Table-ui/TablePaginationCompo";
 import {
   _handleChangePage,
   _setPaginationObjectFn,

@@ -11,6 +11,7 @@ import { createContact } from "@/app/api/auth/[...nextauth]/brevo";
 import { Button } from "@mui/material";
 import { useEffect, useRef } from "react";
 import SigninWithGoogleCompo from "./SigninWithGoogleCompo";
+
 export const AuthCredentialsSignupForm = ({
   csrfToken,
 }: {
@@ -102,12 +103,6 @@ export const AuthCredentialsSignupForm = ({
               className="form-control"
               placeholder="Enter Your Email Address"
             />
-            {/* <span>
-              <img
-                alt=" Envelope icon for entering email."
-                src="/assets/images/iconEnvelope.svg"
-              />
-            </span> */}
 
             <div className="error">
               <ErrorMessage name="email" />
@@ -128,9 +123,6 @@ export const AuthCredentialsSignupForm = ({
               className="form-control"
               placeholder="Enter Password"
             />
-            {/* <span>
-              <img alt={``} src="/assets/images/lockIcon.svg" width="auto" />
-            </span> */}
 
             <div className="error">
               <ErrorMessage name="password" />
@@ -152,27 +144,12 @@ export const AuthCredentialsSignupForm = ({
               className="form-control"
               placeholder="Enter Confirm Password"
             />
-            {/* <span>
-              <img
-                alt="This lock icon indicates where to type your password."
-                src="/assets/images/lockIcon.svg" width="auto"
-              />
-            </span> */}
 
             <div className="error">
               <ErrorMessage name="confirm_password" />
             </div>
           </div>
-          {/* <ReCAPTCHA sitekey="6LecdLYpAAAAAPzzNMuFO4dPNFUrYGFWx07UcBSY" onChange={onChange} /> */}
           <div className="form-group text-center mt-5">
-            {/* <button
-              type="submit"
-              className="btn btnLogin signup_button_class"
-              disabled={formik.isSubmitting}
-            >
-              {formik.isSubmitting ? "Please wait..." : "Sign Up"}
-            </button> */}
-
             <Button
               type="submit"
               className="btn btnLogin"

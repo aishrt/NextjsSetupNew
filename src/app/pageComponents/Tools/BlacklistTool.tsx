@@ -26,6 +26,7 @@ import { Button } from "@mui/material";
 import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 import Ipmodal from "@/components/Modal/ipModal";
 import ToolsUi from "@/app/pageComponents/Tools/ToolsUi";
+
 const BlacklistTool = ({
   result,
   toolName,
@@ -39,9 +40,21 @@ const BlacklistTool = ({
 
   const router = useRouter();
   const { data: session, status } = useSession();
+  const domain: string | string[] | undefined =
+  removeHttp(searchParams?.domain as string) || "";
+if (!isEmpty(lookupData)) {
+  scrollIntoView(`${toolName}_resultSection`, 0);
+}
 
   const [lookupError, setLookupError] = useState(false);
   const [invalidDomainError, setInvalidDomainError] = useState(false);
+  const [inputDomain, setInputDomain] = useState(domain);
+  const [domainError, setDomainError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [searchState, setSearchState] = useState<boolean>(false);
+  const targetSectionRef = useRef<HTMLDivElement>(null);
+  const [isWindow, setIsWindow] = useState(true);
+
 
   useEffect(() => {
     if (!isEmpty(lookupData)) {
@@ -53,18 +66,8 @@ const BlacklistTool = ({
     setInvalidDomainError(false);
   }, [lookupData]);
 
-  const domain: string | string[] | undefined =
-    removeHttp(searchParams?.domain as string) || "";
-  if (!isEmpty(lookupData)) {
-    scrollIntoView(`${toolName}_resultSection`, 0);
-  }
-  const [inputDomain, setInputDomain] = useState(domain);
-  const [domainError, setDomainError] = useState(false);
+ 
 
-  const [isLoading, setIsLoading] = useState(false);
-
-  const [searchState, setSearchState] = useState<boolean>(false);
-  const targetSectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (searchState && targetSectionRef.current) {
@@ -127,7 +130,6 @@ const BlacklistTool = ({
     }
     setIsLoading(false);
   };
-  const [isWindow, setIsWindow] = useState(true);
 
   useEffect(() => {
     const path = window.location.pathname.includes("/dashboard");
@@ -347,9 +349,6 @@ const BlacklistTool = ({
                             )}
                           </h3>
                           <div>{<CardsHtml />}</div>
-                          {/* {!lookupData.data?.blacklist_status && (
-                        <RecordWarningCompo warningText="Not Blacklisted" />
-                      )} */}
                           {lookupData.data?.blacklist_status && (
                             <RecordWarningCompo
                               isError
@@ -488,7 +487,6 @@ const BlacklistTool = ({
                 <>
                   {!lookupError && (
                     <AllToolsScannerResult
-                      // data={result}
                       domain={domain}
                     />
                   )}

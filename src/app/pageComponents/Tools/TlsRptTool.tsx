@@ -163,15 +163,6 @@ const TlsRptTool = ({
           }
         }
       }
-
-      // let httpsArray: any = fields2.map((v) => v.value);
-
-      // if (httpsArray[0] != "") {
-      //   httpsArray = fields2.map((v) => v.value);
-      // } else {
-      //   httpsArray = null;
-      // }
-
       let postData: any = {
         domain_name: formDomain,
         mailto: fields.map((v) => v.value),

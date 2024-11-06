@@ -19,7 +19,7 @@ import {
 import { toast } from "react-toastify";
 import countries from "../../../../public/assets/countries.json";
 import { postFetcher } from "@/@core/apiFetcher";
-import VideoPlayer from "../../../components/View/common/Videoplayer";
+import VideoPlayer from "@/components/View/Videoplayer";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().required("Name is required"),

@@ -54,12 +54,6 @@ const AuthForgotPassword = ({ csrfToken }: { csrfToken?: string }) => {
               className="form-control"
               placeholder="Enter Your Email Address"
             />
-            {/* <span>
-              <img
-                alt=" Envelope icon for entering email."
-                src="/assets/images/iconEnvelope.svg"
-              />
-            </span> */}
 
             <div className="error">
               <ErrorMessage name="email" />
@@ -67,10 +61,6 @@ const AuthForgotPassword = ({ csrfToken }: { csrfToken?: string }) => {
           </div>
 
           <div className="form-group text-center mt-5">
-            {/* <button type="submit" className="btn btnLogin">
-              {formik.isSubmitting ? "Please wait..." : "Send Email"}
-            </button> */}
-
             <Button
               type="submit"
               className="btn btnLogin"

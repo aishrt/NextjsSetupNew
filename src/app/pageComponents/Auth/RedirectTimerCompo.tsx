@@ -8,7 +8,6 @@ const RedirectTimerCompo = ({ redirectTo, countdownSeconds = 5 }: { redirectTo: 
 
   useEffect(() => {
     const timer = counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
-
     // @ts-ignore
     return () => clearInterval(timer);
   }, [counter]);

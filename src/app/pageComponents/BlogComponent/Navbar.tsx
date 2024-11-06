@@ -1,7 +1,5 @@
 // ./frontend/src/app/[lang]/components/Navbar.tsx
-
 "use client";
-import Logo from "./Logo";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 

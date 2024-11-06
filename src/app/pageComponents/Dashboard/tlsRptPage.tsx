@@ -10,11 +10,10 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import PieChartComponent from "@/components/Charts/pieChart";
 import EmailBarCharts from "@/components/Charts/emailBarCharts";
 import { API_ROUTES } from "@/@core/apiRoutes";
-import MainLoader from "../../../components/Loaders/MainLoader";
+import MainLoader from "@/components/Loaders/MainLoader";
 import SelectAsync from "@/components/Form/SelectAsync";
 import DateRangePicker from "@/components/Form/DateRangePicketMui";
 import { getFetcherWithAuth } from "@/@core/apiFetcher";
-import { getLicenseData } from "@/@core/apiFetcher";
 
 import {
   Box,
@@ -26,15 +25,15 @@ import {
   TableBody,
   TableContainer,
 } from "@mui/material";
-import TableToolbar from "@/components/ui/table-ui/TableToolbar";
+import TableToolbar from "@/components/Table-ui/TableToolbar";
 import Scrollbar from "@/components/Layout/scrollbar/Scrollbar";
 import TableHeadRow, {
   StyledTableCell,
   StyledTableNoData,
   StyledTableRow,
-} from "@/components/ui/table-ui/TableHeadRow";
-import { headCellTLSReport } from "@/components/ui/table-ui/headCells";
-import TableRowsLoader from "@/components/ui/table-ui/TableRowsLoader";
+} from "@/components/Table-ui/TableHeadRow";
+import { headCellTLSReport } from "@/components/Table-ui/headCells";
+import TableRowsLoader from "@/components/Table-ui/TableRowsLoader";
 
 import { PAGINATION_OBJECT } from "@/constants/pagination";
 import {
@@ -42,9 +41,9 @@ import {
   _setPaginationObjectFn,
   createQueryString,
 } from "@/@core/tableFunctions";
-import { TablePaginationCompo } from "@/components/ui/table-ui/TablePaginationCompo";
+import { TablePaginationCompo } from "@/components/Table-ui/TablePaginationCompo";
 import { isEmpty } from "@/utils/isEmpty";
-import CircularSpinner from "../../../components/Loaders/CircularSpinner";
+import CircularSpinner from "@/components/Loaders/CircularSpinner";
 import { checkHistory } from "@/@core/helper";
 import UpgradeSubscription from "../Others/UpgradeSubscription";
 

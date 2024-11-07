@@ -219,6 +219,7 @@ const ModalEbook: React.FC<ModalEbookProps> = ({
             </Grid>
             <Grid item sm={6} xs={12} className="ebookImage">
               <Image
+layout="intrinsic"
                 src={_IMG.magzineImg}
                 alt=""
                 loading="eager"

@@ -103,6 +103,7 @@ const LoginComponent = () => {
               <div className="imageSection">
                 <Link href="/">
                   <Image
+layout="intrinsic"
                     src={_IMG.logo_white_blue}
                     alt="yourDMARC's logo in white"
                     className="loginImage pointer"

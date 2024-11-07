@@ -160,6 +160,7 @@ const DomainDashboard = () => {
                                                   aria-controls="flush-collapseOne"
                                                 ></div>
                                                 <Image
+layout="intrinsic"
                                                   className="header-image"
                                                   src={_IMG.checkmarcGreen}
                                                   alt=""

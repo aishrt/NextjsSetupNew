@@ -521,6 +521,7 @@ const TlsReportPage = ({
                                           }}
                                         >
                                           <Image
+layout="intrinsic"
                                             alt={``}
                                             src={_IMG.right_arrow}
                                             title="View Details"

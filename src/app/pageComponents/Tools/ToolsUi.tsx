@@ -35,7 +35,8 @@ const ToolsUi = ({ toolName }: ToolProps) => {
               </div>
             </div>
             <div className="col-lg-6">
-              <Image src={_IMG.reportingImage2} alt="" className="img-fluid" />
+              <Image
+layout="intrinsic" src={_IMG.reportingImage2} alt="" className="img-fluid" />
             </div>
           </div>
         </div>
@@ -61,7 +62,8 @@ const ToolsUi = ({ toolName }: ToolProps) => {
               {features.map((feature, index) => (
                 <div className="col-xl-3 col-lg-6" key={index}>
                   <div className={`featureSection ${featureColour[index]}`}>
-                    <Image src={_IMG.roundCheck} alt="" loading="lazy" />
+                    <Image
+layout="intrinsic" src={_IMG.roundCheck} alt="" loading="lazy" />
                     <h6>{feature.split(":")[0]}</h6>
                     <p
                       dangerouslySetInnerHTML={{
@@ -124,7 +126,8 @@ const ToolsUi = ({ toolName }: ToolProps) => {
             {benefits.map((benefit, index) => (
               <div className="col-lg-6" key={index}>
                 <div className="innerSection">
-                  <Image src={_IMG.sectool} alt="" loading="lazy" />
+                  <Image
+layout="intrinsic" src={_IMG.sectool} alt="" loading="lazy" />
                   <div>
                     <h4>{benefit.split(":")[0]}</h4>
                     <p

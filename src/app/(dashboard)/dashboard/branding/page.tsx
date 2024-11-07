@@ -508,6 +508,7 @@ const BrandLogo = () => {
                         <Typography gutterBottom>
                           <div>
                             <Image
+layout="intrinsic"
                               alt="delete"
                               src={_IMG.bin_Icon}
                               loading="lazy"

@@ -9,7 +9,8 @@ export function postRenderer(section: any, index: number) {
     case "shared.rich-text":
       return <RichText key={index} data={section} />;
     case "shared.slider":
-      return <ImageSlider key={index} data={section} />;
+      return <Image
+layout="intrinsic"Slider key={index} data={section} />;
     case "shared.quote":
       return <Quote key={index} data={section} />;
     case "shared.media":

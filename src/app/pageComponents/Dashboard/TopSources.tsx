@@ -166,6 +166,7 @@ const TopSources = ({
                                     href={`/dashboard/source-dashboard/?policy_published_domain=${domain}&host_name=${item?.host_name}&org_name=${item?.org}&start_date=${start_date}&end_date=${end_date}&page=1&page_size=10`}
                                   >
                                     <Image
+layout="intrinsic"
                                       alt=""
                                       src={_IMG.right_arrow}
                                       className="give-pointer"
@@ -178,6 +179,7 @@ const TopSources = ({
                                     href={`/dashboard/source-dashboard/?policy_published_domain=${domain}&host_name=${item?.host_name}&org_name=${item?.org}&page=1&page_size=10`}
                                   >
                                     <Image
+layout="intrinsic"
                                       alt=""
                                       src={_IMG.right_arrow}
                                       className="give-pointer"
@@ -297,11 +299,13 @@ const TopSources = ({
                                           <span>
                                             {item?.trend == "decrease" ? (
                                               <Image
+layout="intrinsic"
                                                 src={_IMG.trend_down_green}
                                                 alt="Web icon"
                                               />
                                             ) : item?.trend == "increase" ? (
                                               <Image
+layout="intrinsic"
                                                 src={_IMG.trend_up_red}
                                                 alt="Web icon"
                                               />
@@ -335,6 +339,7 @@ const TopSources = ({
                                       href={`/dashboard/source-dashboard/?policy_published_domain=${domain}&host_name=${item?.host_name}&org_name=${item?.source}&start_date=${start_date}&end_date=${end_date}&page=1&page_size=10`}
                                     >
                                       <Image
+layout="intrinsic"
                                         alt=""
                                         src={_IMG.right_arrow}
                                         className="give-pointer"
@@ -348,6 +353,7 @@ const TopSources = ({
                                       href={`/dashboard/source-dashboard/?policy_published_domain=${domain}&host_name=${item?.host_name}&org_name=${item?.source}&page=1&page_size=10`}
                                     >
                                       <Image
+layout="intrinsic"
                                         alt=""
                                         src={_IMG.right_arrow}
                                         className="give-pointer"
@@ -470,11 +476,13 @@ const TopSources = ({
                                             <span>
                                               {item?.trend === "decrease" ? (
                                                 <Image
+layout="intrinsic"
                                                   src="/assets/images/trend-down.svg"
                                                   alt="Web icon"
                                                 />
                                               ) : item?.trend === "increase" ? (
                                                 <Image
+layout="intrinsic"
                                                   src="/assets/images/trend-up.svg"
                                                   alt="Web icon"
                                                 />
@@ -508,6 +516,7 @@ const TopSources = ({
                                         href={`/dashboard/source-dashboard/?policy_published_domain=${domain}&host_name=${item?.host_name}&org_name=${item?.source}&start_date=${start_date}&end_date=${end_date}&page=1&page_size=10`}
                                       >
                                         <Image
+layout="intrinsic"
                                           alt=""
                                           src={_IMG.right_arrow}
                                           className="give-pointer"
@@ -521,6 +530,7 @@ const TopSources = ({
                                         href={`/dashboard/source-dashboard/?policy_published_domain=${domain}&host_name=${item?.host_name}&org_name=${item?.source}&page=1&page_size=10`}
                                       >
                                         <Image
+layout="intrinsic"
                                           alt=""
                                           src={_IMG.right_arrow}
                                           className="give-pointer"

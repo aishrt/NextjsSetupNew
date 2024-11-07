@@ -566,6 +566,7 @@ const ScanDomainTool = () => {
                               Domain Name
                               <a href="">
                                 <Image
+layout="intrinsic"
                                   src={_IMG.arrange}
                                   alt=""
                                   loading="lazy"
@@ -576,6 +577,7 @@ const ScanDomainTool = () => {
                               DMARC Record Policy
                               <a href="">
                                 <Image
+layout="intrinsic"
                                   src={_IMG.arrange}
                                   alt=""
                                   loading="lazy"
@@ -586,6 +588,7 @@ const ScanDomainTool = () => {
                               ADKIM
                               <a href="">
                                 <Image
+layout="intrinsic"
                                   src={_IMG.arrange}
                                   alt=""
                                   loading="lazy"
@@ -596,6 +599,7 @@ const ScanDomainTool = () => {
                               ASPF
                               <a href="">
                                 <Image
+layout="intrinsic"
                                   src={_IMG.arrange}
                                   alt=""
                                   loading="lazy"
@@ -607,6 +611,7 @@ const ScanDomainTool = () => {
                               rua
                               <a href="">
                                 <Image
+layout="intrinsic"
                                   src={_IMG.arrange}
                                   alt=""
                                   loading="lazy"
@@ -617,6 +622,7 @@ const ScanDomainTool = () => {
                               ruf
                               <a href="">
                                 <Image
+layout="intrinsic"
                                   src={_IMG.arrange}
                                   alt=""
                                   loading="lazy"
@@ -627,6 +633,7 @@ const ScanDomainTool = () => {
                               Import Date
                               <a href="">
                                 <Image
+layout="intrinsic"
                                   src={_IMG.arrange}
                                   alt=""
                                   loading="lazy"
@@ -722,7 +729,8 @@ const ScanDomainTool = () => {
         }}
       >
         <span className="cancelBtn" onClick={handleCloseUpload}>
-          <Image src={_IMG.cancel_black} alt="Cancel" loading="lazy" />
+          <Image
+layout="intrinsic" src={_IMG.cancel_black} alt="Cancel" loading="lazy" />
         </span>
         <FileExcelUpload
           selectedFile={selectedFile}

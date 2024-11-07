@@ -17,35 +17,45 @@ const ResetPassword = ({ params }: Props) => {
           <div className="row">
             <div className="col-xl-6 col-lg-6 col-md-12 imageArea">
               <span className="vec1">
-                <Image src={_IMG.vec1} alt="" loading="lazy" />
+                <Image
+layout="intrinsic" src={_IMG.vec1} alt="" loading="lazy" />
               </span>
               <span className="vec2">
-                <Image src={_IMG.vec2} alt="" loading="lazy" />
+                <Image
+layout="intrinsic" src={_IMG.vec2} alt="" loading="lazy" />
               </span>
               <span className="vec3">
-                <Image src={_IMG.vec2} alt="" loading="lazy" />
+                <Image
+layout="intrinsic" src={_IMG.vec2} alt="" loading="lazy" />
               </span>
               <span className="vec4">
-                <Image src={_IMG.vec2} alt="" loading="lazy" />
+                <Image
+layout="intrinsic" src={_IMG.vec2} alt="" loading="lazy" />
               </span>
               <span className="vec5">
-                <Image src={_IMG.vec2} alt="" loading="lazy" />
+                <Image
+layout="intrinsic" src={_IMG.vec2} alt="" loading="lazy" />
               </span>
               <span className="vec6">
-                <Image src={_IMG.vec2} alt="" loading="lazy" />
+                <Image
+layout="intrinsic" src={_IMG.vec2} alt="" loading="lazy" />
               </span>
               <span className="vec7">
-                <Image src={_IMG.vec1} alt="" loading="lazy" />
+                <Image
+layout="intrinsic" src={_IMG.vec1} alt="" loading="lazy" />
               </span>
               <span className="vec8 lock">
-                <Image src={_IMG.vec3} alt="" loading="lazy" />
+                <Image
+layout="intrinsic" src={_IMG.vec3} alt="" loading="lazy" />
               </span>
               <span className="vec9">
-                <Image src={_IMG.vec1} alt="" loading="lazy" />
+                <Image
+layout="intrinsic" src={_IMG.vec1} alt="" loading="lazy" />
               </span>
 
               <div className="imageSection">
                 <Image
+layout="intrinsic"
                   src={_IMG.logo_white_blue}
                   alt=""
                   className="loginImage"
@@ -63,29 +73,37 @@ const ResetPassword = ({ params }: Props) => {
 
             <div className="col-xl-6 col-lg-6 col-md-12 formArea">
               <span className="vecp1">
-                <Image src={_IMG.vecp1} alt="" loading="lazy" />
+                <Image
+layout="intrinsic" src={_IMG.vecp1} alt="" loading="lazy" />
               </span>
               <span className="vecp2">
-                <Image src={_IMG.vecp1} alt="" loading="lazy" />
+                <Image
+layout="intrinsic" src={_IMG.vecp1} alt="" loading="lazy" />
               </span>
               <span className="vecp3">
-                <Image src={_IMG.vecp1} alt="" loading="lazy" />
+                <Image
+layout="intrinsic" src={_IMG.vecp1} alt="" loading="lazy" />
               </span>
               <span className="vecp4">
-                <Image src={_IMG.vecp1} alt="" loading="lazy" />
+                <Image
+layout="intrinsic" src={_IMG.vecp1} alt="" loading="lazy" />
               </span>
               <span className="vecp5">
-                <Image src={_IMG.vecp1} alt="" loading="lazy" />
+                <Image
+layout="intrinsic" src={_IMG.vecp1} alt="" loading="lazy" />
               </span>
               <span className="vecp6">
-                <Image src={_IMG.vecp1} alt="" loading="lazy" />
+                <Image
+layout="intrinsic" src={_IMG.vecp1} alt="" loading="lazy" />
               </span>
               <span className="vecp7">
-                <Image src={_IMG.vecp2} alt="" loading="lazy" />
+                <Image
+layout="intrinsic" src={_IMG.vecp2} alt="" loading="lazy" />
               </span>
 
               <div className="logo">
                 <Image
+layout="intrinsic"
                   src={_IMG.logo_blue}
                   alt=""
                   className="loginImage"

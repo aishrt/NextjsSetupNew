@@ -23,11 +23,12 @@ const Navbar = () => {
           >
             <Link className="navbar-brand navbarLogo" href="/blogs">
               <Image
+layout="intrinsic"
                 src={_IMG.logo_final_blue}
-                alt="logo"
-                width="auto"
-                height="auto"
+                alt="logo777"
                 loading="lazy"
+                height={20}
+                width={20}
               />
             </Link>
           </div>
@@ -470,6 +471,7 @@ const Navbar = () => {
                           <span className="iconBorder">
                             {/* <DnsIcon className='text-[#eb5454]'/> */}
                             <Image
+layout="intrinsic"
                               src={_IMG.business}
                               alt="Business"
                               loading="lazy"
@@ -517,7 +519,12 @@ const Navbar = () => {
                         <span className="d-flex gap-2 align-items-center mb-3">
                           <span className="iconBorder">
                             {/* <DnsIcon className='text-[#eb5454]'/> */}
-                            <Image src={_IMG.industry} alt="industry" loading="lazy" />
+                            <Image
+layout="intrinsic"
+                              src={_IMG.industry}
+                              alt="industry"
+                              loading="lazy"
+                            />
                           </span>
                           <h3 className="text-[17px] text-[#0f2138]">
                             By Industries

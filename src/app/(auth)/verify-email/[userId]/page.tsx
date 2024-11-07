@@ -32,7 +32,8 @@ export default async function Page({ params }: Props) {
             <div className="col-xl-6 mx-auto">
               {verifyEmail.status ? (
                 <div className="verifyEmail success mb-4">
-                  <Image alt={``} src={_IMG.check_mark} loading="lazy" />
+                  <Image
+layout="intrinsic" alt={``} src={_IMG.check_mark} loading="lazy" />
                   <h4>Great news! </h4>
                   <p>
                     Your email has been <span>successfully verified</span>.
@@ -44,7 +45,8 @@ export default async function Page({ params }: Props) {
                 </div>
               ) : (
                 <div className="verifyEmail error mb-4">
-                  <Image alt={``} src={_IMG.close} loading="lazy" />
+                  <Image
+layout="intrinsic" alt={``} src={_IMG.close} loading="lazy" />
                   <h4>Uh-oh! </h4>
                   <p>
                     We encountered a <span>verification error</span>. Please

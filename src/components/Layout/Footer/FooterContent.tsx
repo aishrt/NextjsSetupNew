@@ -40,6 +40,7 @@ const FooterContent = (url: any) => {
                 <div className="col">
                   <a href="/">
                     <Image
+layout="intrinsic"
                       src={_IMG.logo_final_blue}
                       alt="YOUR DMARC Logo"
                       style={{ width: "130px" }}

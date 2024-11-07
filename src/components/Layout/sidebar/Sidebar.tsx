@@ -423,6 +423,7 @@ const Sidebar = ({
           <Box px={3} className="sidebarLogo">
             <span className="closeButton">
               <Image
+layout="intrinsic"
                 src={_IMG.closeIcon}
                 alt=""
                 onClick={onSidebarClose}

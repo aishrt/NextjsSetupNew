@@ -187,6 +187,7 @@ const Reporters = ({
       >
         {check1 == 0 ? null : check2 == "increase" ? (
           <Image
+layout="intrinsic"
             src={_IMG.trend_up}
             alt="Web icon"
             loading="lazy"
@@ -194,6 +195,7 @@ const Reporters = ({
           />
         ) : check2 == "decrease" ? (
           <Image
+layout="intrinsic"
             src={_IMG.trend_down}
             alt="Web icon"
             width={20}

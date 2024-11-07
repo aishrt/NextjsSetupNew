@@ -185,12 +185,14 @@ const DKIMDetails: React.FC<DKIMDetailsProps> = ({
                           {item?.dkim_auth_results_result?.toLowerCase() ===
                           "fail" ? (
                             <Image
+layout="intrinsic"
                               src={_IMG.crosscircle}
                               alt="crosscircle"
                               loading="lazy"
                             />
                           ) : (
                             <Image
+layout="intrinsic"
                               src={_IMG.checkcircle}
                               alt=""
                               loading="lazy"
@@ -201,12 +203,14 @@ const DKIMDetails: React.FC<DKIMDetailsProps> = ({
                           {item?.row_policy_evaluated_dkim?.toLowerCase() ===
                           "fail" ? (
                             <Image
+layout="intrinsic"
                               src={_IMG.crosscircle}
                               alt=""
                               loading="lazy"
                             />
                           ) : (
                             <Image
+layout="intrinsic"
                               src={_IMG.crosscircle}
                               alt=""
                               loading="lazy"

@@ -173,6 +173,7 @@ export default function ArticleSelect({
                 </div>
                 <div className="text-center flex justify-center items-center mt-4">
                   <Image
+layout="intrinsic"
                     src={_IMG.billu_2}
                     loading="lazy"
                     alt="Submit"

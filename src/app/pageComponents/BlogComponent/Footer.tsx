@@ -91,7 +91,8 @@ export default function Footer({
     //         {/* <Logo src={logoUrl}>
     //           {logoText && <h2 className="text-2xl font-bold">{logoText}</h2>}
     //         </Logo> */}
-    //         {logoUrl && <Image src={logoUrl} alt="logo" width={45} height={45} className='w-[120px] h-[90px]' />}
+    //         {logoUrl && <Image
+layout="intrinsic" src={logoUrl} alt="logo" width={45} height={45} className='w-[120px] h-[90px]' />}
     //         <p className="text-[#787878] mt-[10px]">With YOUR DMARC, boosting email campaign deliverability, safeguarding brand identity, and fortifying business reputation is a breeze.</p>
     //       </div>
 
@@ -152,7 +153,8 @@ export default function Footer({
     //       <div className="">
     //         <p className="text-[#000] text-[24px] font-semibold mb-[20px]">Quick Links</p>
     //         <Link href="mailto:contact@yourdmarc.com" className="text-[#787878]">
-    //           {/* <Image width="250" height="250" className="object-cover w-full h-[250px]" src="email.svg" /> */}
+    //           {/* <Image
+layout="intrinsic" width="250" height="250" className="object-cover w-full h-[250px]" src="email.svg" /> */}
     //           contact@yourdmarc.com</Link>
     //       </div>
     //     </div>

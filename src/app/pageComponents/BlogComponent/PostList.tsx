@@ -85,6 +85,7 @@ export default function PostList({
                     >
                       {imageUrl ? (
                         <Image
+layout="intrinsic"
                           alt="Your Dmarc Blog Image"
                           width="250"
                           height="250"
@@ -93,6 +94,7 @@ export default function PostList({
                         />
                       ) : (
                         <Image
+layout="intrinsic"
                           alt="Your Dmarc Blog Image"
                           width="250"
                           height="250"

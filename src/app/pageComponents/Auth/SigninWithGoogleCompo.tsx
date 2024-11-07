@@ -35,6 +35,7 @@ const SigninWithGoogleCompo = ({ btnTitle }: { btnTitle: string }) => {
       onClick={loginWithGoogle}
     >
       <Image
+layout="intrinsic"
         alt="This is the Google icon used for signing up"
         src={_IMG.googleIcon}
         loading="lazy"

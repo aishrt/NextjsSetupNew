@@ -13,6 +13,7 @@ const ResourcesContainer = () => {
         <div className="resources wow fadeIn">
           <div className="thickLine">
             <Image
+layout="intrinsic"
               src={_IMG.thickLine}
               alt="Thick line used for design."
               loading="lazy"
@@ -21,6 +22,7 @@ const ResourcesContainer = () => {
 
           <div className="zigzag">
             <Image
+layout="intrinsic"
               src={_IMG.shapeZigZag}
               alt="ZigZag shape for designing."
               loading="lazy"
@@ -29,6 +31,7 @@ const ResourcesContainer = () => {
 
           <span className="dotted">
             <Image
+layout="intrinsic"
               src={_IMG.shapeDotted}
               alt="Shape dotted used for design."
               loading="lazy"
@@ -52,6 +55,7 @@ const ResourcesContainer = () => {
                         
                           <span className="imageBorder">
                             <Image
+layout="intrinsic"
                               src={_IMG.DMARCRecord}
                               alt=""
                               loading="lazy"
@@ -71,7 +75,8 @@ const ResourcesContainer = () => {
                         <div className="card-body">
                         
                           <span className="imageBorder">
-                            <Image src={_IMG.SPFRecord} alt="" loading="lazy" />
+                            <Image
+layout="intrinsic" src={_IMG.SPFRecord} alt="" loading="lazy" />
                           </span>
                           <h5 className="card-title">SPF Record</h5>
                           <p className="card-text">
@@ -87,7 +92,8 @@ const ResourcesContainer = () => {
                         <div className="card-body">
                         
                           <span className="imageBorder">
-                            <Image src={_IMG.DKIM_record} alt="" />
+                            <Image
+layout="intrinsic" src={_IMG.DKIM_record} alt="" />
                           </span>
                           <h5 className="card-title">DKIM Record</h5>
                           <p className="card-text">Look up DKIM record</p>
@@ -101,6 +107,7 @@ const ResourcesContainer = () => {
                         <div className="card-body">
                           <span className="imageBorder">
                             <Image
+layout="intrinsic"
                               src={_IMG.BIMI_Record}
                               alt=""
                               loading="lazy"
@@ -118,15 +125,18 @@ const ResourcesContainer = () => {
           </div>
 
           <span className="thinLine">
-            <Image src={_IMG.thinLine} alt="Line" loading="lazy" />
+            <Image
+layout="intrinsic" src={_IMG.thinLine} alt="Line" loading="lazy" />
           </span>
 
           <span className="thinLine2">
-            <Image src={_IMG.thinLine} alt="Line" loading="lazy" />
+            <Image
+layout="intrinsic" src={_IMG.thinLine} alt="Line" loading="lazy" />
           </span>
 
           <div className="zigzag2">
-            <Image src={_IMG.shapeZigZag} alt="shapeZigZag" loading="lazy" />
+            <Image
+layout="intrinsic" src={_IMG.shapeZigZag} alt="shapeZigZag" loading="lazy" />
           </div>
         </div>
       )}

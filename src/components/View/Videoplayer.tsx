@@ -50,9 +50,11 @@ const VideoPlayer: React.FC<VideoPlayerProps> = ({ video_name }) => {
           onClick={isPlaying ? handlePause : handlePlay}
         >
           {isPlaying ? (
-            <Image src={_IMG.pauseVideoBtn} alt="Pause Button" loading="lazy" />
+            <Image
+layout="intrinsic" src={_IMG.pauseVideoBtn} alt="Pause Button" loading="lazy" />
           ) : (
-            <Image src={_IMG.playBtn} alt="Play Button" loading="lazy" />
+            <Image
+layout="intrinsic" src={_IMG.playBtn} alt="Play Button" loading="lazy" />
           )}
         </button>
       </div>

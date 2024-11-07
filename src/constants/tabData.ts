@@ -1,4 +1,5 @@
 import { _IMG } from "./images";
+// import  SPF1  from "../assets/spf1.svg";
 
 export const _TABS = [
   {
@@ -10,14 +11,14 @@ export const _TABS = [
         description: `Check if your domain has an SPF record and if it’s set up correctly.`,
         href: "/tools/spf-lookup",
         buttonTitle: "Check SPF Record",
-        icon: `${_IMG.spf1}`,
+        icon: "/assets/images/spf1.svg",
       },
       {
         title: "SPF Record Generator",
         description: `Generate an SPF record for your domain automatically to avoid syntax issues.`,
         href: "/tools/spf-generator",
         buttonTitle: "Generate SPF Record",
-        icon: `${_IMG.spf2}`,
+        icon: "../../public/assets/images/spf1.svg",
       },
       {
         title: "SPF Raw Checker",
@@ -234,7 +235,7 @@ export const _TABS_HOME = [
         description: `Verify if your domain has an SPF record and if it's configured correctly.`,
         href: "/tools/spf-lookup",
         buttonTitle: "Check SPF Record",
-        icon: `${_IMG.spf1}`,
+        icon: "../../public/assets/images/spf1.svg",
       },
       {
         title: "DMARC Record Checker",
@@ -360,7 +361,7 @@ export const _TABS_HOME = [
     tabName: "MTA TLS LOOKUPS",
     mainTitle: "",
     tabTools: [
-      { 
+      {
         title: "MTA STS Record Checker",
         description: `Verify if your domain has an MTA STS record and if it's properly configured.`,
         href: "/tools/mta-sts-lookup",

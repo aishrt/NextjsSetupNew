@@ -460,6 +460,7 @@ const DomainPage = () => {
                                       placement="left"
                                     >
                                       <Image
+layout="intrinsic"
                                         src={_IMG.crosscircle}
                                         alt=""
                                         loading="lazy"
@@ -492,6 +493,7 @@ const DomainPage = () => {
                                       placement="top"
                                     >
                                       <Image
+layout="intrinsic"
                                         src={_IMG.checkarrowFilled}
                                         alt=""
                                         loading="lazy"
@@ -526,6 +528,7 @@ const DomainPage = () => {
                                       }}
                                     >
                                       <Image
+layout="intrinsic"
                                         src={_IMG.redMinusIco}
                                         alt=""
                                         loading="lazy"
@@ -543,6 +546,7 @@ const DomainPage = () => {
                                   style={{ cursor: "default" }}
                                 >
                                   <Image
+layout="intrinsic"
                                     src={_IMG.greenTick}
                                     alt=""
                                     loading="lazy"
@@ -576,6 +580,7 @@ const DomainPage = () => {
                                       }}
                                     >
                                       <Image
+layout="intrinsic"
                                         src={_IMG.redMinusIco}
                                         alt=""
                                         loading="lazy"
@@ -593,6 +598,7 @@ const DomainPage = () => {
                                   style={{ cursor: "default" }}
                                 >
                                   <Image
+layout="intrinsic"
                                     src={_IMG.greenTick}
                                     alt=""
                                     loading="lazy"
@@ -684,6 +690,7 @@ const DomainPage = () => {
                               onClick={handleCloseUpload}
                             >
                               <Image
+layout="intrinsic"
                                 alt="cancel"
                                 src={_IMG.cancel_black}
                                 loading="lazy"
@@ -852,7 +859,8 @@ const DomainPage = () => {
               <DialogContent className="dialogHeader" dividers>
                 <Typography gutterBottom>
                   <>
-                    <Image src={_IMG.bin_Icon} alt="Delete" loading="lazy" />
+                    <Image
+layout="intrinsic" src={_IMG.bin_Icon} alt="Delete" loading="lazy" />
                     <span style={{ display: "block" }}>
                       Are you sure You want to delete ?
                     </span>

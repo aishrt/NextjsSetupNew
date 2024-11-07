@@ -305,7 +305,8 @@ const Statistics = ({
               <div className="cardInner compliants">
                 <div className="cardInnerContent">
                   <div className="cardIcon">
-                    <Image alt={``} src={_IMG.greenCheck} loading="lazy" />
+                    <Image
+layout="intrinsic" alt={``} src={_IMG.greenCheck} loading="lazy" />
                   </div>
                   <div className="cardText">
                     <h4>
@@ -372,7 +373,8 @@ const Statistics = ({
               <div className="cardInner failures">
                 <div className="cardInnerContent">
                   <div className="cardIcon">
-                    <Image src={_IMG.failureIcon} alt="" loading="lazy" />
+                    <Image
+layout="intrinsic" src={_IMG.failureIcon} alt="" loading="lazy" />
                   </div>
                   <div className="cardText">
                     <h4>
@@ -438,6 +440,7 @@ const Statistics = ({
                 <div className="cardInnerContent">
                   <div className="cardIcon">
                     <Image
+layout="intrinsic"
                       className="imgBorder"
                       alt={``}
                       src={_IMG.sendEmail}

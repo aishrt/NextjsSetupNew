@@ -586,6 +586,7 @@ const Ipmodal: React.FC<ModalEbookProps> = ({
                                 <div className="col-lg-5">
                                   <div className="content">
                                     <Image
+layout="intrinsic"
                                       alt=""
                                       src={_IMG.companyIcon}
                                       loading="lazy"
@@ -653,6 +654,7 @@ const Ipmodal: React.FC<ModalEbookProps> = ({
                                 <div className="col-lg-5">
                                   <div className="content">
                                     <Image
+layout="intrinsic"
                                       alt=""
                                       src={_IMG.flag_Icon}
                                       loading="lazy"
@@ -775,6 +777,7 @@ const Ipmodal: React.FC<ModalEbookProps> = ({
                                         <div className="col-lg-7">
                                           <div className="ipdangeralert">
                                             <Image
+layout="intrinsic"
                                               src={_IMG.redinfo}
                                               alt=""
                                             />

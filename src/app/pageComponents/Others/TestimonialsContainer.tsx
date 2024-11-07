@@ -5,10 +5,12 @@ const TestimonialsContainer = () => {
   return (
     <section className="testimonials wow fadeIn">
       <span className="shade">
-        <Image src={_IMG.testimonialShade} alt={""} loading="lazy" />
+        <Image
+layout="intrinsic" src={_IMG.testimonialShade} alt={""} loading="lazy" />
       </span>
       <span className="quoteImage">
-        <Image src={_IMG.quoteImg} alt={""} loading="lazy" />
+        <Image
+layout="intrinsic" src={_IMG.quoteImg} alt={""} loading="lazy" />
       </span>
       <div className="container">
         <div className="row">
@@ -46,6 +48,7 @@ const TestimonialsContainer = () => {
                 <div className="carousel-inner">
                   <div className="carousel-item active">
                     <Image
+layout="intrinsic"
                       className="rating"
                       src={_IMG.ratingStarts}
                       alt={""}
@@ -60,6 +63,7 @@ const TestimonialsContainer = () => {
 
                     <span className="userImage">
                       <Image
+layout="intrinsic"
                         src={_IMG.testimonialImg}
                         alt={""}
                         loading="lazy"
@@ -70,6 +74,7 @@ const TestimonialsContainer = () => {
                   </div>
                   <div className="carousel-item">
                     <Image
+layout="intrinsic"
                       className="rating"
                       src={_IMG.ratingStarts}
                       alt={""}
@@ -82,7 +87,8 @@ const TestimonialsContainer = () => {
                     </p>
 
                     <span className="userImage">
-                      <Image src={_IMG.team_1} alt={""} loading="lazy" />
+                      <Image
+layout="intrinsic" src={_IMG.team_1} alt={""} loading="lazy" />
                     </span>
                     <h5>M. Brown</h5>
                     <h6>
@@ -92,6 +98,7 @@ const TestimonialsContainer = () => {
 
                   <div className="carousel-item">
                     <Image
+layout="intrinsic"
                       className="rating"
                       src={_IMG.ratingStarts}
                       alt={""}
@@ -104,7 +111,8 @@ const TestimonialsContainer = () => {
                     </p>
 
                     <span className="userImage">
-                      <Image src={_IMG.gracia} alt={""} loading="lazy" />
+                      <Image
+layout="intrinsic" src={_IMG.gracia} alt={""} loading="lazy" />
                     </span>
                     <h5>L. Garcia</h5>
                     <h6>Compliance Officer, Fintech from UK</h6>

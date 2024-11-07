@@ -20,6 +20,7 @@ const CartsDashboard = () => {
                 <div className="card-header">
                   <h3>
                     <Image
+layout="intrinsic"
                       className="failureImg"
                       alt={``}
                       src={_IMG.cancel}
@@ -50,6 +51,7 @@ const CartsDashboard = () => {
                           <td>
                             <a href="">
                               <Image
+layout="intrinsic"
                                 alt={``}
                                 src={_IMG.right_arrow}
                                 loading="lazy"
@@ -67,6 +69,7 @@ const CartsDashboard = () => {
                           <td>
                             <a href="">
                               <Image
+layout="intrinsic"
                                 alt={``}
                                 src={_IMG.right_arrow}
                                 loading="lazy"
@@ -84,6 +87,7 @@ const CartsDashboard = () => {
                           <td>
                             <a href="">
                               <Image
+layout="intrinsic"
                                 alt={``}
                                 src={_IMG.right_arrow}
                                 loading="lazy"
@@ -101,6 +105,7 @@ const CartsDashboard = () => {
                           <td>
                             <a href="">
                               <Image
+layout="intrinsic"
                                 alt={``}
                                 src={_IMG.right_arrow}
                                 loading="lazy"
@@ -118,7 +123,8 @@ const CartsDashboard = () => {
               <div className="card">
                 <div className="card-header">
                   <h3>
-                    <Image alt={``} src={_IMG.checkmarcGreen} loading="lazy" />{" "}
+                    <Image
+layout="intrinsic" alt={``} src={_IMG.checkmarcGreen} loading="lazy" />{" "}
                     Top compliant sources
                   </h3>
                 </div>
@@ -144,6 +150,7 @@ const CartsDashboard = () => {
                           <td>
                             <a href="">
                               <Image
+layout="intrinsic"
                                 alt={``}
                                 src={_IMG.right_arrow}
                                 loading="lazy"
@@ -161,6 +168,7 @@ const CartsDashboard = () => {
                           <td>
                             <a href="">
                               <Image
+layout="intrinsic"
                                 alt={``}
                                 src={_IMG.right_arrow}
                                 loading="lazy"
@@ -178,6 +186,7 @@ const CartsDashboard = () => {
                           <td>
                             <a href="">
                               <Image
+layout="intrinsic"
                                 alt={``}
                                 src={_IMG.right_arrow}
                                 loading="lazy"
@@ -195,6 +204,7 @@ const CartsDashboard = () => {
                           <td>
                             <a href="">
                               <Image
+layout="intrinsic"
                                 alt={``}
                                 src={_IMG.right_arrow}
                                 loading="lazy"
@@ -326,6 +336,7 @@ const CartsDashboard = () => {
                           <td>
                             <a href="">
                               <Image
+layout="intrinsic"
                                 alt={``}
                                 src={_IMG.right_arrow}
                                 loading="lazy"
@@ -392,7 +403,8 @@ const CartsDashboard = () => {
                           </td>
                           <td>
                             <a href="">
-                              <Image alt={``} src={_IMG.right_arrow} />
+                              <Image
+layout="intrinsic" alt={``} src={_IMG.right_arrow} />
                             </a>
                           </td>
                         </tr>
@@ -456,6 +468,7 @@ const CartsDashboard = () => {
                           <td>
                             <a href="">
                               <Image
+layout="intrinsic"
                                 alt={``}
                                 src={_IMG.right_arrow}
                                 loading="lazy"

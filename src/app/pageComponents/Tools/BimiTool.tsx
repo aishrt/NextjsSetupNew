@@ -529,6 +529,7 @@ const BimiTool = ({
                                 <div className="devicePreview__Left">
                                   <div className="devicePreview__Img">
                                     <Image
+layout="intrinsic"
                                       src={_IMG.bimi_desktop_bg}
                                       loading="lazy"
                                       alt="bimi_desktop_bg"
@@ -550,6 +551,7 @@ const BimiTool = ({
                                 <div className="devicePreview__Right">
                                   <div className="devicePreview__Img">
                                     <Image
+layout="intrinsic"
                                       src={_IMG.bimi_mobile_bg}
                                       loading="lazy"
                                       alt="Bimi Logo"
@@ -558,7 +560,7 @@ const BimiTool = ({
                                       <img
                                         src={lookupData?.data?.logo_detail?.url}
                                         loading="lazy"
-                                        alt="Logo"
+                                        alt="Logo444"
                                       />
                                     </div>
                                     <div className="rightContent">

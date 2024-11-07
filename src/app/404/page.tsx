@@ -12,6 +12,7 @@ const PageNotFound = () => {
       <div>
         <div className="text-center">
           <Image
+layout="intrinsic"
             src={_IMG.error2}
             loading="lazy"
             alt=""

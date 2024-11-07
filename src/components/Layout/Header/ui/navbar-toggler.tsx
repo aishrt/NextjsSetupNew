@@ -639,7 +639,8 @@ const NavbarToggler = () => {
                       <div className="col-lg-4">
                         <span className="d-flex gap-2 align-items-center mb-3">
                           <span className="iconBorder">
-                            <Image src={_IMG.business} alt="" loading="lazy" />
+                            <Image
+layout="intrinsic" src={_IMG.business} alt="" loading="lazy" />
                           </span>
                           <h5>By Business</h5>
                         </span>
@@ -664,7 +665,8 @@ const NavbarToggler = () => {
                       <div className="col-lg-8">
                         <span className="d-flex gap-2 align-items-center mb-3">
                           <span className="iconBorder">
-                            <Image src={_IMG.industry} alt="" loading="lazy" />
+                            <Image
+layout="intrinsic" src={_IMG.industry} alt="" loading="lazy" />
                           </span>
                           <h5>By Industries</h5>
                         </span>
@@ -743,7 +745,8 @@ const NavbarToggler = () => {
                       <div className="col-lg-4">
                           <span className="d-flex gap-2 align-items-center mb-3">
                             <span className="iconBorder">
-                              <Image src="/assets/images/management.svg" alt="" />
+                              <Image
+layout="intrinsic" src="/assets/images/management.svg" alt="" />
                             </span>
                             <h5>By Management</h5>
                           </span>
@@ -767,7 +770,8 @@ const NavbarToggler = () => {
                       <div className="col-lg-8">
                             <span className="d-flex gap-2 align-items-center mb-3">
                               <span className="iconBorder">
-                                <Image src="/assets/images/partnership.svg" alt="" />
+                                <Image
+layout="intrinsic" src="/assets/images/partnership.svg" alt="" />
                               </span>
                               <h5>By Partnership</h5>
                             </span>
@@ -1412,6 +1416,7 @@ const NavbarToggler = () => {
                           <span className="d-flex gap-2 align-items-center mb-3">
                             <span className="iconBorder">
                               <Image
+layout="intrinsic"
                                 src={_IMG.business}
                                 alt=""
                                 loading="lazy"
@@ -1441,6 +1446,7 @@ const NavbarToggler = () => {
                           <span className="d-flex gap-2 align-items-center mb-3">
                             <span className="iconBorder">
                               <Image
+layout="intrinsic"
                                 src={_IMG.industry}
                                 alt=""
                                 loading="lazy"
@@ -1523,7 +1529,8 @@ const NavbarToggler = () => {
                       <div className="col-lg-4">
                           <span className="d-flex gap-2 align-items-center mb-3">
                             <span className="iconBorder">
-                              <Image src="/assets/images/management.svg" alt="" />
+                              <Image
+layout="intrinsic" src="/assets/images/management.svg" alt="" />
                             </span>
                             <h5>By Management</h5>
                           </span>
@@ -1547,7 +1554,8 @@ const NavbarToggler = () => {
                       <div className="col-lg-8">
                             <span className="d-flex gap-2 align-items-center mb-3">
                               <span className="iconBorder">
-                                <Image src="/assets/images/partnership.svg" alt="" />
+                                <Image
+layout="intrinsic" src="/assets/images/partnership.svg" alt="" />
                               </span>
                               <h5>By Partnership</h5>
                             </span>

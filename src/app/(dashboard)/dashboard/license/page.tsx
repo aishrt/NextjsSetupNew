@@ -130,7 +130,8 @@ const License = () => {
                       <div className="col-xl-12">
                         <div className="card">
                           <div className="card-header">
-                            <Image src={_IMG.card} alt="Card" loading="lazy" />
+                            <Image
+layout="intrinsic" src={_IMG.card} alt="Card" loading="lazy" />
                             <h5 className="fw-bolder">License</h5>
                           </div>
                           <div className="card-body">
@@ -192,6 +193,7 @@ const License = () => {
                           <div className="card">
                             <div className="card-header">
                               <Image
+layout="intrinsic"
                                 src={_IMG.domainIcon}
                                 alt=""
                                 loading="lazy"
@@ -233,6 +235,7 @@ const License = () => {
                           <div className="card">
                             <div className="card-header">
                               <Image
+layout="intrinsic"
                                 src={_IMG.envelope}
                                 alt=""
                                 loading="lazy"
@@ -274,6 +277,7 @@ const License = () => {
                           <div className="card">
                             <div className="card-header">
                               <Image
+layout="intrinsic"
                                 src={_IMG.user}
                                 alt="User"
                                 loading="lazy"
@@ -315,6 +319,7 @@ const License = () => {
                           <div className="card">
                             <div className="card-header">
                               <Image
+layout="intrinsic"
                                 src={_IMG.sender}
                                 alt="Sender"
                                 loading="lazy"
@@ -354,7 +359,8 @@ const License = () => {
                       <div className="col-xl-12 mt-3">
                         <div className="card">
                           <div className="card-header">
-                            <Image src={_IMG.plan} alt="Plan" loading="lazy" />
+                            <Image
+layout="intrinsic" src={_IMG.plan} alt="Plan" loading="lazy" />
                             <h5 className="fw-bolder">Plan Features</h5>
                           </div>
                           <div className="card-body">

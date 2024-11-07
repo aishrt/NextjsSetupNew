@@ -12,6 +12,7 @@ const Header = () => {
       <div className="header animate__fadeInUp">
         <span className="heroDotted">
           <Image
+layout="intrinsic"
             src={_IMG.shapeDotted}
             alt="Shape dotted used for design."
             loading="lazy"
@@ -19,6 +20,7 @@ const Header = () => {
         </span>
         <span className="heroDotted2">
           <Image
+layout="intrinsic"
             src={_IMG.shapeDotted}
             alt="Shape dotted used for design."
             loading="lazy"
@@ -26,16 +28,19 @@ const Header = () => {
         </span>
         <span className="vector">
           <Image
+layout="intrinsic"
             src={_IMG.logo_vector}
             alt="logo-vector"
             loading="lazy"
           />
         </span>
         <span className="vector-left">
-          <Image src={_IMG.Ellipse4} alt="decorative-vector" loading="lazy" />
+          <Image
+layout="intrinsic" src={_IMG.Ellipse4} alt="decorative-vector" loading="lazy" />
         </span>
         <span className="vector-right">
-          <Image src={_IMG.Ellipse3} alt="decorative-vector" loading="lazy" />
+          <Image
+layout="intrinsic" src={_IMG.Ellipse3} alt="decorative-vector" loading="lazy" />
         </span>
         <HeaderNavigation />
         <div className="hero-section">

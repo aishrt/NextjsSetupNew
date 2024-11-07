@@ -605,6 +605,7 @@ const DnsTool = ({
                                 />
                                 {/* <span className="tooltipOuter">
                               <Image
+layout="intrinsic"
                                 src="/assets/images/infoIcon.svg"
                                 alt=""
                                 loading="lazy"
@@ -652,6 +653,7 @@ const DnsTool = ({
                                 />
                                 {/* <span className="tooltipOuter">
                               <Image
+layout="intrinsic"
                                 src="/assets/images/infoIcon.svg"
                                 alt=""
                                 loading="lazy"

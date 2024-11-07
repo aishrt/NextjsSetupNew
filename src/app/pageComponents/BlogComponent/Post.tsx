@@ -48,6 +48,7 @@ export default function Post({ data }: { data: Article }) {
     <article>
       {imageUrl && (
         <Image
+layout="intrinsic"
           src={_IMG.phishing5}
           alt="article cover image"
           width={400}
@@ -72,6 +73,7 @@ export default function Post({ data }: { data: Article }) {
         <div className="d-flex items-center md:space-x-2">
           {authorImgUrl && (
             <Image
+layout="intrinsic"
               src={authorImgUrl}
               alt="article cover image"
               width={100}

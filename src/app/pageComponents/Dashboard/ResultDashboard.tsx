@@ -391,6 +391,7 @@ const Resultspage = ({
                                           )}
                                         >
                                           <Image
+layout="intrinsic"
                                             className="handIcon"
                                             alt={``}
                                             src={_IMG.right_arrow}

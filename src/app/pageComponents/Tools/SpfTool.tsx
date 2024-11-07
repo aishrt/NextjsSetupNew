@@ -775,7 +775,8 @@ const SpfTool = ({
                               href={`spf-generator?domain=${domain}`}
                             >
                               <Tooltip title="Generate Record" placement="top">
-                                <Image src={_IMG.record} alt="Record" />
+                                <Image
+layout="intrinsic" src={_IMG.record} alt="Record" />
                               </Tooltip>
                             </Link>
                           </div>

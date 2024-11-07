@@ -15,6 +15,7 @@ const ResourcesContainerNew = () => {
       <div className="resources wow fadeIn">
         <div className="thickLine">
           <Image
+layout="intrinsic"
             src={_IMG.thickLine}
             alt="Thick line used for design."
             loading="lazy"
@@ -23,6 +24,7 @@ const ResourcesContainerNew = () => {
 
         <div className="zigzag">
           <Image
+layout="intrinsic"
             src={_IMG.shapeZigZag}
             alt="ZigZag shape for designing"
             loading="lazy"
@@ -30,7 +32,8 @@ const ResourcesContainerNew = () => {
         </div>
 
         <span className="dotted">
-          <Image src={_IMG.shapeDotted} alt={""} loading="lazy" />
+          <Image
+layout="intrinsic" src={_IMG.shapeDotted} alt={""} loading="lazy" />
         </span>
         <div className="container">
           <div className="resources-outer">
@@ -55,12 +58,14 @@ const ResourcesContainerNew = () => {
                   <div className="card wow flipInX">
                     <div className="card-body">
                       {/* <Image
+layout="intrinsic"
                       className="card-image"
                       src="/assets/images/dmarcRecord.svg"
                       alt="Envelope with lock icon signifies DMARC record."
                     /> */}
                       <span className="imageBorder">
-                        <Image src={_IMG.DMARCRecord} alt="" loading="lazy" />
+                        <Image
+layout="intrinsic" src={_IMG.DMARCRecord} alt="" loading="lazy" />
                       </span>
                       <h5 className="card-title">DMARC Record</h5>
                       <p className="card-text">
@@ -81,13 +86,15 @@ const ResourcesContainerNew = () => {
                   <div className="card wow flipInX">
                     <div className="card-body">
                       {/* <Image
+layout="intrinsic"
                       className="card-image"
                       src="/assets/images/spfRecord.svg"
                       alt="Eye icon representing SPF record."
                       width="auto" height="auto"
                     /> */}
                       <span className="imageBorder">
-                        <Image src={_IMG.SPFRecord} alt="" loading="lazy" />
+                        <Image
+layout="intrinsic" src={_IMG.SPFRecord} alt="" loading="lazy" />
                       </span>
                       <h5 className="card-title">SPF Record</h5>
                       <p className="card-text">
@@ -108,13 +115,15 @@ const ResourcesContainerNew = () => {
                   <div className="card wow flipInX">
                     <div className="card-body">
                       {/* <Image
+layout="intrinsic"
                       className="card-image"
                       src="/assets/images/dkimRecord.svg"
                       alt="Person with star logo for DKIM record lock." width="auto" height="auto"
                     /> */}
 
                       <span className="imageBorder">
-                        <Image src={_IMG.DKIM_record} alt="" loading="lazy" />
+                        <Image
+layout="intrinsic" src={_IMG.DKIM_record} alt="" loading="lazy" />
                       </span>
                       <h5 className="card-title">DKIM Record</h5>
                       <p className="card-text">Look up DKIM record</p>
@@ -133,6 +142,7 @@ const ResourcesContainerNew = () => {
                   <div className="card wow flipInX">
                     <div className="card-body">
                       {/* <Image
+layout="intrinsic"
                       className="card-image"
                       src="/assets/images/bimiRecord.svg"
                       alt="This logo is used to display authenticated emails.
@@ -140,7 +150,8 @@ const ResourcesContainerNew = () => {
                     /> */}
 
                       <span className="imageBorder">
-                        <Image src={_IMG.BIMI_Record} alt="" loading="lazy" />
+                        <Image
+layout="intrinsic" src={_IMG.BIMI_Record} alt="" loading="lazy" />
                       </span>
                       <h5 className="card-title">BIMI Record</h5>
                       <p className="card-text">Look up DKIM record</p>
@@ -159,6 +170,7 @@ const ResourcesContainerNew = () => {
                   <div className="card wow flipInX">
                     <div className="card-body">
                       {/* <Image
+layout="intrinsic"
                       className="card-image"
                       src="/assets/images/bimiRecord.svg"
                       alt="This logo is used to display authenticated emails.
@@ -167,6 +179,7 @@ const ResourcesContainerNew = () => {
 
                       <span className="imageBorder">
                         <Image
+layout="intrinsic"
                           src={_IMG.MTA_STA_Record}
                           alt=""
                           loading="lazy"
@@ -189,6 +202,7 @@ const ResourcesContainerNew = () => {
                   <div className="card wow flipInX">
                     <div className="card-body">
                       {/* <Image
+layout="intrinsic"
                       className="card-image"
                       src="/assets/images/bimiRecord.svg"
                       alt="This logo is used to display authenticated emails.
@@ -196,6 +210,7 @@ const ResourcesContainerNew = () => {
                     /> */}
                       <span className="imageBorder">
                         <Image
+layout="intrinsic"
                           src={_IMG.TLS_RPT_Record}
                           alt=""
                           loading="lazy"
@@ -218,6 +233,7 @@ const ResourcesContainerNew = () => {
                   <div className="card wow flipInX">
                     <div className="card-body">
                       {/* <Image
+layout="intrinsic"
                       className="card-image"
                       src="/assets/images/bimiRecord.svg"
                       alt="This logo is used to display authenticated emails.
@@ -225,6 +241,7 @@ const ResourcesContainerNew = () => {
                     /> */}
                       <span className="imageBorder">
                         <Image
+layout="intrinsic"
                           src={_IMG.blacklist_domain}
                           alt=""
                           loading="lazy"
@@ -242,6 +259,7 @@ const ResourcesContainerNew = () => {
 
         <span className="thinLine">
           <Image
+layout="intrinsic"
             src={_IMG.thinLine}
             alt="Line"
             loading="lazy"
@@ -250,6 +268,7 @@ const ResourcesContainerNew = () => {
 
         <span className="thinLine2">
           <Image
+layout="intrinsic"
             src={_IMG.thinLine}
             alt="Line"
             loading="lazy"
@@ -258,6 +277,7 @@ const ResourcesContainerNew = () => {
 
         <div className="zigzag2">
           <Image
+layout="intrinsic"
             src={_IMG.shapeZigZag}
             alt="shapeZigZag"
             loading="lazy"

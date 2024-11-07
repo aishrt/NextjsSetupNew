@@ -509,6 +509,7 @@ const SourceDashboardPage = ({ props }: { props: any }) => {
                                                 placement="right"
                                               >
                                                 <Image
+layout="intrinsic"
                                                   alt=""
                                                   src={_IMG.Critical}
                                                   loading="lazy"
@@ -522,6 +523,7 @@ const SourceDashboardPage = ({ props }: { props: any }) => {
                                                 placement="right"
                                               >
                                                 <Image
+layout="intrinsic"
                                                   src={_IMG.checkarrowFilled}
                                                   alt=""
                                                   loading="lazy"
@@ -557,6 +559,7 @@ const SourceDashboardPage = ({ props }: { props: any }) => {
                                               {item?.rows_trend ==
                                               "decrease" ? (
                                                 <Image
+layout="intrinsic"
                                                   src={_IMG.trend_down}
                                                   alt="Web icon"
                                                   width={20}
@@ -565,6 +568,7 @@ const SourceDashboardPage = ({ props }: { props: any }) => {
                                               ) : item?.rows_trend ==
                                                 "increase" ? (
                                                 <Image
+layout="intrinsic"
                                                   src={_IMG.trend_up}
                                                   alt="Web icon"
                                                   width={20}
@@ -616,6 +620,7 @@ const SourceDashboardPage = ({ props }: { props: any }) => {
                                                   {item?.compliant_trend ==
                                                   "decrease" ? (
                                                     <Image
+layout="intrinsic"
                                                       src={_IMG.trend_down}
                                                       alt="Web icon"
                                                       width={20}
@@ -624,6 +629,7 @@ const SourceDashboardPage = ({ props }: { props: any }) => {
                                                   ) : item?.compliant_trend ==
                                                     "increase" ? (
                                                     <Image
+layout="intrinsic"
                                                       src={_IMG.trend_up}
                                                       alt="Web icon"
                                                       width={20}
@@ -675,6 +681,7 @@ const SourceDashboardPage = ({ props }: { props: any }) => {
                                                   {item?.failure_trend ==
                                                   "decrease" ? (
                                                     <Image
+layout="intrinsic"
                                                       src={
                                                         _IMG.trend_down_green
                                                       }
@@ -685,6 +692,7 @@ const SourceDashboardPage = ({ props }: { props: any }) => {
                                                   ) : item?.failure_trend ==
                                                     "increase" ? (
                                                     <Image
+layout="intrinsic"
                                                       src={_IMG.trend_up_red}
                                                       alt="Web icon"
                                                       width={20}
@@ -792,6 +800,7 @@ const SourceDashboardPage = ({ props }: { props: any }) => {
                                             )}&page=1&page_size=10`}
                                           >
                                             <Image
+layout="intrinsic"
                                               alt={``}
                                               src={_IMG.right_arrow}
                                               title="View Details"
@@ -804,6 +813,7 @@ const SourceDashboardPage = ({ props }: { props: any }) => {
                                             href={`/dashboard/compliant-dashboard/?row_source_ip=${item.source_ip}&volume=${item.rows_count}&complaince=${item.compliant_percentage}&policy_published_domain=${item.header_from}&spf=${item.spf_percentage}&dkim=${item.dkim_percentage}&page=1&page_size=10`}
                                           >
                                             <Image
+layout="intrinsic"
                                               alt={``}
                                               src={_IMG.right_arrow}
                                               title="View Details"

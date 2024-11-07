@@ -689,6 +689,7 @@ const AllToolsScannerResult = ({
                           <div className="LeftSection">
                             <span className="iconSection">
                               <Image
+layout="intrinsic"
                                 src={_IMG.warningIconWhite}
                                 alt="warning"
                                 loading="lazy"
@@ -709,6 +710,7 @@ const AllToolsScannerResult = ({
                           <div className="LeftSection">
                             <span className="iconSection">
                               <Image
+layout="intrinsic"
                                 src={_IMG.issueIconWhite}
                                 alt="issyes"
                                 loading="lazy"
@@ -827,7 +829,8 @@ const AllToolsScannerResult = ({
                     ) : (
                       <>
                         Launch Setup Wizard
-                        <Image src={_IMG.right_arrowNew} alt="right_arrowNew" />
+                        <Image
+layout="intrinsic" src={_IMG.right_arrowNew} alt="right_arrowNew" />
                       </>
                     )}
                   </button>
@@ -898,6 +901,7 @@ const AllToolsScannerResult = ({
                                                   placement="top"
                                                 >
                                                   <Image
+layout="intrinsic"
                                                     src={_IMG.record}
                                                     alt="Records"
                                                   />
@@ -935,6 +939,7 @@ const AllToolsScannerResult = ({
                                                     placement="top"
                                                   >
                                                     <Image
+layout="intrinsic"
                                                       src={_IMG.record}
                                                       alt="Records"
                                                     />
@@ -1094,6 +1099,7 @@ const AllToolsScannerResult = ({
                                                         placement="top"
                                                       >
                                                         <Image
+layout="intrinsic"
                                                           src={_IMG.record}
                                                           alt="Records"
                                                         />
@@ -1148,6 +1154,7 @@ const AllToolsScannerResult = ({
                                                           placement="top"
                                                         >
                                                           <Image
+layout="intrinsic"
                                                             src={_IMG.record}
                                                             alt="Records"
                                                           />
@@ -1160,6 +1167,7 @@ const AllToolsScannerResult = ({
                                                           placement="top"
                                                         >
                                                           <Image
+layout="intrinsic"
                                                             src={_IMG.record}
                                                             alt="Records"
                                                           />

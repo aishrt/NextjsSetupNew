@@ -571,6 +571,7 @@ const MtaStsTool = ({
                                   style={{ marginLeft: "10px" }}
                                 >
                                   <Image
+layout="intrinsic"
                                     src="/assets/images/infoIcon.svg"
                                     alt=""
                                     loading="lazy"
@@ -1084,6 +1085,7 @@ const MtaStsTool = ({
                                         <div className="text-end">
                                           <button onClick={handleDownload}>
                                             <Image
+layout="intrinsic"
                                               alt="Download Icon"
                                               src={_IMG.downloadIcon}
                                               loading="lazy"

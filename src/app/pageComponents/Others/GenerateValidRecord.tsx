@@ -11,7 +11,8 @@ const GenerateValidRecord = () => {
               <div className="row">
                 <div className="col-lg-5">
                   <div className="Img">
-                    <Image src={_IMG.recordImg} alt="records" loading="lazy" />
+                    <Image
+layout="intrinsic" src={_IMG.recordImg} alt="records" loading="lazy" />
                   </div>
                 </div>
                 <div className="col-lg-7">

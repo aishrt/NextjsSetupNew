@@ -175,6 +175,7 @@ const RecordValuesCompo = ({
                                                   placement="top"
                                                 >
                                                   <Image
+layout="intrinsic"
                                                     src={_IMG.record}
                                                     alt="Records"
                                                   />
@@ -234,6 +235,7 @@ const RecordValuesCompo = ({
                                         placement="top"
                                       >
                                         <Image
+layout="intrinsic"
                                           src={_IMG.record}
                                           alt="Records"
                                         />

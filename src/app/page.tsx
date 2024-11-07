@@ -140,36 +140,42 @@ export default function HomePage() {
                     ELIMINATE EMAIL FRAUD AND STRENGTHEN YOUR BRAND TRUST
                   </h3>
                   <Image
+                    layout="intrinsic"
                     className="vector1"
                     src={_IMG.vector_1}
                     alt="design of a mail envelope"
                     loading="lazy"
                   />
                   <Image
+                    layout="intrinsic"
                     className="vector2"
                     src={_IMG.vector_2}
                     alt="design of a mail envelope"
                     loading="lazy"
                   />
                   <Image
+                    layout="intrinsic"
                     className="vector3"
                     src={_IMG.vector_3}
                     alt="design of a mail envelope"
                     loading="lazy"
                   />
                   <Image
+                    layout="intrinsic"
                     className="vector4"
                     src={_IMG.vector_4}
                     alt="design of a mail envelope"
                     loading="lazy"
                   />
                   <Image
+                    layout="intrinsic"
                     className="vector5"
                     src={_IMG.vector_5}
                     alt="design of a mail envelope"
                     loading="lazy"
                   />
                   <Image
+                    layout="intrinsic"
                     className="vector6"
                     src={_IMG.vector_6}
                     alt="design of a mail envelope"
@@ -195,6 +201,7 @@ export default function HomePage() {
               <div className="col-xl-6 col-lg-6 col-md-6">
                 <div className="mainBanner__Img">
                   <Image
+                    layout="intrinsic"
                     src={_IMG.headerImage2}
                     alt=" A man examines a graph while a woman sits with a laptop nearby."
                     className="img-fluid"
@@ -264,6 +271,7 @@ export default function HomePage() {
             <div className="col-lg-6 discoverImage">
               <div>
                 <Image
+                  layout="intrinsic"
                   src={_IMG.magzineImg}
                   alt="Your DMARC EBook"
                   className="img-fluid"
@@ -282,6 +290,7 @@ export default function HomePage() {
             <div className="col-xl-6 col-lg-6 margin">
               <div className="advantageSection__Img">
                 <Image
+                  layout="intrinsic"
                   src={_IMG.reportingImage2}
                   alt="A man and woman stand by a panel, discussing. The woman holds a laptop. Nearby, a plant, speech bubble, chart, clock, and gears are visible."
                   title="DMARC Reporters"
@@ -367,6 +376,7 @@ export default function HomePage() {
                   <div className="innerSection">
                     <span className="imageBorder">
                       <Image
+                        layout="intrinsic"
                         src={_IMG.domainPro}
                         alt="a red lock icon"
                         loading="lazy"
@@ -383,6 +393,7 @@ export default function HomePage() {
                   <div className="innerSection">
                     <span className="imageBorder">
                       <Image
+                        layout="intrinsic"
                         src={_IMG.emailArrival}
                         alt="a secure mail icon"
                         loading="lazy"
@@ -396,6 +407,7 @@ export default function HomePage() {
                   <div className="innerSection">
                     <span className="imageBorder">
                       <Image
+                        layout="intrinsic"
                         src={_IMG.brandIntegrity}
                         alt="a red flag icon"
                         loading="lazy"
@@ -411,6 +423,7 @@ export default function HomePage() {
                   <div className="innerSection">
                     <span className="imageBorder">
                       <Image
+                        layout="intrinsic"
                         src={_IMG.infiniteSpf}
                         alt="Keyboard icon"
                         loading="lazy"
@@ -427,6 +440,7 @@ export default function HomePage() {
                   <div className="innerSection">
                     <span className="imageBorder">
                       <Image
+                        layout="intrinsic"
                         src={_IMG.setup}
                         alt="Guided setup illustration for managing DMARC, DKIM, and SPF policies"
                         loading="lazy"
@@ -451,6 +465,7 @@ export default function HomePage() {
                   instant insights into email flows for better domain control.
                 </p>
                 <Image
+                  layout="intrinsic"
                   title="YOUR DMARC"
                   src={_IMG.compliantSources}
                   alt="A table titled 'Top 5 Compliant Sources'"
@@ -491,6 +506,7 @@ export default function HomePage() {
           <div className="row">
             <div className="col-xl-6 col-lg-6 imageSection">
               <Image
+                layout="intrinsic"
                 src={_IMG.dmarCFailures}
                 alt="Screenshot of DMARC failures"
                 title="YOUR DMARC Get Visibility"
@@ -525,6 +541,7 @@ export default function HomePage() {
             <div className="col-xl-6 col-lg-6 imageSection">
               <div className="contentInner2">
                 <Image
+                  layout="intrinsic"
                   src={_IMG.maps}
                   alt="Screenshot of two graphs. Bar graph, line graph."
                   title="YOUR DMARC Increase Security"
@@ -564,6 +581,7 @@ export default function HomePage() {
             <div className="col-xl-4 col-lg-4">
               <div className="magzineSection__Img">
                 <Image
+                  layout="intrinsic"
                   src={_IMG.magazineImg1}
                   alt="Cyber Defence Magazine"
                   loading="lazy"
@@ -573,6 +591,7 @@ export default function HomePage() {
             <div className="col-xl-4 col-lg-4">
               <div className="magzineSection__Img">
                 <Image
+                  layout="intrinsic"
                   src={_IMG.magazineImg2}
                   alt="Cyber Defence Magazine"
                   loading="lazy"
@@ -582,6 +601,7 @@ export default function HomePage() {
             <div className="col-xl-4 col-lg-4">
               <div className="magzineSection__Img">
                 <Image
+                  layout="intrinsic"
                   src={_IMG.magazineImg3}
                   alt="Cyber Defence Magazine"
                   loading="lazy"
@@ -617,6 +637,7 @@ export default function HomePage() {
               <div className="startupfeatures" title="Schedule a Demo">
                 <span className="imageBorder">
                   <Image
+                    layout="intrinsic"
                     src={_IMG.demo}
                     alt="Demo scheduling icon"
                     loading="lazy"
@@ -634,6 +655,7 @@ export default function HomePage() {
               <div className="startupfeatures" title="Domain Analysis">
                 <span className="imageBorder">
                   <Image
+                    layout="intrinsic"
                     src={_IMG.iconDomain}
                     alt="Web icon"
                     loading="lazy"
@@ -657,6 +679,7 @@ export default function HomePage() {
               <div className="startupfeatures" title="Get in Touch">
                 <span className="imageBorder">
                   <Image
+                    layout="intrinsic"
                     src={_IMG.contact2}
                     alt="Contact icon"
                     loading="lazy"

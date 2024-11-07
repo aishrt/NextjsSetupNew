@@ -21,6 +21,7 @@ const ForgotPassword = () => {
             <div className="col-xl-6 col-lg-6 col-md-12 imageArea">
               <span className="vec1">
                 <Image
+layout="intrinsic"
                   src={_IMG.vec1}
                   loading="lazy"
                   alt="White icon of an envelope with a shield"
@@ -28,6 +29,7 @@ const ForgotPassword = () => {
               </span>
               <span className="vec2">
                 <Image
+layout="intrinsic"
                   src={_IMG.vec2}
                   loading="lazy"
                   alt="White envelope with a lock"
@@ -35,6 +37,7 @@ const ForgotPassword = () => {
               </span>
               <span className="vec3">
                 <Image
+layout="intrinsic"
                   src={_IMG.vec2}
                   loading="lazy"
                   alt="White envelope with a lock"
@@ -42,6 +45,7 @@ const ForgotPassword = () => {
               </span>
               <span className="vec4">
                 <Image
+layout="intrinsic"
                   src={_IMG.vec2}
                   loading="lazy"
                   alt="White envelope with a lock"
@@ -49,6 +53,7 @@ const ForgotPassword = () => {
               </span>
               <span className="vec5">
                 <Image
+layout="intrinsic"
                   src={_IMG.vec2}
                   loading="lazy"
                   alt="White envelope with a lock"
@@ -56,6 +61,7 @@ const ForgotPassword = () => {
               </span>
               <span className="vec6">
                 <Image
+layout="intrinsic"
                   src={_IMG.vec2}
                   loading="lazy"
                   alt="White envelope with a lock"
@@ -63,6 +69,7 @@ const ForgotPassword = () => {
               </span>
               <span className="vec7">
                 <Image
+layout="intrinsic"
                   src={_IMG.vec1}
                   loading="lazy"
                   alt="White icon of an envelope with a shield"
@@ -70,6 +77,7 @@ const ForgotPassword = () => {
               </span>
               <span className="vec8 lock">
                 <Image
+layout="intrinsic"
                   src={_IMG.vec3}
                   loading="lazy"
                   alt="White icon of an envelope with a shield"
@@ -77,6 +85,7 @@ const ForgotPassword = () => {
               </span>
               <span className="vec9">
                 <Image
+layout="intrinsic"
                   src={_IMG.vec1}
                   loading="lazy"
                   alt="White icon of an envelope with a shield"
@@ -86,6 +95,7 @@ const ForgotPassword = () => {
               <div className="imageSection">
                 <a href="/">
                   <Image
+layout="intrinsic"
                     alt=""
                     src={_IMG.black_shadow}
                     className="loginImage"
@@ -112,28 +122,36 @@ const ForgotPassword = () => {
 
             <div className="col-xl-6 col-lg-6 col-md-12 formArea">
               <span className="vecp1">
-                <Image src={_IMG.vecp1} alt="" loading="lazy" />
+                <Image
+layout="intrinsic" src={_IMG.vecp1} alt="" loading="lazy" />
               </span>
               <span className="vecp2">
-                <Image src={_IMG.vecp1} alt="" loading="lazy" />
+                <Image
+layout="intrinsic" src={_IMG.vecp1} alt="" loading="lazy" />
               </span>
               <span className="vecp3">
-                <Image src={_IMG.vecp1} alt="" loading="lazy" />
+                <Image
+layout="intrinsic" src={_IMG.vecp1} alt="" loading="lazy" />
               </span>
               <span className="vecp4">
-                <Image src={_IMG.vecp1} alt="" loading="lazy" />
+                <Image
+layout="intrinsic" src={_IMG.vecp1} alt="" loading="lazy" />
               </span>
               <span className="vecp5">
-                <Image src={_IMG.vecp1} alt="" loading="lazy" />
+                <Image
+layout="intrinsic" src={_IMG.vecp1} alt="" loading="lazy" />
               </span>
               <span className="vecp6">
-                <Image src={_IMG.vecp1} alt="" loading="lazy" />
+                <Image
+layout="intrinsic" src={_IMG.vecp1} alt="" loading="lazy" />
               </span>
               <span className="vecp7">
-                <Image src={_IMG.vecp2} alt="" loading="lazy" />
+                <Image
+layout="intrinsic" src={_IMG.vecp2} alt="" loading="lazy" />
               </span>
               <div className="logo">
                 <Image
+layout="intrinsic"
                   src={_IMG.logo_blue}
                   alt=""
                   className="loginImage"

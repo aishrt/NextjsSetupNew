@@ -47,13 +47,15 @@ const CompliantDetails = ({ props }: { props: any }) => {
   const handleCommonFunction = (domain: any) => {
     return domain == "fail" || domain == "Fail" ? (
       <Image
+layout="intrinsic"
         style={{ width: "28px" }}
         src={_IMG.Critical}
         alt=""
         loading="lazy"
       />
     ) : (
-      <Image src={_IMG.checkarrowFilled} alt="" loading="lazy" />
+      <Image
+layout="intrinsic" src={_IMG.checkarrowFilled} alt="" loading="lazy" />
     );
   };
   useEffect(() => {
@@ -229,6 +231,7 @@ const CompliantDetails = ({ props }: { props: any }) => {
                                   href={`/dashboard/source-result/?policy_published_domain=${props?.header_from}&base_domain=${props?.base_domain}&row_source_ip=${props?.ip_address}&dmarc_report_detail_id=${item?.id}&start_date=${props?.startDate}&end_date=${props?.endDate}`}
                                 >
                                   <Image
+layout="intrinsic"
                                     alt={``}
                                     src={_IMG.right_arrow}
                                     title="View Details"
@@ -240,6 +243,7 @@ const CompliantDetails = ({ props }: { props: any }) => {
                                   href={`/dashboard/source-result/?policy_published_domain=${props?.header_from}&base_domain=${props?.base_domain}&row_source_ip=${props?.ip_address}&dmarc_report_detail_id=${item?.id}`}
                                 >
                                   <Image
+layout="intrinsic"
                                     alt={``}
                                     src={_IMG.right_arrow}
                                     title="View Details"

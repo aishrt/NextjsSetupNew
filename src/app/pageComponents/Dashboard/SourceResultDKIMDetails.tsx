@@ -135,9 +135,11 @@ const SourceResultDKIMDetails: React.FC<DKIMDetailsProps> = ({
   };
   const handleCommonFunction = (domain: any) => {
     return domain == "fail" || domain == "Fail" ? (
-      <Image src={_IMG.Critical} alt="" loading="lazy" />
+      <Image
+layout="intrinsic" src={_IMG.Critical} alt="" loading="lazy" />
     ) : (
-      <Image src={_IMG.checkarrowFilled} alt="" loading="lazy" />
+      <Image
+layout="intrinsic" src={_IMG.checkarrowFilled} alt="" loading="lazy" />
     );
   };
   return (

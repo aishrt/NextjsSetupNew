@@ -277,6 +277,7 @@ const DetailedSources = (props: any) => {
                                                 {item?.volume_trend ==
                                                 "decrease" ? (
                                                   <Image
+layout="intrinsic"
                                                     src={_IMG.trend_down}
                                                     alt="Web icon"
                                                     width={20}
@@ -285,6 +286,7 @@ const DetailedSources = (props: any) => {
                                                 ) : item?.volume_trend ==
                                                   "increase" ? (
                                                   <Image
+layout="intrinsic"
                                                     src={_IMG.trend_up}
                                                     alt="Web icon"
                                                     width={20}
@@ -353,6 +355,7 @@ const DetailedSources = (props: any) => {
                                               {item?.compliant_trend ==
                                               "decrease" ? (
                                                 <Image
+layout="intrinsic"
                                                   src={_IMG.trend_down}
                                                   alt="Web icon"
                                                   width={20}
@@ -361,6 +364,7 @@ const DetailedSources = (props: any) => {
                                               ) : item?.compliant_trend ==
                                                 "increase" ? (
                                                 <Image
+layout="intrinsic"
                                                   src={_IMG.trend_up}
                                                   alt="Web icon"
                                                   width={20}
@@ -427,6 +431,7 @@ const DetailedSources = (props: any) => {
                                               {item?.failure_trend ==
                                               "decrease" ? (
                                                 <Image
+layout="intrinsic"
                                                   src={_IMG.trend_down_green}
                                                   alt="Web icon"
                                                   width={20}
@@ -435,6 +440,7 @@ const DetailedSources = (props: any) => {
                                               ) : item?.failure_trend ==
                                                 "increase" ? (
                                                 <Image
+layout="intrinsic"
                                                   src={_IMG.trend_up_red}
                                                   alt="Web icon"
                                                   width={20}
@@ -531,6 +537,7 @@ const DetailedSources = (props: any) => {
                                           )}&page=1&page_size=10`}
                                         >
                                           <Image
+layout="intrinsic"
                                             alt={``}
                                             src={_IMG.right_arrow}
                                             className="give-pointer"
@@ -543,6 +550,7 @@ const DetailedSources = (props: any) => {
                                           href={`/dashboard/source-dashboard/?policy_published_domain=${props?.domain}&host_name=${item?.host_name}&org_name=${item?.source}&page=1&page_size=10`}
                                         >
                                           <Image
+layout="intrinsic"
                                             alt={``}
                                             src={_IMG.right_arrow}
                                             className="give-pointer"

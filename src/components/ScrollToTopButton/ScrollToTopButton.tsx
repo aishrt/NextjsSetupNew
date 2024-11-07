@@ -43,6 +43,7 @@ const ScrollToTopButton = () => {
     >
       <span>
         <Image
+layout="intrinsic"
           src={_IMG.arrowUpIcon}
           loading="lazy"
           alt="Arrow-up icon jumps to the top of the site."

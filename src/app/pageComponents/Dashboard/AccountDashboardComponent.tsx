@@ -282,6 +282,7 @@ const AccountDashboardComponent = ({
                         <div className="cardInnerContent">
                           <div className="cardIcon">
                             <Image
+layout="intrinsic"
                               className="imgBorder"
                               alt={``}
                               src={_IMG.complaint}
@@ -444,6 +445,7 @@ const AccountDashboardComponent = ({
                                                 ).format("YYYY-MM-DD")}`}
                                               >
                                                 <Image
+layout="intrinsic"
                                                   alt={``}
                                                   src={_IMG.right_arrow}
                                                   title="View Details"
@@ -574,6 +576,7 @@ const AccountDashboardComponent = ({
                                                 ).format("YYYY-MM-DD")}`}
                                               >
                                                 <Image
+layout="intrinsic"
                                                   alt={``}
                                                   src={_IMG.right_arrow}
                                                   title="View Details"
@@ -708,6 +711,7 @@ const AccountDashboardComponent = ({
                                                 ).format("YYYY-MM-DD")}`}
                                               >
                                                 <Image
+layout="intrinsic"
                                                   alt={``}
                                                   src={_IMG.right_arrow}
                                                   title="View Details"

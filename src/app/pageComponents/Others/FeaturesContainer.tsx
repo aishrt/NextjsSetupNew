@@ -27,6 +27,7 @@ const FeaturesContainer = () => {
                 <div className="card blue wow flipInX">
                   <div className="card-body">
                     <Image
+layout="intrinsic"
                       className="card-image blue"
                       src={_IMG.budget}
                       alt="Streamline IT"
@@ -47,6 +48,7 @@ const FeaturesContainer = () => {
                 <div className="card green wow flipInX">
                   <div className="card-body">
                     <Image
+layout="intrinsic"
                       className="card-image green"
                       src={_IMG.compliance}
                       alt="Compliance"
@@ -67,6 +69,7 @@ const FeaturesContainer = () => {
                 <div className="card red wow flipInX">
                   <div className="card-body">
                     <Image
+layout="intrinsic"
                       className="card-image red"
                       src={_IMG.support}
                       alt="24/7 Support"

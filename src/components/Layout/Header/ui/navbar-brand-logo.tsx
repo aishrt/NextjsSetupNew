@@ -12,7 +12,13 @@ const NavbarBrandLogo = () => {
   return (
     <Suspense fallback={<div>Loading</div>}>
       <Link className="navbar-brand" href={domain ? `/?domain=${domain}` : `/`}>
-        <Image src={_IMG.logo_final_blue} alt="logo" loading="lazy" />
+        <Image
+          src={_IMG.logo_final_blue}
+          alt="logo Left Header"
+          loading="lazy"
+          width={20}
+          height={70}
+        />
       </Link>
     </Suspense>
   );

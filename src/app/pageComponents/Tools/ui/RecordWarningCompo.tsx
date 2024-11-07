@@ -23,7 +23,8 @@ const RecordWarningCompo = ({ warningText, isError }: Props) => {
           isError ? "errorAlerts__Content" : "warningAlerts__Content"
         } align-items-start`}
       >
-        <Image src={_IMG.warningIcon} alt="logo-vector" loading="lazy" />
+        <Image
+layout="intrinsic" src={_IMG.warningIcon} alt="logo-vector" loading="lazy" />
         <div className="warningBox2">
           <h4>
             {!isString && warningText.length > 1 && warningText.length}
@@ -44,6 +45,7 @@ const RecordWarningCompo = ({ warningText, isError }: Props) => {
       </div>
       {!isError ? (
         <Image
+layout="intrinsic"
           className="crossIcon"
           src={_IMG.warningCross}
           alt="logo-vector"

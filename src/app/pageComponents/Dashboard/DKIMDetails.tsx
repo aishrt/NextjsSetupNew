@@ -170,7 +170,7 @@ const DKIMDetails: React.FC<DKIMDetailsProps> = ({
                     elementsList.map((item: any, index: number) => (
                       <tr key={index}>
                         <td className="">
-                          <Image
+                          <img
                             alt="Fav icon"
                             className="favIconImage"
                             loading="lazy"

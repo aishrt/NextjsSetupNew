@@ -980,7 +980,7 @@ const DnsTool = ({
                                                               }}
                                                             >
                                                               {idx4 == 1 && (
-                                                                <Image
+                                                                <img
                                                                   alt="Fav icons"
                                                                   className="favIconImage"
                                                                   loading="lazy"

@@ -145,7 +145,7 @@ const UploadFile = ({
     ) {
       return (
         <div style={{ position: "relative", width: `${width}px` }}>
-          <Image
+          <img
             src={previewUrl}
             alt="Selected"
             style={mediaStyle}
@@ -175,7 +175,7 @@ const UploadFile = ({
     else if (fileName) {
       return (
         <div style={{ position: "relative", width: `${width}px` }}>
-          <Image
+          <img
             src={previewUrl ? previewUrl : fileFormatImage}
             alt="File"
             style={mediaStyle}

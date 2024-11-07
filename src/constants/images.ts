@@ -99,14 +99,11 @@ import greenCheck from "@/assets/greenCheck.svg";
 import checkcircle from "@/assets/checkcircle.svg";
 import trend_up_red from "@/assets/trend-up-red.svg";
 import trend_down_green from "@/assets/trend-down-green.svg";
-
-// import  from "@/assets/.webp";
-// import  from "@/assets/.webp";
-// import  from "@/assets/.webp";
+import spf1 from "@/assets/spf1.svg";
+import spf2 from "@/assets/spf2.svg";
 import Ellipse4 from "@/assets/Ellipse4.png";
 import Ellipse3 from "@/assets/Ellipse3.png";
 import logo_final_white from "@/assets/logo-final-white.png";
-
 import logo_vector from "@/assets/logo-vector.svg";
 import closeIcon from "@/assets/closeIcon.svg";
 import arrowUpIcon from "@/assets/arrowUpIcon.svg";
@@ -115,9 +112,41 @@ import flag_Icon from "@/assets/flag-Icon.svg";
 import companyIcon from "@/assets/companyIcon.svg";
 import playBtn from "@/assets/playBtn.svg";
 import pauseVideoBtn from "@/assets/pauseVideoBtn.svg";
+// import  from "@/assets/.webp";
+// import  from "@/assets/.webp";
+// import  from "@/assets/.webp";
+// import  from "@/assets/.webp";
+// import  from "@/assets/.webp";
+// import  from "@/assets/.webp";
+// import  from "@/assets/.webp";
+// import  from "@/assets/.webp";
+// import  from "@/assets/.webp";
+// import  from "@/assets/.webp";
+// import  from "@/assets/.webp";
+// import  from "@/assets/.svg";
+// import  from "@/assets/.svg";
+// import  from "@/assets/.svg";
+// import  from "@/assets/.svg";
+// import  from "@/assets/.svg";
+// import  from "@/assets/.svg";
+// import  from "@/assets/.svg";
+import bimi1 from "@/assets/bimi1.png";
+import bimi2 from "@/assets/bimi2.svg";
+import dkim1 from "@/assets/dkim1.svg";
+import dkim2 from "@/assets/dkim2.svg";
+import dmarc1 from "@/assets/dmarc1.svg";
+import dmarc2 from "@/assets/dmarc2.svg";
 
 export const _IMG = {
   complaint: complaint,
+  bimi1: bimi1,
+  bimi2: bimi2,
+  dmarc1: dmarc1,
+  dkim1: dkim1,
+  dkim2: dkim2,
+  dmarc2: dmarc2,
+  spf1: spf1,
+  spf2: spf2,
   playBtn: playBtn,
   redinfo: redinfo,
   companyIcon: companyIcon,

@@ -303,7 +303,7 @@ const BrandLogo = () => {
                                     {form.preview && (
                                       <>
                                         <div className="logoImage">
-                                          <Image
+                                          <img
                                             src={form.preview}
                                             alt="Logo Preview"
                                             width={80}

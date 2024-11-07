@@ -275,7 +275,7 @@ const SourceDashboardPage = ({ props }: { props: any }) => {
                               <tr>
                                 <th scope="row">Sender</th>
                                 <td>
-                                  <Image
+                                  <img
                                     alt=""
                                     className="favIconImage"
                                     loading="lazy"
@@ -303,7 +303,7 @@ const SourceDashboardPage = ({ props }: { props: any }) => {
                               <tr>
                                 <th scope="row">Source Name</th>
                                 <td>
-                                  <Image
+                                  <img
                                     alt=""
                                     className="favIconImage"
                                     loading="lazy"
@@ -332,7 +332,7 @@ const SourceDashboardPage = ({ props }: { props: any }) => {
                                 <tr>
                                   <th scope="row">Host Name</th>
                                   <td>
-                                    <Image
+                                    <img
                                       alt=""
                                       className="favIconImage"
                                       loading="lazy"

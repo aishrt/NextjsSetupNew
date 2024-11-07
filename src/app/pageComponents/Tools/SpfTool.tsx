@@ -581,13 +581,13 @@ const SpfTool = ({
                         <td>
                           <span>
                             {row?.email_service_provider_logo ? (
-                              <Image
+                              <img
                                 src={`${row?.email_service_provider_logo}`}
                                 loading="lazy"
                                 alt="Email Provider Logo"
                               />
                             ) : (
-                              <Image
+                              <img
                                 src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${removeFirstPart(
                                   row?.spf_part
                                 )}&size=128`}

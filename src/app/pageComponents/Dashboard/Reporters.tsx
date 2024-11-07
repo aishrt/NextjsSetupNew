@@ -323,13 +323,13 @@ const Reporters = ({
                               <StyledTableRow key={`row_idx${idx}`}>
                                 <StyledTableCell>
                                   {item?.source_logo ? (
-                                    <Image
+                                    <img
                                       alt=""
                                       src={item?.source_logo}
                                       loading="lazy"
                                     />
                                   ) : (
-                                    <Image
+                                    <img
                                       alt=""
                                       className="favIconImage"
                                       loading="lazy"

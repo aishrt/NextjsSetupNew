@@ -47,7 +47,7 @@ const ViewImage = ({
 
   return (
     <div>
-      <Image
+      <img
         src={imageUrl}
         alt="common"
         style={imageStyle}
@@ -61,7 +61,7 @@ const ViewImage = ({
         aria-describedby="modal-description"
       >
         <Box sx={modalStyles}>
-          <Image src={imageUrl} alt="common" style={modalImageStyle} />
+          <img src={imageUrl} alt="common" style={modalImageStyle} />
           <Button
             variant="contained"
             color="error"

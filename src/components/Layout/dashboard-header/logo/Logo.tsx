@@ -38,7 +38,7 @@ const Logo = () => {
 
   return (
     <LinkStyled href="/dashboard/dashboard">
-      <Image
+      <img
         loading="lazy"
         src={
           isEmpty(checkImage)

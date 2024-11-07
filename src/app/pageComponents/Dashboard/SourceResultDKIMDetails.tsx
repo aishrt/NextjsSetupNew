@@ -181,20 +181,20 @@ const SourceResultDKIMDetails: React.FC<DKIMDetailsProps> = ({
                             <StyledTableCell>
                               {" "}
                               {item?.source_logo ? (
-                                <Image
+                                <img
                                   alt=""
                                   src={item?.source_logo}
                                   loading="lazy"
                                 />
                               ) : (
-                                <Image
+                                <img
                                   alt=""
                                   className="favIconImage"
                                   loading="lazy"
                                   src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${item?.dkim_auth_results_domain}&size=128`}
                                 />
                               )}
-                              {/* <Image
+                              {/* <img
                                 className="favIconImage"
                                 loading="lazy"
                                 src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${item?.dkim_auth_results_domain}&size=128`}

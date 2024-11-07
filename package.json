@@ -21,7 +21,6 @@
     "@mui/lab": "^5.0.0-alpha.170",
     "@mui/material": "^5.15.16",
     "@mui/x-date-pickers": "^6.19.5",
-  
     "@react-pdf/renderer": "^4.0.0",
     "@types/node": "20.3.1",
     "@types/qs": "^6.9.7",
@@ -69,6 +68,7 @@
     "remark": "^15.0.1",
     "remark-gfm": "^3.0.1",
     "remark-html": "^16.0.1",
+    "sharp": "^0.33.5",
     "simplebar-react": "^3.2.6",
     "stripe": "^15.0.0",
     "uuid": "^10.0.0",

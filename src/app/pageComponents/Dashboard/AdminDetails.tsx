@@ -83,7 +83,7 @@ const AdminDetails = ({ profileData }: any) => {
           <div className="col-xl-12">
             <div className="form-group">
               <div className="uploadImage">
-                <Image
+                <img
                   src={
                     isEmpty(profileData?.preview)
                       ? `${_IMG.profile}`

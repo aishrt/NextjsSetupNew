@@ -408,7 +408,7 @@ const AccountDashboardComponent = ({
                                           <tr key={index}>
                                             <td>
                                               {item ? null : (
-                                                <Image
+                                                <img
                                                   alt="Image"
                                                   className="favIconImage"
                                                   loading="lazy"
@@ -511,7 +511,7 @@ const AccountDashboardComponent = ({
                                         return (
                                           <tr key={index}>
                                             <td>
-                                              <Image
+                                              <img
                                                 alt="Fav icon"
                                                 className="favIconImage"
                                                 loading="lazy"
@@ -640,7 +640,7 @@ const AccountDashboardComponent = ({
                                       return (
                                         <tr key={index}>
                                           <td>
-                                            <Image
+                                            <img
                                               alt="New icon"
                                               className="favIconImage"
                                               loading="lazy"
@@ -763,20 +763,20 @@ const AccountDashboardComponent = ({
                                   <StyledTableCell>
                                     {" "}
                                     {item?.source_logo ? (
-                                      <Image
+                                      <img
                                         alt="Source Logo"
                                         src={item?.source_logo}
                                         loading="lazy"
                                       />
                                     ) : (
-                                      <Image
+                                      <img
                                         alt="Source Logo"
                                         className="favIconImage"
                                         loading="lazy"
                                         src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${item?.domain}&size=128`}
                                       />
                                     )}
-                                    {/* <Image
+                                    {/* <img
                                       className="favIconImage"
                                       loading="lazy"
                                       src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${item?.domain}&size=128`}

@@ -225,19 +225,19 @@ const DetailedSources = (props: any) => {
                                     <div className="sourcesName">
                                       <span>
                                         {item?.source_logo ? (
-                                          <Image
+                                          <img
                                             alt="Source Logo"
                                             src={item?.source_logo}
                                             loading="lazy"
                                           />
                                         ) : (
-                                          <Image
+                                          <img
                                             src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${item?.base_domain}&size=128`}
                                             alt="Source Logo"
                                             loading="lazy"
                                           />
                                         )}
-                                        {/*<Image
+                                        {/*<img
                                           loading="lazy"
                                           src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${item?.base_domain}&size=128`}
                                         /> */}

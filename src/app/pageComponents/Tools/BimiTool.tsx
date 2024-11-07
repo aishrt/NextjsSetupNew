@@ -534,7 +534,7 @@ const BimiTool = ({
                                       alt="bimi_desktop_bg"
                                     />
                                     <div className="leftContent">
-                                      <Image
+                                      <img
                                         alt="Logo detail"
                                         src={lookupData?.data?.logo_detail?.url}
                                         loading="lazy"
@@ -555,7 +555,7 @@ const BimiTool = ({
                                       alt="Bimi Logo"
                                     />
                                     <div className="rightImg">
-                                      <Image
+                                      <img
                                         src={lookupData?.data?.logo_detail?.url}
                                         loading="lazy"
                                         alt="Logo"
@@ -665,7 +665,7 @@ const BimiTool = ({
                               <div className="col-lg-2">
                                 <div className="logo">
                                   <span>
-                                    <Image
+                                    <img
                                       src={logoData.data?.logo_detail?.url}
                                       loading="lazy"
                                       alt="logo Det"
@@ -747,7 +747,7 @@ const BimiTool = ({
                                 <div className="col-lg-2">
                                   <div className="logo">
                                     <span>
-                                      <Image
+                                      <img
                                         src={logoData?.data?.logo_detail?.url}
                                         loading="lazy"
                                         alt="llogo"

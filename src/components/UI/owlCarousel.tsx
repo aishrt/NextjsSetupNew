@@ -46,7 +46,7 @@ export const CarouselTool = () => {
                     <h3>{item?.title}</h3>
                     <div className="row">
                       <div className="col-lg-6">
-                        <Image
+                        <img
                           src={item?.src}
                           alt="Slide 1"
                           className="carousel-img"

@@ -413,7 +413,7 @@ const BlacklistTool = ({
                                       return (
                                         <tr key={`table_tr_${idx3}`}>
                                           <td>
-                                            <Image
+                                            <img
                                               alt="favicon"
                                               className="favIconImage"
                                               loading="lazy"

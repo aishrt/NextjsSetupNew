@@ -136,13 +136,13 @@ const TopSources = ({
                                 <div className="sourcesName">
                                   <span>
                                     {item?.source_logo ? (
-                                      <Image
+                                      <img
                                         alt=""
                                         src={item?.source_logo}
                                         loading="lazy"
                                       />
                                     ) : (
-                                      <Image
+                                      <img
                                         alt=""
                                         src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${item?.base_domain}&size=128`}
                                         loading="lazy"
@@ -237,13 +237,13 @@ const TopSources = ({
                                   <div className="sourcesName">
                                     <span>
                                       {item?.source_logo ? (
-                                        <Image
+                                        <img
                                           alt=""
                                           src={item?.source_logo}
                                           loading="lazy"
                                         />
                                       ) : (
-                                        <Image
+                                        <img
                                           alt=""
                                           src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${item?.base_domain}&size=128`}
                                           loading="lazy"
@@ -414,13 +414,13 @@ const TopSources = ({
                                     <div className="sourcesName">
                                       <span>
                                         {item?.source_logo ? (
-                                          <Image
+                                          <img
                                             alt=""
                                             src={item?.source_logo}
                                             loading="lazy"
                                           />
                                         ) : (
-                                          <Image
+                                          <img
                                             alt=""
                                             src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${item?.base_domain}&size=128`}
                                             loading="lazy"

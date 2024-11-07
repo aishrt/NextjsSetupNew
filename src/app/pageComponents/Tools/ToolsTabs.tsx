@@ -64,7 +64,7 @@ const ToolsTabs = () => {
                                 <div className="tabCard">
                                   <div>
                                     <span>
-                                      <Image
+                                      <img
                                         src={lookup.icon}
                                         alt={`Tools`}
                                         loading="lazy"

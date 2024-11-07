@@ -1,6 +1,7 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 import React, { Fragment } from "react";
+import Image from "next/image";
 
 export const CarouselTool = () => {
   const data = [
@@ -45,7 +46,7 @@ export const CarouselTool = () => {
                     <h3>{item?.title}</h3>
                     <div className="row">
                       <div className="col-lg-6">
-                        <img
+                        <Image
                           src={item?.src}
                           alt="Slide 1"
                           className="carousel-img"

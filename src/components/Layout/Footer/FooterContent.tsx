@@ -5,6 +5,8 @@ import ScrollToTopButton from "@/components/ScrollToTopButton/ScrollToTopButton"
 import { Box } from "@mui/material";
 import { useRouter } from "next/navigation";
 import FooterResources from "./FooterResources";
+import Image from "next/image";
+import { _IMG } from "@/constants/images";
 
 const FooterContent = (url: any) => {
   const router = useRouter();
@@ -37,13 +39,11 @@ const FooterContent = (url: any) => {
               <div className="row">
                 <div className="col">
                   <a href="/">
-                    <img
-                      src="/assets/images/logo-final-blue.svg"
+                    <Image
+                      src={_IMG.logo_final_blue}
                       alt="YOUR DMARC Logo"
                       style={{ width: "130px" }}
                       className="footerLogo"
-                      width="auto"
-                      height="auto"
                       loading="lazy"
                     />
                   </a>

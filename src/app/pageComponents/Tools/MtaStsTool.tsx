@@ -18,9 +18,7 @@ import { useRouter } from "next/navigation";
 import RecordWarningCompo from "@/app/pageComponents/Tools/ui/RecordWarningCompo";
 import { debounce } from "lodash";
 
-import {
-  postFetcherLambda,
-} from "@/@core/apiFetcher";
+import { postFetcherLambda } from "@/@core/apiFetcher";
 import { scrollIntoView } from "@/utils/scrollIntoView";
 import SubmitButton from "@/components/Form/SubmitButton";
 import TagTable from "@/components/UI/TagTable";
@@ -37,6 +35,8 @@ import Head from "next/head";
 import LicenseWarningsCompo from "@/components/UI/LicenseWarningsCompo";
 import MainLoader from "@/components/Loaders/MainLoader";
 import { Skeleton } from "@mui/material";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 
 const MtaStsTool = ({
   result,
@@ -570,7 +570,7 @@ const MtaStsTool = ({
                                   className="tooltipOuter"
                                   style={{ marginLeft: "10px" }}
                                 >
-                                  <img
+                                  <Image
                                     src="/assets/images/infoIcon.svg"
                                     alt=""
                                     loading="lazy"
@@ -1083,8 +1083,9 @@ const MtaStsTool = ({
                                       <div className="recordSecInner col-lg-4">
                                         <div className="text-end">
                                           <button onClick={handleDownload}>
-                                            <img
-                                              src="/assets/images/downloadIcon.svg"
+                                            <Image
+                                              alt="Download Icon"
+                                              src={_IMG.downloadIcon}
                                               loading="lazy"
                                             />
                                             Download

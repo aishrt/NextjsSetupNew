@@ -47,6 +47,8 @@ import {
   _setPaginationObjectFn,
   createQueryString,
 } from "@/@core/tableFunctions";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 
 const GoogleleafletMap = dynamic(
   () => import("@/externalLibraries/GoogleleafletMap"),
@@ -273,7 +275,8 @@ const SourceDashboardPage = ({ props }: { props: any }) => {
                               <tr>
                                 <th scope="row">Sender</th>
                                 <td>
-                                  <img
+                                  <Image
+                                    alt=""
                                     className="favIconImage"
                                     loading="lazy"
                                     src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${props?.domain}&size=128`}
@@ -300,7 +303,8 @@ const SourceDashboardPage = ({ props }: { props: any }) => {
                               <tr>
                                 <th scope="row">Source Name</th>
                                 <td>
-                                  <img
+                                  <Image
+                                    alt=""
                                     className="favIconImage"
                                     loading="lazy"
                                     src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${props?.org}&size=128`}
@@ -328,7 +332,8 @@ const SourceDashboardPage = ({ props }: { props: any }) => {
                                 <tr>
                                   <th scope="row">Host Name</th>
                                   <td>
-                                    <img
+                                    <Image
+                                      alt=""
                                       className="favIconImage"
                                       loading="lazy"
                                       src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${props?.org}&size=128`}
@@ -503,9 +508,9 @@ const SourceDashboardPage = ({ props }: { props: any }) => {
                                                 title="Blacklisted"
                                                 placement="right"
                                               >
-                                                <img
-                                                  src="/assets/images/Critical.svg"
+                                                <Image
                                                   alt=""
+                                                  src={_IMG.Critical}
                                                   loading="lazy"
                                                 />
                                               </Tooltip>
@@ -516,8 +521,8 @@ const SourceDashboardPage = ({ props }: { props: any }) => {
                                                 title="Not Blacklisted"
                                                 placement="right"
                                               >
-                                                <img
-                                                  src="/assets/images/checkarrowFilled.svg"
+                                                <Image
+                                                  src={_IMG.checkarrowFilled}
                                                   alt=""
                                                   loading="lazy"
                                                 />
@@ -551,20 +556,18 @@ const SourceDashboardPage = ({ props }: { props: any }) => {
                                             >
                                               {item?.rows_trend ==
                                               "decrease" ? (
-                                                <img
-                                                  src="/assets/images/trend-down.svg"
+                                                <Image
+                                                  src={_IMG.trend_down}
                                                   alt="Web icon"
-                                                  width="20px"
-                                                  height="auto"
+                                                  width={20}
                                                   loading="lazy"
                                                 />
                                               ) : item?.rows_trend ==
                                                 "increase" ? (
-                                                <img
-                                                  src="/assets/images/trend-up.svg"
+                                                <Image
+                                                  src={_IMG.trend_up}
                                                   alt="Web icon"
-                                                  width="20px"
-                                                  height="auto"
+                                                  width={20}
                                                   loading="lazy"
                                                 />
                                               ) : item?.rows_trend ==
@@ -612,20 +615,18 @@ const SourceDashboardPage = ({ props }: { props: any }) => {
                                                 >
                                                   {item?.compliant_trend ==
                                                   "decrease" ? (
-                                                    <img
-                                                      src="/assets/images/trend-down.svg"
+                                                    <Image
+                                                      src={_IMG.trend_down}
                                                       alt="Web icon"
-                                                      width="20px"
-                                                      height="auto"
+                                                      width={20}
                                                       loading="lazy"
                                                     />
                                                   ) : item?.compliant_trend ==
                                                     "increase" ? (
-                                                    <img
-                                                      src="/assets/images/trend-up.svg"
+                                                    <Image
+                                                      src={_IMG.trend_up}
                                                       alt="Web icon"
-                                                      width="20px"
-                                                      height="auto"
+                                                      width={20}
                                                       loading="lazy"
                                                     />
                                                   ) : item?.compliant_trend ==
@@ -673,20 +674,20 @@ const SourceDashboardPage = ({ props }: { props: any }) => {
                                                 <>
                                                   {item?.failure_trend ==
                                                   "decrease" ? (
-                                                    <img
-                                                      src="/assets/images/trend-down-green.svg"
+                                                    <Image
+                                                      src={
+                                                        _IMG.trend_down_green
+                                                      }
                                                       alt="Web icon"
-                                                      width="20px"
-                                                      height="auto"
+                                                      width={20}
                                                       loading="lazy"
                                                     />
                                                   ) : item?.failure_trend ==
                                                     "increase" ? (
-                                                    <img
-                                                      src="/assets/images/trend-up-red.svg"
+                                                    <Image
+                                                      src={_IMG.trend_up_red}
                                                       alt="Web icon"
-                                                      width="20px"
-                                                      height="auto"
+                                                      width={20}
                                                       loading="lazy"
                                                     />
                                                   ) : item?.failure_trend ==
@@ -790,9 +791,9 @@ const SourceDashboardPage = ({ props }: { props: any }) => {
                                               "YYYY-MM-DD"
                                             )}&page=1&page_size=10`}
                                           >
-                                            <img
+                                            <Image
                                               alt={``}
-                                              src="/assets/images/right-arrow.svg"
+                                              src={_IMG.right_arrow}
                                               title="View Details"
                                               loading="lazy"
                                             />
@@ -802,9 +803,9 @@ const SourceDashboardPage = ({ props }: { props: any }) => {
                                             onClick={() => reloadPageData()}
                                             href={`/dashboard/compliant-dashboard/?row_source_ip=${item.source_ip}&volume=${item.rows_count}&complaince=${item.compliant_percentage}&policy_published_domain=${item.header_from}&spf=${item.spf_percentage}&dkim=${item.dkim_percentage}&page=1&page_size=10`}
                                           >
-                                            <img
+                                            <Image
                                               alt={``}
-                                              src="/assets/images/right-arrow.svg"
+                                              src={_IMG.right_arrow}
                                               title="View Details"
                                               loading="lazy"
                                             />

@@ -11,6 +11,8 @@ import { API_ROUTES } from "@/@core/apiRoutes";
 import { useSession } from "next-auth/react";
 import { calculateStartDate } from "@/@core/helper";
 import ExceedPlan from "@/app/pageComponents/Others/ExceedPlan";
+import Image from "next/image";
+import { _IMG } from "@/constants/images";
 
 interface ItemType {
   isMobileSidebarOpen: boolean;
@@ -420,8 +422,8 @@ const Sidebar = ({
         >
           <Box px={3} className="sidebarLogo">
             <span className="closeButton">
-              <img
-                src="/assets/images/closeIcon.svg"
+              <Image
+                src={_IMG.closeIcon}
                 alt=""
                 onClick={onSidebarClose}
                 loading="lazy"

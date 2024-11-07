@@ -24,6 +24,8 @@ import TableRowsLoader from "@/components/Table-ui/TableRowsLoader";
 import { TablePaginationCompo } from "@/components/Table-ui/TablePaginationCompo";
 import { useRouter } from "next/navigation";
 import { fetchImage } from "@/@core/commonS3";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 interface DKIMDetailsProps {
   domain: string;
   base_domain: any;
@@ -133,9 +135,9 @@ const SourceResultDKIMDetails: React.FC<DKIMDetailsProps> = ({
   };
   const handleCommonFunction = (domain: any) => {
     return domain == "fail" || domain == "Fail" ? (
-      <img src="/assets/images/Critical.svg" alt="" loading="lazy" />
+      <Image src={_IMG.Critical} alt="" loading="lazy" />
     ) : (
-      <img src="/assets/images/checkarrowFilled.svg" alt="" loading="lazy" />
+      <Image src={_IMG.checkarrowFilled} alt="" loading="lazy" />
     );
   };
   return (
@@ -179,20 +181,20 @@ const SourceResultDKIMDetails: React.FC<DKIMDetailsProps> = ({
                             <StyledTableCell>
                               {" "}
                               {item?.source_logo ? (
-                                <img
+                                <Image
+                                  alt=""
                                   src={item?.source_logo}
-                                  // width={5}
-                                  // height={40}
                                   loading="lazy"
                                 />
                               ) : (
-                                <img
+                                <Image
+                                  alt=""
                                   className="favIconImage"
                                   loading="lazy"
                                   src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${item?.dkim_auth_results_domain}&size=128`}
                                 />
                               )}
-                              {/* <img
+                              {/* <Image
                                 className="favIconImage"
                                 loading="lazy"
                                 src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${item?.dkim_auth_results_domain}&size=128`}

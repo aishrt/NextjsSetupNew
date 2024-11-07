@@ -1,9 +1,14 @@
-import React, {useEffect, useState} from "react";
-import {_IMG} from "@/shared/constants/images";
+import React, { useEffect, useState } from "react";
+import { _IMG } from "@/shared/constants/images";
 
 import { Box, Button, Modal } from "@mui/material";
-import {fetchImage} from "@/shared/functions/file-conversion.js";
-import {closeButtonStyle, modalImageStyle, modalStyles} from "@/shared/constants/styles.js";
+import { fetchImage } from "@/shared/functions/file-conversion.js";
+import {
+  closeButtonStyle,
+  modalImageStyle,
+  modalStyles,
+} from "@/shared/constants/styles.js";
+import Image from "next/image";
 
 const ViewImage = ({
   src,
@@ -11,7 +16,7 @@ const ViewImage = ({
   borderColor = "#DCD3D3E8",
   borderWidth = 0,
   size = 100,
-  awsFolder = ""
+  awsFolder = "",
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [imageUrl, setImageUrl] = useState("");
@@ -19,7 +24,7 @@ const ViewImage = ({
   useEffect(() => {
     fetchImage(src, _IMG.dummyImg, awsFolder).then((data) => {
       setImageUrl(data);
-    })
+    });
   }, [src]);
 
   const imageStyle = {
@@ -42,7 +47,7 @@ const ViewImage = ({
 
   return (
     <div>
-      <img
+      <Image
         src={imageUrl}
         alt="common"
         style={imageStyle}
@@ -56,7 +61,7 @@ const ViewImage = ({
         aria-describedby="modal-description"
       >
         <Box sx={modalStyles}>
-          <img src={imageUrl} alt="common" style={modalImageStyle} />
+          <Image src={imageUrl} alt="common" style={modalImageStyle} />
           <Button
             variant="contained"
             color="error"

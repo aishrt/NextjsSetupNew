@@ -15,17 +15,23 @@ import getCurrentUser from "@/lib/session";
 import { signOut } from "next-auth/react";
 import { isEmpty } from "@/utils/isEmpty";
 import { useRouter } from "next/navigation";
-import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";import EmailButton from "../Form/EmailButton";
+import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
+import EmailButton from "../Form/EmailButton";
 import Donutchart from "@/components/Charts/Donutchart";
 import dayjs from "dayjs";
 import { getLicenseData } from "@/@core/apiFetcher";
 import IPLoader from "../Loaders/IPLoader";
 import { createQueryString } from "@/@core/tableFunctions";
 import { API_ROUTES } from "@/@core/apiRoutes";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 
-const LinkOpenButton = dynamic(() => import("@/components/Form/LinkOpenButton"), {
-  ssr: false,
-});
+const LinkOpenButton = dynamic(
+  () => import("@/components/Form/LinkOpenButton"),
+  {
+    ssr: false,
+  }
+);
 // const score = { slice1: 10, slice2: 20, slice3: 30 };
 const score = 60;
 
@@ -579,8 +585,9 @@ const Ipmodal: React.FC<ModalEbookProps> = ({
                               <div className="row">
                                 <div className="col-lg-5">
                                   <div className="content">
-                                    <img
-                                      src="/assets/images/companyIcon.svg"
+                                    <Image
+                                      alt=""
+                                      src={_IMG.companyIcon}
                                       loading="lazy"
                                     />
                                     <h4>ASN Data </h4>
@@ -645,8 +652,9 @@ const Ipmodal: React.FC<ModalEbookProps> = ({
                               <div className="row">
                                 <div className="col-lg-5">
                                   <div className="content">
-                                    <img
-                                      src="/assets/images/flag-Icon.svg"
+                                    <Image
+                                      alt=""
+                                      src={_IMG.flag_Icon}
                                       loading="lazy"
                                     />
                                     <h4>Abuse Contact Data for IP Addresses</h4>
@@ -734,62 +742,7 @@ const Ipmodal: React.FC<ModalEbookProps> = ({
                                       </tr>
                                     </tbody>
                                   </table>
-                                  {/* <div className="codeSection">
-                            <div className="form-group">
-                              <input type="text" className="form-control" />
-                              <button>
-                                <img src="/assets/images/search.svg" />
-                              </button>
-                            </div>
-
-                            <code>
-                              <p>
-                                <span className="quote">
-                                  <img src="/assets/imag  es/quote.svg" />
-                                </span>
-                                address: "US, CA, Mountain View, 1600
-                                Amphitheatre Parkway",
-                              </p>
-                              <p>
-                                <span className="quote">
-                                  <img src="/assets/images/quote.svg" />
-                                </span>
-                                country: "US",
-                              </p>
-                              <p>
-                                <span className="quote">
-                                  <img src="/assets/images/quote.svg" />
-                                </span>
-                                email: "network-abuse@google.com",
-                              </p>
-                              <p>
-                                <span className="quote">
-                                  <img src="/assets/images/quote.svg" />
-                                </span>
-                                name: "Abuse",
-                              </p>
-                              <p>
-                                <span className="quote">
-                                  <img src="/assets/images/quote.svg" />
-                                </span>
-                                network: "8.8.8.0/24"
-                              </p>
-                              <p>
-                                <span className="quote">
-                                  <img src="/assets/images/quote.svg" />
-                                </span>
-                                phone: "+1-650-253-0000"
-                              </p>
-                            </code>
-
-                            <div className="btns">
-                              <button className="btn">Your IP</button>
-                              <button className="btn">1.1.1.14</button>
-                              <button className="btn">45.60.11.176</button>
-                              <button className="btn">68.8741.40</button>
-                              <button className="btn">68.8741.40</button>
-                            </div>
-                          </div> */}
+                               
                                 </div>
                               </div>
                             </div>
@@ -821,8 +774,8 @@ const Ipmodal: React.FC<ModalEbookProps> = ({
                                       <div className="row">
                                         <div className="col-lg-7">
                                           <div className="ipdangeralert">
-                                            <img
-                                              src="/assets/images/redinfo.svg"
+                                            <Image
+                                              src={_IMG.redinfo}
                                               alt=""
                                             />
                                             <p>
@@ -837,12 +790,7 @@ const Ipmodal: React.FC<ModalEbookProps> = ({
                                           </div>
                                         </div>
                                         <div className="col-lg-5 ">
-                                          {/* <div className="domainoptions">
-                                    <a href="">Reanalyze</a>
-                                    <a href="">Similar</a>
-                                    <a href="">Graph</a>
-                                    <a href="">API</a>
-                                  </div> */}
+                      
                                         </div>
                                       </div>
                                     </div>
@@ -949,34 +897,7 @@ const Ipmodal: React.FC<ModalEbookProps> = ({
                                     Details
                                   </button>
                                 </li>
-                                {/* <li className="nav-item" role="presentation">
-                          <button
-                            className="nav-link"
-                            id="relation-tab"
-                            data-bs-toggle="tab"
-                            data-bs-target="#relation-tab-pane"
-                            type="button"
-                            role="tab"
-                            aria-controls="relation-tab-pane"
-                            aria-selected="false"
-                          >
-                            Relation
-                          </button>
-                        </li>
-                        <li className="nav-item" role="presentation">
-                          <button
-                            className="nav-link"
-                            id="community-tab"
-                            data-bs-toggle="tab"
-                            data-bs-target="#community-tab-pane"
-                            type="button"
-                            role="tab"
-                            aria-controls="community-tab-pane"
-                            aria-selected="false"
-                          >
-                            Community
-                          </button>
-                        </li> */}
+                                
                                 <li className="nav-item" role="presentation">
                                   <button
                                     className="nav-link"
@@ -1078,7 +999,7 @@ const Ipmodal: React.FC<ModalEbookProps> = ({
                                             const item =
                                               data?.virutotal_response
                                                 ?.attributes
-                                                ?.last_analysis_results[key]; // Access each blacklist entry
+                                                ?.last_analysis_results[key]; 
                                             return (
                                               <tr key={index}>
                                                 <td className="capitalData">
@@ -1116,32 +1037,7 @@ const Ipmodal: React.FC<ModalEbookProps> = ({
                                         )}
                                       </tbody>
                                     </table>
-                                    {/* <table className="table table-bordered">
-                              <tbody>
-                                <tr>
-                                  <td className="capitalData">abusix</td>
-                                  <td className="capitalData">
-                                    <div className="dangerinfo">
-                                      <img
-                                        src="/assets/images/redinfo.svg"
-                                        alt=""
-                                      />
-                                      <p className="mb-0">Malicious</p>
-                                    </div>
-                                  </td>
-                                  <td className="capitalData">Antiy-AVL</td>
-                                  <td className="capitalData">
-                                    <div className="dangerinfo">
-                                      <img
-                                        src="/assets/images/redinfo.svg"
-                                        alt=""
-                                      />
-                                      <p className="mb-0">Malicious</p>
-                                    </div>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table> */}
+                                  
                                   </div>
                                 </div>
                                 <div
@@ -1226,77 +1122,7 @@ const Ipmodal: React.FC<ModalEbookProps> = ({
                                       </tr>
                                     </tbody>
                                   </table>
-                                  {/* <h5 className="detailheading">
-                            Last HTTPS Certificate
-                          </h5> */}
-
-                                  {/* <h6 className="fw-semibold">JARM Fingerprint</h6>
-                                <p>
-                                  2ad2ad16d00000022c2ad2ad2ad2ad46ff59a659b30fd8aeaa6755c67691b4
-                                </p> */}
-                                  {/* <h6 className="fw-semibold">
-                            Last HTTPS Certificate
-                          </h6>
-                          <p>
-                            Data: Version: V3 Serial Number:
-                            41d24df027992690672baa52b202d567a99 Thumbprint:
-                            ba018364b62387ae984ebb546547c1eb50b922d3 Signature
-                            Algorithm: Issuer: C=US O=Let&apos;s Encrypt CN=R11
-                            Validity Not Before: 2024-06-21 13:44:22 Not After:
-                            2024-09-19 13:44:21 Subject: CN=gazallaince.com
-                            Subject Public Key Info: Public Key Algorithm : RSA
-                            Public-Key: (2048 bit) Modulus:
-                            8f:b2:07:b9:d4:22:4d:2a:5c:fe:e9:65:dd:53:ed:
-                            30:30:a3:aa:0a:6b:ed:7b:32:21:a4:c2:83:0d:ad:
-                            10:b6:aa:ba:c9:a9:64:b5:f1:10:d6:26:c2:58:52:
-                            86:a8:d0:c7:79:56:c2:0a:b1:da:21:67:04:a3:a4:
-                            03:d4:61:7f:03:df:ab:b4:09:9f:82:71:aa:65:be:
-                            c2:54:b5:07:16:b4:8f:78:e8:c8:7e:6e:51:f4:48:
-                            39:40:6b:fe:ec:62:ca:ab:87:3d:94:4e:55:4a:31:
-                            e3:7b:2c:35:7e:9c:3e:ab:37:b0:4f:98:57:df:02:
-                            8d:a3:b5:ae:a1:9d:2b:e8:5b:4a:57:ec:b2:b0:44:
-                            e8:73:6f:7f:13:b1:2c:07:0d:9f:ad:7f:06:54:44:
-                            a6:5e:7f:7c:db:73:35:f1:8a:0c:f2:2a:3c:d7:fc:
-                            f8:95:3f:0a:86:72:61:ca:8f:4d:86:4b:28:d8:59:
-                            d9:39:b7:d3:fe:02:77:ed:3d:bb:a4:43:f4:9b:c3:
-                            35:c9:d3:4a:c1:bd:34:ef:fd:70:a4:22:f1:e7:5e:
-                            8d:35:43:b5:72:39:61:44:69:42:23:b8:2e:23:7a:
-                            3c:9d:5b:a1:30:ed:ac:c5:8a:98:a6:ed:a7:d2:55:
-                            cc:65:4d:17:fe:1b:ce:23:e9:b2:26:69:23:da:23: cb
-                            Exponent: 10001 X509v3 extensions: X509v3 Authority
-                            Key Identifier:
-                            c5:cf:46:a4:ea:f4:c3:c0:7a:6c:95:c4:2d:b0:5e:
-                            92:2f:26:e3:b9X509v3 Subject Key Identifier:
-                            80:d8:6f:9a:2f:17:9a:f2:e0:6d:f4:bc:15:24:b3:
-                            1c:05:84:dc:b8X509v3 Subject Alternative Name:
-                            DNS:gazallaince.com X509v3 Key Usage:
-                            digitalSignature, keyEncipherment X509v3 Extended
-                            Key Usage: serverAuth, clientAuth X509v3 CRL
-                            Distribution Points: X509v3 Certification Policies:
-                            Policy: 2.23.140.1.2.1 Authority Information Access:
-                            OCSP - http://r11.o.lencr.org CA Issuers -
-                            http://r11.i.lencr.org/ X509v3 Basic Constraints:
-                            CA:FALSE 1.3.6.1.4.1.11129.2.4.2:
-                            0481f300f100770048b0e36bdaa647340fe56a02fa9d30eb1c5201cb56dd2c81
-                            Signature Algorithm: sha256RSA
-                            95:89:e1:b0:df:f9:54:b4:7a:e5:3c:36:3d:b0:a4:
-                            21:d5:71:8d:77:91:d2:fa:63:4f:2c:b0:aa:83:d5:
-                            51:51:14:8c:3a:3f:08:db:63:e3:fc:6f:91:07:36:
-                            3e:cb:05:c2:6b:2e:a8:59:df:89:53:90:c9:fc:0b:
-                            b7:ff:43:54:d1:ff:eb:a6:d4:aa:b0:48:e3:0f:91:
-                            c8:72:ae:17:65:a0:6c:d8:d9:30:4b:0b:29:33:1a:
-                            1b:cd:0a:30:fc:88:ff:56:13:0c:bc:c8:a2:74:59:
-                            4d:af:5e:58:af:86:46:7f:a7:27:e1:c5:e9:f4:49:
-                            05:ba:16:95:86:81:38:fd:3f:78:7e:e6:70:ec:b4:
-                            d7:ae:3e:92:4b:ad:0f:83:74:d3:c6:b5:96:46:44:
-                            e2:ba:59:7b:7e:4a:c7:aa:9a:40:36:2c:b0:e8:4a:
-                            e7:d7:a3:7a:2b:22:db:22:1d:c1:53:af:5d:45:61:
-                            5a:e3:92:65:1d:68:8e:7f:75:a5:e2:15:0f:08:1a:
-                            be:61:87:6f:5e:5d:44:48:ea:bf:21:1b:55:51:ce:
-                            ae:64:5e:f0:22:7a:54:0c:1a:19:fd:35:a3:c6:ba:
-                            44:ef:fd:56:15:5c:97:c7:de:55:9b:c0:f6:2a:0d:
-                            de:2c:1b:2f:f9:a9:9f:a0:b5:09:94:3b:ae:da:63: bd
-                          </p> */}
+                              
                                   <h6 className="fw-semibold">Whois Lookup</h6>
                                   <p>
                                     <div
@@ -1513,7 +1339,7 @@ const Ipmodal: React.FC<ModalEbookProps> = ({
                                             const item =
                                               data.dns_blacklist.blocklists[
                                                 key
-                                              ]; // Access each blacklist entry
+                                              ]; 
                                             return (
                                               <tr key={index}>
                                                 <td className="capitalData">
@@ -2004,8 +1830,6 @@ const Ipmodal: React.FC<ModalEbookProps> = ({
                             type="submit"
                             onClick={() => manageChangePlan()}
                             title="Manage Plan"
-                            // onClick={() => router.push("/dashboard/pricing")}
-                            //jkvf
                           >
                             Upgrade plan
                           </button>

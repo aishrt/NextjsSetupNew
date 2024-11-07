@@ -22,7 +22,7 @@ import { isTokenExpired, postFetcherLambda } from "@/@core/apiFetcher";
 import RecordWarningCompo from "@/app/pageComponents/Tools/ui/RecordWarningCompo";
 import { scrollIntoView } from "@/utils/scrollIntoView";
 import SubmitButton from "@/components/Form/SubmitButton";
-import {  Tooltip } from "@mui/material";
+import { Tooltip } from "@mui/material";
 import TagTable from "@/components/UI/TagTable";
 import { createAndClickProgressBar } from "@/@core/createAndClickProgressBar";
 import { useSession } from "next-auth/react";
@@ -31,10 +31,9 @@ import getCurrentUser from "@/lib/session";
 import { toast } from "react-toastify";
 import AccordionComponent from "./ui/Accordin";
 
-import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";import ToolsUi from "@/app/pageComponents/Tools/ToolsUi";
-import {
-  removeFirstPart,
-} from "@/@core/helper";
+import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
+import ToolsUi from "@/app/pageComponents/Tools/ToolsUi";
+import { removeFirstPart } from "@/@core/helper";
 
 import { validateDomainName } from "@/utils/string-conversion";
 
@@ -44,6 +43,8 @@ import MainLoader from "@/components/Loaders/MainLoader";
 import RecordBox from "@/components/UI/RecordBox";
 import { fetchImage } from "@/@core/commonS3";
 import { useStore } from "@/utils/store";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 const SpfTool = ({
   result,
   toolsId,
@@ -580,18 +581,18 @@ const SpfTool = ({
                         <td>
                           <span>
                             {row?.email_service_provider_logo ? (
-                              <img
+                              <Image
                                 src={`${row?.email_service_provider_logo}`}
                                 loading="lazy"
+                                alt="Email Provider Logo"
                               />
                             ) : (
-                              <img
+                              <Image
                                 src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${removeFirstPart(
                                   row?.spf_part
                                 )}&size=128`}
-                                // width={5}
-                                // height={40}
                                 loading="lazy"
+                                alt="Gstatic Image"
                               />
                             )}
                             <span>{row?.sending_source}</span>
@@ -728,117 +729,119 @@ const SpfTool = ({
           <h6 className="fw-bold fs-4">SPF {toolType} Tree</h6>
 
           {treeData?.map((item: any, index: any) => {
-            return(
-            <>
-              <div
-                key={index}
-                className="accordion border mt-4 p-2"
-                id="accordionExample"
-              >
-                <div className="accordion-item">
-                  <h2 className="accordion-header" id="headingOne">
-                    <button
-                      className="accordion-button"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target={`#collapse-${index}`}
-                      aria-expanded="true"
-                      aria-controls={`collapse-${index}`}
-                    >
-                      {domain}
+            return (
+              <>
+                <div
+                  key={index}
+                  className="accordion border mt-4 p-2"
+                  id="accordionExample"
+                >
+                  <div className="accordion-item">
+                    <h2 className="accordion-header" id="headingOne">
+                      <button
+                        className="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target={`#collapse-${index}`}
+                        aria-expanded="true"
+                        aria-controls={`collapse-${index}`}
+                      >
+                        {domain}
 
-                      <span className="blue-pill">
-                        {item?.dns_lookups || 0} LOOKUPS (
-                        {(item?.dns_lookups ||0 )
-                           -
+                        <span className="blue-pill">
+                          {item?.dns_lookups || 0} LOOKUPS (
+                          {(item?.dns_lookups || 0) -
                             (calculateNestedDnsLookups(item?.parsed?.include) +
                               (item?.parsed?.redirect?.dns_lookups || 0))}{" "}
-                        main,{" "}
-                        {
-                          calculateNestedDnsLookups(item?.parsed?.include) +
-                            // calculateNestedDnsLookups(
-                            (item?.parsed?.redirect?.dns_lookups || 0)
-                          // )
-                        }{" "}
-                        nested)
-                      </span>
-                    </button>
+                          main,{" "}
+                          {
+                            calculateNestedDnsLookups(item?.parsed?.include) +
+                              // calculateNestedDnsLookups(
+                              (item?.parsed?.redirect?.dns_lookups || 0)
+                            // )
+                          }{" "}
+                          nested)
+                        </span>
+                      </button>
 
-                    <span className="codeSection">
-                      {item?.record || "No record value found"}
-                      {item?.record ? (
-                        <CopyToClipboard entryText={item?.record} />
-                      ) : (
-                        <div className="generateCodeBtn pt-4 text-start">
-                          <Link
-                            style={{ color: "#fff" }}
-                            href={`spf-generator?domain=${domain}`}
-                          >
-                            <Tooltip title="Generate Record" placement="top">
-                              <img src="/assets/images/record.svg" />
-                            </Tooltip>
-                          </Link>
-                        </div>
-                      )}
-                    </span>
-                  </h2>
-                  <div
-                    id={`collapse-${index}`}
-                    className="accordion-collapse collapse show"
-                    aria-labelledby={`heading-${index}`}
-                    data-bs-parent="#accordionExample"
-                  >
-                    <div className="accordion-body">
-                      {/* {CalculateNestedRecords(
+                      <span className="codeSection">
+                        {item?.record || "No record value found"}
+                        {item?.record ? (
+                          <CopyToClipboard entryText={item?.record} />
+                        ) : (
+                          <div className="generateCodeBtn pt-4 text-start">
+                            <Link
+                              style={{ color: "#fff" }}
+                              href={`spf-generator?domain=${domain}`}
+                            >
+                              <Tooltip title="Generate Record" placement="top">
+                                <Image src={_IMG.record} alt="Record" />
+                              </Tooltip>
+                            </Link>
+                          </div>
+                        )}
+                      </span>
+                    </h2>
+                    <div
+                      id={`collapse-${index}`}
+                      className="accordion-collapse collapse show"
+                      aria-labelledby={`heading-${index}`}
+                      data-bs-parent="#accordionExample"
+                    >
+                      <div className="accordion-body">
+                        {/* {CalculateNestedRecords(
                                       lookupData?.data?.parsed?.pass
                                     )} */}
 
-                      {!isEmpty(item?.parsed?.include) &&
-                        item?.parsed?.include?.map((inc: any, idx: number) => {
-                          {
-                            return (
-                              <div key={idx}>
-                                {displayBlock(
-                                  inc,
-                                  inc.seq_number,
-                                  "include",
-                                  "ps-0"
-                                )}
-                              </div>
-                            );
-                          }
-                        })}
-                      {item?.parsed?.redirect && (
-                        <div>
-                          {displayBlock(
-                            item?.parsed?.redirect,
-                            item?.parsed?.redirect.seq_number,
-                            // lookupData?.data?.parsed?.redirect,
-                            // lookupData?.data?.parsed?.redirect.seq_number,
-                            "redirect",
-                            "ps-0"
+                        {!isEmpty(item?.parsed?.include) &&
+                          item?.parsed?.include?.map(
+                            (inc: any, idx: number) => {
+                              {
+                                return (
+                                  <div key={idx}>
+                                    {displayBlock(
+                                      inc,
+                                      inc.seq_number,
+                                      "include",
+                                      "ps-0"
+                                    )}
+                                  </div>
+                                );
+                              }
+                            }
                           )}
-                        </div>
-                      )}
-                      {item?.parsed?.pass?.length ? (
-                        <>
-                          <AccordionComponent
-                            inc={item?.parsed?.pass}
-                            mappingId={numindex}
-                            IsPremiumPlan={IsPremiumPlan}
-                            isLoggedIn={isLoggedIn}
-                            itemIndex={numindex + 1}
-                          />
-                          {/* {setSelectedData(item?.parsed?.pass)} */}
-                        </>
-                      ) : (
-                        <></>
-                      )}
+                        {item?.parsed?.redirect && (
+                          <div>
+                            {displayBlock(
+                              item?.parsed?.redirect,
+                              item?.parsed?.redirect.seq_number,
+                              // lookupData?.data?.parsed?.redirect,
+                              // lookupData?.data?.parsed?.redirect.seq_number,
+                              "redirect",
+                              "ps-0"
+                            )}
+                          </div>
+                        )}
+                        {item?.parsed?.pass?.length ? (
+                          <>
+                            <AccordionComponent
+                              inc={item?.parsed?.pass}
+                              mappingId={numindex}
+                              IsPremiumPlan={IsPremiumPlan}
+                              isLoggedIn={isLoggedIn}
+                              itemIndex={numindex + 1}
+                            />
+                            {/* {setSelectedData(item?.parsed?.pass)} */}
+                          </>
+                        ) : (
+                          <></>
+                        )}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </>)
+              </>
+            );
           })}
         </div>
       </>

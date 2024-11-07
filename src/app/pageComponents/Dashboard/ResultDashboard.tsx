@@ -35,6 +35,8 @@ import {
 } from "@/@core/tableFunctions";
 import UpgradeSubscription from "../Others/UpgradeSubscription";
 import { checkHistory } from "@/@core/helper";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 
 const Resultspage = ({
   domain,
@@ -274,7 +276,6 @@ const Resultspage = ({
                         <div className="cardInner quarantined">
                           <div className="cardInnerContent">
                             <div className="cardIcon">
-                              {/* <img alt={``} src="/assets/images/statisticsWhite.svg" /> */}
                               <PollIcon className="iconSize quarantined" />
                             </div>
                             <div className="cardText">
@@ -389,10 +390,10 @@ const Resultspage = ({
                                             item?.dkim
                                           )}
                                         >
-                                          <img
+                                          <Image
                                             className="handIcon"
                                             alt={``}
-                                            src="/assets/images/right-arrow.svg"
+                                            src={_IMG.right_arrow}
                                             loading="lazy"
                                           />
                                         </a>

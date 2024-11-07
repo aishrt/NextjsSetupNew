@@ -1,6 +1,8 @@
 "use client";
 import Link from "next/link";
 import { useSession } from "next-auth/react";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 const ResourcesContainer = () => {
   const { data: session, status } = useSession();
   return (
@@ -10,27 +12,26 @@ const ResourcesContainer = () => {
       ) : (
         <div className="resources wow fadeIn">
           <div className="thickLine">
-            <img
-              src="/assets/images/thickLine.svg"
+            <Image
+              src={_IMG.thickLine}
               alt="Thick line used for design."
-              width="auto" height="auto" loading="lazy"
+              loading="lazy"
             />
           </div>
 
           <div className="zigzag">
-            <img
-              src="/assets/images/shapeZigZag.svg"
+            <Image
+              src={_IMG.shapeZigZag}
               alt="ZigZag shape for designing."
-              width="auto"
-              height="auto" loading="lazy"
+              loading="lazy"
             />
           </div>
 
           <span className="dotted">
-            <img
-              src="/assets/images/shapeDotted.svg"
+            <Image
+              src={_IMG.shapeDotted}
               alt="Shape dotted used for design."
-              width="auto" height="auto" loading="lazy"
+              loading="lazy"
             />
           </span>
           <div className="container">
@@ -45,82 +46,71 @@ const ResourcesContainer = () => {
               <div className="card-section">
                 <div className="row">
                   <div className="col-lg-3 col-md-6">
-                      <div className="card wow flipInX">
-                    <Link rel="canonical" href="/tools/dmarc-lookup">
+                    <div className="card wow flipInX">
+                      <Link rel="canonical" href="/tools/dmarc-lookup">
                         <div className="card-body">
-                          {/* <img
-                            className="card-image"
-                            src="/assets/images/dmarcRecord.svg"
-                            alt=""
-                          /> */}
+                        
                           <span className="imageBorder">
-                            <img src="/assets/images/DMARCRecord.webp" alt="" width="auto" height="auto" loading="lazy"/>
+                            <Image
+                              src={_IMG.DMARCRecord}
+                              alt=""
+                              loading="lazy"
+                            />
                           </span>
                           <h5 className="card-title">DMARC Record</h5>
                           <p className="card-text">
                             Look up and generate DMARC record
                           </p>
                         </div>
-                    </Link>
-                      </div>
+                      </Link>
+                    </div>
                   </div>
                   <div className="col-lg-3 col-md-6">
-                      <div className="card wow flipInX">
-                    <Link rel="canonical" href="/tools/spf-lookup">
+                    <div className="card wow flipInX">
+                      <Link rel="canonical" href="/tools/spf-lookup">
                         <div className="card-body">
-                          {/* <img
-                            className="card-image"
-                            src="/assets/images/spfRecord.svg"
-                            alt="Eye icon representing SPF record."
-                            width="auto" height="auto"
-                          /> */}
+                        
                           <span className="imageBorder">
-                            <img src="/assets/images/SPF-Record.webp" width="auto" height="auto" alt="" loading="lazy"/>
+                            <Image src={_IMG.SPFRecord} alt="" loading="lazy" />
                           </span>
                           <h5 className="card-title">SPF Record</h5>
                           <p className="card-text">
                             Look up and validate your SPF record
                           </p>
                         </div>
-                    </Link>
-                      </div>
+                      </Link>
+                    </div>
                   </div>
                   <div className="col-lg-3 col-md-6">
-                      <div className="card wow flipInX">
-                    <Link rel="canonical" href="/tools/dkim-lookup">
+                    <div className="card wow flipInX">
+                      <Link rel="canonical" href="/tools/dkim-lookup">
                         <div className="card-body">
-                          {/* <img
-                            className="card-image"
-                            src="/assets/images/dkimRecord.svg"
-                            alt="Person with star logo for DKIM record lock." width="auto" height="auto"
-                          /> */}
+                        
                           <span className="imageBorder">
-                            <img src="/assets/images/DKIM record.webp" width="auto" height="auto" alt="" />
+                            <Image src={_IMG.DKIM_record} alt="" />
                           </span>
                           <h5 className="card-title">DKIM Record</h5>
                           <p className="card-text">Look up DKIM record</p>
                         </div>
-                    </Link>
-                      </div>
+                      </Link>
+                    </div>
                   </div>
                   <div className="col-lg-3 col-md-6">
-                      <div className="card wow flipInX">
-                    <Link rel="canonical" href="/tools/bimi-lookup">
+                    <div className="card wow flipInX">
+                      <Link rel="canonical" href="/tools/bimi-lookup">
                         <div className="card-body">
-                          {/* <img
-                            className="card-image"
-                            src="/assets/images/bimiRecord.svg"
-                            alt="This logo is used to display authenticated emails."
-                             width="auto" height="auto"  
-                          /> */}
                           <span className="imageBorder">
-                            <img src="/assets/images/BIMI-Record.webp" width="auto" height="auto" alt="" loading="lazy"/>
+                            <Image
+                              src={_IMG.BIMI_Record}
+                              alt=""
+                              loading="lazy"
+                            />
                           </span>
                           <h5 className="card-title">BIMI Record</h5>
                           <p className="card-text">Look up DKIM record</p>
                         </div>
-                    </Link>
-                      </div>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -128,15 +118,15 @@ const ResourcesContainer = () => {
           </div>
 
           <span className="thinLine">
-            <img src="/assets/images/thinLine.svg" width="auto" height="auto" alt="Line" loading="lazy"/>
+            <Image src={_IMG.thinLine} alt="Line" loading="lazy" />
           </span>
 
           <span className="thinLine2">
-            <img src="/assets/images/thinLine.svg" width="auto" height="auto" alt="Line" loading="lazy"/>
+            <Image src={_IMG.thinLine} alt="Line" loading="lazy" />
           </span>
 
           <div className="zigzag2">
-            <img src="/assets/images/shapeZigZag.svg" width="auto" height="auto" alt="shapeZigZag" loading="lazy"/>
+            <Image src={_IMG.shapeZigZag} alt="shapeZigZag" loading="lazy" />
           </div>
         </div>
       )}

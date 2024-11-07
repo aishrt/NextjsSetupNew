@@ -3,6 +3,8 @@ import { useSearchParams } from "next/navigation";
 import { removeHttp } from "@/utils/string-conversion";
 import Link from "next/link";
 import { Suspense } from "react";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 
 const ResourcesContainerNew = () => {
   const searchParams = useSearchParams();
@@ -12,30 +14,23 @@ const ResourcesContainerNew = () => {
     <Suspense fallback={<div>Loading</div>}>
       <div className="resources wow fadeIn">
         <div className="thickLine">
-          <img
-            src="/assets/images/thickLine.svg"
+          <Image
+            src={_IMG.thickLine}
             alt="Thick line used for design."
-            width="auto"
-            height="auto" loading="lazy"
+            loading="lazy"
           />
         </div>
 
         <div className="zigzag">
-          <img
-            src="/assets/images/shapeZigZag.svg"
+          <Image
+            src={_IMG.shapeZigZag}
             alt="ZigZag shape for designing"
-            width="auto"
-            height="auto" loading="lazy"
+            loading="lazy"
           />
         </div>
 
         <span className="dotted">
-          <img
-            src="/assets/images/shapeDotted.svg"
-            width="auto"
-            height="auto"
-            alt={""} loading="lazy"
-          />
+          <Image src={_IMG.shapeDotted} alt={""} loading="lazy" />
         </span>
         <div className="container">
           <div className="resources-outer">
@@ -59,18 +54,13 @@ const ResourcesContainerNew = () => {
                 >
                   <div className="card wow flipInX">
                     <div className="card-body">
-                      {/* <img
+                      {/* <Image
                       className="card-image"
                       src="/assets/images/dmarcRecord.svg"
                       alt="Envelope with lock icon signifies DMARC record."
                     /> */}
                       <span className="imageBorder">
-                        <img
-                          src="/assets/images/DMARCRecord.webp"
-                          alt=""
-                          width="auto"
-                          height="auto" loading="lazy"
-                        />
+                        <Image src={_IMG.DMARCRecord} alt="" loading="lazy" />
                       </span>
                       <h5 className="card-title">DMARC Record</h5>
                       <p className="card-text">
@@ -90,19 +80,14 @@ const ResourcesContainerNew = () => {
                 >
                   <div className="card wow flipInX">
                     <div className="card-body">
-                      {/* <img
+                      {/* <Image
                       className="card-image"
                       src="/assets/images/spfRecord.svg"
                       alt="Eye icon representing SPF record."
                       width="auto" height="auto"
                     /> */}
                       <span className="imageBorder">
-                        <img
-                          src="/assets/images/SPF-Record.webp"
-                          alt=""
-                          width="auto"
-                          height="auto" loading="lazy"
-                        />
+                        <Image src={_IMG.SPFRecord} alt="" loading="lazy" />
                       </span>
                       <h5 className="card-title">SPF Record</h5>
                       <p className="card-text">
@@ -122,19 +107,14 @@ const ResourcesContainerNew = () => {
                 >
                   <div className="card wow flipInX">
                     <div className="card-body">
-                      {/* <img
+                      {/* <Image
                       className="card-image"
                       src="/assets/images/dkimRecord.svg"
                       alt="Person with star logo for DKIM record lock." width="auto" height="auto"
                     /> */}
 
                       <span className="imageBorder">
-                        <img
-                          src="/assets/images/DKIM record.webp"
-                          alt=""
-                          width="auto"
-                          height="auto" loading="lazy"
-                        /> 
+                        <Image src={_IMG.DKIM_record} alt="" loading="lazy" />
                       </span>
                       <h5 className="card-title">DKIM Record</h5>
                       <p className="card-text">Look up DKIM record</p>
@@ -152,7 +132,7 @@ const ResourcesContainerNew = () => {
                 >
                   <div className="card wow flipInX">
                     <div className="card-body">
-                      {/* <img
+                      {/* <Image
                       className="card-image"
                       src="/assets/images/bimiRecord.svg"
                       alt="This logo is used to display authenticated emails.
@@ -160,12 +140,7 @@ const ResourcesContainerNew = () => {
                     /> */}
 
                       <span className="imageBorder">
-                        <img
-                          src="/assets/images/BIMI-Record.webp"
-                          alt=""
-                          width="auto"
-                          height="auto" loading="lazy"
-                        />
+                        <Image src={_IMG.BIMI_Record} alt="" loading="lazy" />
                       </span>
                       <h5 className="card-title">BIMI Record</h5>
                       <p className="card-text">Look up DKIM record</p>
@@ -183,7 +158,7 @@ const ResourcesContainerNew = () => {
                 >
                   <div className="card wow flipInX">
                     <div className="card-body">
-                      {/* <img
+                      {/* <Image
                       className="card-image"
                       src="/assets/images/bimiRecord.svg"
                       alt="This logo is used to display authenticated emails.
@@ -191,7 +166,11 @@ const ResourcesContainerNew = () => {
                     /> */}
 
                       <span className="imageBorder">
-                        <img src="/assets/images/MTA-STA-Record.svg" alt="" loading="lazy"/>
+                        <Image
+                          src={_IMG.MTA_STA_Record}
+                          alt=""
+                          loading="lazy"
+                        />
                       </span>
                       <h5 className="card-title">MTA STS Record</h5>
                       <p className="card-text">Look up MTA STS record</p>
@@ -209,14 +188,18 @@ const ResourcesContainerNew = () => {
                 >
                   <div className="card wow flipInX">
                     <div className="card-body">
-                      {/* <img
+                      {/* <Image
                       className="card-image"
                       src="/assets/images/bimiRecord.svg"
                       alt="This logo is used to display authenticated emails.
                       "
                     /> */}
                       <span className="imageBorder">
-                        <img src="/assets/images/TLS-RPT-Record.svg" alt="" loading="lazy"/>
+                        <Image
+                          src={_IMG.TLS_RPT_Record}
+                          alt=""
+                          loading="lazy"
+                        />
                       </span>
                       <h5 className="card-title">TLS RPT Record</h5>
                       <p className="card-text">Look up TLS RPT record</p>
@@ -234,14 +217,18 @@ const ResourcesContainerNew = () => {
                 >
                   <div className="card wow flipInX">
                     <div className="card-body">
-                      {/* <img
+                      {/* <Image
                       className="card-image"
                       src="/assets/images/bimiRecord.svg"
                       alt="This logo is used to display authenticated emails.
                       "
                     /> */}
                       <span className="imageBorder">
-                        <img src="/assets/images/blacklist domain.svg" alt="" loading="lazy"/>
+                        <Image
+                          src={_IMG.blacklist_domain}
+                          alt=""
+                          loading="lazy"
+                        />
                       </span>
                       <h5 className="card-title">Blacklist Domain</h5>
                       <p className="card-text">Look up Blacklist Domain</p>
@@ -254,29 +241,26 @@ const ResourcesContainerNew = () => {
         </div>
 
         <span className="thinLine">
-          <img
-            src="/assets/images/thinLine.svg"
-            width="auto"
-            height="auto"
-            alt="Line" loading="lazy"
+          <Image
+            src={_IMG.thinLine}
+            alt="Line"
+            loading="lazy"
           />
         </span>
 
         <span className="thinLine2">
-          <img
-            src="/assets/images/thinLine.svg"
-            width="auto"
-            height="auto"
-            alt="Line" loading="lazy"
+          <Image
+            src={_IMG.thinLine}
+            alt="Line"
+            loading="lazy"
           />
         </span>
 
         <div className="zigzag2">
-          <img
-            src="/assets/images/shapeZigZag.svg"
-            width="auto"
-            height="auto"
-            alt="shapeZigZag" loading="lazy"
+          <Image
+            src={_IMG.shapeZigZag}
+            alt="shapeZigZag"
+            loading="lazy"
           />
         </div>
       </div>

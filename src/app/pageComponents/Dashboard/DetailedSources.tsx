@@ -26,6 +26,8 @@ import TableRowsLoader from "@/components/Table-ui/TableRowsLoader";
 import { TablePaginationCompo } from "@/components/Table-ui/TablePaginationCompo";
 import { useRouter } from "next/navigation";
 import { fetchImage } from "@/@core/commonS3";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 
 const DetailedSources = (props: any) => {
   let queryString;
@@ -223,21 +225,19 @@ const DetailedSources = (props: any) => {
                                     <div className="sourcesName">
                                       <span>
                                         {item?.source_logo ? (
-                                          <img
+                                          <Image
+                                            alt="Source Logo"
                                             src={item?.source_logo}
-                                            // width={5}
-                                            // height={40}
                                             loading="lazy"
                                           />
                                         ) : (
-                                          <img
+                                          <Image
                                             src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${item?.base_domain}&size=128`}
-                                            // width={5}
-                                            // height={40}
+                                            alt="Source Logo"
                                             loading="lazy"
                                           />
                                         )}
-                                        {/* <img
+                                        {/*<Image
                                           loading="lazy"
                                           src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${item?.base_domain}&size=128`}
                                         /> */}
@@ -276,20 +276,18 @@ const DetailedSources = (props: any) => {
                                               <>
                                                 {item?.volume_trend ==
                                                 "decrease" ? (
-                                                  <img
-                                                    src="/assets/images/trend-down.svg"
+                                                  <Image
+                                                    src={_IMG.trend_down}
                                                     alt="Web icon"
-                                                    width="20px"
-                                                    height="auto"
+                                                    width={20}
                                                     loading="lazy"
                                                   />
                                                 ) : item?.volume_trend ==
                                                   "increase" ? (
-                                                  <img
-                                                    src="/assets/images/trend-up.svg"
+                                                  <Image
+                                                    src={_IMG.trend_up}
                                                     alt="Web icon"
-                                                    width="20px"
-                                                    height="auto"
+                                                    width={20}
                                                     loading="lazy"
                                                   />
                                                 ) : item?.volume_trend ==
@@ -354,20 +352,18 @@ const DetailedSources = (props: any) => {
                                             <>
                                               {item?.compliant_trend ==
                                               "decrease" ? (
-                                                <img
-                                                  src="/assets/images/trend-down.svg"
+                                                <Image
+                                                  src={_IMG.trend_down}
                                                   alt="Web icon"
-                                                  width="20px"
-                                                  height="auto"
+                                                  width={20}
                                                   loading="lazy"
                                                 />
                                               ) : item?.compliant_trend ==
                                                 "increase" ? (
-                                                <img
-                                                  src="/assets/images/trend-up.svg"
+                                                <Image
+                                                  src={_IMG.trend_up}
                                                   alt="Web icon"
-                                                  width="20px"
-                                                  height="auto"
+                                                  width={20}
                                                   loading="lazy"
                                                 />
                                               ) : item?.compliant_trend ==
@@ -430,20 +426,18 @@ const DetailedSources = (props: any) => {
                                             <>
                                               {item?.failure_trend ==
                                               "decrease" ? (
-                                                <img
-                                                  src="/assets/images/trend-down-green.svg"
+                                                <Image
+                                                  src={_IMG.trend_down_green}
                                                   alt="Web icon"
-                                                  width="20px"
-                                                  height="auto"
+                                                  width={20}
                                                   loading="lazy"
                                                 />
                                               ) : item?.failure_trend ==
                                                 "increase" ? (
-                                                <img
-                                                  src="/assets/images/trend-up-red.svg"
+                                                <Image
+                                                  src={_IMG.trend_up_red}
                                                   alt="Web icon"
-                                                  width="20px"
-                                                  height="auto"
+                                                  width={20}
                                                   loading="lazy"
                                                 />
                                               ) : item?.failure_trend ==
@@ -536,9 +530,9 @@ const DetailedSources = (props: any) => {
                                             "YYYY-MM-DD"
                                           )}&page=1&page_size=10`}
                                         >
-                                          <img
+                                          <Image
                                             alt={``}
-                                            src="/assets/images/right-arrow.svg"
+                                            src={_IMG.right_arrow}
                                             className="give-pointer"
                                             title="View Details"
                                             loading="lazy"
@@ -548,9 +542,9 @@ const DetailedSources = (props: any) => {
                                         <a
                                           href={`/dashboard/source-dashboard/?policy_published_domain=${props?.domain}&host_name=${item?.host_name}&org_name=${item?.source}&page=1&page_size=10`}
                                         >
-                                          <img
+                                          <Image
                                             alt={``}
-                                            src="/assets/images/right-arrow.svg"
+                                            src={_IMG.right_arrow}
                                             className="give-pointer"
                                             title="View Details"
                                             loading="lazy"

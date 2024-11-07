@@ -91,7 +91,7 @@ export default function Footer({
     //         {/* <Logo src={logoUrl}>
     //           {logoText && <h2 className="text-2xl font-bold">{logoText}</h2>}
     //         </Logo> */}
-    //         {logoUrl && <img src={logoUrl} alt="logo" width={45} height={45} className='w-[120px] h-[90px]' />}
+    //         {logoUrl && <Image src={logoUrl} alt="logo" width={45} height={45} className='w-[120px] h-[90px]' />}
     //         <p className="text-[#787878] mt-[10px]">With YOUR DMARC, boosting email campaign deliverability, safeguarding brand identity, and fortifying business reputation is a breeze.</p>
     //       </div>
 

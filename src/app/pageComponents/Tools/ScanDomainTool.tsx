@@ -18,6 +18,8 @@ import DateRangePicker from "@/components/Form/DateRangePicketMui";
 import MainLoader from "@/components/Loaders/MainLoader";
 import FileExcelUpload from "@/components/Upload/FileExcelUpload";
 import ExportCsv from "@/components/Functions/ExportCsv";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 
 const formatPercentage = (progress: any, totalCount: any): number => {
   const percentage =
@@ -563,8 +565,8 @@ const ScanDomainTool = () => {
                             <th>
                               Domain Name
                               <a href="">
-                                <img
-                                  src="/assets/images/arrange.svg"
+                                <Image
+                                  src={_IMG.arrange}
                                   alt=""
                                   loading="lazy"
                                 />
@@ -573,8 +575,8 @@ const ScanDomainTool = () => {
                             <th style={{ width: "150px!important" }}>
                               DMARC Record Policy
                               <a href="">
-                                <img
-                                  src="/assets/images/arrange.svg"
+                                <Image
+                                  src={_IMG.arrange}
                                   alt=""
                                   loading="lazy"
                                 />
@@ -583,8 +585,8 @@ const ScanDomainTool = () => {
                             <th>
                               ADKIM
                               <a href="">
-                                <img
-                                  src="/assets/images/arrange.svg"
+                                <Image
+                                  src={_IMG.arrange}
                                   alt=""
                                   loading="lazy"
                                 />
@@ -593,8 +595,8 @@ const ScanDomainTool = () => {
                             <th>
                               ASPF
                               <a href="">
-                                <img
-                                  src="/assets/images/arrange.svg"
+                                <Image
+                                  src={_IMG.arrange}
                                   alt=""
                                   loading="lazy"
                                 />
@@ -604,8 +606,8 @@ const ScanDomainTool = () => {
                             <th>
                               rua
                               <a href="">
-                                <img
-                                  src="/assets/images/arrange.svg"
+                                <Image
+                                  src={_IMG.arrange}
                                   alt=""
                                   loading="lazy"
                                 />
@@ -614,8 +616,8 @@ const ScanDomainTool = () => {
                             <th>
                               ruf
                               <a href="">
-                                <img
-                                  src="/assets/images/arrange.svg"
+                                <Image
+                                  src={_IMG.arrange}
                                   alt=""
                                   loading="lazy"
                                 />
@@ -624,8 +626,8 @@ const ScanDomainTool = () => {
                             <th>
                               Import Date
                               <a href="">
-                                <img
-                                  src="/assets/images/arrange.svg"
+                                <Image
+                                  src={_IMG.arrange}
                                   alt=""
                                   loading="lazy"
                                 />
@@ -720,7 +722,7 @@ const ScanDomainTool = () => {
         }}
       >
         <span className="cancelBtn" onClick={handleCloseUpload}>
-          <img src="/assets/images/cancel-black.svg" loading="lazy" />
+          <Image src={_IMG.cancel_black} alt="Cancel" loading="lazy" />
         </span>
         <FileExcelUpload
           selectedFile={selectedFile}

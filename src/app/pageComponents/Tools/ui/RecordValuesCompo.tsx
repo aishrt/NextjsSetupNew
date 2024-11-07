@@ -2,6 +2,8 @@ import CopyToClipboard from "@/components/Functions/CopyToClipboard";
 import { isEmpty } from "@/utils/isEmpty";
 import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 import { Button, Link, Tooltip } from "@mui/material";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 type Props = {
   recordValue: string | string[] | undefined;
   titleText?: string | string[] | undefined;
@@ -172,7 +174,10 @@ const RecordValuesCompo = ({
                                                   title="Generate Record"
                                                   placement="top"
                                                 >
-                                                  <img src="/assets/images/record.svg" />
+                                                  <Image
+                                                    src={_IMG.record}
+                                                    alt="Records"
+                                                  />
                                                 </Tooltip>
                                               </Link>
                                             </div>
@@ -228,7 +233,10 @@ const RecordValuesCompo = ({
                                         title="Generate Record"
                                         placement="top"
                                       >
-                                        <img src="/assets/images/record.svg" />
+                                        <Image
+                                          src={_IMG.record}
+                                          alt="Records"
+                                        />
                                       </Tooltip>
                                     </Link>
                                   </div>

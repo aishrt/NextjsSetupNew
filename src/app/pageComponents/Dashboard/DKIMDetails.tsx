@@ -4,6 +4,8 @@ import { Pagination } from "@mui/material";
 import { debounce } from "lodash";
 import React, { useCallback, useEffect, useState } from "react";
 import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 
 interface DKIMDetailsProps {
   domain: string;
@@ -168,7 +170,8 @@ const DKIMDetails: React.FC<DKIMDetailsProps> = ({
                     elementsList.map((item: any, index: number) => (
                       <tr key={index}>
                         <td className="">
-                          <img
+                          <Image
+                            alt="Fav icon"
                             className="favIconImage"
                             loading="lazy"
                             src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${item?.dkim_auth_results_domain}&size=128`}
@@ -181,14 +184,14 @@ const DKIMDetails: React.FC<DKIMDetailsProps> = ({
                         <td>
                           {item?.dkim_auth_results_result?.toLowerCase() ===
                           "fail" ? (
-                            <img
-                              src="/assets/images/crosscircle.svg"
-                              alt=""
+                            <Image
+                              src={_IMG.crosscircle}
+                              alt="crosscircle"
                               loading="lazy"
                             />
                           ) : (
-                            <img
-                              src="/assets/images/checkcircle.svg"
+                            <Image
+                              src={_IMG.checkcircle}
                               alt=""
                               loading="lazy"
                             />
@@ -197,14 +200,14 @@ const DKIMDetails: React.FC<DKIMDetailsProps> = ({
                         <td>
                           {item?.row_policy_evaluated_dkim?.toLowerCase() ===
                           "fail" ? (
-                            <img
-                              src="/assets/images/crosscircle.svg"
+                            <Image
+                              src={_IMG.crosscircle}
                               alt=""
                               loading="lazy"
                             />
                           ) : (
-                            <img
-                              src="/assets/images/checkcircle.svg"
+                            <Image
+                              src={_IMG.crosscircle}
                               alt=""
                               loading="lazy"
                             />

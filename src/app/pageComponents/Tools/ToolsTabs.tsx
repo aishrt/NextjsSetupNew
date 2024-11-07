@@ -4,6 +4,7 @@ import { removeHttp, removeSpace } from "@/utils/string-conversion";
 import { _TABS_HOME } from "@/constants/tabData";
 import { useSearchParams } from "next/navigation";
 import { Suspense } from "react";
+import Image from "next/image";
 
 const ToolsTabs = () => {
   const tabs = _TABS_HOME;
@@ -63,7 +64,7 @@ const ToolsTabs = () => {
                                 <div className="tabCard">
                                   <div>
                                     <span>
-                                      <img
+                                      <Image
                                         src={lookup.icon}
                                         alt={`Tools`}
                                         loading="lazy"

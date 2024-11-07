@@ -51,6 +51,7 @@ import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 import Head from "next/head";
 import LicenseWarningsCompo from "@/components/UI/LicenseWarningsCompo";
 import MainLoader from "@/components/Loaders/MainLoader";
+import Image from "next/image";
 const DnsTool = ({
   result,
   toolsId,
@@ -603,7 +604,7 @@ const DnsTool = ({
                                   favIcons="i"
                                 />
                                 {/* <span className="tooltipOuter">
-                              <img
+                              <Image
                                 src="/assets/images/infoIcon.svg"
                                 alt=""
                                 loading="lazy"
@@ -650,7 +651,7 @@ const DnsTool = ({
                                   favIcons="i"
                                 />
                                 {/* <span className="tooltipOuter">
-                              <img
+                              <Image
                                 src="/assets/images/infoIcon.svg"
                                 alt=""
                                 loading="lazy"
@@ -979,7 +980,8 @@ const DnsTool = ({
                                                               }}
                                                             >
                                                               {idx4 == 1 && (
-                                                                <img
+                                                                <Image
+                                                                  alt="Fav icons"
                                                                   className="favIconImage"
                                                                   loading="lazy"
                                                                   src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${val}&size=128`}

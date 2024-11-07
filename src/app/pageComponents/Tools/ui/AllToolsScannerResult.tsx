@@ -9,7 +9,11 @@ import CircularSpinner from "@/components/Loaders/CircularSpinner";
 import { isEmpty } from "@/utils/isEmpty";
 import { commonFetcherFn } from "@/@core/apiFetcher";
 import { API_ROUTES } from "@/@core/apiRoutes";
-const GaugeChartCompo = lazy(() => import("../../../../components/Charts/GaugeChartCompo"));
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
+const GaugeChartCompo = lazy(
+  () => import("../../../../components/Charts/GaugeChartCompo")
+);
 
 const BLACKLIST_CHECK_URL = process.env.NEXT_PUBLIC_BACKEND_BLACKLIST_CHECK_URL;
 const DKIM_CHECK_URL = process.env.NEXT_PUBLIC_DKIM_CHECK_URL;
@@ -684,8 +688,8 @@ const AllToolsScannerResult = ({
                         <div className="resultIssue warning">
                           <div className="LeftSection">
                             <span className="iconSection">
-                              <img
-                                src="/assets/images/warningIconWhite.svg"
+                              <Image
+                                src={_IMG.warningIconWhite}
                                 alt="warning"
                                 loading="lazy"
                               />
@@ -704,8 +708,8 @@ const AllToolsScannerResult = ({
                         <div className="resultIssue issue">
                           <div className="LeftSection">
                             <span className="iconSection">
-                              <img
-                                src="/assets/images/issueIconWhite.svg"
+                              <Image
+                                src={_IMG.issueIconWhite}
                                 alt="issyes"
                                 loading="lazy"
                               />
@@ -823,7 +827,7 @@ const AllToolsScannerResult = ({
                     ) : (
                       <>
                         Launch Setup Wizard
-                        <img src="/assets/images/right-arrowNew.svg" />
+                        <Image src={_IMG.right_arrowNew} alt="right_arrowNew" />
                       </>
                     )}
                   </button>
@@ -893,7 +897,10 @@ const AllToolsScannerResult = ({
                                                   title="Generate Record"
                                                   placement="top"
                                                 >
-                                                  <img src="/assets/images/record.svg" />
+                                                  <Image
+                                                    src={_IMG.record}
+                                                    alt="Records"
+                                                  />
                                                 </Tooltip>
                                               </Link>
                                             </div>
@@ -927,7 +934,10 @@ const AllToolsScannerResult = ({
                                                     title="Generate Record"
                                                     placement="top"
                                                   >
-                                                    <img src="assets/images/record.svg" />
+                                                    <Image
+                                                      src={_IMG.record}
+                                                      alt="Records"
+                                                    />
                                                   </Tooltip>
                                                 </>
                                               </Link>
@@ -1083,7 +1093,10 @@ const AllToolsScannerResult = ({
                                                         title="Generate Record"
                                                         placement="top"
                                                       >
-                                                        <img src="assets/images/record.svg" />
+                                                        <Image
+                                                          src={_IMG.record}
+                                                          alt="Records"
+                                                        />
                                                       </Tooltip>
                                                     </>
                                                   )}
@@ -1134,7 +1147,10 @@ const AllToolsScannerResult = ({
                                                           title="Check Details"
                                                           placement="top"
                                                         >
-                                                          <img src="assets/images/record.svg" />
+                                                          <Image
+                                                            src={_IMG.record}
+                                                            alt="Records"
+                                                          />
                                                         </Tooltip>
                                                       </>
                                                     ) : (
@@ -1143,7 +1159,10 @@ const AllToolsScannerResult = ({
                                                           title="Generate Record"
                                                           placement="top"
                                                         >
-                                                          <img src="assets/images/record.svg" />
+                                                          <Image
+                                                            src={_IMG.record}
+                                                            alt="Records"
+                                                          />
                                                         </Tooltip>
                                                       </>
                                                     )}

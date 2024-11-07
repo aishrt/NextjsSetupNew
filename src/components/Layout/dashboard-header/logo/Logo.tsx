@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { isEmpty } from "lodash";
 import { API_ROUTES } from "@/@core/apiRoutes";
 import { getFetcherWithAuth } from "@/@core/apiFetcher";
+import Image from "next/image";
+import { _IMG } from "@/constants/images";
 
 const LinkStyled = styled(Link)(() => ({
   height: "70px",
@@ -36,11 +38,11 @@ const Logo = () => {
 
   return (
     <LinkStyled href="/dashboard/dashboard">
-      <img
+      <Image
         loading="lazy"
         src={
           isEmpty(checkImage)
-            ? "/assets/images/logo-final-white.png"
+            ? `${_IMG.logo_final_white}`
             : `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${checkImage}`
         }
         alt="logo"

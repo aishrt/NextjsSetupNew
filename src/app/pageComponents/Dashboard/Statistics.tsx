@@ -14,6 +14,8 @@ import DateRangePicker from "@/components/Form/DateRangePicketMui";
 import { checkHistory } from "@/@core/helper";
 import UpgradeSubscription from "../Others/UpgradeSubscription";
 import UpgradePlanComponent from "../Others/UpgradePlanComponent";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 
 const Statistics = ({
   data,
@@ -42,13 +44,12 @@ const Statistics = ({
   const { setStoredDashboardUrl } = useStore();
   const [showUpgrade, setShowUpgrade] = useState(false);
   const [checkHistoryVal, setCheckHistory] = useState(false);
-  
+
   useEffect(() => {
     setStoredDashboardUrl(selectedDomain);
   }, [selectedDomain]);
 
   useEffect(() => {
-
     if (start_date) {
       setStartDate(dayjs(start_date));
     }
@@ -131,7 +132,6 @@ const Statistics = ({
     }, 0);
   };
 
-
   const handleChangeDomain = (event: any) => {
     setDomain(event?.domain);
     window.localStorage.setItem("dashboardUrl", event?.domain);
@@ -155,24 +155,33 @@ const Statistics = ({
   useEffect(() => {
     if (
       start_date &&
-      dayjs(start_date)?.isBefore(dayjs(historyDate?.startDate).format("YYYY-MM-DD"))
+      dayjs(start_date)?.isBefore(
+        dayjs(historyDate?.startDate).format("YYYY-MM-DD")
+      )
     ) {
       setShowUpgrade(true);
     } else {
       setShowUpgrade(false);
     }
   }, [start_date]);
-    const handleCloseUpgradePlan = () => {
-      setShowUpgrade(false);
-    };
-    console.log(start_date,dayjs(start_date)?.isBefore(dayjs(historyDate?.startDate).format("YYYY-MM-DD")),historyDate?.startDate,"++++++++")
+  const handleCloseUpgradePlan = () => {
+    setShowUpgrade(false);
+  };
+  console.log(
+    start_date,
+    dayjs(start_date)?.isBefore(
+      dayjs(historyDate?.startDate).format("YYYY-MM-DD")
+    ),
+    historyDate?.startDate,
+    "++++++++"
+  );
   return (
     <>
-      {showUpgrade && ( 
-         <UpgradePlanComponent
-         initialOpenModal={showUpgrade}
-         onClose={handleCloseUpgradePlan}
-       />
+      {showUpgrade && (
+        <UpgradePlanComponent
+          initialOpenModal={showUpgrade}
+          onClose={handleCloseUpgradePlan}
+        />
       )}
       <div className="dashboardTopCard pb-0">
         <div className="container-fluid">
@@ -296,11 +305,7 @@ const Statistics = ({
               <div className="cardInner compliants">
                 <div className="cardInnerContent">
                   <div className="cardIcon">
-                    <img
-                      alt={``}
-                      src="/assets/images/greenCheck.svg"
-                      loading="lazy"
-                    />
+                    <Image alt={``} src={_IMG.greenCheck} loading="lazy" />
                   </div>
                   <div className="cardText">
                     <h4>
@@ -367,7 +372,7 @@ const Statistics = ({
               <div className="cardInner failures">
                 <div className="cardInnerContent">
                   <div className="cardIcon">
-                    <img src="/assets/images/failureIcon.svg" loading="lazy" />
+                    <Image src={_IMG.failureIcon} alt="" loading="lazy" />
                   </div>
                   <div className="cardText">
                     <h4>
@@ -432,10 +437,10 @@ const Statistics = ({
               <div className="cardInner senders">
                 <div className="cardInnerContent">
                   <div className="cardIcon">
-                    <img
+                    <Image
                       className="imgBorder"
                       alt={``}
-                      src="/assets/images/sendEmail.svg"
+                      src={_IMG.sendEmail}
                       loading="lazy"
                     />
                   </div>

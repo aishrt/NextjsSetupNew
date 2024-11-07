@@ -1,3 +1,4 @@
+import { _IMG } from "@/constants/images";
 import { getStrapiMedia } from "./utils/api-helpers";
 import { postRenderer } from "./utils/post-renderer";
 import Image from "next/image";
@@ -47,8 +48,7 @@ export default function Post({ data }: { data: Article }) {
     <article>
       {imageUrl && (
         <Image
-          // src={imageUrl}
-          src="/assets/images/phishing5.png"
+          src={_IMG.phishing5}
           alt="article cover image"
           width={400}
           height={400}

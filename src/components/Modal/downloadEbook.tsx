@@ -8,6 +8,8 @@ import { toast } from "react-toastify";
 import { postFetcher } from "@/@core/apiFetcher";
 import ReCAPTCHA from "react-google-recaptcha";
 import { Button } from "@mui/material";
+import Image from "next/image";
+import { _IMG } from "@/constants/images";
 
 interface ModalEbookProps {
   isOpen: boolean;
@@ -216,8 +218,8 @@ const ModalEbook: React.FC<ModalEbookProps> = ({
               </form>
             </Grid>
             <Grid item sm={6} xs={12} className="ebookImage">
-              <img
-                src="/assets/images/magzineImg.svg"
+              <Image
+                src={_IMG.magzineImg}
                 alt=""
                 loading="eager"
                 fetchPriority="high"

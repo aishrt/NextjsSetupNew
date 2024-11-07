@@ -3,6 +3,8 @@ import React, { memo, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 import { fetchImage } from "@/@core/commonS3";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 const TopSources = ({
   domainValue,
   failure,
@@ -134,14 +136,14 @@ const TopSources = ({
                                 <div className="sourcesName">
                                   <span>
                                     {item?.source_logo ? (
-                                      <img
+                                      <Image
+                                        alt=""
                                         src={item?.source_logo}
-                                        // width={5}
-                                        // height={40}
                                         loading="lazy"
                                       />
                                     ) : (
-                                      <img
+                                      <Image
+                                        alt=""
                                         src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${item?.base_domain}&size=128`}
                                         loading="lazy"
                                       />
@@ -163,9 +165,9 @@ const TopSources = ({
                                   <a
                                     href={`/dashboard/source-dashboard/?policy_published_domain=${domain}&host_name=${item?.host_name}&org_name=${item?.org}&start_date=${start_date}&end_date=${end_date}&page=1&page_size=10`}
                                   >
-                                    <img
+                                    <Image
                                       alt=""
-                                      src="/assets/images/right-arrow.svg"
+                                      src={_IMG.right_arrow}
                                       className="give-pointer"
                                       title="View Details"
                                       loading="lazy"
@@ -175,9 +177,9 @@ const TopSources = ({
                                   <a
                                     href={`/dashboard/source-dashboard/?policy_published_domain=${domain}&host_name=${item?.host_name}&org_name=${item?.org}&page=1&page_size=10`}
                                   >
-                                    <img
+                                    <Image
                                       alt=""
-                                      src="/assets/images/right-arrow.svg"
+                                      src={_IMG.right_arrow}
                                       className="give-pointer"
                                       title="View Details"
                                       loading="lazy"
@@ -235,12 +237,14 @@ const TopSources = ({
                                   <div className="sourcesName">
                                     <span>
                                       {item?.source_logo ? (
-                                        <img
+                                        <Image
+                                          alt=""
                                           src={item?.source_logo}
                                           loading="lazy"
                                         />
                                       ) : (
-                                        <img
+                                        <Image
+                                          alt=""
                                           src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${item?.base_domain}&size=128`}
                                           loading="lazy"
                                         />
@@ -292,18 +296,14 @@ const TopSources = ({
                                         <span className="trendDisplaydata">
                                           <span>
                                             {item?.trend == "decrease" ? (
-                                              <img
-                                                src="/assets/images/trend-down-green.svg"
+                                              <Image
+                                                src={_IMG.trend_down_green}
                                                 alt="Web icon"
-                                                width="auto"
-                                                height="auto"
                                               />
                                             ) : item?.trend == "increase" ? (
-                                              <img
-                                                src="/assets/images/trend-up-red.svg"
+                                              <Image
+                                                src={_IMG.trend_up_red}
                                                 alt="Web icon"
-                                                width="auto"
-                                                height="auto"
                                               />
                                             ) : item?.trend ==
                                               "no change" ? null : null}
@@ -334,9 +334,9 @@ const TopSources = ({
                                       onClick={() => reloadPageData()}
                                       href={`/dashboard/source-dashboard/?policy_published_domain=${domain}&host_name=${item?.host_name}&org_name=${item?.source}&start_date=${start_date}&end_date=${end_date}&page=1&page_size=10`}
                                     >
-                                      <img
+                                      <Image
                                         alt=""
-                                        src="/assets/images/right-arrow.svg"
+                                        src={_IMG.right_arrow}
                                         className="give-pointer"
                                         title="View Details"
                                         loading="lazy"
@@ -347,9 +347,9 @@ const TopSources = ({
                                       onClick={() => reloadPageData()}
                                       href={`/dashboard/source-dashboard/?policy_published_domain=${domain}&host_name=${item?.host_name}&org_name=${item?.source}&page=1&page_size=10`}
                                     >
-                                      <img
+                                      <Image
                                         alt=""
-                                        src="/assets/images/right-arrow.svg"
+                                        src={_IMG.right_arrow}
                                         className="give-pointer"
                                         title="View Details"
                                         loading="lazy"
@@ -414,12 +414,14 @@ const TopSources = ({
                                     <div className="sourcesName">
                                       <span>
                                         {item?.source_logo ? (
-                                          <img
+                                          <Image
+                                            alt=""
                                             src={item?.source_logo}
                                             loading="lazy"
                                           />
                                         ) : (
-                                          <img
+                                          <Image
+                                            alt=""
                                             src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${item?.base_domain}&size=128`}
                                             loading="lazy"
                                           />
@@ -467,18 +469,14 @@ const TopSources = ({
                                           <span className="trendDisplaydata">
                                             <span>
                                               {item?.trend === "decrease" ? (
-                                                <img
+                                                <Image
                                                   src="/assets/images/trend-down.svg"
                                                   alt="Web icon"
-                                                  width="auto"
-                                                  height="auto"
                                                 />
                                               ) : item?.trend === "increase" ? (
-                                                <img
+                                                <Image
                                                   src="/assets/images/trend-up.svg"
                                                   alt="Web icon"
-                                                  width="auto"
-                                                  height="auto"
                                                 />
                                               ) : item?.trend ===
                                                 "no change" ? null : null}
@@ -509,9 +507,9 @@ const TopSources = ({
                                         onClick={() => reloadPageData()}
                                         href={`/dashboard/source-dashboard/?policy_published_domain=${domain}&host_name=${item?.host_name}&org_name=${item?.source}&start_date=${start_date}&end_date=${end_date}&page=1&page_size=10`}
                                       >
-                                        <img
+                                        <Image
                                           alt=""
-                                          src="/assets/images/right-arrow.svg"
+                                          src={_IMG.right_arrow}
                                           className="give-pointer"
                                           title="View Details"
                                           loading="lazy"
@@ -522,9 +520,9 @@ const TopSources = ({
                                         onClick={() => reloadPageData()}
                                         href={`/dashboard/source-dashboard/?policy_published_domain=${domain}&host_name=${item?.host_name}&org_name=${item?.source}&page=1&page_size=10`}
                                       >
-                                        <img
+                                        <Image
                                           alt=""
-                                          src="/assets/images/right-arrow.svg"
+                                          src={_IMG.right_arrow}
                                           className="give-pointer"
                                           title="View Details"
                                           loading="lazy"

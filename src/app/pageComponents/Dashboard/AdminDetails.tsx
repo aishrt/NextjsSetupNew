@@ -6,6 +6,8 @@ import { toast } from "react-toastify";
 import { API_ROUTES } from "@/@core/apiRoutes";
 import { isEmpty } from "lodash";
 import { ROLES } from "@/constants/roles";
+import Image from "next/image";
+import { _IMG } from "@/constants/images";
 
 const AdminDetails = ({ profileData }: any) => {
   const [activeTab, setActiveTab] = useState<string>("");
@@ -81,16 +83,16 @@ const AdminDetails = ({ profileData }: any) => {
           <div className="col-xl-12">
             <div className="form-group">
               <div className="uploadImage">
-                <img
+                <Image
                   src={
                     isEmpty(profileData?.preview)
-                      ? "/assets/images/profile.png"
+                      ? `${_IMG.profile}`
                       : `${profileData?.preview}`
                   }
                   alt="profile image"
                   loading="lazy"
                   onError={(e) => {
-                    e.currentTarget.src = "/assets/images/profile.png";
+                    e.currentTarget.src = `${_IMG.profile}`;
                   }}
                 />
                 <div className="image">

@@ -32,10 +32,15 @@ import { API_ROUTES } from "@/@core/apiRoutes";
 import { fetchImage } from "@/@core/commonS3";
 import UpgradeSubscription from "../Others/UpgradeSubscription";
 import { checkHistory } from "@/@core/helper";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 
-const DonutChart = dynamic(() => import("@/app/pageComponents/Dashboard/donutchart"), {
-  ssr: false,
-});
+const DonutChart = dynamic(
+  () => import("@/app/pageComponents/Dashboard/donutchart"),
+  {
+    ssr: false,
+  }
+);
 
 const Reporters = ({
   domain,
@@ -105,11 +110,7 @@ const Reporters = ({
         const promises = response?.results.map(
           async (item: any, index: number) => {
             if (item.source_logo) {
-              const logoUrl = await fetchImage(
-                item.source_logo,
-                null,
-                ""
-              );
+              const logoUrl = await fetchImage(item.source_logo, null, "");
               return {
                 ...item,
                 source_logo: logoUrl,
@@ -185,17 +186,17 @@ const Reporters = ({
         } `}
       >
         {check1 == 0 ? null : check2 == "increase" ? (
-          <img
-            src="/assets/images/trend-up.svg"
+          <Image
+            src={_IMG.trend_up}
             alt="Web icon"
             loading="lazy"
-            width="20px"
+            width={20}
           />
         ) : check2 == "decrease" ? (
-          <img
-            src="/assets/images/trend-down.svg"
+          <Image
+            src={_IMG.trend_down}
             alt="Web icon"
-            width="20px"
+            width={20}
             loading="lazy"
           />
         ) : check2 == "no change" ? null : null}
@@ -322,14 +323,14 @@ const Reporters = ({
                               <StyledTableRow key={`row_idx${idx}`}>
                                 <StyledTableCell>
                                   {item?.source_logo ? (
-                                    <img
+                                    <Image
+                                      alt=""
                                       src={item?.source_logo}
-                                      // width={5}
-                                      // height={40}
                                       loading="lazy"
                                     />
                                   ) : (
-                                    <img
+                                    <Image
+                                      alt=""
                                       className="favIconImage"
                                       loading="lazy"
                                       src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${item?.reporter}&size=128`}

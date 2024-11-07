@@ -22,6 +22,8 @@ import { PAGINATION_OBJECT } from "@/constants/pagination";
 import { TablePaginationCompo } from "@/components/Table-ui/TablePaginationCompo";
 import TableRowsLoader from "@/components/Table-ui/TableRowsLoader";
 import { useRouter } from "next/navigation";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 
 const CompliantDetails = ({ props }: { props: any }) => {
   const router = useRouter();
@@ -44,14 +46,14 @@ const CompliantDetails = ({ props }: { props: any }) => {
   };
   const handleCommonFunction = (domain: any) => {
     return domain == "fail" || domain == "Fail" ? (
-      <img
+      <Image
         style={{ width: "28px" }}
-        src="/assets/images/Critical.svg"
+        src={_IMG.Critical}
         alt=""
         loading="lazy"
       />
     ) : (
-      <img src="/assets/images/checkarrowFilled.svg" alt="" loading="lazy" />
+      <Image src={_IMG.checkarrowFilled} alt="" loading="lazy" />
     );
   };
   useEffect(() => {
@@ -71,8 +73,8 @@ const CompliantDetails = ({ props }: { props: any }) => {
   const handleCompliantDashboard = () => {
     let queryObject = {
       policy_published_domain: props?.header_from,
-      row_source_ip:props?.ip_address,
-      ...(props?.startDate  && props?.startDate !== "undefined"
+      row_source_ip: props?.ip_address,
+      ...(props?.startDate && props?.startDate !== "undefined"
         ? { start_date: dayjs(props?.startDate).format("YYYY-MM-DD") }
         : {}),
       ...(props?.endDate && props?.endDate !== "undefined"
@@ -222,13 +224,13 @@ const CompliantDetails = ({ props }: { props: any }) => {
                             </StyledTableCell>
                             <StyledTableCell style={{ cursor: "pointer" }}>
                               {props?.startDate !== "undefined" &&
-                              props?.endDate !== "undefined"  ? (
+                              props?.endDate !== "undefined" ? (
                                 <a
                                   href={`/dashboard/source-result/?policy_published_domain=${props?.header_from}&base_domain=${props?.base_domain}&row_source_ip=${props?.ip_address}&dmarc_report_detail_id=${item?.id}&start_date=${props?.startDate}&end_date=${props?.endDate}`}
                                 >
-                                  <img
+                                  <Image
                                     alt={``}
-                                    src="/assets/images/right-arrow.svg"
+                                    src={_IMG.right_arrow}
                                     title="View Details"
                                     loading="lazy"
                                   />
@@ -237,9 +239,9 @@ const CompliantDetails = ({ props }: { props: any }) => {
                                 <a
                                   href={`/dashboard/source-result/?policy_published_domain=${props?.header_from}&base_domain=${props?.base_domain}&row_source_ip=${props?.ip_address}&dmarc_report_detail_id=${item?.id}`}
                                 >
-                                  <img
+                                  <Image
                                     alt={``}
-                                    src="/assets/images/right-arrow.svg"
+                                    src={_IMG.right_arrow}
                                     title="View Details"
                                     loading="lazy"
                                   />

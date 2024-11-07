@@ -3,33 +3,39 @@ import Link from "next/link";
 import { Typewriter } from "react-simple-typewriter";
 import TimerCountdown from "@/components/UI/TimerCountdown";
 import HeaderNavigation from "./HeaderNavigation";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 
 const Header = () => {
   return (
     <>
       <div className="header animate__fadeInUp">
         <span className="heroDotted">
-          <img
-            src="/assets/images/shapeDotted.svg"
+          <Image
+            src={_IMG.shapeDotted}
             alt="Shape dotted used for design."
-            width="auto" height="auto" loading="lazy"
+            loading="lazy"
           />
         </span>
         <span className="heroDotted2">
-          <img
-            src="/assets/images/shapeDotted.svg"
+          <Image
+            src={_IMG.shapeDotted}
             alt="Shape dotted used for design."
-            width="auto" height="auto" loading="lazy"
+            loading="lazy"
           />
         </span>
         <span className="vector">
-          <img src="/assets/images/logo-vector.svg" width="auto" height="auto" alt="logo-vector" loading="lazy"/>
+          <Image
+            src={_IMG.logo_vector}
+            alt="logo-vector"
+            loading="lazy"
+          />
         </span>
         <span className="vector-left">
-          <img src="/assets/images/Ellipse4.png" alt="decorative-vector" loading="lazy"/>
+          <Image src={_IMG.Ellipse4} alt="decorative-vector" loading="lazy" />
         </span>
         <span className="vector-right">
-          <img src="/assets/images/Ellipse3.png" alt="decorative-vector" loading="lazy"/>
+          <Image src={_IMG.Ellipse3} alt="decorative-vector" loading="lazy" />
         </span>
         <HeaderNavigation />
         <div className="hero-section">

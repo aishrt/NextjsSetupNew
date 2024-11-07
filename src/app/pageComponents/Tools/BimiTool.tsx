@@ -28,6 +28,8 @@ import MainLoader from "@/components/Loaders/MainLoader";
 import LicenseWarningsCompo from "@/components/UI/LicenseWarningsCompo";
 import ToolsUi from "@/app/pageComponents/Tools/ToolsUi";
 import CopyToClipboard from "@/components/Functions/CopyToClipboard";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 
 const BimiTool = ({
   result,
@@ -40,12 +42,11 @@ const BimiTool = ({
   const router = useRouter();
   const { data: session, status } = useSession();
   const domain: string | string[] | undefined =
-  removeHttp(searchParams?.domain as string) || "";
+    removeHttp(searchParams?.domain as string) || "";
 
-if (!isEmpty(lookupData)) {
-  scrollIntoView(`${toolName}_resultSection`, 0);
-}
-
+  if (!isEmpty(lookupData)) {
+    scrollIntoView(`${toolName}_resultSection`, 0);
+  }
 
   const [generatorData, setGeneratorData] = useState({} as any);
   const [vmcErrors, setVMCErrors] = useState([] as any);
@@ -61,7 +62,6 @@ if (!isEmpty(lookupData)) {
   const [isLoading, setIsLoading] = useState(false);
   const [isLoadingGenerator, setIsLoadingGenerator] = useState(false);
 
- 
   useEffect(() => {
     if (!isEmpty(lookupData)) {
       if (lookupData?.status == false) {
@@ -528,12 +528,14 @@ if (!isEmpty(lookupData)) {
                               <div className="col-lg-8">
                                 <div className="devicePreview__Left">
                                   <div className="devicePreview__Img">
-                                    <img
-                                      src="/assets/images/bimi-desktop-bg.png"
+                                    <Image
+                                      src={_IMG.bimi_desktop_bg}
                                       loading="lazy"
+                                      alt="bimi_desktop_bg"
                                     />
                                     <div className="leftContent">
-                                      <img
+                                      <Image
+                                        alt="Logo detail"
                                         src={lookupData?.data?.logo_detail?.url}
                                         loading="lazy"
                                       />
@@ -547,14 +549,16 @@ if (!isEmpty(lookupData)) {
                               <div className="col-lg-4">
                                 <div className="devicePreview__Right">
                                   <div className="devicePreview__Img">
-                                    <img
-                                      src="/assets/images/bimi-mobile-bg.png"
+                                    <Image
+                                      src={_IMG.bimi_mobile_bg}
                                       loading="lazy"
+                                      alt="Bimi Logo"
                                     />
                                     <div className="rightImg">
-                                      <img
+                                      <Image
                                         src={lookupData?.data?.logo_detail?.url}
                                         loading="lazy"
+                                        alt="Logo"
                                       />
                                     </div>
                                     <div className="rightContent">
@@ -661,9 +665,10 @@ if (!isEmpty(lookupData)) {
                               <div className="col-lg-2">
                                 <div className="logo">
                                   <span>
-                                    <img
+                                    <Image
                                       src={logoData.data?.logo_detail?.url}
                                       loading="lazy"
+                                      alt="logo Det"
                                     />
                                   </span>
                                 </div>
@@ -742,9 +747,10 @@ if (!isEmpty(lookupData)) {
                                 <div className="col-lg-2">
                                   <div className="logo">
                                     <span>
-                                      <img
+                                      <Image
                                         src={logoData?.data?.logo_detail?.url}
                                         loading="lazy"
+                                        alt="llogo"
                                       />
                                     </span>
                                   </div>
@@ -824,9 +830,7 @@ if (!isEmpty(lookupData)) {
                 )}
 
               {toolType === _TOOL_TYPES.LOOKUP && !lookupError && (
-                <AllToolsScannerResult
-                  domain={domain}
-                />
+                <AllToolsScannerResult domain={domain} />
               )}
               {isWindow && (
                 <ToolsUi toolName={`${toolName + "_" + toolType}`} />

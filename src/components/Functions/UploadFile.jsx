@@ -1,7 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { _IMG } from "@/shared/constants/images";
-import {getVideoCover, isImage, isVideo} from "@/shared/functions/file-conversion.js";
-import {crossButtonStyle} from "@/shared/constants/styles.js";
+import {
+  getVideoCover,
+  isImage,
+  isVideo,
+} from "@/shared/functions/file-conversion.js";
+import { crossButtonStyle } from "@/shared/constants/styles.js";
+import Image from "next/image";
 
 const fileFormatImage = _IMG.dummyImg;
 
@@ -17,7 +22,7 @@ const UploadFile = ({
   backgroundColor = "transparent",
   initialFileData = null,
   onFileUpload,
-  name=""
+  name = "",
 }) => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(initialFileData);
@@ -42,7 +47,7 @@ const UploadFile = ({
   useEffect(() => {
     if (initialFileData) {
       setPreviewUrl(initialFileData);
-      const [fullPath] = initialFileData.split('?');
+      const [fullPath] = initialFileData.split("?");
       setFileName(fullPath.split("/").pop()); // Extract filename from URL
     }
   }, [initialFileData]);
@@ -134,16 +139,21 @@ const UploadFile = ({
 
   const renderPreview = () => {
     // Render image preview
-    if (previewUrl && (isImage(selectedFile?.name || "") || isImage(previewUrl))) {
+    if (
+      previewUrl &&
+      (isImage(selectedFile?.name || "") || isImage(previewUrl))
+    ) {
       return (
         <div style={{ position: "relative", width: `${width}px` }}>
-          <img
+          <Image
             src={previewUrl}
             alt="Selected"
             style={mediaStyle}
             onClick={handleClick}
           />
-          <button style={crossButtonStyle} onClick={clearFile}>×</button>
+          <button style={crossButtonStyle} onClick={clearFile}>
+            ×
+          </button>
         </div>
       );
     }
@@ -165,7 +175,7 @@ const UploadFile = ({
     else if (fileName) {
       return (
         <div style={{ position: "relative", width: `${width}px` }}>
-          <img
+          <Image
             src={previewUrl ? previewUrl : fileFormatImage}
             alt="File"
             style={mediaStyle}
@@ -241,5 +251,3 @@ const UploadFile = ({
 };
 
 export default UploadFile;
-
-

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { getStrapiMedia } from "./utils/api-helpers";
+import { _IMG } from "@/constants/images";
 
 interface Article {
   id: 4;
@@ -88,14 +89,14 @@ export default function PostList({
                           width="250"
                           height="250"
                           className="rounded-md mb-4 blogpostImage"
-                          src="/assets/images/phishing5.png"
+                          src={_IMG.phishing5}
                         />
                       ) : (
                         <Image
                           alt="Your Dmarc Blog Image"
                           width="250"
                           height="250"
-                          src="/assets/images/phishing5.png"
+                          src={_IMG.phishing5}
                           className="rounded-md mb-4 blogpostImage"
                         />
                       )}

@@ -52,6 +52,8 @@ import LicenseWarningsCompo from "@/components/UI/LicenseWarningsCompo";
 import Scrollbar from "@/components/Layout/scrollbar/Scrollbar";
 import TableToolbar from "@/components/Table-ui/TableToolbar";
 import { BorderLinearProgress } from "@/components/UI/LineProgress";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 const AccountDashboardComponent = ({
   // resData,
   page,
@@ -279,10 +281,10 @@ const AccountDashboardComponent = ({
                       <div className="cardInner compliants" title="Source">
                         <div className="cardInnerContent">
                           <div className="cardIcon">
-                            <img
+                            <Image
                               className="imgBorder"
                               alt={``}
-                              src="/assets/images/complaint.svg"
+                              src={_IMG.complaint}
                               loading="lazy"
                             />
                           </div>
@@ -406,7 +408,8 @@ const AccountDashboardComponent = ({
                                           <tr key={index}>
                                             <td>
                                               {item ? null : (
-                                                <img
+                                                <Image
+                                                  alt="Image"
                                                   className="favIconImage"
                                                   loading="lazy"
                                                   src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${item?.domain}&size=128`}
@@ -440,9 +443,9 @@ const AccountDashboardComponent = ({
                                                   historyDate?.endDate
                                                 ).format("YYYY-MM-DD")}`}
                                               >
-                                                <img
+                                                <Image
                                                   alt={``}
-                                                  src="/assets/images/right-arrow.svg"
+                                                  src={_IMG.right_arrow}
                                                   title="View Details"
                                                   loading="lazy"
                                                 />
@@ -508,7 +511,8 @@ const AccountDashboardComponent = ({
                                         return (
                                           <tr key={index}>
                                             <td>
-                                              <img
+                                              <Image
+                                                alt="Fav icon"
                                                 className="favIconImage"
                                                 loading="lazy"
                                                 src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${item?.domain}&size=128`}
@@ -569,9 +573,9 @@ const AccountDashboardComponent = ({
                                                   historyDate?.endDate
                                                 ).format("YYYY-MM-DD")}`}
                                               >
-                                                <img
+                                                <Image
                                                   alt={``}
-                                                  src="/assets/images/right-arrow.svg"
+                                                  src={_IMG.right_arrow}
                                                   title="View Details"
                                                   loading="lazy"
                                                 />
@@ -636,7 +640,8 @@ const AccountDashboardComponent = ({
                                       return (
                                         <tr key={index}>
                                           <td>
-                                            <img
+                                            <Image
+                                              alt="New icon"
                                               className="favIconImage"
                                               loading="lazy"
                                               src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${item?.domain}&size=128`}
@@ -702,9 +707,9 @@ const AccountDashboardComponent = ({
                                                   historyDate?.endDate
                                                 ).format("YYYY-MM-DD")}`}
                                               >
-                                                <img
+                                                <Image
                                                   alt={``}
-                                                  src="/assets/images/right-arrow.svg"
+                                                  src={_IMG.right_arrow}
                                                   title="View Details"
                                                   loading="lazy"
                                                 />
@@ -758,20 +763,20 @@ const AccountDashboardComponent = ({
                                   <StyledTableCell>
                                     {" "}
                                     {item?.source_logo ? (
-                                      <img
+                                      <Image
+                                        alt="Source Logo"
                                         src={item?.source_logo}
-                                        // width={5}
-                                        // height={40}
                                         loading="lazy"
                                       />
                                     ) : (
-                                      <img
+                                      <Image
+                                        alt="Source Logo"
                                         className="favIconImage"
                                         loading="lazy"
                                         src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${item?.domain}&size=128`}
                                       />
                                     )}
-                                    {/* <img
+                                    {/* <Image
                                       className="favIconImage"
                                       loading="lazy"
                                       src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${item?.domain}&size=128`}

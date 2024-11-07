@@ -26,6 +26,7 @@ import { Button } from "@mui/material";
 import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 import Ipmodal from "@/components/Modal/ipModal";
 import ToolsUi from "@/app/pageComponents/Tools/ToolsUi";
+import Image from "next/image";
 
 const BlacklistTool = ({
   result,
@@ -41,10 +42,10 @@ const BlacklistTool = ({
   const router = useRouter();
   const { data: session, status } = useSession();
   const domain: string | string[] | undefined =
-  removeHttp(searchParams?.domain as string) || "";
-if (!isEmpty(lookupData)) {
-  scrollIntoView(`${toolName}_resultSection`, 0);
-}
+    removeHttp(searchParams?.domain as string) || "";
+  if (!isEmpty(lookupData)) {
+    scrollIntoView(`${toolName}_resultSection`, 0);
+  }
 
   const [lookupError, setLookupError] = useState(false);
   const [invalidDomainError, setInvalidDomainError] = useState(false);
@@ -55,7 +56,6 @@ if (!isEmpty(lookupData)) {
   const targetSectionRef = useRef<HTMLDivElement>(null);
   const [isWindow, setIsWindow] = useState(true);
 
-
   useEffect(() => {
     if (!isEmpty(lookupData)) {
       if (lookupData?.status == false) {
@@ -65,9 +65,6 @@ if (!isEmpty(lookupData)) {
     }
     setInvalidDomainError(false);
   }, [lookupData]);
-
- 
-
 
   useEffect(() => {
     if (searchState && targetSectionRef.current) {
@@ -416,11 +413,10 @@ if (!isEmpty(lookupData)) {
                                       return (
                                         <tr key={`table_tr_${idx3}`}>
                                           <td>
-                                            <img
+                                            <Image
+                                              alt="favicon"
                                               className="favIconImage"
                                               loading="lazy"
-                                              width="auto"
-                                              height="auto"
                                               src={`https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${inputDomain}&size=128`}
                                             />
                                             {inputDomain}
@@ -484,13 +480,7 @@ if (!isEmpty(lookupData)) {
               </div>
 
               {toolName === ToolNames.IP ? null : (
-                <>
-                  {!lookupError && (
-                    <AllToolsScannerResult
-                      domain={domain}
-                    />
-                  )}
-                </>
+                <>{!lookupError && <AllToolsScannerResult domain={domain} />}</>
               )}
               {isWindow ? (
                 <ToolsUi

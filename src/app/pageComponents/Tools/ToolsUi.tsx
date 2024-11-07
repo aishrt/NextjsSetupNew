@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { toolsData } from "@/constants/toolsData";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 
 type ToolProps = {
   toolName: string;
@@ -33,13 +35,7 @@ const ToolsUi = ({ toolName }: ToolProps) => {
               </div>
             </div>
             <div className="col-lg-6">
-              <img
-                src="/assets/images/reportingImage2.svg"
-                alt=""
-                className="img-fluid"
-                height="auto"
-                width="auto"
-              />
+              <Image src={_IMG.reportingImage2} alt="" className="img-fluid" />
             </div>
           </div>
         </div>
@@ -65,11 +61,7 @@ const ToolsUi = ({ toolName }: ToolProps) => {
               {features.map((feature, index) => (
                 <div className="col-xl-3 col-lg-6" key={index}>
                   <div className={`featureSection ${featureColour[index]}`}>
-                    <img
-                      src="/assets/images/roundCheck.webp"
-                      alt=""
-                      loading="lazy"
-                    />
+                    <Image src={_IMG.roundCheck} alt="" loading="lazy" />
                     <h6>{feature.split(":")[0]}</h6>
                     <p
                       dangerouslySetInnerHTML={{
@@ -132,7 +124,7 @@ const ToolsUi = ({ toolName }: ToolProps) => {
             {benefits.map((benefit, index) => (
               <div className="col-lg-6" key={index}>
                 <div className="innerSection">
-                  <img src="/assets/images/sectool.svg" alt="" loading="lazy" />
+                  <Image src={_IMG.sectool} alt="" loading="lazy" />
                   <div>
                     <h4>{benefit.split(":")[0]}</h4>
                     <p

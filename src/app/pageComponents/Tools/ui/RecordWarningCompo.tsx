@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { isEmpty } from "@/utils/isEmpty";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 
 type Props = {
   warningText: string | string[];
@@ -21,11 +23,7 @@ const RecordWarningCompo = ({ warningText, isError }: Props) => {
           isError ? "errorAlerts__Content" : "warningAlerts__Content"
         } align-items-start`}
       >
-        <img
-          src="/assets/images/warningIcon.svg"
-          alt="logo-vector"
-          loading="lazy"
-        />
+        <Image src={_IMG.warningIcon} alt="logo-vector" loading="lazy" />
         <div className="warningBox2">
           <h4>
             {!isString && warningText.length > 1 && warningText.length}
@@ -45,16 +43,16 @@ const RecordWarningCompo = ({ warningText, isError }: Props) => {
         </div>
       </div>
       {!isError ? (
-        <img
+        <Image
           className="crossIcon"
-          src="/assets/images/warningCross.svg"
+          src={_IMG.warningCross}
           alt="logo-vector"
           onClick={handleClose}
           loading="lazy"
         />
       ) : (
         ""
-      )} 
+      )}
     </div>
   ) : (
     <></>

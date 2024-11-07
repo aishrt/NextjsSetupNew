@@ -46,6 +46,8 @@ import { isEmpty } from "@/utils/isEmpty";
 import CircularSpinner from "@/components/Loaders/CircularSpinner";
 import { checkHistory } from "@/@core/helper";
 import UpgradeSubscription from "../Others/UpgradeSubscription";
+import { _IMG } from "@/constants/images";
+import Image from "next/image";
 
 const TlsReportPage = ({
   domain,
@@ -518,9 +520,9 @@ const TlsReportPage = ({
                                             );
                                           }}
                                         >
-                                          <img
+                                          <Image
                                             alt={``}
-                                            src="/assets/images/right-arrow.svg"
+                                            src={_IMG.right_arrow}
                                             title="View Details"
                                             loading="lazy"
                                           />

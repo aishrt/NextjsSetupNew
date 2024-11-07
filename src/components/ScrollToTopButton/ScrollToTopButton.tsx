@@ -1,6 +1,8 @@
-"use client"
-import { useState, useEffect } from 'react';
-import styles from './scrollToTopButton.module.css'; // You can create a CSS module for styling
+"use client";
+import { useState, useEffect } from "react";
+import styles from "./scrollToTopButton.module.css"; // You can create a CSS module for styling
+import Image from "next/image";
+import { _IMG } from "@/constants/images";
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -17,30 +19,37 @@ const ScrollToTopButton = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     // Cleanup the event listener when the component is unmounted
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
 
   return (
-    <div className={`sectionTop ${styles.scrollToTopButton} ${isVisible ? styles.visible : ''}`}
-         onClick={scrollToTop}
+    <div
+      className={`sectionTop ${styles.scrollToTopButton} ${
+        isVisible ? styles.visible : ""
+      }`}
+      onClick={scrollToTop}
     >
       <span>
-        <img src="/assets/images/arrowUpIcon.svg" loading="lazy" alt="Arrow-up icon jumps to the top of the site." width="auto" height="auto" />
+        <Image
+          src={_IMG.arrowUpIcon}
+          loading="lazy"
+          alt="Arrow-up icon jumps to the top of the site."
+        />
       </span>
     </div>
-  )
+  );
 };
 
 export default ScrollToTopButton;

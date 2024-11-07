@@ -6,6 +6,8 @@ import DnsIcon from "@mui/icons-material/Dns";
 import MailLockIcon from "@mui/icons-material/MailLock";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 import UnsubscribeIcon from "@mui/icons-material/Unsubscribe";
+import Image from "next/image";
+import { _IMG } from "@/constants/images";
 
 const Navbar = () => {
   let router = useRouter();
@@ -20,8 +22,8 @@ const Navbar = () => {
             }}
           >
             <Link className="navbar-brand navbarLogo" href="/blogs">
-              <img
-                src="/assets/images/logo-final-blue.svg"
+              <Image
+                src={_IMG.logo_final_blue}
                 alt="logo"
                 width="auto"
                 height="auto"
@@ -467,9 +469,9 @@ const Navbar = () => {
                         <span className="d-flex gap-2 align-items-center mb-3">
                           <span className="iconBorder">
                             {/* <DnsIcon className='text-[#eb5454]'/> */}
-                            <img
-                              src="/assets/images/business.svg"
-                              alt=""
+                            <Image
+                              src={_IMG.business}
+                              alt="Business"
                               loading="lazy"
                             />
                           </span>
@@ -515,11 +517,7 @@ const Navbar = () => {
                         <span className="d-flex gap-2 align-items-center mb-3">
                           <span className="iconBorder">
                             {/* <DnsIcon className='text-[#eb5454]'/> */}
-                            <img
-                              src="/assets/images/industry.svg"
-                              alt=""
-                              loading="lazy"
-                            />
+                            <Image src={_IMG.industry} alt="industry" loading="lazy" />
                           </span>
                           <h3 className="text-[17px] text-[#0f2138]">
                             By Industries

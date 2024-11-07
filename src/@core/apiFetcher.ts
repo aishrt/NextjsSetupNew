@@ -4,8 +4,10 @@ import { signOut } from "next-auth/react";
 import { API_ROUTES } from "@/@core/apiRoutes";
 import { trim } from "lodash-es";
 import { toast } from "react-toastify";
+import { _ENV_VARIABLES } from "@/constants/envVariables";
 
-
+const backend_Url = _ENV_VARIABLES.NEXT_PUBLIC_BACKEND_API_URL;
+const backend_Url_lamda = _ENV_VARIABLES.NEXT_PUBLIC_BACKEND_API_URL_AWS_LAMBDA;
 
 export const isTokenExpired = async (token: string) => {
   const base64Url = token?.split(".")[1];
@@ -45,14 +47,11 @@ export const getFetcherWithAuth = async (
     headers["Authorization"] = `Bearer ${users.token}`;
   }
   try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${url}`,
-      {
-        method: "GET",
-        headers,
-        next: { revalidate: 0 },
-      }
-    );
+    const res = await fetch(`${backend_Url}${url}`, {
+      method: "GET",
+      headers,
+      next: { revalidate: 0 },
+    });
     if (!res.ok) {
       const resData = await res.json();
       console.log("Fetch error:", resData?.error);
@@ -77,10 +76,9 @@ export const getLicenseData = async (checkToken?: boolean) => {
 
 export const getFetcher = async (url: string) => {
   try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${url}`,
-      { next: { revalidate: 0 } }
-    );
+    const res = await fetch(`${backend_Url}${url}`, {
+      next: { revalidate: 0 },
+    });
     return await generateResponse(res);
   } catch (e) {
     return {};
@@ -117,9 +115,7 @@ export const commonFetcherFn = async (
 
   try {
     const isHttp = url.startsWith("http://") || url.startsWith("https://");
-    const baseUrl = isLambda
-      ? process.env.NEXT_PUBLIC_BACKEND_API_URL_AWS_LAMBDA
-      : process.env.NEXT_PUBLIC_BACKEND_API_URL;
+    const baseUrl = isLambda ? backend_Url_lamda : backend_Url;
     const res = await fetch(isHttp ? url : `${baseUrl}${url}`, {
       method,
       ...(!isEmpty(headers) && { headers }),
@@ -151,16 +147,13 @@ export const showAllDomain = async () => {
   if (!isEmpty(users) && !isEmpty(users.token)) {
     headers["Authorization"] = `Bearer ${users.token}`;
   }
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${API_ROUTES.LIST_ALL_DOMAINS}`,
-    {
-      method: "GET",
-      headers,
-      next: {
-        revalidate: 0,
-      },
-    }
-  );
+  const res = await fetch(`${backend_Url}${API_ROUTES.LIST_ALL_DOMAINS}`, {
+    method: "GET",
+    headers,
+    next: {
+      revalidate: 0,
+    },
+  });
   let resData = await res.json();
   return resData;
 };
@@ -176,7 +169,7 @@ export const putFormFetcher = async (
     Accept: "application/json";
     headers["Authorization"] = `Bearer ${user.token}`;
   }
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}${url}`, {
+  const res = await fetch(`${backend_Url}${url}`, {
     method: "PUT",
     headers,
     body: formData,
@@ -214,7 +207,7 @@ export const putFetcher = async (
   if (!isEmpty(user) && !isEmpty(user.token)) {
     headers["Authorization"] = `Bearer ${user.token}`;
   }
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}${url}`, {
+  const res = await fetch(`${backend_Url}${url}`, {
     method: "PUT",
     headers,
     body: JSON.stringify(postData),
@@ -250,7 +243,7 @@ export const postFetcher = async (
   if (!isEmpty(user) && !isEmpty(user.token)) {
     headers["Authorization"] = `Bearer ${user.token}`;
   }
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}${url}`, {
+  const res = await fetch(`${backend_Url}${url}`, {
     method: "POST",
     headers,
     body: JSON.stringify(postData),
@@ -293,7 +286,7 @@ export const postFetcherFormData = async (
     headers["Authorization"] = `Bearer ${user.token}`;
   }
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}${url}`, {
+  const res = await fetch(`${backend_Url}${url}`, {
     method: "POST",
     headers,
     body: postData,
@@ -331,7 +324,7 @@ export const postFetcherLambda = async (
   let apiMsg;
   let apiError;
   try {
-    const workingUrl = `${process.env.NEXT_PUBLIC_BACKEND_API_URL_AWS_LAMBDA}${url}`;
+    const workingUrl = `${backend_Url_lamda}${url}`;
 
     const myJson = JSON.stringify(postData);
 
@@ -374,7 +367,7 @@ export const deleteFetcher = async (
   if (!isEmpty(user) && !isEmpty(user.token)) {
     headers["Authorization"] = `Bearer ${user.token}`;
   }
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}${url}`, {
+  const res = await fetch(`${backend_Url}${url}`, {
     method: "DELETE",
     headers,
     next: {
@@ -430,7 +423,7 @@ export const fetchSourceDetails = async (
       revalidate: 0,
     },
   };
-  let url = `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${API_ROUTES.SOURCE_DETAILS_LIST}?policy_published_domain=${domain}&org_name=${org_name}&page=${page}&page_size=${pageSize}&detail_type=${filterDetails}`;
+  let url = `${backend_Url}${API_ROUTES.SOURCE_DETAILS_LIST}?policy_published_domain=${domain}&org_name=${org_name}&page=${page}&page_size=${pageSize}&detail_type=${filterDetails}`;
   if (startDate !== "undefined" && endDate !== "undefined") {
     url = url.concat(`&start_date=${startDate}&end_date=${endDate}`);
   } else if (startDate !== "undefined") {
@@ -475,7 +468,7 @@ export const fetchDetailList = async (
         revalidate: 0,
       },
     };
-    let url = `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${API_ROUTES.DETAIL_REPORT_LIST}?policy_published_domain=${domain}&search_query=${searchDetails}&page_size=${pageSize}&page=${page}&detail_type=${filterDetails}`;
+    let url = `${backend_Url}${API_ROUTES.DETAIL_REPORT_LIST}?policy_published_domain=${domain}&search_query=${searchDetails}&page_size=${pageSize}&page=${page}&detail_type=${filterDetails}`;
     if (startDate !== "undefined" && endDate !== "undefined") {
       url = url.concat(`&start_date=${startDate}&end_date=${endDate}`);
     } else if (startDate !== "undefined") {
@@ -523,7 +516,7 @@ export const fetchSourceDetailsGeoList = async (
       revalidate: 0,
     },
   };
-  let url = `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${API_ROUTES.SOURCE_GEO_DETAILS_LIST}?policy_published_domain=${domain}&org_name=${org_name}&detail_type=${filterDetails}`;
+  let url = `${backend_Url}${API_ROUTES.SOURCE_GEO_DETAILS_LIST}?policy_published_domain=${domain}&org_name=${org_name}&detail_type=${filterDetails}`;
   if (startDate !== "undefined" && endDate !== "undefined") {
     url = url.concat(`&start_date=${startDate}&end_date=${endDate}`);
   } else if (startDate !== "undefined") {
@@ -561,7 +554,7 @@ export const fetchIpDetails = async (ip_address: any) => {
     },
   };
   let response = await fetch(
-    `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${API_ROUTES.GEO_LOOKUP_BY_IP}?ip_address=${ip_address}`,
+    `${backend_Url}${API_ROUTES.GEO_LOOKUP_BY_IP}?ip_address=${ip_address}`,
     headerAuthentication
   );
   const data = await response.json();
@@ -614,16 +607,13 @@ export const reportsDetailsApi = async (
   } else if (searchDetails !== "") {
     url = `${API_ROUTES.REPORTER_DETAIL_LIST}?policy_published_domain=${domain}&page_size=${pageSize}&page=${page}&search_query=${searchDetails}`;
   }
-  let response = await fetch(
-    `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${url}`,
-    {
-      method: "GET",
-      headers,
-      next: {
-        revalidate: 0,
-      },
-    }
-  );
+  let response = await fetch(`${backend_Url}${url}`, {
+    method: "GET",
+    headers,
+    next: {
+      revalidate: 0,
+    },
+  });
   const data = await response.json();
   return data;
 };
@@ -657,16 +647,13 @@ export const getPieApi = async (
   } else {
     url = `${API_ROUTES.REPORTER_PIE_CHART}?policy_published_domain=${domain}`;
   }
-  let response = await fetch(
-    `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${url}`,
-    {
-      method: "GET",
-      headers,
-      next: {
-        revalidate: 0,
-      },
-    }
-  );
+  let response = await fetch(`${backend_Url}${url}`, {
+    method: "GET",
+    headers,
+    next: {
+      revalidate: 0,
+    },
+  });
   const data = await response.json();
 
   return data;
@@ -688,16 +675,13 @@ export const getAlertsApi = async () => {
     headers["Authorization"] = `Bearer ${users.token}`;
   }
 
-  let response = await fetch(
-    `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${API_ROUTES.GET_ALERTS}`,
-    {
-      method: "GET",
-      headers,
-      next: {
-        revalidate: 0,
-      },
-    }
-  );
+  let response = await fetch(`${backend_Url}${API_ROUTES.GET_ALERTS}`, {
+    method: "GET",
+    headers,
+    next: {
+      revalidate: 0,
+    },
+  });
   const data = await response.json();
 
   return data;
@@ -731,16 +715,13 @@ export const getFirstResultsDashboard = async (
   } else {
     url = `${API_ROUTES.RESULT_FIRST_DASHBOARD}?policy_published_domain=${domain}`;
   }
-  let response = await fetch(
-    `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${url}`,
-    {
-      method: "GET",
-      headers,
-      next: {
-        revalidate: 0,
-      },
-    }
-  );
+  let response = await fetch(`${backend_Url}${url}`, {
+    method: "GET",
+    headers,
+    next: {
+      revalidate: 0,
+    },
+  });
   const data = await response.json();
 
   return data;
@@ -789,16 +770,13 @@ export const getSecondResultsDashboard = async (
     .join("&");
 
   url = `${API_ROUTES.RESULT_SECOND_DASHBOARD}?${filteredParams}`;
-  let response = await fetch(
-    `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${url}`,
-    {
-      method: "GET",
-      headers,
-      next: {
-        revalidate: 0,
-      },
-    }
-  );
+  let response = await fetch(`${backend_Url}${url}`, {
+    method: "GET",
+    headers,
+    next: {
+      revalidate: 0,
+    },
+  });
   const data = await response.json();
 
   return data;
@@ -847,16 +825,13 @@ export const getSecondResultsDashboardList = async (
     .join("&");
 
   url = `${API_ROUTES.RESULT_SECOND_DETAIL_LIST}?${filteredParams}`;
-  let response = await fetch(
-    `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${url}`,
-    {
-      method: "GET",
-      headers,
-      next: {
-        revalidate: 0,
-      },
-    }
-  );
+  let response = await fetch(`${backend_Url}${url}`, {
+    method: "GET",
+    headers,
+    next: {
+      revalidate: 0,
+    },
+  });
   const data = await response.json();
   return data;
 };
@@ -939,7 +914,7 @@ export const fetchSourceIpDetails = async (
   }
   if (startDate !== "undefined" && endDate !== "undefined") {
     let response = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${API_ROUTES.DMARC_SOURCE_DETAILS}?policy_published_domain=${domain}&row_source_ip=${ip_address}&start_date=${startDate}&end_date=${endDate}`,
+      `${backend_Url}${API_ROUTES.DMARC_SOURCE_DETAILS}?policy_published_domain=${domain}&row_source_ip=${ip_address}&start_date=${startDate}&end_date=${endDate}`,
       {
         method: "GET",
         headers,
@@ -952,7 +927,7 @@ export const fetchSourceIpDetails = async (
     return data;
   } else if (startDate !== "undefined") {
     let response = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${API_ROUTES.DMARC_SOURCE_DETAILS}?policy_published_domain=${domain}&row_source_ip=${ip_address}&start_date=${startDate}`,
+      `${backend_Url}${API_ROUTES.DMARC_SOURCE_DETAILS}?policy_published_domain=${domain}&row_source_ip=${ip_address}&start_date=${startDate}`,
       {
         method: "GET",
         headers,
@@ -965,7 +940,7 @@ export const fetchSourceIpDetails = async (
     return data;
   } else if (endDate !== "undefined") {
     let response = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${API_ROUTES.DMARC_SOURCE_DETAILS}?policy_published_domain=${domain}&row_source_ip=${ip_address}&end_date=${endDate}`,
+      `${backend_Url}${API_ROUTES.DMARC_SOURCE_DETAILS}?policy_published_domain=${domain}&row_source_ip=${ip_address}&end_date=${endDate}`,
       {
         method: "GET",
         headers,
@@ -978,7 +953,7 @@ export const fetchSourceIpDetails = async (
     return data;
   } else {
     let response = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${API_ROUTES.DMARC_SOURCE_DETAILS}?policy_published_domain=${domain}&row_source_ip=${ip_address}`,
+      `${backend_Url}${API_ROUTES.DMARC_SOURCE_DETAILS}?policy_published_domain=${domain}&row_source_ip=${ip_address}`,
       {
         method: "GET",
         headers,
@@ -1010,7 +985,7 @@ export const fetchSourceIpDetailsList = async (
   if (!isEmpty(user) && !isEmpty(user.token)) {
     headers["Authorization"] = `Bearer ${user.token}`;
   }
-  let url = `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${API_ROUTES.DMARC_SOURCE_DETAIL_LIST}/?policy_published_domain=${domain}&row_source_ip=${ip_address}`;
+  let url = `${backend_Url}${API_ROUTES.DMARC_SOURCE_DETAIL_LIST}/?policy_published_domain=${domain}&row_source_ip=${ip_address}`;
   if (startDate !== "undefined") {
     url = url.concat(`&start_date=${startDate}`);
   }
@@ -1158,7 +1133,7 @@ export const getDashboardData = async (
       headers["Authorization"] = `Bearer ${user.token}`;
     }
 
-    const baseUrl = `${process.env.NEXT_PUBLIC_BACKEND_API_URL}/tools`;
+    const baseUrl = `${backend_Url}/tools`;
 
     const buildUrl = (endpoint: string) => {
       let url = `${baseUrl}/${endpoint}/?policy_published_domain=${domain}`;
@@ -1278,8 +1253,8 @@ export const getDashboardGraphData = async (
     }
     let [VOLUME_BAR] = await Promise.all([
       fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${url}`,
-        // `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${url}?from_last_days=${from_last_days}&policy_published_domain=${domain}&start_date=${start_date}&end_date=${end_date}`,
+        `${backend_Url}${url}`,
+        // `${backend_Url}${url}?from_last_days=${from_last_days}&policy_published_domain=${domain}&start_date=${start_date}&end_date=${end_date}`,
         { headers, next: { revalidate: 0 } }
       ),
     ]);

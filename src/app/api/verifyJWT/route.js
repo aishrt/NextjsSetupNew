@@ -1,8 +1,9 @@
+import { _ENV_VARIABLES } from "@/constants/envVariables";
 import jwt from "jsonwebtoken";
 
 export async function POST(request) {
     const { token } = await request.json();
-    const jwtKey = process.env.JWT_SECRET_KEY;
+    const jwtKey = _ENV_VARIABLES.JWT_SECRET_KEY;
     if (!token) {
         return new Response(JSON.stringify({ message: "Token is required" }), {
             status: 400,

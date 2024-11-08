@@ -10,6 +10,7 @@ import Loader from "@/app/pageComponents/BlogComponent/Loader";
 import { API_ROUTES } from "@/@core/apiRoutes";
 import Image from "next/image";
 import { _IMG } from "@/constants/images";
+import { _ENV_VARIABLES } from "@/constants/envVariables";
 
 const Login = () => {
   return (
@@ -77,8 +78,8 @@ const LoginComponent = () => {
   useEffect(() => {
     verifyToken(token);
   }, []);
-  const storedUserName = process.env.NEXT_PUBLIC_API_USER_NAME;
-  const storedUserPassword = process.env.NEXT_PUBLIC_API_PASSWORD;
+  const storedUserName = _ENV_VARIABLES.NEXT_PUBLIC_API_USER_NAME;
+  const storedUserPassword = _ENV_VARIABLES.NEXT_PUBLIC_API_PASSWORD;
   useEffect(() => {
     if (session) {
       if (session.user.is_onboarded && session.user.is_domain === "verified") {
@@ -103,7 +104,7 @@ const LoginComponent = () => {
               <div className="imageSection">
                 <Link href="/">
                   <Image
-layout="intrinsic"
+                    layout="intrinsic"
                     src={_IMG.logo_white_blue}
                     alt="yourDMARC's logo in white"
                     className="loginImage pointer"

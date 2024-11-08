@@ -8,6 +8,10 @@ import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 import UnsubscribeIcon from "@mui/icons-material/Unsubscribe";
 import Image from "next/image";
 import { _IMG } from "@/constants/images";
+import { _ENV_VARIABLES } from "@/constants/envVariables";
+
+const PUBLIC_URL = _ENV_VARIABLES.NEXT_PUBLIC_URL;
+
 
 const Navbar = () => {
   let router = useRouter();
@@ -108,7 +112,7 @@ layout="intrinsic"
                           <ul className="pl-[15px]">
                             <li className="mb-[15px] relative customArrow">
                               <a
-                                href={`${process.env.NEXT_PUBLIC_URL}/tools/dns-lookup`}
+                                href={`${PUBLIC_URL}/tools/dns-lookup`}
                                 className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                               >
                                 {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454", borderColor: "transparent" }}></div> */}
@@ -118,7 +122,7 @@ layout="intrinsic"
 
                             <li className="mb-[15px] relative customArrow">
                               <a
-                                href={`${process.env.NEXT_PUBLIC_URL}/tools/a-lookup`}
+                                href={`${PUBLIC_URL}/tools/a-lookup`}
                                 className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454] ml-[5px]"
                               >
                                 {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -128,7 +132,7 @@ layout="intrinsic"
 
                             <li className="mb-[15px] relative customArrow">
                               <a
-                                href={`${process.env.NEXT_PUBLIC_URL}/tools/aaaa-lookup`}
+                                href={`${PUBLIC_URL}/tools/aaaa-lookup`}
                                 className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                               >
                                 {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -138,7 +142,7 @@ layout="intrinsic"
 
                             <li className="mb-[15px] relative customArrow">
                               <a
-                                href={`${process.env.NEXT_PUBLIC_URL}/tools/mx-lookup`}
+                                href={`${PUBLIC_URL}/tools/mx-lookup`}
                                 className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                               >
                                 {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -148,7 +152,7 @@ layout="intrinsic"
 
                             <li className="mb-[15px] relative customArrow">
                               <a
-                                href={`${process.env.NEXT_PUBLIC_URL}/tools/cname-lookup`}
+                                href={`${PUBLIC_URL}/tools/cname-lookup`}
                                 className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                               >
                                 {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -158,7 +162,7 @@ layout="intrinsic"
 
                             <li className="mb-[15px] relative customArrow">
                               <a
-                                href={`${process.env.NEXT_PUBLIC_URL}tools/txt-lookup`}
+                                href={`${PUBLIC_URL}tools/txt-lookup`}
                                 className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                               >
                                 {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -168,7 +172,7 @@ layout="intrinsic"
 
                             <li className="mb-[15px] relative customArrow">
                               <a
-                                href={`${process.env.NEXT_PUBLIC_URL}/tools/dnskey-lookup`}
+                                href={`${PUBLIC_URL}/tools/dnskey-lookup`}
                                 className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                               >
                                 {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -179,7 +183,7 @@ layout="intrinsic"
                           <ul className="pl-[15px]">
                             <li className="mb-[5px] relative customArrow">
                               <a
-                                href={`${process.env.NEXT_PUBLIC_URL}tools/ptr-lookup`}
+                                href={`${PUBLIC_URL}tools/ptr-lookup`}
                                 className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                               >
                                 {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -189,7 +193,7 @@ layout="intrinsic"
 
                             <li className="mb-[15px] relative customArrow">
                               <a
-                                href={`${process.env.NEXT_PUBLIC_URL}/tools/ns-lookup`}
+                                href={`${PUBLIC_URL}/tools/ns-lookup`}
                                 className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                               >
                                 {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -199,7 +203,7 @@ layout="intrinsic"
 
                             <li className="mb-[15px] relative customArrow">
                               <a
-                                href={`${process.env.NEXT_PUBLIC_URL}tools/soa-lookup`}
+                                href={`${PUBLIC_URL}tools/soa-lookup`}
                                 className="relative px-2 text-[15px] text-[#333]"
                               >
                                 {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -209,7 +213,7 @@ layout="intrinsic"
 
                             <li className="mb-[15px] relative customArrow">
                               <a
-                                href={`${process.env.NEXT_PUBLIC_URL}/tools/srv-lookup`}
+                                href={`${PUBLIC_URL}/tools/srv-lookup`}
                                 className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                               >
                                 {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -219,7 +223,7 @@ layout="intrinsic"
 
                             <li className="mb-[15px] relative customArrow">
                               <a
-                                href={`${process.env.NEXT_PUBLIC_URL}/tools/caa-lookup`}
+                                href={`${PUBLIC_URL}/tools/caa-lookup`}
                                 className="relative px-2 text-[15px] text-[#333]"
                               >
                                 {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -229,7 +233,7 @@ layout="intrinsic"
 
                             <li className="mb-[15px] relative customArrow">
                               <a
-                                href={`${process.env.NEXT_PUBLIC_URL}/tools/ds-lookup`}
+                                href={`${PUBLIC_URL}/tools/ds-lookup`}
                                 className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                               >
                                 {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -252,7 +256,7 @@ layout="intrinsic"
                         <ul className="pl-[15px]">
                           <li className="mb-[15px] relative customArrow w-full">
                             <a
-                              href={`${process.env.NEXT_PUBLIC_URL}/tools/spf-lookup`}
+                              href={`${PUBLIC_URL}/tools/spf-lookup`}
                               className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                             >
                               {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -262,7 +266,7 @@ layout="intrinsic"
 
                           <li className="mb-[15px] relative customArrow w-full">
                             <a
-                              href={`${process.env.NEXT_PUBLIC_URL}/tools/spf-generator`}
+                              href={`${PUBLIC_URL}/tools/spf-generator`}
                               className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                             >
                               {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -272,7 +276,7 @@ layout="intrinsic"
 
                           <li className="mb-[15px] relative customArrow w-full">
                             <a
-                              href={`${process.env.NEXT_PUBLIC_URL}/tools/spf-checker`}
+                              href={`${PUBLIC_URL}/tools/spf-checker`}
                               className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                             >
                               {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -282,7 +286,7 @@ layout="intrinsic"
 
                           <li className="mb-[15px] relative customArrow w-full">
                             <a
-                              href={`${process.env.NEXT_PUBLIC_URL}/tools/dmarc-lookup`}
+                              href={`${PUBLIC_URL}/tools/dmarc-lookup`}
                               className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                             >
                               {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -292,7 +296,7 @@ layout="intrinsic"
 
                           <li className="mb-[15px] relative customArrow w-full">
                             <a
-                              href={`${process.env.NEXT_PUBLIC_URL}/tools/dmarc-generator`}
+                              href={`${PUBLIC_URL}/tools/dmarc-generator`}
                               className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                             >
                               {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -302,7 +306,7 @@ layout="intrinsic"
 
                           <li className="mb-[15px] relative customArrow w-full">
                             <a
-                              href={`${process.env.NEXT_PUBLIC_URL}/tools/dkim-lookup`}
+                              href={`${PUBLIC_URL}/tools/dkim-lookup`}
                               className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                             >
                               {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -312,7 +316,7 @@ layout="intrinsic"
 
                           <li className="mb-[15px] relative customArrow w-full">
                             <a
-                              href={`${process.env.NEXT_PUBLIC_URL}/tools/dkim-generator`}
+                              href={`${PUBLIC_URL}/tools/dkim-generator`}
                               className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                             >
                               {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -323,7 +327,7 @@ layout="intrinsic"
                         <ul className="pl-[15px]">
                           <li className="mb-[15px] relative customArrow w-full">
                             <a
-                              href={`${process.env.NEXT_PUBLIC_URL}/tools/bimi-lookup`}
+                              href={`${PUBLIC_URL}/tools/bimi-lookup`}
                               className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                             >
                               {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -333,7 +337,7 @@ layout="intrinsic"
 
                           <li className="mb-[15px] relative customArrow w-full">
                             <a
-                              href={`${process.env.NEXT_PUBLIC_URL}/tools/bimi-generator`}
+                              href={`${PUBLIC_URL}/tools/bimi-generator`}
                               className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                             >
                               {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -356,7 +360,7 @@ layout="intrinsic"
                         <ul className="pl-[15px]">
                           <li className="mb-[15px] relative customArrow">
                             <a
-                              href={`${process.env.NEXT_PUBLIC_URL}/tools/mta-sts-lookup`}
+                              href={`${PUBLIC_URL}/tools/mta-sts-lookup`}
                               className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                             >
                               {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -366,7 +370,7 @@ layout="intrinsic"
 
                           <li className="mb-[15px] relative customArrow">
                             <a
-                              href={`${process.env.NEXT_PUBLIC_URL}/tools/mta-sts-generator`}
+                              href={`${PUBLIC_URL}/tools/mta-sts-generator`}
                               className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                             >
                               {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -376,7 +380,7 @@ layout="intrinsic"
 
                           <li className="mb-[15px] relative customArrow">
                             <a
-                              href={`${process.env.NEXT_PUBLIC_URL}/tools/tls-rpt-lookup`}
+                              href={`${PUBLIC_URL}/tools/tls-rpt-lookup`}
                               className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                             >
                               {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -386,7 +390,7 @@ layout="intrinsic"
 
                           <li className="mb-[15px] relative customArrow">
                             <a
-                              href={`${process.env.NEXT_PUBLIC_URL}/tools/tls-rpt-generator`}
+                              href={`${PUBLIC_URL}/tools/tls-rpt-generator`}
                               className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                             >
                               {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -408,7 +412,7 @@ layout="intrinsic"
                         <ul className="pl-[15px]">
                           <li className="mb-[15px] relative customArrow">
                             <a
-                              href={`${process.env.NEXT_PUBLIC_URL}/tools/blacklist-domain-lookup`}
+                              href={`${PUBLIC_URL}/tools/blacklist-domain-lookup`}
                               className="relative text-[15px] px-2 text-[#333] hover:text-[#eb5454]"
                             >
                               {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -418,7 +422,7 @@ layout="intrinsic"
 
                           <li className="mb-[5px] relative customArrow">
                             <a
-                              href={`${process.env.NEXT_PUBLIC_URL}/tools/blacklist-domain-lookup`}
+                              href={`${PUBLIC_URL}/tools/blacklist-domain-lookup`}
                               className="relative text-[15px] px-2 text-[#333] hover:text-[#eb5454]"
                             >
                               {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -486,7 +490,7 @@ layout="intrinsic"
                         <ul className="pl-[15px]">
                           <li className="mb-[15px] relative customArrow">
                             <a
-                              href={`${process.env.NEXT_PUBLIC_URL}/startup`}
+                              href={`${PUBLIC_URL}/startup`}
                               className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                             >
                               {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -496,7 +500,7 @@ layout="intrinsic"
 
                           <li className="mb-[15px] relative customArrow">
                             <a
-                              href={`${process.env.NEXT_PUBLIC_URL}/solution`}
+                              href={`${PUBLIC_URL}/solution`}
                               className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                             >
                               {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -506,7 +510,7 @@ layout="intrinsic"
 
                           <li className="mb-[15px] relative customArrow">
                             <a
-                              href={`${process.env.NEXT_PUBLIC_URL}/enterprise`}
+                              href={`${PUBLIC_URL}/enterprise`}
                               className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                             >
                               {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -536,7 +540,7 @@ layout="intrinsic"
                           <ul className="pl-[15px]">
                             <li className="mb-[15px] relative customArrow">
                               <a
-                                href={`${process.env.NEXT_PUBLIC_URL}/nonprofits`}
+                                href={`${PUBLIC_URL}/nonprofits`}
                                 className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                               >
                                 {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -546,7 +550,7 @@ layout="intrinsic"
 
                             <li className="mb-[15px] relative customArrow">
                               <a
-                                href={`${process.env.NEXT_PUBLIC_URL}/healthcare`}
+                                href={`${PUBLIC_URL}/healthcare`}
                                 className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                               >
                                 {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -556,7 +560,7 @@ layout="intrinsic"
 
                             <li className="mb-[15px] relative customArrow">
                               <a
-                                href={`${process.env.NEXT_PUBLIC_URL}/educations`}
+                                href={`${PUBLIC_URL}/educations`}
                                 className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                               >
                                 {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -566,7 +570,7 @@ layout="intrinsic"
 
                             <li className="mb-[15px] relative customArrow">
                               <a
-                                href={`${process.env.NEXT_PUBLIC_URL}/info-tech`}
+                                href={`${PUBLIC_URL}/info-tech`}
                                 className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                               >
                                 {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -576,7 +580,7 @@ layout="intrinsic"
 
                             <li className="mb-[15px] relative customArrow">
                               <a
-                                href={`${process.env.NEXT_PUBLIC_URL}/government`}
+                                href={`${PUBLIC_URL}/government`}
                                 className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                               >
                                 {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -588,7 +592,7 @@ layout="intrinsic"
                           <ul className="pl-[15px]">
                             <li className="mb-[15px] relative customArrow">
                               <a
-                                href={`${process.env.NEXT_PUBLIC_URL}/retail`}
+                                href={`${PUBLIC_URL}/retail`}
                                 className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                               >
                                 {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -598,7 +602,7 @@ layout="intrinsic"
 
                             <li className="mb-[15px] relative customArrow">
                               <a
-                                href={`${process.env.NEXT_PUBLIC_URL}/finance`}
+                                href={`${PUBLIC_URL}/finance`}
                                 className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                               >
                                 {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -608,7 +612,7 @@ layout="intrinsic"
 
                             <li className="mb-[15px] relative customArrow">
                               <a
-                                href={`${process.env.NEXT_PUBLIC_URL}/marketing`}
+                                href={`${PUBLIC_URL}/marketing`}
                                 className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                               >
                                 {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -618,7 +622,7 @@ layout="intrinsic"
 
                             <li className="mb-[15px] relative customArrow">
                               <a
-                                href={`${process.env.NEXT_PUBLIC_URL}/insurance`}
+                                href={`${PUBLIC_URL}/insurance`}
                                 className="relative px-2 text-[15px] text-[#333] hover:text-[#eb5454]"
                               >
                                 {/* <div class="absolute left-0 top-[14px] w-0 h-0 border-t-4 border-r-8 border-b-4 border-transparent border-secondary rotate-180 top-[4px] left-[-12px]" style={{ borderRightColor: "#EB5454" }}></div> */}
@@ -637,7 +641,7 @@ layout="intrinsic"
                 <button
                   className="text-[#000] hover:text-[#eb5454] text-[16px] py-[9px] px-[10px] transition ease-in-out"
                   onClick={() =>
-                    (window.location.href = `${process.env.NEXT_PUBLIC_URL}/contact-us`)
+                    (window.location.href = `${PUBLIC_URL}/contact-us`)
                   }
                 >
                   Contact Us
@@ -646,7 +650,7 @@ layout="intrinsic"
                   {/* Submenu items for About */}
                   <div className="py-1">
                     <a
-                      href={`${process.env.NEXT_PUBLIC_URL}startup`}
+                      href={`${PUBLIC_URL}startup`}
                       className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700"
                     >
                       About Page
@@ -659,7 +663,7 @@ layout="intrinsic"
                 <button
                   className="text-[#000] hover:text-[#eb5454] text-[16px] py-[9px] px-[10px]"
                   onClick={() =>
-                    (window.location.href = `${process.env.NEXT_PUBLIC_URL}/login`)
+                    (window.location.href = `${PUBLIC_URL}/login`)
                   }
                   // onClick={(e) => e.preventDefault()}
                 >
@@ -670,7 +674,7 @@ layout="intrinsic"
               <div className="relative">
                 <button
                   onClick={() =>
-                    (window.location.href = `${process.env.NEXT_PUBLIC_URL}/signup`)
+                    (window.location.href = `${PUBLIC_URL}/signup`)
                   }
                   className="bg-[#EB5454] text-[#fff] text-[16px] py-[9px] px-[30px] rounded-[8px] border-1 border-solid border-[#f00] transition ease-in-out"
                   // onClick={(e) => e.preventDefault()}

@@ -20,6 +20,9 @@ import FileExcelUpload from "@/components/Upload/FileExcelUpload";
 import ExportCsv from "@/components/Functions/ExportCsv";
 import { _IMG } from "@/constants/images";
 import Image from "next/image";
+import { _ENV_VARIABLES } from "@/constants/envVariables";
+
+const WEBSOCKET_URL = _ENV_VARIABLES.NEXT_PUBLIC_BACKEND_WEBSOCKET_URL;
 
 const formatPercentage = (progress: any, totalCount: any): number => {
   const percentage =
@@ -265,9 +268,7 @@ const ScanDomainTool = () => {
         setPaginatedData([]);
         setisLoader(true);
 
-        const ws = new WebSocket(
-          `${process.env.NEXT_PUBLIC_BACKEND_WEBSOCKET_URL}`
-        );
+        const ws = new WebSocket(`${WEBSOCKET_URL}`);
 
         ws.onopen = () => {
           console.log("WebSocket connection opened");
@@ -338,9 +339,7 @@ const ScanDomainTool = () => {
 
     try {
       const base64File = await fileToBase64(selectedFile);
-      const ws = new WebSocket(
-        `${process.env.NEXT_PUBLIC_BACKEND_WEBSOCKET_URL}`
-      );
+      const ws = new WebSocket(`${WEBSOCKET_URL}`);
 
       ws.onopen = () => {
         console.log("WebSocket connection opened");
@@ -566,7 +565,7 @@ const ScanDomainTool = () => {
                               Domain Name
                               <a href="">
                                 <Image
-layout="intrinsic"
+                                  layout="intrinsic"
                                   src={_IMG.arrange}
                                   alt=""
                                   loading="lazy"
@@ -577,7 +576,7 @@ layout="intrinsic"
                               DMARC Record Policy
                               <a href="">
                                 <Image
-layout="intrinsic"
+                                  layout="intrinsic"
                                   src={_IMG.arrange}
                                   alt=""
                                   loading="lazy"
@@ -588,7 +587,7 @@ layout="intrinsic"
                               ADKIM
                               <a href="">
                                 <Image
-layout="intrinsic"
+                                  layout="intrinsic"
                                   src={_IMG.arrange}
                                   alt=""
                                   loading="lazy"
@@ -599,7 +598,7 @@ layout="intrinsic"
                               ASPF
                               <a href="">
                                 <Image
-layout="intrinsic"
+                                  layout="intrinsic"
                                   src={_IMG.arrange}
                                   alt=""
                                   loading="lazy"
@@ -611,7 +610,7 @@ layout="intrinsic"
                               rua
                               <a href="">
                                 <Image
-layout="intrinsic"
+                                  layout="intrinsic"
                                   src={_IMG.arrange}
                                   alt=""
                                   loading="lazy"
@@ -622,7 +621,7 @@ layout="intrinsic"
                               ruf
                               <a href="">
                                 <Image
-layout="intrinsic"
+                                  layout="intrinsic"
                                   src={_IMG.arrange}
                                   alt=""
                                   loading="lazy"
@@ -633,7 +632,7 @@ layout="intrinsic"
                               Import Date
                               <a href="">
                                 <Image
-layout="intrinsic"
+                                  layout="intrinsic"
                                   src={_IMG.arrange}
                                   alt=""
                                   loading="lazy"
@@ -730,7 +729,11 @@ layout="intrinsic"
       >
         <span className="cancelBtn" onClick={handleCloseUpload}>
           <Image
-layout="intrinsic" src={_IMG.cancel_black} alt="Cancel" loading="lazy" />
+            layout="intrinsic"
+            src={_IMG.cancel_black}
+            alt="Cancel"
+            loading="lazy"
+          />
         </span>
         <FileExcelUpload
           selectedFile={selectedFile}

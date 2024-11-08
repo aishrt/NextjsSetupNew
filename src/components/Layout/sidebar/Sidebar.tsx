@@ -13,6 +13,10 @@ import { calculateStartDate } from "@/@core/helper";
 import ExceedPlan from "@/app/pageComponents/Others/ExceedPlan";
 import Image from "next/image";
 import { _IMG } from "@/constants/images";
+import { _ENV_VARIABLES } from "@/constants/envVariables";
+
+const BACKEND_API_URL = _ENV_VARIABLES.NEXT_PUBLIC_BACKEND_API_URL;
+
 
 interface ItemType {
   isMobileSidebarOpen: boolean;
@@ -139,7 +143,7 @@ const Sidebar = ({
         headers["Authorization"] = `Bearer ${users?.token}`;
       }
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${API_ROUTES.DOMAINS_LIST}`,
+        `${BACKEND_API_URL}${API_ROUTES.DOMAINS_LIST}`,
         {
           method: "GET",
           headers,
@@ -179,7 +183,7 @@ const Sidebar = ({
     let resData: any = {};
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${url}`,
+        `${BACKEND_API_URL}${url}`,
         {
           method: "GET",
           headers,
@@ -225,7 +229,7 @@ const Sidebar = ({
     let resData: any = {};
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${url}`,
+        `${BACKEND_API_URL}${url}`,
         {
           method: "GET",
           headers,

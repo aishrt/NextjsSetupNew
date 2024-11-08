@@ -9,6 +9,9 @@ import { getFetcherWithAuth, putFormFetcher } from "@/@core/apiFetcher";
 import { API_ROUTES } from "@/@core/apiRoutes";
 import { isEmpty } from "@/utils/isEmpty";
 import AdminDetails from "@/app/pageComponents/Dashboard/AdminDetails";
+import { _ENV_VARIABLES } from "@/constants/envVariables";
+
+const BACKEND_API_URL = _ENV_VARIABLES.NEXT_PUBLIC_BACKEND_API_URL;
 
 const ProfilePage = () => {
   const [profileData, setProfileData] = useState({
@@ -39,8 +42,7 @@ const ProfilePage = () => {
       .then((resData: any) => {
         if (!isEmpty(resData)) {
           resData.data.preview = resData.data.profile_image
-            ? process.env.NEXT_PUBLIC_BACKEND_API_URL +
-              resData.data.profile_image
+            ? BACKEND_API_URL + resData.data.profile_image
             : "/assets/images/profile.png";
           setProfileData(resData.data);
         }

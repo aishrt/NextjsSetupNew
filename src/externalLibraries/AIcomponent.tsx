@@ -9,6 +9,11 @@ import { useRouter } from "next/navigation";
 import InformationTooltip from "@/app/pageComponents/Others/InformationTooltip";
 import JsonLdScript from "../components/Functions/JsonLdScript";
 import MainLoader from "../components/Loaders/MainLoader";
+import { _ENV_VARIABLES } from "@/constants/envVariables";
+
+const OPENAI_API_KEY = _ENV_VARIABLES.NEXT_PUBLIC_OPENAI_API_KEY;
+const PUBLIC_URL = _ENV_VARIABLES.NEXT_PUBLIC_URL;
+const SECRET_KEY = _ENV_VARIABLES.NEXT_PUBLIC_SECRET_KEY;
 
 const AIComponent = ({
   domain,
@@ -26,9 +31,10 @@ const AIComponent = ({
   const router = useRouter();
   const [chatResponse, setChatResponse] = useState("");
   const [formattedChatResponse, setFormattedChatResponse] = useState("");
+
   const chatGpt = async () => {
     const openai = new OpenAI({
-      apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
+      apiKey: OPENAI_API_KEY,
       dangerouslyAllowBrowser: true,
     });
     try {
@@ -95,15 +101,14 @@ const AIComponent = ({
   const manageChangePlan = async () => {
     setIsLoading(true);
     const user = await getCurrentUser();
-    const redirectURL = process?.env?.NEXT_PUBLIC_URL;
 
     await fetch("https://api.stripe.com/v1/billing_portal/sessions", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_SECRET_KEY}`,
+        Authorization: `Bearer ${SECRET_KEY}`,
       },
-      body: `customer=${license?.stripe_customer_id}&return_url=${redirectURL}/dashboard/dashboard`,
+      body: `customer=${license?.stripe_customer_id}&return_url=${PUBLIC_URL}/dashboard/dashboard`,
     })
       .then((response) => response.json())
       .then((data) => {

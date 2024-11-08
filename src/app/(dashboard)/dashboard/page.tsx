@@ -16,6 +16,7 @@ import ResultButton from "@/app/pageComponents/Dashboard/ResultButton";
 import { getLast30Days } from "@/@core/helper";
 import { API_ROUTES } from "@/@core/apiRoutes";
 import { signOut } from "next-auth/react";
+import { _ENV_VARIABLES } from "@/constants/envVariables";
 
 type DashboardDataTypes = {
   WIDGET_COUNTS?: any;
@@ -26,6 +27,8 @@ type DashboardDataTypes = {
   DETAIL_REPORTS?: any;
   TOP_SENDER?: any;
 };
+
+const BACKEND_API_URL = _ENV_VARIABLES.NEXT_PUBLIC_BACKEND_API_URL;
 
 export default async function Home({ searchParams }: SearchParamsProps) {
   const user = await getCurrentUser();
@@ -62,16 +65,13 @@ export default async function Home({ searchParams }: SearchParamsProps) {
   let resData: any = {};
 
   try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${url}`,
-      {
-        method: "GET",
-        headers,
-        next: {
-          revalidate: 0,
-        },
-      }
-    );
+    const res = await fetch(`${BACKEND_API_URL}${url}`, {
+      method: "GET",
+      headers,
+      next: {
+        revalidate: 0,
+      },
+    });
     if (res.status != 200) {
       throw new Error(`HTTP error! Status: ${res.status}`);
     }

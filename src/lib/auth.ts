@@ -3,12 +3,17 @@ import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { postFetcher } from "@/@core/apiFetcher";
 import { API_ROUTES } from "@/@core/apiRoutes";
+import { _ENV_VARIABLES } from "@/constants/envVariables";
+
+const GOOGLE_CLIENT_ID = _ENV_VARIABLES.GOOGLE_CLIENT_ID;
+const GOOGLE_CLIENT_SECRET = _ENV_VARIABLES.GOOGLE_CLIENT_SECRET;
+const JWT_SECRET = _ENV_VARIABLES.JWT_SECRET;
 
 const authOptions: NextAuthOptions = {
   providers: [
     GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID as string,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+      clientId: GOOGLE_CLIENT_ID as string,
+      clientSecret: GOOGLE_CLIENT_SECRET as string,
       authorization: {
         params: {
           prompt: "consent",
@@ -179,7 +184,7 @@ const authOptions: NextAuthOptions = {
       return baseUrl;
     },
   },
-  secret: process.env.JWT_SECRET,
+  secret: JWT_SECRET,
   pages: {
     signIn: "/login",
   },

@@ -10,6 +10,10 @@ import { useSession } from "next-auth/react";
 import UpgradePlanComponent from "@/app/pageComponents/Others/UpgradePlanComponent";
 import { useStore } from "@/utils/store";
 import { API_ROUTES } from "@/@core/apiRoutes";
+import { _ENV_VARIABLES } from "@/constants/envVariables";
+
+const BACKEND_API_URL = _ENV_VARIABLES.NEXT_PUBLIC_BACKEND_API_URL;
+
 const Profile = () => {
   const { licenseValidation } = useStore();
   const [anchorEl2, setAnchorEl2] = useState(null);
@@ -43,16 +47,13 @@ const Profile = () => {
     }
     let resData: any = {};
     try {
-      const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${url}`,
-        {
-          method: "GET",
-          headers,
-          next: {
-            revalidate: 0,
-          },
-        }
-      );
+      const res = await fetch(`${BACKEND_API_URL}${url}`, {
+        method: "GET",
+        headers,
+        next: {
+          revalidate: 0,
+        },
+      });
 
       if (!res.ok) {
         throw new Error(`HTTP error! status: ${res.status}`);
@@ -137,7 +138,7 @@ const Profile = () => {
             src={
               isEmpty(profileData?.profile_image)
                 ? "/assets/images/profile.png"
-                : `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${profileData?.profile_image}`
+                : `${BACKEND_API_URL}${profileData?.profile_image}`
             }
             alt="image"
             sx={{ width: 35, height: 35 }}

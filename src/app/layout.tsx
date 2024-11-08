@@ -11,12 +11,14 @@ import React, { Suspense } from "react";
 import { NextAuthSessionProvider } from "@/lib/NextAuthSessionProvider";
 import { ToastifyContainer } from "@/components/ToastifyContainer";
 import PageAnimatePresence from "@/theme/Animate/PageAnimatePresence";
+import { _ENV_VARIABLES } from "@/constants/envVariables";
 
 const ProgressBar = dynamic(() => import("@/components/ProgressBar"), {
   suspense: true,
   ssr: false,
 });
 
+const NEXT_PUBLIC_URL = _ENV_VARIABLES.NEXT_PUBLIC_URL;
 export const metadata: Metadata = {
   title: {
     default: "yourDMARC | Secure Email with DMARC, SPF & DKIM Tools",
@@ -48,7 +50,7 @@ export default function RootLayout({
           content="YOUR DMARC: Strengthen Email Security and Protect Your Brand"
         />
         <meta property="og:site_name" content="YourDMARC" />
-        <meta property="og:url" content={`${process.env.NEXT_PUBLIC_URL}/`} />
+        <meta property="og:url" content={NEXT_PUBLIC_URL} />
         <meta
           property="og:description"
           content="Eliminate email fraud and safeguard your brand with YOUR DMARC. Our advanced DMARC, SPF, and DKIM tools provide comprehensive email authentication, protect your domain from spoofing, and enhance email deliverability. Get smart reporting, guided setups, and stay ahead of email threats with our all-in-one solution for businesses of all sizes. Strengthen your brand trust and reputation today."
@@ -56,7 +58,7 @@ export default function RootLayout({
         <meta property="og:type" content="website" />
         <meta
           property="og:image"
-          content={`${process.env.NEXT_PUBLIC_URL}/assets/images/logo-final-blue.svg`}
+          content={`${NEXT_PUBLIC_URL}/assets/images/logo-final-blue.svg`}
         />
         <script
           dangerouslySetInnerHTML={{

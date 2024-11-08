@@ -10,13 +10,16 @@ import { postFetcher } from "@/@core/apiFetcher";
 import { isTokenExpired } from "@/@core/apiFetcher";
 import { signOut } from "next-auth/react";
 import { API_ROUTES } from "@/@core/apiRoutes";
+import { _ENV_VARIABLES } from "@/constants/envVariables";
+
+const BACKEND_API_URL = _ENV_VARIABLES.NEXT_PUBLIC_BACKEND_API_URL;
+
 interface FormData {
   old_password: string;
   new_password: string;
 }
 
 const PasswordSetup = () => {
-
   const [profileData, setProfileData] = useState({
     first_name: "",
     last_name: "",
@@ -43,19 +46,16 @@ const PasswordSetup = () => {
     if (!isEmpty(users) && !isEmpty(users.token)) {
       headers["Authorization"] = `Bearer ${users.token}`;
     }
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${url}`,
-      {
-        method: "GET",
-        headers,
-        next: {
-          revalidate: 0,
-        },
-      }
-    );
+    const res = await fetch(`${BACKEND_API_URL}${url}`, {
+      method: "GET",
+      headers,
+      next: {
+        revalidate: 0,
+      },
+    });
     let resData = await res.json();
     resData.data.preview = resData.data.profile_image
-      ? process.env.NEXT_PUBLIC_BACKEND_API_URL + resData.data.profile_image
+      ? BACKEND_API_URL + resData.data.profile_image
       : "/assets/images/profile.png";
     setProfileData(resData.data);
     setProfileData(resData.data);
@@ -107,8 +107,6 @@ const PasswordSetup = () => {
               </div>
               <div className="col-xxl-9">
                 <div className="card">
-   
-
                   <div className="d-flex justify-content-between align-items-center mb-4">
                     <h4 className="fw-semibold"></h4>
                     <button

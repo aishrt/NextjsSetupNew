@@ -37,6 +37,9 @@ import MainLoader from "@/components/Loaders/MainLoader";
 import { Skeleton } from "@mui/material";
 import { _IMG } from "@/constants/images";
 import Image from "next/image";
+import { _ENV_VARIABLES } from "@/constants/envVariables";
+
+const BACKEND_API_URL = _ENV_VARIABLES.NEXT_PUBLIC_BACKEND_API_URL;
 
 const MtaStsTool = ({
   result,
@@ -313,16 +316,13 @@ const MtaStsTool = ({
     let resData: any = {};
 
     try {
-      const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${url}`,
-        {
-          method: "GET",
-          headers,
-          next: {
-            revalidate: 0, //ff
-          },
-        }
-      );
+      const res = await fetch(`${BACKEND_API_URL}${url}`, {
+        method: "GET",
+        headers,
+        next: {
+          revalidate: 0, //ff
+        },
+      });
 
       if (!res.ok) {
         setDataloader(false);
@@ -1085,7 +1085,7 @@ layout="intrinsic"
                                         <div className="text-end">
                                           <button onClick={handleDownload}>
                                             <Image
-layout="intrinsic"
+                                              layout="intrinsic"
                                               alt="Download Icon"
                                               src={_IMG.downloadIcon}
                                               loading="lazy"

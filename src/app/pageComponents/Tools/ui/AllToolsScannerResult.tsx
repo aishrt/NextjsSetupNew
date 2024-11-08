@@ -11,12 +11,14 @@ import { commonFetcherFn } from "@/@core/apiFetcher";
 import { API_ROUTES } from "@/@core/apiRoutes";
 import { _IMG } from "@/constants/images";
 import Image from "next/image";
+import { _ENV_VARIABLES } from "@/constants/envVariables";
 const GaugeChartCompo = lazy(
   () => import("../../../../components/Charts/GaugeChartCompo")
 );
 
-const BLACKLIST_CHECK_URL = process.env.NEXT_PUBLIC_BACKEND_BLACKLIST_CHECK_URL;
-const DKIM_CHECK_URL = process.env.NEXT_PUBLIC_DKIM_CHECK_URL;
+const BLACKLIST_CHECK_URL = _ENV_VARIABLES.NEXT_PUBLIC_BACKEND_BLACKLIST_CHECK_URL;
+const DKIM_CHECK_URL = _ENV_VARIABLES.NEXT_PUBLIC_DKIM_CHECK_URL;
+const BACKEND_API_URL = _ENV_VARIABLES.NEXT_PUBLIC_BACKEND_API_URL
 
 type ScannerResultTypes = {
   DMARC: any;
@@ -57,7 +59,7 @@ const AllToolsScannerResult = ({
         headers["Authorization"] = `Bearer ${users?.token}`;
       }
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${API_ROUTES.DOMAINS_LIST}`,
+        `${BACKEND_API_URL}${API_ROUTES.DOMAINS_LIST}`,
         {
           method: "GET",
           headers,

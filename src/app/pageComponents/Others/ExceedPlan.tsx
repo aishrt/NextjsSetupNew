@@ -5,6 +5,10 @@ import DialogContent from "@mui/material/DialogContent";
 import Typography from "@mui/material/Typography";
 import { useRouter } from "next/navigation";
 import { getLicenseData } from "@/@core/apiFetcher";
+import { _ENV_VARIABLES } from "@/constants/envVariables";
+
+const SECRET_KEY = _ENV_VARIABLES.NEXT_PUBLIC_SECRET_KEY;
+const PUBLIC_URL = _ENV_VARIABLES.NEXT_PUBLIC_URL;
 
 const ExceedPlan = ({
   initialOpenModal, // Initial prop for openModal
@@ -37,9 +41,9 @@ const ExceedPlan = ({
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
-          Authorization: `Bearer ${process.env.NEXT_PUBLIC_SECRET_KEY}`,
+          Authorization: `Bearer ${SECRET_KEY}`,
         },
-        body: `customer=${license?.stripe_customer_id}&return_url=${process.env.NEXT_PUBLIC_URL}/dashboard/dashboard`,
+        body: `customer=${license?.stripe_customer_id}&return_url=${PUBLIC_URL}/dashboard/dashboard`,
       })
         .then((response) => response.json())
         .then((data) => {
@@ -58,10 +62,10 @@ const ExceedPlan = ({
 
   return (
     <>
-      <BootstrapDialog 
-        open={openModal} 
-        onClose={undefined} 
-        disableEscapeKeyDown  = {true}
+      <BootstrapDialog
+        open={openModal}
+        onClose={undefined}
+        disableEscapeKeyDown={true}
         className="fixComponent"
       >
         <DialogContent dividers className="automateModal">

@@ -14,6 +14,11 @@ import { useStore } from "@/utils/store";
 import UpgradePlanComponent from "@/app/pageComponents/Others/UpgradePlanComponent";
 import { _IMG } from "@/constants/images";
 import Image from "next/image";
+import { _ENV_VARIABLES } from "@/constants/envVariables";
+
+const BACKEND_API_URL = _ENV_VARIABLES.NEXT_PUBLIC_BACKEND_API_URL;
+
+
 const BrandLogo = () => {
   const [form, setFormData] = useState({
     brandLogo: "",
@@ -88,7 +93,7 @@ const BrandLogo = () => {
       .then((resData: any) => {
         if (!isEmpty(resData)) {
           resData.data.preview = resData.data.profile_image
-            ? process.env.NEXT_PUBLIC_BACKEND_API_URL +
+            ? BACKEND_API_URL +
               resData.data.profile_image
             : "/assets/images/profile.png";
           setProfileData(resData.data);
@@ -116,7 +121,7 @@ const BrandLogo = () => {
             password: resData?.data?.password,
 
             preview: resData.data.brand_image
-              ? process.env.NEXT_PUBLIC_BACKEND_API_URL +
+              ? BACKEND_API_URL +
                 resData.data.brand_image
               : "",
           });

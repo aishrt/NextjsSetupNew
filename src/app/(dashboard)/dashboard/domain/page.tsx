@@ -70,6 +70,11 @@ import dayjs from "dayjs";
 import Image from "next/image";
 import { _IMG } from "@/constants/images";
 import FileUpload from "@/components/Upload/FileUpload";
+import { _ENV_VARIABLES } from "@/constants/envVariables";
+
+const BACKEND_API_URL = _ENV_VARIABLES.NEXT_PUBLIC_BACKEND_API_URL;
+
+
 function debounce(func: any, wait: any) {
   let timeout: any;
   return function executedFunction(...args: any) {
@@ -160,7 +165,7 @@ const DomainPage = () => {
         is_verify: selectedValue || "all",
       };
       const qryStr = createQueryString(queryObject);
-      url = `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${API_ROUTES.LIST_ALL_DOMAINS}${qryStr}`;
+      url = `${BACKEND_API_URL}${API_ROUTES.LIST_ALL_DOMAINS}${qryStr}`;
       const res = await fetch(url, {
         method: "GET",
         headers,

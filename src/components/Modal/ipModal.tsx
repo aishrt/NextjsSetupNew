@@ -25,6 +25,11 @@ import { createQueryString } from "@/@core/tableFunctions";
 import { API_ROUTES } from "@/@core/apiRoutes";
 import { _IMG } from "@/constants/images";
 import Image from "next/image";
+import { _ENV_VARIABLES } from "@/constants/envVariables";
+
+const BACKEND_API_URL = _ENV_VARIABLES.NEXT_PUBLIC_BACKEND_API_URL;
+const SECRET_KEY = _ENV_VARIABLES.NEXT_PUBLIC_SECRET_KEY;
+const PUBLIC_URL = _ENV_VARIABLES.NEXT_PUBLIC_URL;
 
 const LinkOpenButton = dynamic(
   () => import("@/components/Form/LinkOpenButton"),
@@ -82,9 +87,9 @@ const Ipmodal: React.FC<ModalEbookProps> = ({
         method: "POST",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
-          Authorization: `Bearer ${process.env.NEXT_PUBLIC_SECRET_KEY}`,
+          Authorization: `Bearer ${SECRET_KEY}`,
         },
-        body: `customer=${license?.stripe_customer_id}&return_url=${process?.env?.NEXT_PUBLIC_URL}/dashboard/dashboard`,
+        body: `customer=${license?.stripe_customer_id}&return_url=${PUBLIC_URL}/dashboard/dashboard`,
       })
         .then((response) => response.json())
         .then((data) => {
@@ -157,16 +162,13 @@ const Ipmodal: React.FC<ModalEbookProps> = ({
 
     let resData: any = {};
     try {
-      const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${url}`,
-        {
-          method: "GET",
-          headers,
-          next: {
-            revalidate: 0,
-          },
-        }
-      );
+      const res = await fetch(`${BACKEND_API_URL}${url}`, {
+        method: "GET",
+        headers,
+        next: {
+          revalidate: 0,
+        },
+      });
 
       if (!res.ok) {
         throw new Error(`HTTP error! status: ${res.status}`);
@@ -586,7 +588,7 @@ const Ipmodal: React.FC<ModalEbookProps> = ({
                                 <div className="col-lg-5">
                                   <div className="content">
                                     <Image
-layout="intrinsic"
+                                      layout="intrinsic"
                                       alt=""
                                       src={_IMG.companyIcon}
                                       loading="lazy"
@@ -654,7 +656,7 @@ layout="intrinsic"
                                 <div className="col-lg-5">
                                   <div className="content">
                                     <Image
-layout="intrinsic"
+                                      layout="intrinsic"
                                       alt=""
                                       src={_IMG.flag_Icon}
                                       loading="lazy"
@@ -744,7 +746,6 @@ layout="intrinsic"
                                       </tr>
                                     </tbody>
                                   </table>
-                               
                                 </div>
                               </div>
                             </div>
@@ -777,7 +778,7 @@ layout="intrinsic"
                                         <div className="col-lg-7">
                                           <div className="ipdangeralert">
                                             <Image
-layout="intrinsic"
+                                              layout="intrinsic"
                                               src={_IMG.redinfo}
                                               alt=""
                                             />
@@ -792,9 +793,7 @@ layout="intrinsic"
                                             </p>
                                           </div>
                                         </div>
-                                        <div className="col-lg-5 ">
-                      
-                                        </div>
+                                        <div className="col-lg-5 "></div>
                                       </div>
                                     </div>
                                     <div className="ipsection">
@@ -900,7 +899,7 @@ layout="intrinsic"
                                     Details
                                   </button>
                                 </li>
-                                
+
                                 <li className="nav-item" role="presentation">
                                   <button
                                     className="nav-link"
@@ -1002,7 +1001,7 @@ layout="intrinsic"
                                             const item =
                                               data?.virutotal_response
                                                 ?.attributes
-                                                ?.last_analysis_results[key]; 
+                                                ?.last_analysis_results[key];
                                             return (
                                               <tr key={index}>
                                                 <td className="capitalData">
@@ -1040,7 +1039,6 @@ layout="intrinsic"
                                         )}
                                       </tbody>
                                     </table>
-                                  
                                   </div>
                                 </div>
                                 <div
@@ -1125,7 +1123,7 @@ layout="intrinsic"
                                       </tr>
                                     </tbody>
                                   </table>
-                              
+
                                   <h6 className="fw-semibold">Whois Lookup</h6>
                                   <p>
                                     <div
@@ -1342,7 +1340,7 @@ layout="intrinsic"
                                             const item =
                                               data.dns_blacklist.blocklists[
                                                 key
-                                              ]; 
+                                              ];
                                             return (
                                               <tr key={index}>
                                                 <td className="capitalData">

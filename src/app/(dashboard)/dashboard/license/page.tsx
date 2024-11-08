@@ -14,6 +14,11 @@ import { useStore } from "@/utils/store";
 import { Checkbox, FormControlLabel, FormGroup } from "@mui/material";
 import Image from "next/image";
 import { _IMG } from "@/constants/images";
+import { _ENV_VARIABLES } from "@/constants/envVariables";
+
+const BACKEND_API_URL = _ENV_VARIABLES.NEXT_PUBLIC_BACKEND_API_URL;
+const REDIRECT_URL = _ENV_VARIABLES.NEXT_PUBLIC_URL;
+const SECRET_KEY = _ENV_VARIABLES.NEXT_PUBLIC_SECRET_KEY;
 
 const License = () => {
   const router = useRouter();
@@ -43,19 +48,16 @@ const License = () => {
     if (!isEmpty(users) && !isEmpty(users.token)) {
       headers["Authorization"] = `Bearer ${users.token}`;
     }
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${url}`,
-      {
-        method: "GET",
-        headers,
-        next: {
-          revalidate: 0,
-        },
-      }
-    );
+    const res = await fetch(`${BACKEND_API_URL}${url}`, {
+      method: "GET",
+      headers,
+      next: {
+        revalidate: 0,
+      },
+    });
     let resData = await res.json();
     resData.data.preview = resData.data.profile_image
-      ? process.env.NEXT_PUBLIC_BACKEND_API_URL + resData.data.profile_image
+      ? BACKEND_API_URL + resData.data.profile_image
       : "/assets/images/profile.png";
     setProfileData(resData.data);
     setProfileData(resData.data);
@@ -80,15 +82,14 @@ const License = () => {
 
   const manageChangePlan = async ({ profileData }: any) => {
     const user = await getCurrentUser();
-    const redirectURL = process?.env?.NEXT_PUBLIC_URL;
 
     await fetch("https://api.stripe.com/v1/billing_portal/sessions", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
-        Authorization: `Bearer ${process.env.NEXT_PUBLIC_SECRET_KEY}`,
+        Authorization: `Bearer ${SECRET_KEY}`,
       },
-      body: `customer=${license?.stripe_customer_id}&return_url=${redirectURL}/dashboard/dashboard`,
+      body: `customer=${license?.stripe_customer_id}&return_url=${REDIRECT_URL}/dashboard/dashboard`,
     })
       .then((response) => response.json())
       .then((data) => {
@@ -131,7 +132,11 @@ const License = () => {
                         <div className="card">
                           <div className="card-header">
                             <Image
-layout="intrinsic" src={_IMG.card} alt="Card" loading="lazy" />
+                              layout="intrinsic"
+                              src={_IMG.card}
+                              alt="Card"
+                              loading="lazy"
+                            />
                             <h5 className="fw-bolder">License</h5>
                           </div>
                           <div className="card-body">
@@ -193,7 +198,7 @@ layout="intrinsic" src={_IMG.card} alt="Card" loading="lazy" />
                           <div className="card">
                             <div className="card-header">
                               <Image
-layout="intrinsic"
+                                layout="intrinsic"
                                 src={_IMG.domainIcon}
                                 alt=""
                                 loading="lazy"
@@ -235,7 +240,7 @@ layout="intrinsic"
                           <div className="card">
                             <div className="card-header">
                               <Image
-layout="intrinsic"
+                                layout="intrinsic"
                                 src={_IMG.envelope}
                                 alt=""
                                 loading="lazy"
@@ -277,7 +282,7 @@ layout="intrinsic"
                           <div className="card">
                             <div className="card-header">
                               <Image
-layout="intrinsic"
+                                layout="intrinsic"
                                 src={_IMG.user}
                                 alt="User"
                                 loading="lazy"
@@ -319,7 +324,7 @@ layout="intrinsic"
                           <div className="card">
                             <div className="card-header">
                               <Image
-layout="intrinsic"
+                                layout="intrinsic"
                                 src={_IMG.sender}
                                 alt="Sender"
                                 loading="lazy"
@@ -360,7 +365,11 @@ layout="intrinsic"
                         <div className="card">
                           <div className="card-header">
                             <Image
-layout="intrinsic" src={_IMG.plan} alt="Plan" loading="lazy" />
+                              layout="intrinsic"
+                              src={_IMG.plan}
+                              alt="Plan"
+                              loading="lazy"
+                            />
                             <h5 className="fw-bolder">Plan Features</h5>
                           </div>
                           <div className="card-body">

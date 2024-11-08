@@ -7,6 +7,9 @@ import { API_ROUTES } from "@/@core/apiRoutes";
 import { getFetcherWithAuth } from "@/@core/apiFetcher";
 import Image from "next/image";
 import { _IMG } from "@/constants/images";
+import { _ENV_VARIABLES } from "@/constants/envVariables";
+
+const BACKEND_API_URL = _ENV_VARIABLES.NEXT_PUBLIC_BACKEND_API_URL;
 
 const LinkStyled = styled(Link)(() => ({
   height: "70px",
@@ -43,7 +46,7 @@ const Logo = () => {
         src={
           isEmpty(checkImage)
             ? `${_IMG.logo_final_white}`
-            : `${process.env.NEXT_PUBLIC_BACKEND_API_URL}${checkImage}`
+            : `${BACKEND_API_URL}${checkImage}`
         }
         alt="logo"
         height={100}

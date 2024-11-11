@@ -15,6 +15,7 @@ import { Checkbox, FormControlLabel, FormGroup } from "@mui/material";
 import Image from "next/image";
 import { _IMG } from "@/constants/images";
 import { _ENV_VARIABLES } from "@/constants/envVariables";
+import ProfileLicenseLoader from "@/components/Loaders/ProfileLicenseLoader";
 
 const BACKEND_API_URL = _ENV_VARIABLES.NEXT_PUBLIC_BACKEND_API_URL;
 const REDIRECT_URL = _ENV_VARIABLES.NEXT_PUBLIC_URL;
@@ -115,7 +116,7 @@ const License = () => {
       <div className="graphSection">
         <div className="dashboardTopCard">
           {isLoading || isLoader ? (
-            <MainLoader />
+            <ProfileLicenseLoader profileData={profileData} />
           ) : (
             <div className="license">
               <div className="container-fluid">

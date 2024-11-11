@@ -112,30 +112,20 @@ import flag_Icon from "@/assets/flag-Icon.svg";
 import companyIcon from "@/assets/companyIcon.svg";
 import playBtn from "@/assets/playBtn.svg";
 import pauseVideoBtn from "@/assets/pauseVideoBtn.svg";
-// import  from "@/assets/.webp";
-// import  from "@/assets/.webp";
-// import  from "@/assets/.webp";
-// import  from "@/assets/.webp";
-// import  from "@/assets/.webp";
-// import  from "@/assets/.webp";
-// import  from "@/assets/.webp";
-// import  from "@/assets/.webp";
-// import  from "@/assets/.webp";
-// import  from "@/assets/.webp";
-// import  from "@/assets/.webp";
-// import  from "@/assets/.svg";
-// import  from "@/assets/.svg";
-// import  from "@/assets/.svg";
-// import  from "@/assets/.svg";
-// import  from "@/assets/.svg";
-// import  from "@/assets/.svg";
-// import  from "@/assets/.svg";
 import bimi1 from "@/assets/bimi1.png";
 import bimi2 from "@/assets/bimi2.svg";
 import dkim1 from "@/assets/dkim1.svg";
 import dkim2 from "@/assets/dkim2.svg";
 import dmarc1 from "@/assets/dmarc1.svg";
 import dmarc2 from "@/assets/dmarc2.svg";
+// import  from "@/assets/.webp";
+// import  from "@/assets/.webp";
+// import  from "@/assets/.webp";
+// import  from "@/assets/.webp";
+// import  from "@/assets/.svg";
+// import  from "@/assets/.svg";
+// import  from "@/assets/.svg";
+// import  from "@/assets/.svg";
 
 export const _IMG = {
   complaint: complaint,

@@ -10,6 +10,7 @@ import { API_ROUTES } from "@/@core/apiRoutes";
 import { isEmpty } from "@/utils/isEmpty";
 import AdminDetails from "@/app/pageComponents/Dashboard/AdminDetails";
 import { _ENV_VARIABLES } from "@/constants/envVariables";
+import ProfileSectionLoader from "@/components/Loaders/ProfileSectionLoader";
 
 const BACKEND_API_URL = _ENV_VARIABLES.NEXT_PUBLIC_BACKEND_API_URL;
 
@@ -108,7 +109,7 @@ const ProfilePage = () => {
     <div className="graphSection">
       <div className="dashboardTopCard">
         {isLoading ? (
-          <MainLoader />
+          <ProfileSectionLoader profileData={profileData} />
         ) : (
           <div className="profileSection">
             <div className="container-fluid">

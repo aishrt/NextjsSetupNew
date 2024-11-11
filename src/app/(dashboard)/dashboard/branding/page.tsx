@@ -15,9 +15,9 @@ import UpgradePlanComponent from "@/app/pageComponents/Others/UpgradePlanCompone
 import { _IMG } from "@/constants/images";
 import Image from "next/image";
 import { _ENV_VARIABLES } from "@/constants/envVariables";
+import ProfileSectionLoader from "@/components/Loaders/ProfileSectionLoader";
 
 const BACKEND_API_URL = _ENV_VARIABLES.NEXT_PUBLIC_BACKEND_API_URL;
-
 
 const BrandLogo = () => {
   const [form, setFormData] = useState({
@@ -93,8 +93,7 @@ const BrandLogo = () => {
       .then((resData: any) => {
         if (!isEmpty(resData)) {
           resData.data.preview = resData.data.profile_image
-            ? BACKEND_API_URL +
-              resData.data.profile_image
+            ? BACKEND_API_URL + resData.data.profile_image
             : "/assets/images/profile.png";
           setProfileData(resData.data);
         }
@@ -121,8 +120,7 @@ const BrandLogo = () => {
             password: resData?.data?.password,
 
             preview: resData.data.brand_image
-              ? BACKEND_API_URL +
-                resData.data.brand_image
+              ? BACKEND_API_URL + resData.data.brand_image
               : "",
           });
         }
@@ -251,7 +249,7 @@ const BrandLogo = () => {
       />
 
       {isLoadingProfile || isLoadingLicence ? (
-        <MainLoader />
+        <ProfileSectionLoader profileData={profileData} />
       ) : (
         <>
           {showUpgrade && !license?.branding && (
@@ -513,7 +511,7 @@ const BrandLogo = () => {
                         <Typography gutterBottom>
                           <div>
                             <Image
-layout="intrinsic"
+                              layout="intrinsic"
                               alt="delete"
                               src={_IMG.bin_Icon}
                               loading="lazy"

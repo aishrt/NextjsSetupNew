@@ -48,6 +48,7 @@ import { checkHistory } from "@/@core/helper";
 import UpgradeSubscription from "../Others/UpgradeSubscription";
 import { _IMG } from "@/constants/images";
 import Image from "next/image";
+import ManageChangePlanButtonTLS from "@/app/(dashboard)/dashboard/tls-report/ManageChangePlanButtonTLS";
 
 const TlsReportPage = ({
   domain,
@@ -551,8 +552,7 @@ layout="intrinsic"
         </div>
       ) : (
         <>
-          {/* {showUpgrade && <ManageChangePlanButtonTLS data={data} />} */}
-          {showUpgrade && <p>ManageChangePlanButtonTLS</p>}
+          {showUpgrade && <ManageChangePlanButtonTLS data={data} />}
         </>
       )}
     </div>

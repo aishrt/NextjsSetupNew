@@ -35,7 +35,7 @@ interface ItemType {
   toggleMobileSidebar: any;
 }
 
-export default function NavCollapse({
+export default function   NavCollapse({
   item,
   pathDirect,
   hideMenu,

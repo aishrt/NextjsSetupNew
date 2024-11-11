@@ -45,7 +45,7 @@ const Logo = () => {
         loading="lazy"
         src={
           isEmpty(checkImage)
-            ? `${_IMG.logo_final_white}`
+            ? _IMG.logo_final_white.src
             : `${BACKEND_API_URL}${checkImage}`
         }
         alt="logo"

@@ -4,6 +4,7 @@ import { isTokenExpired, putFormFetcher } from "@/@core/apiFetcher";
 import { API_ROUTES } from "@/@core/apiRoutes";
 import AdminDetails from "@/app/pageComponents/Dashboard/AdminDetails";
 import MainLoader from "@/components/Loaders/MainLoader";
+import ProfileSectionLoader from "@/components/Loaders/ProfileSectionLoader";
 import { _ENV_VARIABLES } from "@/constants/envVariables";
 import getCurrentUser from "@/lib/session";
 import { isEmpty } from "@/utils/isEmpty";
@@ -90,7 +91,7 @@ const ProfilePage = () => {
     <div className="graphSection">
       <div className="dashboardTopCard">
         {isLoading ? (
-          <MainLoader />
+          <ProfileSectionLoader profileData={profileData} />
         ) : (
           <div className="profileSection">
             <div className="container-fluid">

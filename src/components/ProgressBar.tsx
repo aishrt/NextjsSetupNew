@@ -3,19 +3,38 @@ import { useEffect, useState } from "react";
 import NProgress from "nprogress";
 import { GlobalStyles } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import { removeElementsByClassName } from "@/@core/createAndClickProgressBar";
 import { usePathname, useSearchParams } from "next/navigation";
+import { removeElementsByClassName } from "@/@core/createAndClickProgressBar";
 import MainLoader from "./Loaders/MainLoader";
 
 type PushStateInput = [
   data: any,
   unused: string,
-  url?: string | URL | null | undefined,
+  url?: string | URL | null | undefined
 ];
 
 export default function ProgressBar() {
   const theme = useTheme();
   const [isLoading, setIsLoading] = useState(false);
+  const [hideProgressBar, setHideProgressBar] = useState(false);
+  const [urlPath, setUrlPath] = useState(false);
+
+  function getLastPathPart(url: any) {
+    const pathSegments = url.split("/").filter(Boolean);
+    const val = pathSegments[pathSegments.length - 1];
+    setUrlPath(val);
+    console.log("URL Path : ", val);
+
+    if (
+      val == "license" ||
+      val == "profile-section" ||
+      val == "branding" ||
+      val == "notifications-alerts" ||
+      val == "password"
+    ) {
+      setHideProgressBar(true);
+    }
+  }
 
   const pathname = usePathname();
   const searchParams = useSearchParams();
@@ -35,6 +54,9 @@ export default function ProgressBar() {
     const handleAnchorClick = (event: MouseEvent) => {
       const targetUrl = (event.currentTarget as HTMLAnchorElement).href;
       const currentUrl = window.location.href;
+
+      getLastPathPart(targetUrl);
+
       if (targetUrl !== currentUrl) {
         NProgress.start();
         setIsLoading(true);
@@ -75,7 +97,7 @@ export default function ProgressBar() {
   });
 
   const Loader = () => {
-    return <MainLoader />;
+    return hideProgressBar ? null : <MainLoader />;
   };
   return (
     <>

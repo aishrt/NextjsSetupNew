@@ -17,7 +17,6 @@ import { _ENV_VARIABLES } from "@/constants/envVariables";
 
 const BACKEND_API_URL = _ENV_VARIABLES.NEXT_PUBLIC_BACKEND_API_URL;
 
-
 interface ItemType {
   isMobileSidebarOpen: boolean;
   onSidebarClose: (event: React.MouseEvent<HTMLElement>) => void;
@@ -142,16 +141,13 @@ const Sidebar = ({
       if (!isEmpty(users) && !isEmpty(users?.token)) {
         headers["Authorization"] = `Bearer ${users?.token}`;
       }
-      const res = await fetch(
-        `${BACKEND_API_URL}${API_ROUTES.DOMAINS_LIST}`,
-        {
-          method: "GET",
-          headers,
-          next: {
-            revalidate: 0,
-          },
-        }
-      );
+      const res = await fetch(`${BACKEND_API_URL}${API_ROUTES.DOMAINS_LIST}`, {
+        method: "GET",
+        headers,
+        next: {
+          revalidate: 0,
+        },
+      });
       if (res.ok) {
         const resData = await res.json();
         return resData;
@@ -182,16 +178,13 @@ const Sidebar = ({
     }
     let resData: any = {};
     try {
-      const res = await fetch(
-        `${BACKEND_API_URL}${url}`,
-        {
-          method: "GET",
-          headers,
-          next: {
-            revalidate: 0,
-          },
-        }
-      );
+      const res = await fetch(`${BACKEND_API_URL}${url}`, {
+        method: "GET",
+        headers,
+        next: {
+          revalidate: 0,
+        },
+      });
 
       if (!res.ok) {
         throw new Error(`HTTP error! status: ${res.status}`);
@@ -228,16 +221,13 @@ const Sidebar = ({
     }
     let resData: any = {};
     try {
-      const res = await fetch(
-        `${BACKEND_API_URL}${url}`,
-        {
-          method: "GET",
-          headers,
-          next: {
-            revalidate: 0,
-          },
-        }
-      );
+      const res = await fetch(`${BACKEND_API_URL}${url}`, {
+        method: "GET",
+        headers,
+        next: {
+          revalidate: 0,
+        },
+      });
 
       if (!res.ok) {
         throw new Error(`HTTP error! status: ${res.status}`);
@@ -427,7 +417,7 @@ const Sidebar = ({
           <Box px={3} className="sidebarLogo">
             <span className="closeButton">
               <Image
-layout="intrinsic"
+                layout="intrinsic"
                 src={_IMG.closeIcon}
                 alt=""
                 onClick={onSidebarClose}

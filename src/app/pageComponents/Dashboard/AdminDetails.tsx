@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { putFormFetcher } from "@/@core/apiFetcher";
 import { signOut } from "next-auth/react";
 import { toast } from "react-toastify";
-import { API_ROUTES } from "@/@core/apiRoutes";
 import { isEmpty } from "lodash";
+import { useStore } from "@/utils/store";
+import { putFormFetcher } from "@/@core/apiFetcher";
+import { API_ROUTES } from "@/@core/apiRoutes";
 import { ROLES } from "@/constants/roles";
-import Image from "next/image";
-import { _IMG } from "@/constants/images";
 
 const AdminDetails = ({ profileData }: any) => {
+  const { userRole } = useStore();
+
   const [activeTab, setActiveTab] = useState<string>("");
 
   const handleTabClick = (tabUrl: string) => {
@@ -86,13 +87,13 @@ const AdminDetails = ({ profileData }: any) => {
                 <img
                   src={
                     isEmpty(profileData?.preview)
-                      ? `${_IMG.profile}`
+                      ? "/assets/images/profile.png"
                       : `${profileData?.preview}`
                   }
                   alt="profile image"
                   loading="lazy"
                   onError={(e) => {
-                    e.currentTarget.src = `${_IMG.profile}`;
+                    e.currentTarget.src = "/assets/images/profile.png";
                   }}
                 />
                 <div className="image">
@@ -123,11 +124,7 @@ const AdminDetails = ({ profileData }: any) => {
               : profileData?.email}
           </h5>
           <p>
-            {profileData?.role == 2
-              ? "Administrator"
-              : profileData?.role == 3
-              ? "Member"
-              : ""}
+            {userRole == 2 ? "Administrator" : userRole == 3 ? "Member" : ""}
           </p>
         </div>
       </div>
@@ -170,7 +167,7 @@ const AdminDetails = ({ profileData }: any) => {
             </div>
           </li>
 
-          {profileData?.role == ROLES.ADMIN ? (
+          {userRole == ROLES.ADMIN ? (
             <li
               className={`nav-link ${
                 activeTab === "/dashboard/branding" ? "active" : ""

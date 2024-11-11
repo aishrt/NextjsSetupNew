@@ -105,6 +105,9 @@ const AuthCredentialsLoginForm = ({
         }}
       >
         {(formik) => {
+          // useEffect(() => {
+          //   formik.resetForm();
+          // }, []);
           return (
             <form onSubmit={formik.handleSubmit}>
               <div className="googleBtn">
@@ -158,8 +161,17 @@ const AuthCredentialsLoginForm = ({
                 <div className="error">
                   <ErrorMessage name="password" />
                 </div>
+                {/* <Link href="/forgot-password">Forgot Password?</Link> */}
               </div>
               <div className="form-group text-center mt-5">
+                {/* <button
+                  type="submit"
+                  className="btn btnLogin"
+                  disabled={formik.isSubmitting}
+                >
+                  {formik.isSubmitting ? "Please wait..." : "Sign In"}
+                </button> */}
+
                 <Button
                   type="submit"
                   className="btn btnLogin"
